@@ -1,7 +1,7 @@
-# bakekujira
-![Image of schematic](images/bakekujira_schematic.png)
-![Image of pcb](images/bakekujira_pcb.png)
-![Image of pcb render](images/bakekujira_pcb_render.png)
+# umiko
+![Image of schematic](images/umiko_schematic.png)
+![Image of pcb](images/umiko_pcb.png)
+![Image of pcb render](images/umiko_pcb_render.png)
 
 ## Features
 * TKL, F-row less
@@ -36,7 +36,7 @@ Part | Part number | Number needed | Link
 3. Grab the chibios submodules:
    `git submodule sync —recursive && git submodule update --init —recursive`
 4. open up qmk msys
-5. `qmk compile -kb bakekujira -km default -bl dfu-util-split-left` (do the right side also, you only have to do this once for each side)
+5. `qmk compile -kb umiko -km default -bl dfu-util-split-left` (do the right side also, you only have to do this once for each side)
 
 ## Notes
 * `onigaku` repo (not included in this repo) has all symbols and footprints
