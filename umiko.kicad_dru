@@ -1,0 +1,5 @@
+(version 1)
+(rule via_on_pad_edge
+  (condition "A.Type == 'Via' && B.Type == 'Pad'")
+  (constraint clearance (min 0mm))
+)
