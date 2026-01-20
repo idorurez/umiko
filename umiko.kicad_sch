@@ -3,7 +3,7 @@
 	(generator "eeschema")
 	(generator_version "9.0")
 	(uuid "4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a")
-	(paper "User" 1500.01 450.012)
+	(paper "User" 1000 450.012)
 	(title_block
 		(title "recess")
 		(rev "0.1a")
@@ -51373,6 +51373,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Value" "CLK"
@@ -51708,6 +51709,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Value" "DIO"
@@ -59411,7 +59413,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
+		(property "Value" "GND_L"
 			(at 382.27 125.73 0)
 			(effects
 				(font
