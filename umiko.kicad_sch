@@ -19250,7 +19250,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 151.13 63.5 0)
 			(effects
 				(font
@@ -19316,7 +19316,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 176.53 63.5 0)
 			(effects
 				(font
@@ -19382,7 +19382,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 201.93 63.5 0)
 			(effects
 				(font
@@ -19448,7 +19448,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 675.005 57.15 0)
 			(effects
 				(font
@@ -19514,7 +19514,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 725.805 57.15 0)
 			(effects
 				(font
@@ -19667,7 +19667,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap_1.5u"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.5U"
 			(at 49.53 88.9 0)
 			(effects
 				(font
@@ -19733,7 +19733,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 751.205 82.55 0)
 			(effects
 				(font
@@ -19886,7 +19886,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 802.005 82.55 0)
 			(effects
 				(font
@@ -20126,7 +20126,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 675.005 107.95 0)
 			(effects
 				(font
@@ -20192,7 +20192,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 700.405 107.95 0)
 			(effects
 				(font
@@ -20258,7 +20258,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 100.33 139.7 0)
 			(effects
 				(font
@@ -20411,7 +20411,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 125.73 139.7 0)
 			(effects
 				(font
@@ -20738,7 +20738,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 700.405 133.35 0)
 			(effects
 				(font
@@ -20978,7 +20978,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap_2.75u_North"
+		(property "Footprint" "onigaku:Gateron-KS33-2.0-Hotswap-2.75U_stabilized"
 			(at 802.005 133.35 0)
 			(effects
 				(font
@@ -21131,7 +21131,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap_1.25u_North"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.25U"
 			(at 725.805 158.75 0)
 			(effects
 				(font
@@ -22744,7 +22744,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 49.53 63.5 0)
 			(effects
 				(font
@@ -22897,7 +22897,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 125.73 63.5 0)
 			(effects
 				(font
@@ -23137,7 +23137,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 649.605 57.15 0)
 			(effects
 				(font
@@ -23290,7 +23290,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 776.605 57.15 0)
 			(effects
 				(font
@@ -23356,7 +23356,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 100.33 88.9 0)
 			(effects
 				(font
@@ -23509,7 +23509,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 201.93 88.9 0)
 			(effects
 				(font
@@ -23749,7 +23749,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 700.405 82.55 0)
 			(effects
 				(font
@@ -23902,7 +23902,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 725.805 82.55 0)
 			(effects
 				(font
@@ -23968,7 +23968,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap_1.75u"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.75U"
 			(at 49.53 114.3 0)
 			(effects
 				(font
@@ -24034,7 +24034,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 100.33 114.3 0)
 			(effects
 				(font
@@ -24100,7 +24100,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 151.13 114.3 0)
 			(effects
 				(font
@@ -24166,7 +24166,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 201.93 114.3 0)
 			(effects
 				(font
@@ -24319,7 +24319,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 649.605 107.95 0)
 			(effects
 				(font
@@ -24733,7 +24733,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap_2.25u_North"
+		(property "Footprint" "onigaku:Gateron-KS33-2.0-Hotswap-2.25U_stabilized"
 			(at 74.93 139.7 0)
 			(effects
 				(font
@@ -24886,7 +24886,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 725.805 133.35 0)
 			(effects
 				(font
@@ -24952,7 +24952,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 751.205 133.35 0)
 			(effects
 				(font
@@ -25105,7 +25105,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap_1.25u_North"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.25U"
 			(at 751.205 158.75 0)
 			(effects
 				(font
@@ -25258,7 +25258,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap_1.25u_North"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.25U"
 			(at 802.005 158.75 0)
 			(effects
 				(font
@@ -25411,7 +25411,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap_1.25u_North"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.25U"
 			(at 827.405 158.75 0)
 			(effects
 				(font
@@ -25773,7 +25773,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap_1.25u_North"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.25U"
 			(at 100.33 165.1 0)
 			(effects
 				(font
@@ -31168,7 +31168,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 751.205 57.15 0)
 			(effects
 				(font
@@ -31495,7 +31495,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 151.13 88.9 0)
 			(effects
 				(font
@@ -31648,7 +31648,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 176.53 88.9 0)
 			(effects
 				(font
@@ -31714,7 +31714,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 649.605 82.55 0)
 			(effects
 				(font
@@ -31780,7 +31780,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 675.005 82.55 0)
 			(effects
 				(font
@@ -31933,7 +31933,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 776.605 82.55 0)
 			(effects
 				(font
@@ -32173,7 +32173,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 125.73 114.3 0)
 			(effects
 				(font
@@ -32326,7 +32326,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 776.605 107.95 0)
 			(effects
 				(font
@@ -32479,7 +32479,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 649.605 133.35 0)
 			(effects
 				(font
@@ -32632,7 +32632,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap_1.25u_North"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.25U"
 			(at 49.53 165.1 0)
 			(effects
 				(font
@@ -34720,7 +34720,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap_2.75u_North_reversed_stabilizers"
+		(property "Footprint" "onigaku:Gateron-KS33-2.0-Hotswap-2.75U_stabilized"
 			(at 649.605 158.75 0)
 			(effects
 				(font
@@ -47107,7 +47107,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 74.93 63.5 0)
 			(effects
 				(font
@@ -47260,7 +47260,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 100.33 63.5 0)
 			(effects
 				(font
@@ -47413,7 +47413,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 700.405 57.15 0)
 			(effects
 				(font
@@ -47566,7 +47566,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap_2u_North"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-2U"
 			(at 827.405 57.15 0)
 			(effects
 				(font
@@ -47632,7 +47632,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 125.73 88.9 0)
 			(effects
 				(font
@@ -47959,7 +47959,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap_1.5u"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.5U"
 			(at 827.405 82.55 0)
 			(effects
 				(font
@@ -48199,7 +48199,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 176.53 114.3 0)
 			(effects
 				(font
@@ -48265,7 +48265,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 725.805 107.95 0)
 			(effects
 				(font
@@ -48418,7 +48418,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 751.205 107.95 0)
 			(effects
 				(font
@@ -48571,7 +48571,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap_2.25u_North"
+		(property "Footprint" "onigaku:Gateron-KS33-2.0-Hotswap-2.25U_stabilized"
 			(at 802.005 107.95 0)
 			(effects
 				(font
@@ -48724,7 +48724,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 151.13 139.7 0)
 			(effects
 				(font
@@ -48790,7 +48790,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 176.53 139.7 0)
 			(effects
 				(font
@@ -48943,7 +48943,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 201.93 139.7 0)
 			(effects
 				(font
@@ -49009,7 +49009,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
 			(at 675.005 133.35 0)
 			(effects
 				(font
@@ -49162,7 +49162,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap_1.25u_North"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.25U"
 			(at 74.93 165.1 0)
 			(effects
 				(font
@@ -49228,7 +49228,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap_1.25u_North"
+		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.25U"
 			(at 125.73 165.1 0)
 			(effects
 				(font
@@ -49294,7 +49294,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "onigaku:CherryMX_Hotswap_2.25u_North_reversed_stabilizers"
+		(property "Footprint" "onigaku:Gateron-KS33-2.0-Hotswap-2.25U_stabilized"
 			(at 201.93 165.1 0)
 			(effects
 				(font
