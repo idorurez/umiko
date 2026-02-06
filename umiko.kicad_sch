@@ -9687,7 +9687,7 @@
 		(uuid "ffdb9635-d6aa-46d9-9c46-c4ae2335ec6e")
 	)
 	(no_connect
-		(at 603.885 361.315)
+		(at 621.665 192.405)
 		(uuid "0c327936-a573-4c6d-9349-70390ffb53c2")
 	)
 	(no_connect
@@ -11490,7 +11490,7 @@
 	)
 	(wire
 		(pts
-			(xy 606.425 365.125) (xy 606.425 363.855)
+			(xy 624.205 196.215) (xy 624.205 194.945)
 		)
 		(stroke
 			(width 0)
@@ -12730,7 +12730,7 @@
 	)
 	(wire
 		(pts
-			(xy 603.885 363.855) (xy 606.425 363.855)
+			(xy 621.665 194.945) (xy 624.205 194.945)
 		)
 		(stroke
 			(width 0)
@@ -19008,7 +19008,7 @@
 	)
 	(global_label "data_R"
 		(shape input)
-		(at 603.885 358.775 0)
+		(at 621.665 189.865 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -19018,7 +19018,7 @@
 		)
 		(uuid "fe69dc44-fe31-4aea-894a-2a5d5ebfe33a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 613.3756 358.775 0)
+			(at 631.1556 189.865 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -40292,7 +40292,7 @@
 	)
 	(symbol
 		(lib_id "mj-4pp-9:MJ-4PP-9")
-		(at 589.915 358.775 0)
+		(at 607.695 189.865 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -40300,7 +40300,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000060ec7d5c")
 		(property "Reference" "J1"
-			(at 589.915 351.155 0)
+			(at 607.695 182.245 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -40308,7 +40308,7 @@
 			)
 		)
 		(property "Value" "MJ-4PP-9"
-			(at 589.915 367.665 0)
+			(at 607.695 198.755 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -40316,7 +40316,7 @@
 			)
 		)
 		(property "Footprint" "mj-4pp-9:MJ-4PP-9"
-			(at 574.675 361.315 0)
+			(at 592.455 192.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -40325,7 +40325,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 574.675 361.315 0)
+			(at 592.455 192.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -40334,7 +40334,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 589.915 358.775 0)
+			(at 607.695 189.865 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51444,7 +51444,7 @@
 	)
 	(symbol
 		(lib_id "bakekujira-rescue:GNDA-power")
-		(at 606.425 365.125 0)
+		(at 624.205 196.215 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -51452,7 +51452,7 @@
 		(dnp no)
 		(uuid "1315c26b-1928-43a2-ad2d-462c6026e759")
 		(property "Reference" "#PWR016"
-			(at 606.425 371.475 0)
+			(at 624.205 202.565 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51461,7 +51461,7 @@
 			)
 		)
 		(property "Value" "GNDA"
-			(at 606.425 368.935 0)
+			(at 624.205 200.025 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51469,7 +51469,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 606.425 365.125 0)
+			(at 624.205 196.215 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51478,7 +51478,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 606.425 365.125 0)
+			(at 624.205 196.215 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51487,7 +51487,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 606.425 365.125 0)
+			(at 624.205 196.215 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -52529,7 +52529,7 @@
 	)
 	(symbol
 		(lib_id "bakekujira-rescue:VDD-power")
-		(at 603.885 354.965 270)
+		(at 621.665 186.055 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -52537,7 +52537,7 @@
 		(dnp no)
 		(uuid "2e24be0e-7233-49b7-805f-f7834f992395")
 		(property "Reference" "#PWR0180"
-			(at 600.075 354.965 0)
+			(at 617.855 186.055 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -52546,7 +52546,7 @@
 			)
 		)
 		(property "Value" "VDD"
-			(at 607.695 354.965 0)
+			(at 625.475 186.055 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -52554,7 +52554,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 603.885 354.965 0)
+			(at 621.665 186.055 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -52563,7 +52563,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 603.885 354.965 0)
+			(at 621.665 186.055 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -52572,7 +52572,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 603.885 354.965 0)
+			(at 621.665 186.055 0)
 			(effects
 				(font
 					(size 1.27 1.27)
