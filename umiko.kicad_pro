@@ -465,7 +465,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
       "similar_label_and_power": "warning",
@@ -508,6 +508,22 @@
         "via_diameter": 0.46,
         "via_drill": 0.2,
         "wire_width": 6
+      },
+      {
+        "bus_width": 8,
+        "line_style": 0,
+        "name": "0.2mm",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "bus_width": 12,
+        "line_style": 0,
+        "name": "0.3mm",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
       }
     ],
     "meta": {
@@ -527,6 +543,38 @@
       {
         "netclass": "Default",
         "pattern": "VCC"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "GND_R"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "GND_L"
+      },
+      {
+        "netclass": "0.3mm",
+        "pattern": "+5V_L"
+      },
+      {
+        "netclass": "0.3mm",
+        "pattern": "+5V_R"
+      },
+      {
+        "netclass": "0.2mm",
+        "pattern": "+3V3_L"
+      },
+      {
+        "netclass": "0.2mm",
+        "pattern": "+3V3_R"
+      },
+      {
+        "netclass": "0.2mm",
+        "pattern": "+1V1_L"
+      },
+      {
+        "netclass": "0.2mm",
+        "pattern": "+1V1_R"
       }
     ]
   },
@@ -647,7 +695,7 @@
     "meta": {
       "version": 1
     },
-    "net_format_name": "Pcbnew",
+    "net_format_name": "KiCad",
     "ngspice": {
       "fix_include_paths": true,
       "fix_passive_vals": false,
