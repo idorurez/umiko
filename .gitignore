@@ -1,0 +1,15 @@
+# Windows artifacts
+nul
+Thumbs.db
+desktop.ini
+
+# KiCad lock/autosave files
+~*.lck
+_autosave-*
+*.kicad_pcb.pre_placement_*.bak
+*.kicad_sch.bak
+*.kicad_sch.pre_*.bak
+
+# Temp/script files
+*.pyc
+__pycache__/

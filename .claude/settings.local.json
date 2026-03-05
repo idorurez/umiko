@@ -2,7 +2,21 @@
   "permissions": {
     "allow": [
       "Bash(powershell -Command:*)",
-      "Bash(claude mcp:*)"
+      "Bash(claude mcp:*)",
+      "Bash(findstr:*)",
+      "Bash(for net in D+ D- RGB_DO RGB_5V LED RESET BOOT)",
+      "Bash(do echo \"=== $net ===\")",
+      "Bash(done)",
+      "Bash(del:*)",
+      "Bash(python3:*)",
+      "Bash(where:*)",
+      "Bash(C:\\\\Python311\\\\python.exe:*)",
+      "Bash(python.exe:*)",
+      "Bash(python:*)",
+      "Bash(/c/Python311/python.exe:*)",
+      "Bash(git stash:*)",
+      "Bash(copy:*)",
+      "Bash(ls:*)"
     ]
   }
 }
