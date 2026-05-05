@@ -11808,6 +11808,16 @@
 	)
 	(wire
 		(pts
+			(xy 261.874 205.994) (xy 270.764 205.994)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "189a9615-8752-45d5-8d19-c84368294232")
+	)
+	(wire
+		(pts
 			(xy 601.218 368.808) (xy 601.218 356.108)
 		)
 		(stroke
@@ -12508,6 +12518,16 @@
 	)
 	(wire
 		(pts
+			(xy 406.4 207.518) (xy 415.29 207.518)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2fabbb2e-bd7e-44f7-950d-5f88354d11e4")
+	)
+	(wire
+		(pts
 			(xy 104.14 163.83) (xy 110.49 163.83)
 		)
 		(stroke
@@ -12725,6 +12745,16 @@
 			(type default)
 		)
 		(uuid "366f7085-738d-400f-9f99-11f8d5532206")
+	)
+	(wire
+		(pts
+			(xy 261.874 208.534) (xy 270.764 208.534)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3695431d-f240-41d9-92e1-da7fcb6aba26")
 	)
 	(wire
 		(pts
@@ -15215,16 +15245,6 @@
 			(type solid)
 		)
 		(uuid "828a4853-c727-4b3d-887b-7978b9162b16")
-	)
-	(wire
-		(pts
-			(xy 270.764 164.084) (xy 266.954 164.084)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "835b8687-1d52-4bec-bf0e-6affd07a09f3")
 	)
 	(wire
 		(pts
@@ -18978,6 +18998,16 @@
 	)
 	(wire
 		(pts
+			(xy 406.4 204.978) (xy 415.29 204.978)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4f6a130-46b8-4bd3-9de2-aa2719931690")
+	)
+	(wire
+		(pts
 			(xy 119.38 199.39) (xy 129.54 199.39)
 		)
 		(stroke
@@ -18995,16 +19025,6 @@
 			(type default)
 		)
 		(uuid "f6651f6a-db66-428f-a377-9220b28302d4")
-	)
-	(wire
-		(pts
-			(xy 415.29 163.068) (xy 411.48 163.068)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f6ad530f-b900-4227-a9f9-81368d714697")
 	)
 	(wire
 		(pts
@@ -19596,16 +19616,6 @@
 		)
 		(uuid "344edaf8-7814-4aa9-88c5-702745925ab8")
 	)
-	(label "RST_R"
-		(at 411.48 163.068 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "351965ab-a87b-428b-8f61-236431de627f")
-	)
 	(label "SWD_CLK_L"
 		(at 261.874 200.914 0)
 		(effects
@@ -20036,6 +20046,36 @@
 		)
 		(uuid "a889ab88-f476-4fe0-99f9-19addd86c0a1")
 	)
+	(label "+3V3_L"
+		(at 270.764 208.534 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ac8605b2-0e90-461d-ad77-2a16116d3b71")
+	)
+	(label "GND_L"
+		(at 270.764 205.994 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b02184ab-8ba5-4a8d-b393-7f047a957a7c")
+	)
+	(label "GND_R"
+		(at 415.29 204.978 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b039420d-bd61-44b1-89af-c059f89cbecf")
+	)
 	(label "SWD_IO_R"
 		(at 406.4 202.438 0)
 		(effects
@@ -20075,6 +20115,16 @@
 			(justify left bottom)
 		)
 		(uuid "b3c2b045-b1b8-471b-868d-60db7ee3355f")
+	)
+	(label "+3V3_R"
+		(at 415.29 207.518 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b5e1a9ce-636f-4408-8a98-fd351ad1018c")
 	)
 	(label "QSPI_SD1_R"
 		(at 401.32 217.678 0)
@@ -59302,6 +59352,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 261.874 205.994 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "108134c4-9d52-4f24-8b1c-45dc21f39d60")
+		(property "Reference" "TP5"
+			(at 258.064 205.994 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 263.144 202.184 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PCM_0xcb:TestPoint_Pad_D0.8mm"
+			(at 266.954 205.994 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 266.954 205.994 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 261.874 205.994 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "37a1ab8c-cadd-4212-a7cf-a25922dfdd80")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "TP5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 495.3 197.358 0)
 		(unit 1)
@@ -60486,6 +60615,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 406.4 204.978 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "219d8525-8416-447c-a1fb-d58e71fda9f9")
+		(property "Reference" "TP7"
+			(at 402.59 204.978 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 407.67 201.168 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PCM_0xcb:TestPoint_Pad_D0.8mm"
+			(at 411.48 204.978 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 411.48 204.978 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 406.4 204.978 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2cb6c602-a607-4dba-906d-032a12ccc0e2")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "GND_R_1")
 		(lib_id "onigaku:GND_R")
 		(at 435.61 234.188 0)
@@ -61101,6 +61309,85 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 261.874 208.534 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "288eca7b-a2ac-478d-a3e8-1ce05e687107")
+		(property "Reference" "TP6"
+			(at 258.064 208.534 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "3V3"
+			(at 263.144 204.724 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PCM_0xcb:TestPoint_Pad_D0.8mm"
+			(at 266.954 208.534 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 266.954 208.534 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 261.874 208.534 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ee5f03ec-3deb-475d-9c22-d6f414ee4658")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "TP6")
 					(unit 1)
 				)
 			)
@@ -66602,6 +66889,85 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "#PWR0138")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 406.4 207.518 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6de46599-0999-4bb6-a7a9-09ed4292125a")
+		(property "Reference" "TP8"
+			(at 402.59 207.518 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "3V3"
+			(at 407.67 203.708 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PCM_0xcb:TestPoint_Pad_D0.8mm"
+			(at 411.48 207.518 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 411.48 207.518 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 406.4 207.518 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6e0c4610-41ca-48d6-8c11-c07640bae748")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -75585,402 +75951,6 @@
 				)
 			)
 		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 261.874 205.994 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "108134c4-9d52-4f24-8b1c-45dc21f39d60")
-		(property "Reference" "TP5"
-			(at 258.064 205.994 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 263.144 202.184 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "PCM_0xcb:TestPoint_Pad_D0.8mm"
-			(at 266.954 205.994 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 266.954 205.994 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 261.874 205.994 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "37a1ab8c-cadd-4212-a7cf-a25922dfdd80")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "TP5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 261.874 205.994) (xy 270.764 205.994)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "189a9615-8752-45d5-8d19-c84368294232")
-	)
-	(label "GND_L"
-		(at 270.764 205.994 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b02184ab-8ba5-4a8d-b393-7f047a957a7c")
-	)
-	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 261.874 208.534 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "288eca7b-a2ac-478d-a3e8-1ce05e687107")
-		(property "Reference" "TP6"
-			(at 258.064 208.534 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "3V3"
-			(at 263.144 204.724 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "PCM_0xcb:TestPoint_Pad_D0.8mm"
-			(at 266.954 208.534 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 266.954 208.534 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 261.874 208.534 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ee5f03ec-3deb-475d-9c22-d6f414ee4658")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "TP6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 261.874 208.534) (xy 270.764 208.534)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3695431d-f240-41d9-92e1-da7fcb6aba26")
-	)
-	(label "+3V3_L"
-		(at 270.764 208.534 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ac8605b2-0e90-461d-ad77-2a16116d3b71")
-	)
-	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 406.4 204.978 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "219d8525-8416-447c-a1fb-d58e71fda9f9")
-		(property "Reference" "TP7"
-			(at 402.59 204.978 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 407.66999999999996 201.168 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "PCM_0xcb:TestPoint_Pad_D0.8mm"
-			(at 411.47999999999996 204.978 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 411.47999999999996 204.978 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 406.4 204.978 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2cb6c602-a607-4dba-906d-032a12ccc0e2")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "TP7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 406.4 204.978) (xy 415.28999999999996 204.978)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4f6a130-46b8-4bd3-9de2-aa2719931690")
-	)
-	(label "GND_R"
-		(at 415.28999999999996 204.978 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b039420d-bd61-44b1-89af-c059f89cbecf")
-	)
-	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 406.4 207.518 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "6de46599-0999-4bb6-a7a9-09ed4292125a")
-		(property "Reference" "TP8"
-			(at 402.59 207.518 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "3V3"
-			(at 407.66999999999996 203.708 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "PCM_0xcb:TestPoint_Pad_D0.8mm"
-			(at 411.47999999999996 207.518 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 411.47999999999996 207.518 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 406.4 207.518 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6e0c4610-41ca-48d6-8c11-c07640bae748")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "TP8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 406.4 207.518) (xy 415.28999999999996 207.518)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2fabbb2e-bd7e-44f7-950d-5f88354d11e4")
-	)
-	(label "+3V3_R"
-		(at 415.28999999999996 207.518 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b5e1a9ce-636f-4408-8a98-fd351ad1018c")
 	)
 	(sheet_instances
 		(path "/"
