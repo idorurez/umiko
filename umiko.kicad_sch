@@ -8759,12 +8759,6 @@
 		(uuid "3942f48f-196d-42b7-b448-234c4e4820b4")
 	)
 	(junction
-		(at 124.46 175.26)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "39a12a60-99ad-4670-a39d-52a02b201173")
-	)
-	(junction
 		(at 109.22 234.95)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10193,12 +10187,6 @@
 		(uuid "dc773f24-5864-4a7c-9872-2e6229dc6673")
 	)
 	(junction
-		(at 135.89 138.43)
-		(diameter 1.016)
-		(color 0 0 0 0)
-		(uuid "dd58dbd3-379b-4c34-92c3-0ec7429dc0c2")
-	)
-	(junction
 		(at 277.114 132.334)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11387,16 +11375,6 @@
 			(type default)
 		)
 		(uuid "12a8aec8-c07f-4895-a07d-4d9ea4f6fdbf")
-	)
-	(wire
-		(pts
-			(xy 124.46 168.91) (xy 124.46 170.18)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "13664d18-0646-4e95-8f13-8ad0cb3f9cc3")
 	)
 	(wire
 		(pts
@@ -14580,16 +14558,6 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 175.26) (xy 200.66 175.26)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "754eb055-7e5e-48f4-a3d4-ba497d005b7a")
-	)
-	(wire
-		(pts
 			(xy 439.42 131.318) (xy 444.5 131.318)
 		)
 		(stroke
@@ -14810,7 +14778,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 175.26) (xy 124.46 175.26)
+			(xy 99.06 175.26) (xy 200.66 175.26)
 		)
 		(stroke
 			(width 0)
@@ -16690,16 +16658,6 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 163.83) (xy 135.89 163.83)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "b4f51982-f3e6-430f-9692-de054d65a0b4")
-	)
-	(wire
-		(pts
 			(xy 129.54 62.23) (xy 135.89 62.23)
 		)
 		(stroke
@@ -16787,16 +16745,6 @@
 			(type solid)
 		)
 		(uuid "b69821fe-8a46-4157-96b6-6d1196f2216e")
-	)
-	(wire
-		(pts
-			(xy 135.89 163.83) (xy 135.89 138.43)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "b6984c9e-86c3-48da-b62d-481fdae6c8df")
 	)
 	(wire
 		(pts
@@ -29713,109 +29661,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "C38")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_Small")
-		(at 124.46 172.72 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-0000604f8043")
-		(property "Reference" "D_17"
-			(at 127 170.942 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "D"
-			(at 127 173.228 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "onigaku:D3_SMD_v2"
-			(at 124.46 172.72 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 124.46 172.72 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Diode, small symbol"
-			(at 124.46 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 124.46 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 124.46 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "52fcca71-cd95-46e9-956f-fe8dbee20b5d")
-		)
-		(pin "1"
-			(uuid "14b92a2d-5af5-4257-9e0f-905ad81a55b6")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "D_17")
 					(unit 1)
 				)
 			)
@@ -56527,84 +56372,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "SW_7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "MX_Alps_Hybrid:MX-NoLED")
-		(at 125.73 165.1 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-0000694525e2")
-		(property "Reference" "SW_17"
-			(at 125.73 159.1818 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "KEYSW"
-			(at 125.73 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.25U"
-			(at 125.73 165.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 125.73 165.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 125.73 165.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2ce25862-d10b-4d38-9222-8def8eca7c70")
-		)
-		(pin "2"
-			(uuid "96866fe6-7c2c-4b46-9ccd-13b966c940b2")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "SW_17")
 					(unit 1)
 				)
 			)

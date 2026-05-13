@@ -57,6 +57,9 @@ Part | Part number | Number needed | Link
 * Solder the LEDs in the order that wired up and test as you go. Please see the diagram (ie solder the under glows first)
 * If the LED looks broken or melted, it's probably broken.
 
+# Stabilizers
+* The stabilizer cutouts on this PCB are sized for **Kailh Choc V2 stabilizers**. Standard MX/Cherry-style stabilizers will not fit.
+
 ## Inspiration
 Picked apart a lot of boards, including:
 * Corne
@@ -68,6 +71,7 @@ Picked apart a lot of boards, including:
 * build case
 * build plate
 * working out breakout board for 256x32 (see other SSD1326 breakout repo)
+* grab a Gateron KS-33 v2.0 switch body 3D model (GrabCAD or Gateron's site), drop in `onigaku/packages3D/kbd.3dshapes/`, then wire it into all 63 switch footprints for accurate 3D viewer rendering and tolerance checks
 
 ## REV2
 * move proton-c and plugs out instead of tucked in line with the top row to allow for more case options
