@@ -1,5 +1,6 @@
 # umiko
 ![Image of schematic](images/umiko_schematic.svg)
+![Image of pcb](images/umiko_3dview_front.png)
 ![Image of pcb render](images/umiko_3dview_persp.png)
 
 ## Features
