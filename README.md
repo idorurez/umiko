@@ -1,7 +1,7 @@
 # umiko
-![Image of schematic](images/umiko_schematic.png)
+![Image of schematic](images/umiko_schematic.svg)
 ![Image of pcb](images/umiko_pcb.png)
-![Image of pcb render](images/umiko_pcb_render.png)
+![Image of pcb render](images/umiko_3dview_persp.png)
 
 ## Features
 * TKL, F-row less
