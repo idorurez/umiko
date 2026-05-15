@@ -137,6 +137,52 @@ If you need to flash via SWD (rare — BOOTSEL handles most needs):
 * Pad order on left is top-to-bottom: **CLK / IO / GND / 3V3**
 * Pad order on right is mirrored: **3V3 / GND / IO / CLK** — so a flipped pogo clip lands on matching signals on both halves
 
+## Manufacturing Notes (JLCPCB)
+
+### Design rule clearances
+
+This board is set up for **JLCPCB's standard 4-layer pricing tier**:
+
+* **Minimum clearance**: 0.1 mm (4 mil) — JLC's standard min for 4-layer at no surcharge
+* **Net class clearance**: 0.1 mm
+* **Track widths**: 0.2 mm (signals), 0.3 mm (power/GND) — well above the 0.1 mm minimum
+* **Min via**: 0.4 mm diameter / 0.2 mm drill
+* **Min hole**: 0.3 mm (matches JLC standard)
+
+If you want **tighter clearances** (down to 0.089 mm / 3.5 mil), JLC will accept the files but add a **+20% surcharge** on 4-8 layer boards.
+
+### JLC fab options used for this design
+
+* **Layers**: 4
+* **Different Design in Panel**: 2 (left and right halves are separate outlines)
+* **Min hole size**: 0.3 mm
+* **Min track/spacing**: 5/5 mil (well within standard)
+* **Outer copper**: 1 oz
+* **Inner copper**: 0.5 oz (default for 4-layer)
+
+### Fab file generation
+
+KiCad can export everything JLC needs via:
+
+```
+kicad-cli pcb export gerbers --output fab/gerber/ --no-x2 --subtract-soldermask \
+    --layers "F.Cu,In1.Cu,In2.Cu,B.Cu,F.Paste,B.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts" \
+    umiko.kicad_pcb
+
+kicad-cli pcb export drill --output fab/drill/ --excellon-units mm --excellon-separate-th \
+    --generate-map --map-format pdf umiko.kicad_pcb
+
+kicad-cli pcb export pos --output fab/umiko-pos.csv --units mm --format csv \
+    --use-drill-file-origin umiko.kicad_pcb
+
+kicad-cli sch export bom --output fab/umiko-bom.csv \
+    --fields "Reference,Value,Footprint,LCSC,MPN,Manufacturer,Description" \
+    --group-by "Value,Footprint,LCSC,MPN" \
+    umiko.kicad_sch
+```
+
+Then zip `fab/gerber/` + `fab/drill/` for the JLC fab upload. The `pos.csv` and `bom.csv` are only needed if ordering PCBA assembly.
+
 ## Design Notes
 
 * **No reset circuit** — flashing is via BOOTSEL alone. RP2040's `~RUN` pin has an internal pull-up; leaving it floating is safe.
