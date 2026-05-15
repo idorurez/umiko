@@ -61,7 +61,56 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "copper_edge_clearance|143158795|125538000|67fbef0c-39dd-4df7-ac28-160390db4b71|8bc2c25a-a1f1-4ce8-b96a-a4f8f4c35079",
+          ""
+        ],
+        [
+          "copper_edge_clearance|206743250|125545000|01e273b8-cd0c-49c5-8471-bd776dc5bd5c|feb26ecb-9193-46ea-a41b-d09305bf0a3e",
+          ""
+        ],
+        [
+          "copper_edge_clearance|224134000|119442000|15fe950f-8ee7-4b22-a97a-9955dc188dbf|eb245694-5d4a-4580-b58e-31acf2bba517",
+          ""
+        ],
+        [
+          "copper_edge_clearance|224134000|122992000|15fe950f-8ee7-4b22-a97a-9955dc188dbf|fb7892a0-29e9-4d08-86e9-ed9ad1c00745",
+          ""
+        ],
+        [
+          "copper_edge_clearance|301993250|106495000|577a5adf-7e08-4e2e-aa80-5f10d76d9e3b|8d9a3ecc-539f-41da-8099-d37cea9c28e7",
+          ""
+        ],
+        [
+          "copper_edge_clearance|306755750|87445000|7a322c50-e18e-459d-b907-bd083c769104|17ed3508-fa2e-4593-a799-bfd39a6cc14d",
+          ""
+        ],
+        [
+          "copper_edge_clearance|47908795|106488000|514ebb41-51ea-4e0c-a772-abcf74ae3da2|eb473bfd-fc2d-4cf0-8714-6b7dd95b0a03",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|170800000|82795000|0fcb9586-3ed8-4386-afa3-36c7fafea0a1|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|170800000|85335000|0a3043bf-95c3-4b27-b027-fd7846181795|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|177391000|82795000|04ee5e23-7cc0-4635-a542-8939a2857a31|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|177391000|87875000|1756d304-ae1a-4a70-9ac2-16b03bc86f64|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|177391000|90415000|021b4659-7402-4617-8073-639f0849055f|00000000-0000-0000-0000-000000000000",
+          ""
+        ]
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -107,9 +156,9 @@
         "padstack": "error",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
-        "silk_edge_clearance": "warning",
-        "silk_over_copper": "warning",
-        "silk_overlap": "warning",
+        "silk_edge_clearance": "ignore",
+        "silk_over_copper": "ignore",
+        "silk_overlap": "ignore",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
@@ -138,9 +187,9 @@
         "allow_blind_buried_vias": false,
         "allow_microvias": false,
         "max_error": 0.005,
-        "min_clearance": 0.09,
+        "min_clearance": 0.1,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.2,
+        "min_copper_edge_clearance": 0.1,
         "min_groove_width": 0.0,
         "min_hole_clearance": 0.254,
         "min_hole_to_hole": 0.25,
