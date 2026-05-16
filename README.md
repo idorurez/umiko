@@ -208,6 +208,7 @@ This design borrows ideas from:
 * marvelous65 split — TKL split with separate inter-half data path
 * ganymede — case style
 * [0xCB-Helios](https://github.com/0xCB-dev/0xCB-Helios) — schematic patterns for RP2040 + dual flash + LDO
+* [0xCB-libs](https://github.com/0xCB-dev/0xCB-libs) — footprints for RP2040, W25Q128 flash (WSON8), LP5907 (X2SON-4), USB-C receptacle, SOD-882 Schottky and other small SMD parts used throughout this design
 
 ## Credits
 
@@ -218,6 +219,10 @@ QMK community help (without their patience this wouldn't exist):
 * waffle
 * tzarc
 * xyz
+
+Hardware / fab consultation:
+
+* Conor at [KeebSupply](https://keebsupply.com) — manufacturing and build feasibility advice (KS-33 hot-swap pad clipping, stabilizer compatibility, fab tolerances)
 
 ## License
 
