@@ -47,26 +47,26 @@ Quantities are rounded up to account for spares — order more than the minimum.
 
 Part | Part number | Qty | Notes / Source
 --- | --- | --- | ---
-RP2040 MCU | RP2040 (QFN-56) | 2 | Mouser / DigiKey / direct from Raspberry Pi
-QSPI Flash | Winbond W25Q128JVPIQ | 2 | Mouser / DigiKey
-3.3V LDO | TI LP5907SNX-3.3-NOPB | 2 | Mouser / DigiKey, X2SON-4
-12 MHz crystal | 2520 4-pin SMD | 2 | LCSC / Mouser
-USB-C receptacle | HRO TYPE-C-31-M-12 | 4 | LCSC, JLC, AliExpress
-USB ESD | USBLC6-2P6 | 2 | SOT-666
-Polyfuse | 500 mA 0603 | 2 | DigiKey / LCSC
-Ferrite bead | 600 Ω 0402 | 2 | LCSC
-Schottky diode | PMEG2010BELD (SOD-882) | 4 | LCSC / DigiKey
-Per-key LEDs | SK6812MINI-E | 70+ | AliExpress / LCSC — order ~10% spare, these are fragile
-Underglow LEDs | SK6812MINI-E | 30+ | Same as above; same part
-Switch diodes | 1N4148WS / D3-SMD (SOD-323) | 70+ | LCSC / Mouser
-Switches | Gateron KS-33 v2.0 low-profile | 63 | Keebio / Keychron / Gateron direct
+RP2040 MCU | RP2040 (QFN-56) | 2 | LCSC `C2040` / Mouser / DigiKey / direct from Raspberry Pi
+QSPI Flash | Winbond W25Q128JVPIQ | 2 | LCSC `C190862` / Mouser / DigiKey
+3.3V LDO | TI TLV75533PDQNR | 2 | LCSC `C133572` (X2SON-4)
+12 MHz crystal | 2520 4-pin SMD | 2 | LCSC `C2149204` / Mouser
+USB-C receptacle | HRO TYPE-C-31-M-12 | 4 | LCSC `C963373` / JLC / AliExpress
+USB ESD | USBLC6-2P6 | 2 | LCSC `C2827693` (SOT-666)
+Polyfuse | 500 mA 0603 | 2 | LCSC `C210357` / DigiKey
+Ferrite bead | 600 Ω 0402 | 2 | LCSC `C160977`
+Schottky diode | PMEG2010BELD (SOD-882) | 4 | LCSC `C552820` / DigiKey
+Per-key LEDs | SK6812MINI-E (reverse mount) | 70+ | LCSC `C5149201` / AliExpress — order ~10% spare, fragile. Pin **numbers** between vendors differ but physical VDD/VSS/DIN/DOUT corners match
+Underglow LEDs | SK6812MINI-E | 30+ | Same as above; same part (`C5149201`)
+Switch diodes | 1N4148W (SOD-123) | 70+ | LCSC `C81598` / Mouser. Footprint `onigaku:D3_SMD_v2` is SOD-123, **not** SOD-323
+Switches | Gateron KS-33 v2.0 low-profile | 63 | Keebio / Keychron / Gateron direct (hand-place; not from JLC stock)
 Hot-swap sockets | Gateron KS33 hot-swap socket | 63 | Same source as switches
 Stabilizers | Kailh Choc V2 (2u for 2.25U and 2.75U keys) | 2 sets | Choc V2 — **not** MX stabilizers
-0603 100 nF ceramic caps | n/a | 90+ | LCSC / DigiKey
-0402 caps (LDO bypass) | varies (see schematic) | as schematic | LCSC
-0402 resistors | varies | as schematic | LCSC
-BOOTSEL push button | 4×4×1.5 mm SMD | 2 | AliExpress / LCSC
-0402 status LEDs | red / blue / green (per spec) | 4 | LCSC
+0603 100 nF ceramic caps | CC0603KRX7R9BB104 (or equiv 0.1µF X7R) | 90+ | LCSC auto-matches — confirm prompt is benign
+0402 caps (LDO bypass) | varies (see schematic) | as schematic | LCSC `C1525` / `C15525` / `C52923` etc.
+0402 resistors | varies | as schematic | LCSC `C25905` (5.1k) / `C11702` (1k) / `C25744` (10k) / `C25100` (27R)
+BOOTSEL push button | 4×4×1.5 mm SMD | 2 | LCSC `C589221`
+0402 status LEDs | red / blue / green (per spec) | 4 | LCSC `C130719` / `C130724`
 
 ## Software (QMK)
 
@@ -162,26 +162,25 @@ If you want **tighter clearances** (down to 0.089 mm / 3.5 mil), JLC will accept
 
 ### Fab file generation
 
-KiCad can export everything JLC needs via:
+Run `python make_jlc_files.py` from the project root. It produces three upload-ready files in `fab/`:
 
-```
-kicad-cli pcb export gerbers --output fab/gerber/ --no-x2 --subtract-soldermask \
-    --layers "F.Cu,In1.Cu,In2.Cu,B.Cu,F.Paste,B.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts" \
-    umiko.kicad_pcb
+* `umiko-jlc-gerbers.zip` — gerbers + Excellon drill files (the fab upload)
+* `umiko-bom-jlc.csv` — JLC-formatted BOM (header `Comment,Designator,Footprint,JLCPCB Part #（optional）`, comma-separated designators, ranges expanded)
+* `umiko-cpl.csv` — JLC-formatted CPL (header `Designator,Mid X,Mid Y,Layer,Rotation`, mm-suffixed coords at 4-decimal precision, integer rotations 0–359, capitalized `Top`/`Bottom`)
 
-kicad-cli pcb export drill --output fab/drill/ --excellon-units mm --excellon-separate-th \
-    --generate-map --map-format pdf umiko.kicad_pcb
+The script also bakes in LCSC overrides for parts whose schematic symbols don't carry an LCSC field (matrix diode `D3_SMD_v2` → `C81598`, per-key + underglow LED `YS-SK6812MINI-E` → `C5149201`). Add new mappings to the `LCSC_OVERRIDES` dict at the top of the script as needed.
 
-kicad-cli pcb export pos --output fab/umiko-pos.csv --units mm --format csv \
-    --use-drill-file-origin umiko.kicad_pcb
+### JLC upload gotcha
 
-kicad-cli sch export bom --output fab/umiko-bom.csv \
-    --fields "Reference,Value,Footprint,LCSC,MPN,Manufacturer,Description" \
-    --group-by "Value,Footprint,LCSC,MPN" \
-    umiko.kicad_sch
-```
+**Updates to BOM or CPL won't apply unless you restart the upload from the project menu.** Re-uploading just the BOM/CPL after a failed attempt will appear to succeed but JLC keeps the prior validation state, leading to errors like "Failed processing the CPL file" or "BOM doesn't match CPL" that don't actually correspond to the current file contents. The fix is to back up to the **PCB quote** step in JLC's flow and start the whole upload over (gerbers → BOM → CPL).
 
-Then zip `fab/gerber/` + `fab/drill/` for the JLC fab upload. The `pos.csv` and `bom.csv` are only needed if ordering PCBA assembly.
+### CPL format quirks (learned the hard way)
+
+JLC's CPL parser is unusually strict about:
+
+* **Rotation must be a non-negative integer 0–359** — KiCad's default `-90.000000` will be rejected with "Failed processing the CPL file". `make_jlc_files.py` normalizes to integer mod 360.
+* **Coordinates must be fixed at 4-decimal precision** — variable precision like `8.647045mm` also fails. The script formats with `.4f`.
+* **Headers must match JLC's sample exactly**, including the fullwidth Chinese parens in the BOM's `JLCPCB Part #（optional）`.
 
 ## Design Notes
 
