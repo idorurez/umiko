@@ -38,7 +38,7 @@ A split, low-profile TKL F-row-less mechanical keyboard PCB. Two halves connect 
 | **Host connector** | 2× HRO TYPE-C-31-M-12 (USB 2.0 16P) |
 | **Inter-half connector** | 2× HRO TYPE-C-31-M-12 (used as 3-wire serial: VBUS, GND, D+) |
 | **Diodes** | 63× SK matrix diodes, 4× power-path Schottky (PMEG2010BELD), 4× LED indicators |
-| **Polyfuse** | 2× 500 mA (Fuse_0603) for USB power input |
+| **Polyfuse** | 2× 1.1 A (Fuse_0603) for USB power input |
 | **Ferrite beads** | 2× 600 Ω (FB1/FB2) for VBUS filtering |
 
 ## BOM
@@ -53,7 +53,7 @@ QSPI Flash | Winbond W25Q128JVPIQ | 2 | LCSC `C190862` / Mouser / DigiKey
 12 MHz crystal | 2520 4-pin SMD | 2 | LCSC `C2149204` / Mouser
 USB-C receptacle | HRO TYPE-C-31-M-12 | 4 | LCSC `C963373` / JLC / AliExpress
 USB ESD | USBLC6-2P6 | 2 | LCSC `C2827693` (SOT-666)
-Polyfuse | 500 mA 0603 | 2 | LCSC `C210357` / DigiKey
+Polyfuse | Bourns MF-PSMF110X-2 (1.1 A, 0603) | 2 | LCSC `C89658` / DigiKey
 Ferrite bead | 600 Ω 0402 | 2 | LCSC `C160977`
 Schottky diode | PMEG2010BELD (SOD-882) | 4 | LCSC `C552820` / DigiKey
 Per-key LEDs | SK6812MINI-E (reverse mount) | 70+ | LCSC `C5149201` / AliExpress — order ~10% spare, fragile. Pin **numbers** between vendors differ but physical VDD/VSS/DIN/DOUT corners match
