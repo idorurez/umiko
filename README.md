@@ -1,11 +1,12 @@
 # umiko
 
 ![Image of schematic](images/umiko_schematic.svg)
-![Image of pcb front](images/umiko_3dview_front.png)
-![Image of pcb back](images/umiko_3dview_back.png)
-![Image of pcb render](images/umiko_3dview_persp.png)
+![PCB front (with keycaps)](images/umiko_3dview_front.png)
+![PCB perspective](images/umiko_3dview_persp.png)
+![PCB front (no keys)](images/umiko_3dview_front_nokeys.png)
+![PCB back (no keys)](images/umiko_3dview_back_nokeys.png)
 
-A split, low-profile TKL F-row-less mechanical keyboard PCB. Two halves connect via USB-C, each half is independently powered and flashable, and each half has its own RP2040 microcontroller, per-key RGB, and underglow. Stabilizer cutouts are sized for Kailh Choc V2 stabilizers. Switches are Gateron KS-33 v2.0 low-profile (MX-compatible, hot-swap). 4-layer board with split L/R power rails and dedicated inner GND/3V3 planes.
+A split, low-profile TKL F-row-less mechanical keyboard PCB. Two halves connect via TRRS (split serial), each half is independently powered via its own side-mounted host USB-C and flashable, and each half has its own RP2040 microcontroller, per-key RGB, and underglow. Stabilizer cutouts are sized for Kailh Choc V2 stabilizers. Switches are Gateron KS-33 v2.0 low-profile (MX-compatible, hot-swap). 4-layer board with split L/R power rails and dedicated inner GND/3V3 planes.
 
 ## Features
 
@@ -15,7 +16,8 @@ A split, low-profile TKL F-row-less mechanical keyboard PCB. Two halves connect 
 * **Underglow** (SK6812MINI-E underglow variant, mounted on the back of the PCB)
 * **Gateron KS-33 v2.0 low-profile hot-swap** switches (MX-compatible footprint, low-profile body)
 * **Kailh Choc V2 stabilizers** (stabilizer cutouts on PCB sized for Choc V2, not MX stabs)
-* **USB-C everywhere** — host USB-C per half + inter-half USB-C (replacing the older TRRS pattern)
+* **Side-mounted host USB-C** per half (on the outer edge of each board) for host connection and power
+* **TRRS inter-half link** (PJ-320A, on the inner edge of each board) carrying split serial + GND + 5V bridge
 * **RP2040** — one per half, each with its own external QSPI flash (W25Q128) and 3V3 LDO (LP5907)
 * **BOOTSEL-only flashing** — each half has a BOOTSEL button (SW1 left, SW2 right). No reset circuit by design; flashing is via "unplug USB → hold BOOTSEL → plug USB → release → drop .uf2"
 * **SWD test points** — 8 pads per half organized as a pogo-clip pattern (CLK/IO/GND/3V3); pads mirrored across halves so a flipped 6-pin clip lands on matching signals
@@ -35,8 +37,8 @@ A split, low-profile TKL F-row-less mechanical keyboard PCB. Two halves connect 
 | **Stabilizers** | Kailh Choc V2 (2.25U and 2.75U key positions) |
 | **Per-key RGB LEDs** | 63× SK6812MINI-E reverse-mount |
 | **Underglow LEDs** | 26× SK6812MINI-E (B.Cu side) |
-| **Host connector** | 2× HRO TYPE-C-31-M-12 (USB 2.0 16P) |
-| **Inter-half connector** | 2× HRO TYPE-C-31-M-12 (used as 3-wire serial: VBUS, GND, D+) |
+| **Host connector** | 2× HRO TYPE-C-31-M-12 (USB 2.0 16P), side-mounted on the outer edge of each half |
+| **Inter-half connector** | 2× TRRS PJ-320A (TIP=+5V, RING1=split data, RING2=NC spare, SLEEVE=GND), inner-edge mounted on each half |
 | **Diodes** | 63× SK matrix diodes, 4× power-path Schottky (PMEG2010BELD), 4× LED indicators |
 | **Polyfuse** | 2× 1.1 A (Fuse_0603) for USB power input |
 | **Ferrite beads** | 2× 600 Ω (FB1/FB2) for VBUS filtering |
@@ -51,7 +53,8 @@ RP2040 MCU | RP2040 (QFN-56) | 2 | LCSC `C2040` / Mouser / DigiKey / direct from
 QSPI Flash | Winbond W25Q128JVPIQ | 2 | LCSC `C190862` / Mouser / DigiKey
 3.3V LDO | TI TLV75533PDQNR | 2 | LCSC `C133572` (X2SON-4)
 12 MHz crystal | 2520 4-pin SMD | 2 | LCSC `C2149204` / Mouser
-USB-C receptacle | HRO TYPE-C-31-M-12 | 4 | LCSC `C963373` / JLC / AliExpress
+USB-C receptacle (host) | HRO TYPE-C-31-M-12 | 2 | LCSC `C963373` / JLC / AliExpress
+TRRS jack (inter-half) | PJ-320A 4-conductor | 2 | LCSC / Keebio / AliExpress — `keebio:TRRS` symbol + `onigaku:TRRS-PJ-320A` footprint
 USB ESD | USBLC6-2P6 | 2 | LCSC `C2827693` (SOT-666)
 Polyfuse | Bourns MF-PSMF110X-2 (1.1 A, 0603) | 2 | LCSC `C89658` / DigiKey
 Ferrite bead | 600 Ω 0402 | 2 | LCSC `C160977`
@@ -185,7 +188,8 @@ JLC's CPL parser is unusually strict about:
 ## Design Notes
 
 * **No reset circuit** — flashing is via BOOTSEL alone. RP2040's `~RUN` pin has an internal pull-up; leaving it floating is safe.
-* **Inter-half connection** uses USB-C for the physical connector but carries QMK split-serial protocol (single data wire on D+, with GND and VBUS sharing power). Not a real USB connection between halves.
+* **Inter-half connection** uses TRRS (PJ-320A) carrying QMK PIO-serial split (TIP=+5V, RING1=data, SLEEVE=GND; RING2 reserved for future I²C/SCL or 2-wire full-duplex serial). The 5V bridge lets a single host USB-C power both halves through D1/D5 Schottky OR-ing.
+* **Connector placement** — the two host USB-C jacks are mounted on the outer-side edges of each half (aligned with the Q-row keycap top); the TRRS jacks are at the inner-edge top corners of each half. Both sit on small Edge.Cuts plank protrusions (3 mm for the host USB-C, 2 mm for the TRRS).
 * **Each half is fully independent** — you can power and flash each half on its own. Either half can be the master.
 * **Edge cuts** have 1.25 mm fillets on all corners. Both halves form closed loops; no breakaway tabs (order as 2 separate boards, or as a customer panel).
 * The `onigaku` repo (sibling library) contains the custom symbols, footprints, and 3D models referenced by this design. Must be cloned alongside this repo for KiCad to find the libraries.
