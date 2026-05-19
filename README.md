@@ -165,7 +165,7 @@ If you want **tighter clearances** (down to 0.089 mm / 3.5 mil), JLC will accept
 
 ### Fab file generation
 
-Run `python make_jlc_files.py` from the project root. It produces three upload-ready files in `fab/`:
+Run `python scripts/make_jlc_files.py` from the project root. It produces three upload-ready files in `fab/`:
 
 * `umiko-jlc-gerbers.zip` — gerbers + Excellon drill files (the fab upload)
 * `umiko-bom-jlc.csv` — JLC-formatted BOM (header `Comment,Designator,Footprint,JLCPCB Part #（optional）`, comma-separated designators, ranges expanded)
