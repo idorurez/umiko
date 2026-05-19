@@ -39,7 +39,7 @@ KICAD_CLI = os.environ.get(
     'KICAD_CLI',
     r'C:\Program Files\KiCad\10.0\bin\kicad-cli.exe',
 )
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PCB = os.path.join(PROJECT_DIR, 'umiko.kicad_pcb')
 CAD = os.path.join(PROJECT_DIR, 'cad')
 

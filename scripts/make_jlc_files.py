@@ -43,7 +43,7 @@ LCSC_OVERRIDES = {
     'onigaku:YS-SK6812MINI-E': 'C5149201',           # SK6812MINI-E reverse-mount RGB
     'onigaku:YS-SK6812MINI-E_underglow': 'C5149201', # same chip, underglow orientation
 }
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PCB = os.path.join(PROJECT_DIR, 'umiko.kicad_pcb')
 SCH = os.path.join(PROJECT_DIR, 'umiko.kicad_sch')
 FAB = os.path.join(PROJECT_DIR, 'fab')
