@@ -28,6 +28,7 @@ A split, low-profile TKL F-row-less mechanical keyboard PCB. Two halves connect 
 
 | | |
 |--|--|
+| **Dimensions** | 317.710 mm × 95.360 mm (end-to-end, both halves including the inter-half gap) |
 | **MCU** | 2× Raspberry Pi RP2040 (QFN-56) |
 | **Flash** | 2× Winbond W25Q128JVPIQ (16 MB QSPI) |
 | **LDO** | 2× Texas Instruments LP5907 (3V3, X2SON-4) |
