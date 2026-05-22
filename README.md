@@ -207,26 +207,14 @@ JLC's CPL parser is unusually strict about:
 
 This design borrows ideas from:
 
-* [Corne (CRKBD)](https://github.com/foostan/crkbd) — split design pattern, reverse-mount LED approach
-* Corne Waffle — bottom-row layout study
 * marvelous65 split — TKL split with separate inter-half data path
-* ganymede — case style
 * [0xCB-Helios](https://github.com/0xCB-dev/0xCB-Helios) — schematic patterns for RP2040 + dual flash + LDO
 * [0xCB-libs](https://github.com/0xCB-dev/0xCB-libs) — footprints for RP2040, W25Q128 flash (WSON8), LP5907 (X2SON-4), USB-C receptacle, SOD-882 Schottky and other small SMD parts used throughout this design
 
 ## Credits
 
-QMK community help (without their patience this wouldn't exist):
-
-* drashna
-* foostan
-* waffle
-* tzarc
-* xyz
-
-Hardware / fab consultation:
-
-* Conor at [KeebSupply](https://keebsupply.com) — manufacturing and build feasibility advice (KS-33 hot-swap pad clipping, stabilizer compatibility, fab tolerances)
+* The **QMK community** — for firmware help and their patience (without which this wouldn't exist).
+* **Conor at [KeebSupply](https://keebsupply.com)** — manufacturing and build feasibility advice (KS-33 hot-swap pad clipping, stabilizer compatibility, fab tolerances).
 
 ## License
 
