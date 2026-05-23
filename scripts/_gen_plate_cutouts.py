@@ -33,6 +33,7 @@ OUT = os.path.join(CAD, 'umiko-plate-cutouts.dxf')
 PLATE_STEP = os.path.join(CAD, 'umiko-plate.step')
 TEMP_PCB = os.path.join(PROJECT, '_plate_step_temp.kicad_pcb')
 GEN_STEP = True
+PLATE_THICKNESS = 1.2   # mm — Choc V2 stab spec (Keebio); KS-33 clips tolerate it. Change to dial the sweet spot.
 KICAD_CLI = os.environ.get('KICAD_CLI', r'C:\Program Files\KiCad\10.0\bin\kicad-cli.exe')
 
 LAYER = 'Eco1.User'
@@ -203,6 +204,21 @@ def gen_plate_step(pcb):
             t = t[:bp] + t[e:]
         else:
             t = t[:s] + rep + t[e:]
+    # A plate is a homogeneous 1.2mm sheet, not the PCB's 4-layer stackup:
+    # drop the stackup and set the board thickness to 1.2mm for the export.
+    # KiCad's STEP body renders ~0.09mm thinner than nominal, so bump the nominal
+    # to land the solid at PLATE_THICKNESS.
+    nominal = round(PLATE_THICKNESS + 0.09, 3)
+    t = t.replace('(thickness 1.6)', f'(thickness {nominal})', 1)
+    si = t.find('(stackup')
+    if si != -1:
+        se = match_paren(t, si)
+        bp = si
+        while bp > 0 and t[bp-1] in '\t ':
+            bp -= 1
+        if bp > 0 and t[bp-1] == '\n':
+            bp -= 1
+        t = t[:bp] + t[se:]
     with open(TEMP_PCB, 'w', encoding='utf-8') as f:
         f.write(t)
     r = subprocess.run([KICAD_CLI, 'pcb', 'export', 'step', '--output', PLATE_STEP,

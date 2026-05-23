@@ -174,6 +174,15 @@ Run `python scripts/make_jlc_files.py` from the project root. It produces three 
 
 The script also bakes in LCSC overrides for parts whose schematic symbols don't carry an LCSC field (matrix diode `D3_SMD_v2` → `C81598`, per-key + underglow LED `YS-SK6812MINI-E` → `C5149201`). Add new mappings to the `LCSC_OVERRIDES` dict at the top of the script as needed.
 
+### CAD exports (case / plate design)
+
+Run `python scripts/make_cad_files.py` for SolidWorks-ready 3D, and `python scripts/_gen_plate_cutouts.py` for the plate. Outputs land in `cad/` (per-group + assembly + per-half STEP, board-outline DXF, plus `umiko-plate.step` and `umiko-plate-cutouts.dxf`).
+
+* **Board thickness: 1.6 mm** — JLCPCB standard 4-layer; tolerance **±10% (≈ 1.44–1.76 mm)**, so give the case PCB pocket clearance up to ~1.76 mm.
+* **Plate thickness: 1.2 mm** — Choc V2 stabilizer spec; the MX-stem KS-33 clips tolerate it.
+* **Switch/keycap side is the `B.Cu` layer** (switches, hot-swap sockets, per-key LEDs, USB-C all live there). The plate seats **~4.1 mm** off that face — mate the plate underside to the switch plate-shelf.
+* **STEP thickness compensation (important):** KiCad's STEP exporter models only the FR4 substrate — it omits the outer copper (~0.07 mm) and soldermask (~0.02 mm), so a 1.6 mm board would otherwise export as ~1.51 mm (and a 1.2 mm plate as ~1.11 mm). `make_cad_files.py` (board/assembly/halves) and `_gen_plate_cutouts.py` (plate) **bump the nominal thickness +0.09 mm** so the exported solids measure a true **1.6 mm** and **1.2 mm**. Component X/Y placement is unaffected; only the Z thickness is corrected.
+
 ### JLC upload gotcha
 
 **Updates to BOM or CPL won't apply unless you restart the upload from the project menu.** Re-uploading just the BOM/CPL after a failed attempt will appear to succeed but JLC keeps the prior validation state, leading to errors like "Failed processing the CPL file" or "BOM doesn't match CPL" that don't actually correspond to the current file contents. The fix is to back up to the **PCB quote** step in JLC's flow and start the whole upload over (gerbers → BOM → CPL).
