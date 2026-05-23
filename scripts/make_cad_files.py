@@ -114,6 +114,20 @@ def main():
 
     os.makedirs(CAD, exist_ok=True)
 
+    # KiCad's STEP body renders ~0.09mm thinner than the nominal board thickness.
+    # Compensate so the exported board solid measures the true 1.6mm: bump the
+    # stackup core (+0.09) and general thickness, then export from a temp board.
+    # (X/Y placement of every component is unaffected — only the Z thickness.)
+    global PCB
+    with open(PCB, encoding='utf-8') as f:
+        _txt = f.read()
+    _txt = _txt.replace('(thickness 1.24)', f'(thickness {round(1.24 + 0.09, 3)})', 1)
+    _txt = _txt.replace('(thickness 1.6)', f'(thickness {round(1.6 + 0.09, 3)})', 1)
+    _tmp = os.path.join(PROJECT_DIR, '_cad_thickness_temp.kicad_pcb')
+    with open(_tmp, 'w', encoding='utf-8') as f:
+        f.write(_txt)
+    PCB = _tmp
+
     # 1. Full assembly STEP (board + components in 3D)
     run([
         KICAD_CLI, 'pcb', 'export', 'step',
@@ -185,6 +199,9 @@ def main():
         '--exclude-refdes', '--exclude-value',
         PCB,
     ], 'dxf:fab-back')
+
+    if os.path.exists(_tmp):
+        os.remove(_tmp)
 
     print()
     print('=== Done. CAD assets in cad/ ===')
