@@ -180,7 +180,7 @@ Run `python scripts/make_cad_files.py` for SolidWorks-ready 3D, and `python scri
 
 * **Board thickness: 1.6 mm** — JLCPCB standard 4-layer; tolerance **±10% (≈ 1.44–1.76 mm)**, so give the case PCB pocket clearance up to ~1.76 mm.
 * **Plate thickness: 1.2 mm** — Choc V2 stabilizer spec; the MX-stem KS-33 clips tolerate it.
-* **Switch/keycap side is the `B.Cu` layer** (switches, hot-swap sockets, per-key LEDs, USB-C all live there). The plate seats **~4.1 mm** off that face — mate the plate underside to the switch plate-shelf.
+* **Switches/keycaps are on `F.Cu`** (the front/typing surface); the **hot-swap sockets are on `B.Cu`** (the back). Note: the switch *footprints* are placed on the `B.Cu` layer — that's just where the socket pads live — but the switch *bodies* render on `F.Cu`. The plate sits on the `F.Cu` side; reference it from the `F.Cu` face and mate the plate underside to the switch plate-shelf.
 * **STEP thickness compensation (important):** KiCad's STEP exporter models only the FR4 substrate — it omits the outer copper (~0.07 mm) and soldermask (~0.02 mm), so a 1.6 mm board would otherwise export as ~1.51 mm (and a 1.2 mm plate as ~1.11 mm). `make_cad_files.py` (board/assembly/halves) and `_gen_plate_cutouts.py` (plate) **bump the nominal thickness +0.09 mm** so the exported solids measure a true **1.6 mm** and **1.2 mm**. Component X/Y placement is unaffected; only the Z thickness is corrected.
 
 ### JLC upload gotcha
