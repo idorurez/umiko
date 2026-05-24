@@ -125,9 +125,9 @@ def main():
     _txt = _txt.replace('(thickness 1.6)', f'(thickness {round(1.6 + 0.09, 3)})', 1)
     # The switch bodies are anchored to their B.Cu socket footprints, so they don't
     # ride the +0.09mm F.Cu compensation on their own and would sit 0.09mm below the
-    # raised F.Cu surface. Nudge the switch 3D-model offset +0.09mm (-4.1 -> -4.01)
-    # so they stay flush with the compensated F.Cu (typing) face.
-    _txt = _txt.replace('(xyz 0 0 -4.1)', '(xyz 0 0 -4.01)')
+    # raised F.Cu surface. Nudge the switch 3D-model offset (-4.1 -> -4.19) so the
+    # switch bodies rise 0.09mm to sit flush with the compensated F.Cu (typing) face.
+    _txt = _txt.replace('(xyz 0 0 -4.1)', '(xyz 0 0 -4.19)')
     _tmp = os.path.join(PROJECT_DIR, '_cad_thickness_temp.kicad_pcb')
     with open(_tmp, 'w', encoding='utf-8') as f:
         f.write(_txt)
