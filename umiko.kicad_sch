@@ -8637,6 +8637,12 @@
 		(uuid "16ab641a-6f53-4989-bdc2-524f8822872b")
 	)
 	(junction
+		(at 669.798 222.758)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "170b47c8-3c50-4028-bc90-9c8697a2a569")
+	)
+	(junction
 		(at 171.45 326.39)
 		(diameter 1.016)
 		(color 0 0 0 0)
@@ -8679,16 +8685,16 @@
 		(uuid "1d03ea95-3cb8-495a-a3b0-9c1095c1204c")
 	)
 	(junction
+		(at 703.58 240.538)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1f4c59d8-4676-406d-a5b1-f7fa4dfd3b32")
+	)
+	(junction
 		(at 410.21 151.638)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1f8309b0-750e-41cc-9c7c-6c970e68a4d3")
-	)
-	(junction
-		(at 674.878 240.538)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1fcd9836-ffc0-4e6e-8201-acd952bdb8c9")
 	)
 	(junction
 		(at 129.54 234.95)
@@ -8743,6 +8749,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2556ef75-151c-41d7-a930-71e99ffb7999")
+	)
+	(junction
+		(at 692.15 240.538)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "26cf3fd3-ada4-4ba8-aaa0-bd1d15204d6b")
 	)
 	(junction
 		(at 258.064 157.734)
@@ -8817,6 +8829,12 @@
 		(uuid "2ea2f4fc-8e6a-45a2-acee-2f1a42dd4097")
 	)
 	(junction
+		(at 659.638 222.758)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2f67b3f3-1289-4e29-a66a-a68c997b7e38")
+	)
+	(junction
 		(at 607.568 102.108)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8847,12 +8865,6 @@
 		(uuid "31c6a91f-f87f-40d4-b563-921e6787b7c4")
 	)
 	(junction
-		(at 686.308 222.758)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "322d1b73-1a2b-4e2b-88cb-8f8296ddf0ae")
-	)
-	(junction
 		(at 621.538 284.988)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8875,12 +8887,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "33c770d0-ff25-4336-b744-55a2127d4ce1")
-	)
-	(junction
-		(at 665.988 222.758)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "342b4606-d5ea-421b-9341-483356bc60ad")
 	)
 	(junction
 		(at 554.228 204.978)
@@ -9045,6 +9051,12 @@
 		(uuid "4339235f-5b7a-4654-b3cc-1c4144badb0c")
 	)
 	(junction
+		(at 640.588 222.758)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "441f8ab4-393a-40d5-a848-d31b1c5161bd")
+	)
+	(junction
 		(at 66.04 349.25)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9087,6 +9099,12 @@
 		(uuid "47cbe2c2-ea9b-47d3-9f50-6090a3e137d7")
 	)
 	(junction
+		(at 683.26 240.538)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "47f5f8fc-cd1d-4b54-896e-a23a140e96db")
+	)
+	(junction
 		(at 533.908 222.758)
 		(diameter 1.016)
 		(color 0 0 0 0)
@@ -9127,12 +9145,6 @@
 		(diameter 1.016)
 		(color 0 0 0 0)
 		(uuid "4b23aa65-f924-4310-a86b-422caaff350d")
-	)
-	(junction
-		(at 592.328 240.538)
-		(diameter 1.016)
-		(color 0 0 0 0)
-		(uuid "4bd2c0e3-80a2-40f6-8382-2ea03ceb58dd")
 	)
 	(junction
 		(at 111.76 303.53)
@@ -9201,22 +9213,10 @@
 		(uuid "5642a9f5-1138-4277-b057-183b09d78318")
 	)
 	(junction
-		(at 640.588 240.538)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "56ef5e3d-6825-48f6-bf7e-815afca6ab54")
-	)
-	(junction
 		(at 556.768 152.908)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "586287d2-f483-4c54-b85f-3e1267f3e57d")
-	)
-	(junction
-		(at 583.438 240.538)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "586868a5-c5b0-4787-9e4e-8828ce11be1a")
 	)
 	(junction
 		(at 377.19 210.058)
@@ -9247,12 +9247,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5a6225b4-6598-46f2-a7df-ecb2a9790d2b")
-	)
-	(junction
-		(at 650.748 240.538)
-		(diameter 1.016)
-		(color 0 0 0 0)
-		(uuid "5a8b650b-23bb-4fad-902f-986e560c2f17")
 	)
 	(junction
 		(at 644.398 141.478)
@@ -9297,12 +9291,6 @@
 		(uuid "60a04d15-51d8-4e4d-aa44-712b3c2251a8")
 	)
 	(junction
-		(at 640.588 222.758)
-		(diameter 1.016)
-		(color 0 0 0 0)
-		(uuid "6125a60a-ce0b-4f5e-b5de-294e19c3d214")
-	)
-	(junction
 		(at 632.968 76.708)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9321,10 +9309,10 @@
 		(uuid "624c66d7-eab5-494d-9b56-4678c81c64d1")
 	)
 	(junction
-		(at 602.488 240.538)
+		(at 683.26 222.758)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "63855632-6062-4343-b667-b481a2c9ba2e")
+		(uuid "62f4ccaa-e307-44a2-9123-f4c03f96b4fb")
 	)
 	(junction
 		(at 533.908 306.578)
@@ -9357,12 +9345,6 @@
 		(uuid "6685adad-1007-4d64-ab8c-9c656b516c05")
 	)
 	(junction
-		(at 686.308 240.538)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "66f47613-02c2-4fea-ab01-725dbd12aae7")
-	)
-	(junction
 		(at 583.438 222.758)
 		(diameter 1.016)
 		(color 0 0 0 0)
@@ -9387,6 +9369,12 @@
 		(uuid "6b329505-c2d8-457f-9e10-6d0925ffb7a1")
 	)
 	(junction
+		(at 592.328 240.538)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6b9afe70-370f-4fcb-bdc1-78ec0c485a2a")
+	)
+	(junction
 		(at 158.75 214.63)
 		(diameter 1.016)
 		(color 0 0 0 0)
@@ -9397,6 +9385,12 @@
 		(diameter 1.016)
 		(color 0 0 0 0)
 		(uuid "6cd2014d-e21f-4d4e-bb78-11f838def3c6")
+	)
+	(junction
+		(at 611.378 240.538)
+		(diameter 1.016)
+		(color 0 0 0 0)
+		(uuid "6cdefed1-3fb0-48a4-b96e-17ab7fd64c9b")
 	)
 	(junction
 		(at 377.19 220.218)
@@ -9453,12 +9447,6 @@
 		(uuid "747a1885-7434-4aeb-b3dd-cf0a6253abdd")
 	)
 	(junction
-		(at 621.538 240.538)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "750c3c39-18be-4350-b37f-ef430eb6a159")
-	)
-	(junction
 		(at 270.51 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9499,12 +9487,6 @@
 		(diameter 1.016)
 		(color 0 0 0 0)
 		(uuid "7adc23f2-1141-4fde-977b-1ad9b7a122ea")
-	)
-	(junction
-		(at 696.468 222.758)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7b9bcf93-61a2-4b7d-b1f3-84478b743b88")
 	)
 	(junction
 		(at 658.368 102.108)
@@ -9657,6 +9639,12 @@
 		(uuid "86071723-c662-42fe-beb0-aec5c642d252")
 	)
 	(junction
+		(at 703.58 222.758)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "864d2f04-ab11-4afc-bfc0-10f3b20370c3")
+	)
+	(junction
 		(at 583.438 204.978)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9715,6 +9703,12 @@
 		(diameter 1.016)
 		(color 0 0 0 0)
 		(uuid "8b1bbc3a-b76e-4002-9689-9872793bbf06")
+	)
+	(junction
+		(at 669.798 240.538)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8d9a55ba-b503-4196-86c8-cab572659cb1")
 	)
 	(junction
 		(at 48.26 73.66)
@@ -9807,22 +9801,10 @@
 		(uuid "95cc3680-283f-4e02-97c4-e451a52908e0")
 	)
 	(junction
-		(at 631.698 240.538)
-		(diameter 1.016)
-		(color 0 0 0 0)
-		(uuid "97084100-f563-49ef-ae5a-62c7613095ad")
-	)
-	(junction
 		(at 418.338 72.898)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "971127a3-6544-4327-88f5-5a5c4445a5be")
-	)
-	(junction
-		(at 631.698 222.758)
-		(diameter 1.016)
-		(color 0 0 0 0)
-		(uuid "97284871-bb09-4dea-9aad-cba1af0657c0")
 	)
 	(junction
 		(at 168.91 349.25)
@@ -9921,12 +9903,6 @@
 		(uuid "a1fcaf97-5f92-4aab-b26d-66b2484325fc")
 	)
 	(junction
-		(at 611.378 240.538)
-		(diameter 1.016)
-		(color 0 0 0 0)
-		(uuid "a290faf8-03b4-45a6-a879-cc828c9ce4d7")
-	)
-	(junction
 		(at 350.774 202.184)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9961,6 +9937,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a53fec29-95aa-4e11-b941-56a2cdea6bfa")
+	)
+	(junction
+		(at 630.428 240.538)
+		(diameter 1.016)
+		(color 0 0 0 0)
+		(uuid "a5636fd2-d642-4b40-9a8d-975cf003bb99")
+	)
+	(junction
+		(at 602.488 240.538)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a58145fc-cd8f-4fbf-aa00-0da3d93678b4")
 	)
 	(junction
 		(at 559.308 329.438)
@@ -10107,6 +10095,12 @@
 		(uuid "b649b20c-7c0a-43c5-a7f7-ebde275a4507")
 	)
 	(junction
+		(at 621.538 240.538)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b7d6a145-8c4b-46d9-a07a-067b5c0953df")
+	)
+	(junction
 		(at 683.768 102.108)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10227,10 +10221,10 @@
 		(uuid "c44f6360-a3de-4cb8-aeb3-1777bd13489c")
 	)
 	(junction
-		(at 674.878 222.758)
-		(diameter 0)
+		(at 650.748 240.538)
+		(diameter 1.016)
 		(color 0 0 0 0)
-		(uuid "c4df8fb5-099e-4358-8060-a4fb0c86de7c")
+		(uuid "c4b789d4-f62b-4c36-8f05-4bc4af64661b")
 	)
 	(junction
 		(at 433.07 145.288)
@@ -10323,6 +10317,12 @@
 		(uuid "d2bddadf-fb45-4c91-b05a-3dac496dd33d")
 	)
 	(junction
+		(at 659.638 240.538)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d4f4befd-6e5e-4769-a57e-345b135dbca0")
+	)
+	(junction
 		(at 488.188 66.548)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10341,6 +10341,12 @@
 		(uuid "d8d69744-11d0-408c-9f11-8cbc29910060")
 	)
 	(junction
+		(at 692.15 222.758)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d9a155ce-2e30-47f6-8cb8-6a4eb67c9d46")
+	)
+	(junction
 		(at 657.098 284.988)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10357,12 +10363,6 @@
 		(diameter 1.016)
 		(color 0 0 0 0)
 		(uuid "da86a0cc-522a-4f1c-bcdb-1db33c39d2b6")
-	)
-	(junction
-		(at 573.278 240.538)
-		(diameter 1.016)
-		(color 0 0 0 0)
-		(uuid "db141dac-0606-48ce-a355-f92d190242e4")
 	)
 	(junction
 		(at 467.868 58.928)
@@ -10473,6 +10473,12 @@
 		(uuid "e6deea2a-cf50-4772-bff2-bad6029a355d")
 	)
 	(junction
+		(at 713.74 222.758)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e6f3d935-8d22-40fa-911b-db2121d2e635")
+	)
+	(junction
 		(at 632.968 102.108)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10519,6 +10525,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e904faf9-b20a-4f98-935c-359639a6c8c7")
+	)
+	(junction
+		(at 583.438 240.538)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e93637a5-49ab-4851-ba53-919bc2352803")
 	)
 	(junction
 		(at 574.548 329.438)
@@ -10581,6 +10593,12 @@
 		(uuid "ed148e5b-149a-4aa5-9e87-354d3543731b")
 	)
 	(junction
+		(at 640.588 240.538)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "edd95bbf-c514-49c0-9ec7-0356abade903")
+	)
+	(junction
 		(at 66.04 261.62)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10603,6 +10621,12 @@
 		(diameter 1.016)
 		(color 0 0 0 0)
 		(uuid "effa6b8a-99f5-4df0-a6df-e432d8a35802")
+	)
+	(junction
+		(at 630.428 222.758)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f0333a17-8aab-4fdb-962a-db46d9121bff")
 	)
 	(junction
 		(at 90.17 283.21)
@@ -10639,12 +10663,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f265876c-3b07-4068-8ee6-67f092985931")
-	)
-	(junction
-		(at 665.988 240.538)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f26f7769-00dd-43ba-b63a-d285a4937457")
 	)
 	(junction
 		(at 299.974 138.684)
@@ -10723,6 +10741,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f8d6b44d-4cee-4c30-a375-3754751786da")
+	)
+	(junction
+		(at 573.278 240.538)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "faf3852c-8a58-4ec6-8113-3af574fa8604")
 	)
 	(junction
 		(at 531.368 152.908)
@@ -10948,6 +10972,16 @@
 	)
 	(wire
 		(pts
+			(xy 650.748 240.538) (xy 659.638 240.538)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "00ebd6d8-14da-4d79-9e10-15fef6bcc861")
+	)
+	(wire
+		(pts
 			(xy 187.96 214.63) (xy 177.8 214.63)
 		)
 		(stroke
@@ -10988,6 +11022,16 @@
 	)
 	(wire
 		(pts
+			(xy 640.588 222.758) (xy 650.748 222.758)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "02faaa08-b14a-4eb1-b3af-467af7d7af73")
+	)
+	(wire
+		(pts
 			(xy 402.59 157.988) (xy 402.59 156.718)
 		)
 		(stroke
@@ -11018,26 +11062,6 @@
 	)
 	(wire
 		(pts
-			(xy 650.748 240.538) (xy 665.988 240.538)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "03fd2a71-afbb-4de9-b25c-cc129f10a504")
-	)
-	(wire
-		(pts
-			(xy 658.368 232.918) (xy 667.258 232.918)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "0415410e-695f-409b-998e-964b7755f825")
-	)
-	(wire
-		(pts
 			(xy 200.66 168.91) (xy 200.66 170.18)
 		)
 		(stroke
@@ -11048,16 +11072,6 @@
 	)
 	(wire
 		(pts
-			(xy 704.088 232.918) (xy 707.898 232.918)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "0441b967-6ebd-4908-bc10-86cc6e3d7216")
-	)
-	(wire
-		(pts
 			(xy 587.248 65.278) (xy 593.598 65.278)
 		)
 		(stroke
@@ -11065,16 +11079,6 @@
 			(type solid)
 		)
 		(uuid "04dc780b-8e4f-4ac4-ad52-425ca8bf5015")
-	)
-	(wire
-		(pts
-			(xy 631.698 222.758) (xy 631.698 225.298)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "05503b4d-dd97-4a3f-ba42-ed818aa9f9d4")
 	)
 	(wire
 		(pts
@@ -11468,6 +11472,16 @@
 	)
 	(wire
 		(pts
+			(xy 592.328 240.538) (xy 602.488 240.538)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "0ecb5c3a-4280-487c-815e-e66a34198442")
+	)
+	(wire
+		(pts
 			(xy 533.908 222.758) (xy 544.068 222.758)
 		)
 		(stroke
@@ -11535,6 +11549,16 @@
 			(type solid)
 		)
 		(uuid "1113db6b-b68a-4e20-99a7-10eda7f897e0")
+	)
+	(wire
+		(pts
+			(xy 692.15 240.538) (xy 703.58 240.538)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "11856889-831d-48fc-be52-27a626f9dfc0")
 	)
 	(wire
 		(pts
@@ -11625,16 +11649,6 @@
 			(type solid)
 		)
 		(uuid "149a5011-2ec5-4b31-8b71-8c9da570e7de")
-	)
-	(wire
-		(pts
-			(xy 665.988 240.538) (xy 674.878 240.538)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "149e7a90-ef90-4378-8421-9de2f941e0d2")
 	)
 	(wire
 		(pts
@@ -11778,16 +11792,6 @@
 	)
 	(wire
 		(pts
-			(xy 573.278 240.538) (xy 583.438 240.538)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "183fc572-4966-46a4-999c-f7575cc98a51")
-	)
-	(wire
-		(pts
 			(xy 261.874 205.994) (xy 270.764 205.994)
 		)
 		(stroke
@@ -11848,6 +11852,16 @@
 	)
 	(wire
 		(pts
+			(xy 618.998 232.918) (xy 622.808 232.918)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "19b523b6-65e0-4419-bf82-09104437b7d8")
+	)
+	(wire
+		(pts
 			(xy 632.968 76.708) (xy 658.368 76.708)
 		)
 		(stroke
@@ -11895,6 +11909,16 @@
 			(type solid)
 		)
 		(uuid "1a6a59ea-320c-400e-af07-ab4f62d15ce5")
+	)
+	(wire
+		(pts
+			(xy 630.428 240.538) (xy 640.588 240.538)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "1af3a393-a1a1-488b-8f4d-f4562c69aeb7")
 	)
 	(wire
 		(pts
@@ -12048,16 +12072,6 @@
 	)
 	(wire
 		(pts
-			(xy 682.498 232.918) (xy 688.848 232.918)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "21204fa5-0ea3-4fbb-9e17-41bd0cbb8b10")
-	)
-	(wire
-		(pts
 			(xy 212.09 138.43) (xy 212.09 113.03)
 		)
 		(stroke
@@ -12078,6 +12092,16 @@
 	)
 	(wire
 		(pts
+			(xy 703.58 222.758) (xy 713.74 222.758)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "21510871-55a3-4c32-af05-b06ec1a23a8b")
+	)
+	(wire
+		(pts
 			(xy 720.598 65.278) (xy 720.598 90.678)
 		)
 		(stroke
@@ -12088,13 +12112,13 @@
 	)
 	(wire
 		(pts
-			(xy 599.948 232.918) (xy 603.758 232.918)
+			(xy 659.638 235.458) (xy 659.638 222.758)
 		)
 		(stroke
 			(width 0)
 			(type solid)
 		)
-		(uuid "218f3813-ccfd-4a0c-8abc-56adf2c8b023")
+		(uuid "2191eca5-8c00-4ea8-ac44-9c643bdb3200")
 	)
 	(wire
 		(pts
@@ -12125,6 +12149,16 @@
 			(type default)
 		)
 		(uuid "233ec253-66ca-412c-a45f-8bb2a84f6ba6")
+	)
+	(wire
+		(pts
+			(xy 640.588 222.758) (xy 640.588 235.458)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "238bedf2-184e-4a77-8da5-fda400850154")
 	)
 	(wire
 		(pts
@@ -12198,16 +12232,6 @@
 	)
 	(wire
 		(pts
-			(xy 650.748 222.758) (xy 650.748 220.218)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "245b1943-f13c-45b3-892f-e380931d84fa")
-	)
-	(wire
-		(pts
 			(xy 544.068 204.978) (xy 554.228 204.978)
 		)
 		(stroke
@@ -12255,6 +12279,16 @@
 			(type default)
 		)
 		(uuid "25d3da4c-096b-4602-8300-edaf17fdb2d1")
+	)
+	(wire
+		(pts
+			(xy 683.26 222.758) (xy 692.15 222.758)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "2644842c-128e-49b1-a3d9-535db4be84b6")
 	)
 	(wire
 		(pts
@@ -12385,6 +12419,16 @@
 			(type default)
 		)
 		(uuid "2ac33963-e368-46fd-b465-201dfb9dc524")
+	)
+	(wire
+		(pts
+			(xy 659.638 222.758) (xy 669.798 222.758)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "2b13f21a-71c8-4169-9a8c-649cd8978423")
 	)
 	(wire
 		(pts
@@ -12648,16 +12692,6 @@
 	)
 	(wire
 		(pts
-			(xy 665.988 222.758) (xy 674.878 222.758)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "34204bc7-dc3c-4df1-ad21-690c9d85297c")
-	)
-	(wire
-		(pts
 			(xy 556.768 95.758) (xy 556.768 97.028)
 		)
 		(stroke
@@ -12725,6 +12759,16 @@
 			(type default)
 		)
 		(uuid "366f7085-738d-400f-9f99-11f8d5532206")
+	)
+	(wire
+		(pts
+			(xy 630.428 222.758) (xy 640.588 222.758)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36703c0c-53c6-4e5a-ac5b-71e8c978be25")
 	)
 	(wire
 		(pts
@@ -12848,6 +12892,16 @@
 	)
 	(wire
 		(pts
+			(xy 621.538 222.758) (xy 630.428 222.758)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a01e6dd-0b26-4ee4-8706-8462213c4135")
+	)
+	(wire
+		(pts
 			(xy 187.96 209.55) (xy 187.96 199.39)
 		)
 		(stroke
@@ -12905,16 +12959,6 @@
 			(type default)
 		)
 		(uuid "3b3ce01b-db55-4f1c-9fa6-dc456bcd0603")
-	)
-	(wire
-		(pts
-			(xy 631.698 222.758) (xy 640.588 222.758)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "3baf9257-b8fd-42ba-af9c-47c5aa0d8873")
 	)
 	(wire
 		(pts
@@ -13065,16 +13109,6 @@
 			(type default)
 		)
 		(uuid "3fd4f58a-715f-4161-82e0-5ac1499727f8")
-	)
-	(wire
-		(pts
-			(xy 621.538 222.758) (xy 631.698 222.758)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "3ff71a1f-d7c7-4d25-b5fa-d8a9bdd2cb60")
 	)
 	(wire
 		(pts
@@ -13348,6 +13382,16 @@
 	)
 	(wire
 		(pts
+			(xy 669.798 222.758) (xy 683.26 222.758)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "48ccf902-0917-4772-9d40-c656bc94df6c")
+	)
+	(wire
+		(pts
 			(xy 618.998 65.278) (xy 618.998 90.678)
 		)
 		(stroke
@@ -13395,6 +13439,26 @@
 			(type default)
 		)
 		(uuid "4a2fe991-b692-4e6a-8bd8-31cf425ae929")
+	)
+	(wire
+		(pts
+			(xy 692.15 222.758) (xy 703.58 222.758)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "4ab1223a-556a-42a1-8792-6e0015727c73")
+	)
+	(wire
+		(pts
+			(xy 611.378 240.538) (xy 621.538 240.538)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "4b5b83a1-5768-4e50-81a0-6d23897307c8")
 	)
 	(wire
 		(pts
@@ -13458,6 +13522,16 @@
 	)
 	(wire
 		(pts
+			(xy 703.58 235.458) (xy 703.58 222.758)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "4d177696-8c7a-411f-ad3b-4f7ce6262c5f")
+	)
+	(wire
+		(pts
 			(xy 232.664 211.074) (xy 232.664 212.344)
 		)
 		(stroke
@@ -13475,6 +13549,16 @@
 			(type solid)
 		)
 		(uuid "4d375e35-d450-4fb7-9838-4d583aef3198")
+	)
+	(wire
+		(pts
+			(xy 683.26 222.758) (xy 683.26 235.458)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "4e5b336a-6420-4268-8578-0cc78d401923")
 	)
 	(wire
 		(pts
@@ -13838,6 +13922,16 @@
 	)
 	(wire
 		(pts
+			(xy 699.77 232.918) (xy 706.12 232.918)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "5ad34a9c-07d1-41cf-a557-24da0c5b922a")
+	)
+	(wire
+		(pts
 			(xy 436.88 123.698) (xy 436.88 145.288)
 		)
 		(stroke
@@ -13908,6 +14002,16 @@
 	)
 	(wire
 		(pts
+			(xy 638.048 232.918) (xy 643.128 232.918)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "5c3fa95f-1a67-4201-915d-fee7bb479d40")
+	)
+	(wire
+		(pts
 			(xy 129.54 87.63) (xy 135.89 87.63)
 		)
 		(stroke
@@ -13925,16 +14029,6 @@
 			(type solid)
 		)
 		(uuid "5ca1dcd1-c0e5-467f-acf1-f4b3935b6df6")
-	)
-	(wire
-		(pts
-			(xy 640.588 240.538) (xy 650.748 240.538)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "5d042914-4cb5-4341-86f2-dd2d55a14a25")
 	)
 	(wire
 		(pts
@@ -14108,16 +14202,6 @@
 	)
 	(wire
 		(pts
-			(xy 674.878 225.298) (xy 674.878 222.758)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "644ee905-4883-4903-a466-edfcb67b73de")
-	)
-	(wire
-		(pts
 			(xy 531.368 70.358) (xy 531.368 71.628)
 		)
 		(stroke
@@ -14288,16 +14372,6 @@
 	)
 	(wire
 		(pts
-			(xy 618.998 232.918) (xy 624.078 232.918)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "68b99267-901e-4cc3-8686-d96ebc4251d0")
-	)
-	(wire
-		(pts
 			(xy 48.26 73.66) (xy 73.66 73.66)
 		)
 		(stroke
@@ -14448,6 +14522,16 @@
 	)
 	(wire
 		(pts
+			(xy 583.438 240.538) (xy 592.328 240.538)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "6cee4c6d-7b16-4b8a-a03d-ae69f0762874")
+	)
+	(wire
+		(pts
 			(xy 124.46 99.06) (xy 149.86 99.06)
 		)
 		(stroke
@@ -14558,16 +14642,6 @@
 	)
 	(wire
 		(pts
-			(xy 631.698 240.538) (xy 640.588 240.538)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "6f4b789c-ee31-489d-adf9-caff16a87707")
-	)
-	(wire
-		(pts
 			(xy 573.278 222.758) (xy 583.438 222.758)
 		)
 		(stroke
@@ -14648,6 +14722,16 @@
 	)
 	(wire
 		(pts
+			(xy 720.852 246.126) (xy 720.852 232.918)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "72147a33-086a-4f58-91ea-ada8286373e6")
+	)
+	(wire
+		(pts
 			(xy 629.158 298.958) (xy 629.158 292.608)
 		)
 		(stroke
@@ -14685,16 +14769,6 @@
 			(type default)
 		)
 		(uuid "733b2fdb-83b8-480d-9d20-0e3e169d8bf6")
-	)
-	(wire
-		(pts
-			(xy 631.698 222.758) (xy 631.698 220.218)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "7378d10f-dd9e-4987-8c68-04e1acd92ca1")
 	)
 	(wire
 		(pts
@@ -14808,13 +14882,23 @@
 	)
 	(wire
 		(pts
-			(xy 650.748 222.758) (xy 665.988 222.758)
+			(xy 650.748 222.758) (xy 659.638 222.758)
 		)
 		(stroke
 			(width 0)
 			(type solid)
 		)
 		(uuid "774192b2-d7bd-4e55-9fc9-8f808c68524b")
+	)
+	(wire
+		(pts
+			(xy 692.15 225.298) (xy 692.15 222.758)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "77509f0a-83a2-4c9b-b6ca-879e89770141")
 	)
 	(wire
 		(pts
@@ -14895,6 +14979,16 @@
 			(type solid)
 		)
 		(uuid "795946be-3177-4136-9247-a2f8892e6c6e")
+	)
+	(wire
+		(pts
+			(xy 713.74 225.298) (xy 713.74 222.758)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "799a9845-6ddb-4210-96b7-ae147e43f675")
 	)
 	(wire
 		(pts
@@ -15038,16 +15132,6 @@
 	)
 	(wire
 		(pts
-			(xy 686.308 235.458) (xy 686.308 222.758)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "7ccff1e6-8218-4d45-a744-f4a335afb488")
-	)
-	(wire
-		(pts
 			(xy 168.91 209.55) (xy 168.91 199.39)
 		)
 		(stroke
@@ -15175,16 +15259,6 @@
 			(type default)
 		)
 		(uuid "80d77604-c5e1-43d2-b198-a9d5bcfa7d8a")
-	)
-	(wire
-		(pts
-			(xy 714.248 232.918) (xy 712.978 232.918)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "80dc84a3-2014-4c7c-8960-5f89d40f0eaa")
 	)
 	(wire
 		(pts
@@ -15468,6 +15542,16 @@
 	)
 	(wire
 		(pts
+			(xy 720.852 251.206) (xy 720.852 252.476)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8af44ddd-b0f8-412b-959b-be45788e82b6")
+	)
+	(wire
+		(pts
 			(xy 531.368 95.758) (xy 531.368 97.028)
 		)
 		(stroke
@@ -15545,16 +15629,6 @@
 			(type solid)
 		)
 		(uuid "8df19015-eab8-4851-991e-e7eb72950bbd")
-	)
-	(wire
-		(pts
-			(xy 592.328 240.538) (xy 602.488 240.538)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "8e06a1a7-a6c3-48c9-b7b9-07fd22e265ab")
 	)
 	(wire
 		(pts
@@ -15728,6 +15802,16 @@
 	)
 	(wire
 		(pts
+			(xy 703.58 240.538) (xy 713.74 240.538)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9387f930-44b6-4e00-8a0f-44022d279b50")
+	)
+	(wire
+		(pts
 			(xy 443.738 65.278) (xy 443.738 58.928)
 		)
 		(stroke
@@ -15745,16 +15829,6 @@
 			(type solid)
 		)
 		(uuid "93b94af8-3f69-43c6-ad34-e311c4024ee4")
-	)
-	(wire
-		(pts
-			(xy 696.468 222.758) (xy 718.058 222.758)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "93f96720-fa4d-44c7-8640-22c447dccb71")
 	)
 	(wire
 		(pts
@@ -16018,16 +16092,6 @@
 	)
 	(wire
 		(pts
-			(xy 602.488 240.538) (xy 611.378 240.538)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "9dd4e720-bf0f-40a0-b2d6-55d6d4e50692")
-	)
-	(wire
-		(pts
 			(xy 531.368 152.908) (xy 556.768 152.908)
 		)
 		(stroke
@@ -16055,16 +16119,6 @@
 			(type solid)
 		)
 		(uuid "9ecf6daf-e8e8-4ffe-9fad-7cbb1f3d179e")
-	)
-	(wire
-		(pts
-			(xy 611.378 240.538) (xy 621.538 240.538)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "9ee1ef0c-0fe3-4a03-9073-b234d882b1cb")
 	)
 	(wire
 		(pts
@@ -16528,16 +16582,6 @@
 	)
 	(wire
 		(pts
-			(xy 665.988 222.758) (xy 665.988 235.458)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "ab75967d-68d3-4fa1-8957-63d930006e3b")
-	)
-	(wire
-		(pts
 			(xy 566.928 314.198) (xy 566.928 321.818)
 		)
 		(stroke
@@ -16548,23 +16592,13 @@
 	)
 	(wire
 		(pts
-			(xy 696.468 225.298) (xy 696.468 222.758)
+			(xy 683.26 240.538) (xy 692.15 240.538)
 		)
 		(stroke
 			(width 0)
-			(type solid)
+			(type default)
 		)
-		(uuid "abb65389-d8b7-4f75-aaf5-95a7b2427e3b")
-	)
-	(wire
-		(pts
-			(xy 640.588 235.458) (xy 640.588 222.758)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "ac09d203-d65f-4ed0-9600-3e78c6aa9238")
+		(uuid "abe2f39a-4a66-488a-9ca9-8ee2dcc1f1bf")
 	)
 	(wire
 		(pts
@@ -16658,6 +16692,16 @@
 	)
 	(wire
 		(pts
+			(xy 669.798 225.298) (xy 669.798 222.758)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "ae43cf82-ebfa-400f-8e51-23c0e99d54ae")
+	)
+	(wire
+		(pts
 			(xy 138.43 295.91) (xy 138.43 290.83)
 		)
 		(stroke
@@ -16675,6 +16719,16 @@
 			(type solid)
 		)
 		(uuid "aeb16ec4-0b7b-45c1-9bbb-2544d0547fc6")
+	)
+	(wire
+		(pts
+			(xy 573.278 240.538) (xy 583.438 240.538)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "aed273c3-0edd-48d4-9304-a19f512b2530")
 	)
 	(wire
 		(pts
@@ -16908,16 +16962,6 @@
 	)
 	(wire
 		(pts
-			(xy 650.748 225.298) (xy 650.748 222.758)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "b571cf5b-906f-4c4a-9504-bf02f1c2a16e")
-	)
-	(wire
-		(pts
 			(xy 180.34 87.63) (xy 186.69 87.63)
 		)
 		(stroke
@@ -16958,6 +17002,16 @@
 	)
 	(wire
 		(pts
+			(xy 650.748 222.758) (xy 650.748 225.298)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "b6704c11-8fb5-4526-9dd5-7ede2114b0b6")
+	)
+	(wire
+		(pts
 			(xy 554.228 368.808) (xy 554.228 329.438)
 		)
 		(stroke
@@ -16995,16 +17049,6 @@
 			(type default)
 		)
 		(uuid "b6f5fe57-3124-440f-ab01-2bb37c7e1869")
-	)
-	(wire
-		(pts
-			(xy 686.308 240.538) (xy 696.468 240.538)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b76ffc6b-2ef4-4f47-969b-20d2bd5d1b28")
 	)
 	(wire
 		(pts
@@ -17198,13 +17242,13 @@
 	)
 	(wire
 		(pts
-			(xy 686.308 222.758) (xy 696.468 222.758)
+			(xy 621.538 235.458) (xy 621.538 222.758)
 		)
 		(stroke
 			(width 0)
-			(type solid)
+			(type default)
 		)
-		(uuid "bb8f1dbe-1bf7-48a9-aad8-0e430abc153d")
+		(uuid "bc1fe03e-e4ef-4213-8f64-ce24121f18d7")
 	)
 	(wire
 		(pts
@@ -17228,6 +17272,16 @@
 	)
 	(wire
 		(pts
+			(xy 621.538 240.538) (xy 630.428 240.538)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "bd892ac5-8b4c-415e-84ab-3e1a970daceb")
+	)
+	(wire
+		(pts
 			(xy 566.928 258.318) (xy 588.518 258.318)
 		)
 		(stroke
@@ -17235,6 +17289,16 @@
 			(type solid)
 		)
 		(uuid "bdb572e6-2314-4edf-9b39-1bad0d7be380")
+	)
+	(wire
+		(pts
+			(xy 677.418 232.918) (xy 684.53 232.918)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "be3ffd2b-f173-47f1-8116-dd95600c528d")
 	)
 	(wire
 		(pts
@@ -17328,6 +17392,16 @@
 	)
 	(wire
 		(pts
+			(xy 659.638 240.538) (xy 669.798 240.538)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "c1291d84-55d4-4741-8107-0185af1d02fb")
+	)
+	(wire
+		(pts
 			(xy 97.79 356.87) (xy 97.79 361.95)
 		)
 		(stroke
@@ -17355,6 +17429,16 @@
 			(type default)
 		)
 		(uuid "c1a50c2c-c8ad-4d71-a45e-b4c63280527f")
+	)
+	(wire
+		(pts
+			(xy 722.376 222.758) (xy 722.376 223.012)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "c1b4153c-260d-4674-bcb2-03fdfd935155")
 	)
 	(wire
 		(pts
@@ -17488,16 +17572,6 @@
 	)
 	(wire
 		(pts
-			(xy 640.588 222.758) (xy 650.748 222.758)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "c6e87d9c-7c3c-4a8f-a0a5-a04df2ea939c")
-	)
-	(wire
-		(pts
 			(xy 97.79 341.63) (xy 97.79 334.01)
 		)
 		(stroke
@@ -17535,6 +17609,16 @@
 			(type solid)
 		)
 		(uuid "c7c50881-7b43-46dd-9f37-a5e5fe071b09")
+	)
+	(wire
+		(pts
+			(xy 603.758 232.918) (xy 599.948 232.918)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "c7cd6598-1824-4772-8658-9bceb8468a5a")
 	)
 	(wire
 		(pts
@@ -17658,6 +17742,16 @@
 	)
 	(wire
 		(pts
+			(xy 669.798 240.538) (xy 683.26 240.538)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "ca36908c-dfdd-4549-8888-ccc2ff77f62a")
+	)
+	(wire
+		(pts
 			(xy 53.34 87.63) (xy 59.69 87.63)
 		)
 		(stroke
@@ -17685,16 +17779,6 @@
 			(type solid)
 		)
 		(uuid "cc317686-af90-4201-a741-f1f2b3bdbd1e")
-	)
-	(wire
-		(pts
-			(xy 639.318 232.918) (xy 643.128 232.918)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "cc4d5245-b50b-4965-8c16-4a95c13acaff")
 	)
 	(wire
 		(pts
@@ -17795,16 +17879,6 @@
 			(type solid)
 		)
 		(uuid "cf9d554b-bf0b-44e6-bf28-519263421585")
-	)
-	(wire
-		(pts
-			(xy 674.878 240.538) (xy 686.308 240.538)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "d0334548-90a8-446e-b501-48b024004976")
 	)
 	(wire
 		(pts
@@ -17925,6 +17999,16 @@
 			(type default)
 		)
 		(uuid "d3aabc4e-e751-4b72-b24a-68782a836606")
+	)
+	(wire
+		(pts
+			(xy 658.368 232.918) (xy 662.178 232.918)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "d3ab225b-12ab-4c47-b0a3-37d23a12187f")
 	)
 	(wire
 		(pts
@@ -18168,16 +18252,6 @@
 	)
 	(wire
 		(pts
-			(xy 621.538 240.538) (xy 631.698 240.538)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "d8c4b89b-6888-46a6-8151-1b5626b05337")
-	)
-	(wire
-		(pts
 			(xy 427.99 145.288) (xy 429.26 145.288)
 		)
 		(stroke
@@ -18298,6 +18372,16 @@
 	)
 	(wire
 		(pts
+			(xy 630.428 222.758) (xy 630.428 225.298)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd8816c5-7e9d-400f-b6e6-dbe08ac9d346")
+	)
+	(wire
+		(pts
 			(xy 110.49 163.83) (xy 110.49 138.43)
 		)
 		(stroke
@@ -18305,6 +18389,26 @@
 			(type solid)
 		)
 		(uuid "dd9610de-71fb-4321-b385-58041330d18c")
+	)
+	(wire
+		(pts
+			(xy 640.588 240.538) (xy 650.748 240.538)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "de692441-3d1d-4b5c-945d-d5cd620215b8")
+	)
+	(wire
+		(pts
+			(xy 720.852 232.918) (xy 721.36 232.918)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "dea8c8ae-0230-45a6-8ba0-c380acad4102")
 	)
 	(wire
 		(pts
@@ -18558,16 +18662,6 @@
 	)
 	(wire
 		(pts
-			(xy 621.538 222.758) (xy 621.538 235.458)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "e7807a84-c479-4754-85a8-2762dc643bce")
-	)
-	(wire
-		(pts
 			(xy 129.54 234.95) (xy 138.43 234.95)
 		)
 		(stroke
@@ -18618,16 +18712,6 @@
 	)
 	(wire
 		(pts
-			(xy 674.878 222.758) (xy 686.308 222.758)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "e85ec3f3-2615-4762-8c97-176d7bd7e1c7")
-	)
-	(wire
-		(pts
 			(xy 531.368 121.158) (xy 531.368 122.428)
 		)
 		(stroke
@@ -18655,6 +18739,16 @@
 			(type solid)
 		)
 		(uuid "e995b06d-3e5d-4eb2-8e78-ee8fead9cdcc")
+	)
+	(wire
+		(pts
+			(xy 713.74 222.758) (xy 722.376 222.758)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "eaa8ec8c-c16a-4846-bb97-11e1c234f3ac")
 	)
 	(wire
 		(pts
@@ -18938,16 +19032,6 @@
 	)
 	(wire
 		(pts
-			(xy 583.438 240.538) (xy 592.328 240.538)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "f37ed656-ddc5-40ba-b6a3-9ebc01de24db")
-	)
-	(wire
-		(pts
 			(xy 544.068 240.538) (xy 554.228 240.538)
 		)
 		(stroke
@@ -19208,16 +19292,6 @@
 	)
 	(wire
 		(pts
-			(xy 584.708 232.918) (xy 580.898 232.918)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "fbe1cddb-84d5-4356-a20d-f9f94841f70c")
-	)
-	(wire
-		(pts
 			(xy 431.8 145.288) (xy 433.07 145.288)
 		)
 		(stroke
@@ -19278,6 +19352,16 @@
 	)
 	(wire
 		(pts
+			(xy 602.488 240.538) (xy 611.378 240.538)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "fe00d559-26a6-426a-97cd-9d4c4cd68404")
+	)
+	(wire
+		(pts
 			(xy 48.26 67.31) (xy 48.26 68.58)
 		)
 		(stroke
@@ -19285,6 +19369,16 @@
 			(type solid)
 		)
 		(uuid "fe08aae7-cf73-4b47-a568-3f80626f5894")
+	)
+	(wire
+		(pts
+			(xy 584.708 232.918) (xy 580.898 232.918)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "fe0c214b-5b4c-430b-8670-174b93cfae01")
 	)
 	(wire
 		(pts
@@ -20370,6 +20464,30 @@
 			)
 		)
 	)
+	(global_label "LED_R"
+		(shape input)
+		(at 720.852 252.476 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "04893c26-9d8a-4a05-9d88-194bd4794508")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 720.852 261.241 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "col0_R"
 		(shape input)
 		(at 463.55 175.768 0)
@@ -21007,30 +21125,6 @@
 		(uuid "6cfc1519-d2f1-47b5-84b4-7273b5f80571")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 472.1941 157.988 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "LED_R"
-		(shape input)
-		(at 714.248 232.918 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "7355c47f-5628-49c8-a63b-07b23cc58e72")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 723.013 232.918 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40283,173 +40377,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 640.588 237.998 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-000060a8b6b3")
-		(property "Reference" "C112"
-			(at 640.842 236.22 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0.1uF"
-			(at 640.842 240.03 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 640.588 237.998 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 640.588 237.998 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 640.588 237.998 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "bd620f2d-da01-4424-a394-06a37c8da223")
-		)
-		(pin "1"
-			(uuid "b5895c44-98b7-45b3-8c7a-e26c109f3dc2")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "C112")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rescue:YS-SK6812MINI-E-kbd")
-		(at 650.748 232.918 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-000060a8b6bb")
-		(property "Reference" "LED84"
-			(at 642.0104 233.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "YS-SK6812MINI-E"
-			(at 642.0104 232.1814 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "onigaku:YS-SK6812MINI-E_underglow"
-			(at 648.208 226.568 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 648.208 226.568 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 650.748 232.918 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c49d9201-22a0-4cf8-b259-caccb84c8986")
-		)
-		(pin "2"
-			(uuid "de0f267a-b0b2-409d-a1cf-d2e6ab2a1359")
-		)
-		(pin "3"
-			(uuid "459217e1-912e-4af5-9ff6-bd142a1a4e91")
-		)
-		(pin "4"
-			(uuid "d44c2ab6-751c-430b-85e3-88f445ee6e8a")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED84")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "onigaku:GND_R")
 		(at 533.908 271.018 0)
 		(unit 1)
@@ -46338,173 +46265,6 @@
 	)
 	(symbol
 		(lib_id "umiko-rescue:YS-SK6812MINI-E-kbd")
-		(at 696.468 232.918 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-000060fb735b")
-		(property "Reference" "LED89"
-			(at 687.7304 233.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "YS-SK6812MINI-E"
-			(at 687.7304 232.1814 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "onigaku:YS-SK6812MINI-E_underglow"
-			(at 693.928 226.568 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 693.928 226.568 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 696.468 232.918 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d956f773-b14f-4b0e-b7e7-88a73f1e5646")
-		)
-		(pin "2"
-			(uuid "e356b1f1-3e10-42fa-a8fe-08078494877f")
-		)
-		(pin "3"
-			(uuid "62e89493-20a1-4f01-b4a3-edab5cb489d5")
-		)
-		(pin "4"
-			(uuid "15fc3dc3-197c-4058-a6da-7cb3f1c6d7fa")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED89")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 686.308 237.998 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-000060fb7365")
-		(property "Reference" "C121"
-			(at 686.562 236.22 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0.1uF"
-			(at 686.562 240.03 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 686.308 237.998 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 686.308 237.998 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 686.308 237.998 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "57906885-7ee7-4922-809c-9a55ab60e991")
-		)
-		(pin "2"
-			(uuid "7d06b3a5-ca90-4aec-b619-7f6eb8aed90b")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "C121")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rescue:YS-SK6812MINI-E-kbd")
 		(at 78.74 349.25 90)
 		(unit 1)
 		(body_style 1)
@@ -47360,178 +47120,6 @@
 	)
 	(symbol
 		(lib_id "umiko-rescue:YS-SK6812MINI-E-kbd")
-		(at 631.698 232.918 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00006137ed3c")
-		(property "Reference" "LED79"
-			(at 622.9604 233.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "YS-SK6812MINI-E"
-			(at 622.9604 232.1814 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "onigaku:YS-SK6812MINI-E_underglow"
-			(at 629.158 226.568 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 629.158 226.568 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 631.698 232.918 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2da6ea70-df7b-47b1-96d5-7badc97e63ef")
-		)
-		(pin "2"
-			(uuid "763941b7-cd1b-425f-84ba-79341f8c2d26")
-		)
-		(pin "3"
-			(uuid "65bf8ce8-ad50-4ffd-9e07-6b6e9d4a1be4")
-		)
-		(pin "4"
-			(uuid "d0928457-1d86-475f-8106-7c89c584d82d")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED79")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rescue:YS-SK6812MINI-E-kbd")
-		(at 611.378 232.918 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00006137ed42")
-		(property "Reference" "LED75"
-			(at 602.6404 233.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "YS-SK6812MINI-E"
-			(at 602.6404 232.1814 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "onigaku:YS-SK6812MINI-E_underglow"
-			(at 608.838 226.568 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 608.838 226.568 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 611.378 232.918 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "36552d01-1d50-453e-bd2e-235dcccda961")
-		)
-		(pin "2"
-			(uuid "a2194ee7-8c54-4773-a216-cd104817c08c")
-		)
-		(pin "3"
-			(uuid "d474ac03-a116-4bdd-97f4-b573dcec95b4")
-		)
-		(pin "4"
-			(uuid "4950b5a7-d659-480a-830f-0332b1befb6e")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED75")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rescue:YS-SK6812MINI-E-kbd")
 		(at 119.38 326.39 90)
 		(unit 1)
 		(body_style 1)
@@ -47692,173 +47280,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "C19")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 665.988 237.998 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00006180bd89")
-		(property "Reference" "C120"
-			(at 665.734 239.776 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0.1uF"
-			(at 665.734 235.966 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 665.988 237.998 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 665.988 237.998 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 665.988 237.998 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5b2d899a-97e7-41db-9b39-210b2c370222")
-		)
-		(pin "2"
-			(uuid "699275ed-8bfb-4f8f-86e4-bf7199c1beca")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "C120")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rescue:YS-SK6812MINI-E-kbd")
-		(at 674.878 232.918 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00006180bd90")
-		(property "Reference" "LED88"
-			(at 666.1404 233.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "YS-SK6812MINI-E"
-			(at 666.1404 232.1814 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "onigaku:YS-SK6812MINI-E_underglow"
-			(at 672.338 226.568 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 672.338 226.568 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 674.878 232.918 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "96811b75-66af-4d70-afee-5594826b7391")
-		)
-		(pin "2"
-			(uuid "26117f23-b7bb-450b-9325-45c513ba26a1")
-		)
-		(pin "3"
-			(uuid "f3d4bb61-adac-4513-b59e-c4cc73205a95")
-		)
-		(pin "4"
-			(uuid "c888b0c4-a14a-4385-a7f7-0967a0a7c358")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED88")
 					(unit 1)
 				)
 			)
@@ -49809,178 +49230,6 @@
 	)
 	(symbol
 		(lib_id "umiko-rescue:YS-SK6812MINI-E-kbd")
-		(at 592.328 232.918 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-000063340fd6")
-		(property "Reference" "LED68"
-			(at 583.5904 233.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "YS-SK6812MINI-E"
-			(at 583.5904 232.1814 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "onigaku:YS-SK6812MINI-E_underglow"
-			(at 589.788 226.568 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 589.788 226.568 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 592.328 232.918 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "78c815f4-4aba-409e-83c2-e30225ac23ec")
-		)
-		(pin "2"
-			(uuid "8c3f895a-048a-4a00-b562-12817f6bf20d")
-		)
-		(pin "3"
-			(uuid "0686d0d0-fa4f-4f4e-956a-4ee0b3bd1858")
-		)
-		(pin "4"
-			(uuid "c01b14a4-4d38-4e7c-9b39-4059ea243cfd")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED68")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rescue:YS-SK6812MINI-E-kbd")
-		(at 573.278 232.918 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-000063340fdc")
-		(property "Reference" "LED61"
-			(at 564.5404 233.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "YS-SK6812MINI-E"
-			(at 564.5404 232.1814 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "onigaku:YS-SK6812MINI-E_underglow"
-			(at 570.738 226.568 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 570.738 226.568 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 573.278 232.918 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b4763dd6-8374-4c6f-aa0b-e77695e46a4d")
-		)
-		(pin "2"
-			(uuid "1566f744-ac8e-4d4e-8e73-918dd2231c3e")
-		)
-		(pin "3"
-			(uuid "159e61a5-eab0-424d-9f91-522f58508349")
-		)
-		(pin "4"
-			(uuid "c33b09b3-aa23-49fe-aa73-c28024d6f74b")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED61")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rescue:YS-SK6812MINI-E-kbd")
 		(at 526.288 356.108 270)
 		(unit 1)
 		(body_style 1)
@@ -50465,87 +49714,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 710.438 232.918 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00006419ab20")
-		(property "Reference" "R27"
-			(at 709.93 232.156 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "500"
-			(at 711.454 232.156 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 710.438 232.918 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 710.438 232.918 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 710.438 232.918 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d49a7910-e0f2-41ad-bffe-a786e1e6fc18")
-		)
-		(pin "2"
-			(uuid "ffef7375-a967-4c53-bef6-ce48f67048c8")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "R27")
 					(unit 1)
 				)
 			)
@@ -52993,249 +52161,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "C88")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 583.438 237.998 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-0000688cf986")
-		(property "Reference" "C99"
-			(at 583.692 236.22 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0.1uF"
-			(at 583.692 240.03 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 583.438 237.998 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 583.438 237.998 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 583.438 237.998 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "ca1c2837-e811-4c40-a28d-197623255d23")
-		)
-		(pin "1"
-			(uuid "4277bd17-7361-490c-b161-e8c52c142b34")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "C99")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 602.488 237.998 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-0000688d0755")
-		(property "Reference" "C101"
-			(at 602.742 236.22 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0.1uF"
-			(at 602.742 240.03 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 602.488 237.998 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 602.488 237.998 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 602.488 237.998 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "12442cb6-c704-4731-a0ab-597c9c032554")
-		)
-		(pin "1"
-			(uuid "99e8fd43-c105-49d7-ac34-017d0bf015d2")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "C101")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 621.538 237.998 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-0000688d15fc")
-		(property "Reference" "C108"
-			(at 621.284 239.776 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0.1uF"
-			(at 621.284 235.966 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 621.538 237.998 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 621.538 237.998 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 621.538 237.998 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fe660213-072a-4f47-b8a2-f9431834a962")
-		)
-		(pin "2"
-			(uuid "611fd926-2f55-4440-a873-a5ce69c014d2")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "C108")
 					(unit 1)
 				)
 			)
@@ -58656,6 +57581,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 683.26 237.998 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0529d55d-f91d-4c1a-b906-f96521e0ae60")
+		(property "Reference" "C120"
+			(at 683.006 239.776 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 683.006 235.966 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 683.26 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 683.26 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 683.26 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1df8081b-d230-4c64-bd63-35e6b2450680")
+		)
+		(pin "2"
+			(uuid "2f9ea51b-e316-4d60-ab57-d4a4a9ec213d")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "C120")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 273.05 54.61 180)
 		(unit 1)
@@ -59049,6 +58055,173 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 602.488 237.998 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0a1d59a3-2c8a-4ac6-bb3c-a29387998561")
+		(property "Reference" "C99"
+			(at 602.742 236.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 602.742 240.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 602.488 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 602.488 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 602.488 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "0b499078-77aa-4465-94b4-818026732fa2")
+		)
+		(pin "1"
+			(uuid "0d016fb9-95fb-4b49-93f1-bae79ae0c99b")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "C99")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rescue:YS-SK6812MINI-E-kbd")
+		(at 669.798 232.918 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0b323daf-4cbe-4d82-9236-9a0b40693d32")
+		(property "Reference" "LED84"
+			(at 661.0604 233.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "YS-SK6812MINI-E"
+			(at 661.0604 232.1814 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "onigaku:YS-SK6812MINI-E_underglow"
+			(at 667.258 226.568 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 667.258 226.568 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 669.798 232.918 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "15490bde-60f6-470c-9876-537e86135cd5")
+		)
+		(pin "2"
+			(uuid "b0fb45d5-22f6-45d8-8cc6-0170b445fb52")
+		)
+		(pin "3"
+			(uuid "9eb5f875-2aab-4c63-bfb6-723135749963")
+		)
+		(pin "4"
+			(uuid "f365ac6d-cbf6-40b9-810a-e1126d1b8bb6")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED84")
 					(unit 1)
 				)
 			)
@@ -59721,6 +58894,92 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "TP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rescue:YS-SK6812MINI-E-kbd")
+		(at 713.74 232.918 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "155e43a9-a609-4b7b-abdd-c1f5946e5ecd")
+		(property "Reference" "LED89"
+			(at 705.0024 233.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "YS-SK6812MINI-E"
+			(at 705.0024 232.1814 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "onigaku:YS-SK6812MINI-E_underglow"
+			(at 711.2 226.568 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 711.2 226.568 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 713.74 232.918 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e23d47a5-9933-4b8c-91c5-d43a1b9d77ff")
+		)
+		(pin "2"
+			(uuid "3312650f-222b-4c82-9ddf-2e2732fe64b4")
+		)
+		(pin "3"
+			(uuid "23ee9e36-22bd-41e7-8ca2-1777a2848579")
+		)
+		(pin "4"
+			(uuid "f8ece69d-3c56-40cf-af7a-2a4e0f3b3849")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED89")
 					(unit 1)
 				)
 			)
@@ -63346,6 +62605,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 640.588 237.998 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "419d4f61-9a4f-4f7a-99fb-cee5cd1a9456")
+		(property "Reference" "C108"
+			(at 640.334 239.776 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 640.334 235.966 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 640.588 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 640.588 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 640.588 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f338934e-f767-4cb8-8ad7-ffbe397f704e")
+		)
+		(pin "2"
+			(uuid "9bdfbc9d-0958-4cd8-a68b-125eab310bdb")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "C108")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 405.13 177.038 90)
 		(unit 1)
@@ -63451,6 +62791,170 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rescue:YS-SK6812MINI-E-kbd")
+		(at 611.378 232.918 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4247e918-bf9e-40f1-984a-1df8605d4f97")
+		(property "Reference" "LED68"
+			(at 602.6404 233.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "YS-SK6812MINI-E"
+			(at 602.6404 232.1814 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "onigaku:YS-SK6812MINI-E_underglow"
+			(at 608.838 226.568 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 608.838 226.568 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 611.378 232.918 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dd0233d0-d478-48d7-9384-cfd870248dab")
+		)
+		(pin "2"
+			(uuid "f8e4cd25-933b-4cfa-a8c1-8ebaca0750dd")
+		)
+		(pin "3"
+			(uuid "b1066062-c9f1-4e3e-8de6-4133de445618")
+		)
+		(pin "4"
+			(uuid "78a6f272-765b-40d1-ac0c-4050e2c17a7d")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED68")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "onigaku:GND_R")
+		(at 722.376 223.012 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "43116d6b-6128-49d0-8dcd-1dc5bab8b3cd")
+		(property "Reference" "#PWR0233"
+			(at 722.376 229.362 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND_R"
+			(at 722.376 228.092 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 722.376 223.012 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 722.376 223.012 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 722.376 223.012 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f4b29cca-0fa0-4ca1-bab6-0dc00c5b71a1")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "#PWR0233")
 					(unit 1)
 				)
 			)
@@ -63978,6 +63482,173 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "#FLG03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 583.438 237.998 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4cbb351e-37ae-4cc5-87ad-f735665327fc")
+		(property "Reference" "C122"
+			(at 583.692 236.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 583.692 240.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 583.438 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 583.438 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 583.438 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "bb9fc087-1c36-4f6e-92be-ec5494a72234")
+		)
+		(pin "1"
+			(uuid "1815349f-2bf3-42e0-ba41-2e219335f128")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "C122")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rescue:YS-SK6812MINI-E-kbd")
+		(at 692.15 232.918 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4dab4b29-e0d5-49de-89ae-df2f0cf549a9")
+		(property "Reference" "LED88"
+			(at 683.4124 233.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "YS-SK6812MINI-E"
+			(at 683.4124 232.1814 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "onigaku:YS-SK6812MINI-E_underglow"
+			(at 689.61 226.568 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 689.61 226.568 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 692.15 232.918 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ee135c73-8b1f-4d80-b8ec-345c15d561d2")
+		)
+		(pin "2"
+			(uuid "6cbb4c03-a12e-4430-a11a-39b816159039")
+		)
+		(pin "3"
+			(uuid "09d39905-a6d8-4516-91d3-dd32f4b19ca7")
+		)
+		(pin "4"
+			(uuid "82ca7fc3-4a27-4244-9d55-2dab8085bce0")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED88")
 					(unit 1)
 				)
 			)
@@ -65097,6 +64768,87 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "FB2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 621.538 237.998 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5cad12ca-1a43-4308-ae97-08af9b620454")
+		(property "Reference" "C101"
+			(at 621.792 236.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 621.792 240.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 621.538 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 621.538 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 621.538 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "f47f7602-c165-40a3-a83c-3c00464c8c49")
+		)
+		(pin "1"
+			(uuid "b296614d-f7bb-45d8-8bef-fb3c8aa57a9f")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "C101")
 					(unit 1)
 				)
 			)
@@ -66257,6 +66009,92 @@
 		)
 	)
 	(symbol
+		(lib_id "umiko-rescue:YS-SK6812MINI-E-kbd")
+		(at 592.328 232.918 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "67736695-4279-4317-bb9f-67f5b542bf6e")
+		(property "Reference" "LED61"
+			(at 583.5904 233.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "YS-SK6812MINI-E"
+			(at 583.5904 232.1814 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "onigaku:YS-SK6812MINI-E_underglow"
+			(at 589.788 226.568 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 589.788 226.568 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 592.328 232.918 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "40e9e622-e313-4ec6-b300-e63e8ae9cf1d")
+		)
+		(pin "2"
+			(uuid "4050dfc8-a8ee-4b4b-acc6-75a4965ecdec")
+		)
+		(pin "3"
+			(uuid "311d8570-281b-4830-9c8d-2ec1883adbd8")
+		)
+		(pin "4"
+			(uuid "69cff7e9-8657-4c39-9e58-4fbd8899d5e4")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED61")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 338.074 176.784 90)
 		(unit 1)
@@ -66362,6 +66200,87 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 703.58 237.998 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "696ff7fb-994e-46a5-902f-b53b3b1c76ad")
+		(property "Reference" "C121"
+			(at 703.834 236.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 703.834 240.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 703.58 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 703.58 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 703.58 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9af5950f-9485-49fe-b9cf-678c821831b9")
+		)
+		(pin "2"
+			(uuid "5c299564-a526-4103-9c97-10ea697659b9")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "C121")
 					(unit 1)
 				)
 			)
@@ -67284,6 +67203,92 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "#PWR0130")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rescue:YS-SK6812MINI-E-kbd")
+		(at 650.748 232.918 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "761c9d65-f7f6-4abd-b2e1-103c272aef12")
+		(property "Reference" "LED79"
+			(at 642.0104 233.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "YS-SK6812MINI-E"
+			(at 642.0104 232.1814 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "onigaku:YS-SK6812MINI-E_underglow"
+			(at 648.208 226.568 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 648.208 226.568 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 650.748 232.918 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8d1e1e20-8891-4089-918b-04a3b8cf4136")
+		)
+		(pin "2"
+			(uuid "71b1e104-54e4-4d87-991b-ec9dee528f9d")
+		)
+		(pin "3"
+			(uuid "e7fd09b3-376c-44b0-a917-0bf424d6a656")
+		)
+		(pin "4"
+			(uuid "07f2d0d4-7331-4f32-86b8-2cfec1abcdf3")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED79")
 					(unit 1)
 				)
 			)
@@ -68617,6 +68622,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 659.638 237.998 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8bfcbefd-d9d7-4ceb-9b48-f33802507ebf")
+		(property "Reference" "C112"
+			(at 659.892 236.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 659.892 240.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 659.638 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 659.638 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 659.638 237.998 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "f3b13a22-01e7-48ac-b9f6-211271592f1b")
+		)
+		(pin "1"
+			(uuid "6b0c90d2-451f-4a2e-84ba-8b39ab8d697d")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "C112")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "onigaku:GND_R")
 		(at 405.13 189.738 90)
 		(unit 1)
@@ -69258,6 +69344,92 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rescue:YS-SK6812MINI-E-kbd")
+		(at 573.278 232.918 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9a1ca045-9307-4921-b717-f93f56b50291")
+		(property "Reference" "LED90"
+			(at 564.5404 233.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "YS-SK6812MINI-E"
+			(at 564.5404 232.1814 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "onigaku:YS-SK6812MINI-E_underglow"
+			(at 570.738 226.568 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 570.738 226.568 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 573.278 232.918 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d6e2a24c-22d0-4844-8490-49fab58bb609")
+		)
+		(pin "2"
+			(uuid "919eed03-8e85-423d-8600-7586d7dee965")
+		)
+		(pin "3"
+			(uuid "d7431dd8-df79-4053-9aed-5a5b0ad33bf6")
+		)
+		(pin "4"
+			(uuid "c7e09b36-604d-4050-9bd4-c41c84b9c986")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED90")
 					(unit 1)
 				)
 			)
@@ -72377,6 +72549,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 720.852 248.666 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c3e34148-90ec-477c-897b-0fb14cf2a05e")
+		(property "Reference" "R27"
+			(at 721.614 248.158 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "500"
+			(at 721.614 249.682 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 720.852 248.666 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 720.852 248.666 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 720.852 248.666 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "52aedcb3-f8a2-4a61-b133-6fbbc4538071")
+		)
+		(pin "2"
+			(uuid "7ff329b0-9f2d-43ce-9801-91bf02b0a902")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "R27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Logic_LevelTranslator:SN74LVC1T45DRL")
 		(at 334.264 217.424 0)
 		(unit 1)
@@ -73750,84 +74003,6 @@
 		)
 	)
 	(symbol
-		(lib_id "onigaku:GND_R")
-		(at 718.058 222.758 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d45609f6-4ce1-4b1b-b661-65dcfae397c3")
-		(property "Reference" "#PWR0233"
-			(at 718.058 229.108 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND_R"
-			(at 718.058 227.838 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 718.058 222.758 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 718.058 222.758 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 718.058 222.758 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "63777ebf-dc0f-4f8c-9acd-e785dcb7fdcf")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "#PWR0233")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "onigaku:+3V3_L")
 		(at 252.984 202.184 0)
 		(unit 1)
@@ -74248,6 +74423,92 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "#PWR0160")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rescue:YS-SK6812MINI-E-kbd")
+		(at 630.428 232.918 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dfb5eadf-79af-46bb-9784-c9acf946559c")
+		(property "Reference" "LED75"
+			(at 621.6904 233.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "YS-SK6812MINI-E"
+			(at 621.6904 232.1814 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "onigaku:YS-SK6812MINI-E_underglow"
+			(at 627.888 226.568 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 627.888 226.568 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 630.428 232.918 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d104aa99-9fda-440b-b198-3555fc110c1d")
+		)
+		(pin "2"
+			(uuid "97685898-b342-4ca2-a01c-0eb15b132130")
+		)
+		(pin "3"
+			(uuid "207295e3-e473-47fd-a07d-bc42d9219db2")
+		)
+		(pin "4"
+			(uuid "4238bc7c-483d-442a-add3-a10a9bbfedec")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED75")
 					(unit 1)
 				)
 			)
