@@ -176,7 +176,7 @@ The script also bakes in LCSC overrides for parts whose schematic symbols don't 
 
 ### CAD exports (case / plate design)
 
-Run `python scripts/make_cad_files.py` for SolidWorks-ready 3D, and `python scripts/_gen_plate_cutouts.py` for the plate. Outputs land in `cad/` (per-group + assembly + per-half STEP, board-outline DXF, plus `umiko-plate.step` and `umiko-plate-cutouts.dxf`).
+Run `python scripts/make_cad_files.py` for SolidWorks-ready 3D, and `python scripts/make_plate.py` for the plate. Outputs land in `cad/` (per-group + assembly + per-half STEP, board-outline DXF, plus `umiko-plate.step` and `umiko-plate-cutouts.dxf`). Both scripts are **read-only on the source PCB** — all transforms happen in memory / on a self-deleting temp file; you can run them any time without affecting `umiko.kicad_pcb`.
 
 * **Board thickness: 1.6 mm** — JLCPCB standard 4-layer; tolerance **±10% (≈ 1.44–1.76 mm)**, so give the case PCB pocket clearance up to ~1.76 mm.
 * **Plate thickness: 1.2 mm** — Choc V2 stabilizer spec; the MX-stem KS-33 clips tolerate it.
