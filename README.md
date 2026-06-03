@@ -6,7 +6,7 @@
 ![PCB front (no keys)](images/umiko_3dview_front_nokeys.png)
 ![PCB back (no keys)](images/umiko_3dview_back_nokeys.png)
 
-A split, low-profile TKL F-row-less mechanical keyboard PCB. Two halves connect via TRRS (split serial), each half is independently powered via its own side-mounted host USB-C and flashable, and each half has its own RP2040 microcontroller, per-key RGB, and underglow. Stabilizer cutouts are sized for Kailh Choc V2 stabilizers. Switches are Gateron KS-33 v2.0 low-profile (MX-compatible, hot-swap). 4-layer board with split L/R power rails and dedicated inner GND/3V3 planes.
+A split, low-profile TKL F-row-less mechanical keyboard PCB. Two halves connect via a **top-mounted USB-C inter-half link** (single-wire QMK PIO serial over the D+ pin, with VBUS bridging 5 V across halves), each half is independently powered via its own side-mounted host USB-C and flashable, and each half has its own RP2040 microcontroller, per-key RGB, and underglow. Stabilizer cutouts are sized for Kailh Choc V2 stabilizers. Switches are Gateron KS-33 v2.0 low-profile (MX-compatible, hot-swap). 4-layer board with split L/R power rails and dedicated inner GND/3V3 planes.
 
 ## Features
 
@@ -17,7 +17,7 @@ A split, low-profile TKL F-row-less mechanical keyboard PCB. Two halves connect 
 * **Gateron KS-33 v2.0 low-profile hot-swap** switches (MX-compatible footprint, low-profile body)
 * **Kailh Choc V2 stabilizers** (stabilizer cutouts on PCB sized for Choc V2, not MX stabs)
 * **Side-mounted host USB-C** per half (on the outer edge of each board) for host connection and power
-* **TRRS inter-half link** (PJ-320A, on the inner edge of each board) carrying split serial + GND + 5V bridge
+* **Top-mounted USB-C inter-half link** (HRO Type-C, on the top edge of each board near the inner-top corner) carrying single-wire PIO serial (over D+), GND, and 5 V bridge between halves
 * **RP2040** — one per half, each with its own external QSPI flash (W25Q128) and 3V3 LDO (LP5907)
 * **BOOTSEL-only flashing** — each half has a BOOTSEL button (SW1 left, SW2 right). No reset circuit by design; flashing is via "unplug USB → hold BOOTSEL → plug USB → release → drop .uf2"
 * **SWD test points** — 8 pads per half organized as a pogo-clip pattern (CLK/IO/GND/3V3); pads mirrored across halves so a flipped 6-pin clip lands on matching signals
@@ -28,7 +28,7 @@ A split, low-profile TKL F-row-less mechanical keyboard PCB. Two halves connect 
 
 | | |
 |--|--|
-| **Dimensions** | 317.710 mm × 95.360 mm (end-to-end, both halves including the inter-half gap) |
+| **Dimensions** | 328.62 mm × 102.85 mm (end-to-end, both halves including the inter-half gap; left half 145.67 × 102.85, right half 169.84 × 102.85, inter-half gap 13.11 mm) |
 | **MCU** | 2× Raspberry Pi RP2040 (QFN-56) |
 | **Flash** | 2× Winbond W25Q128JVPIQ (16 MB QSPI) |
 | **LDO** | 2× Texas Instruments LP5907 (3V3, X2SON-4) |
@@ -37,9 +37,9 @@ A split, low-profile TKL F-row-less mechanical keyboard PCB. Two halves connect 
 | **Switches** | Gateron KS-33 v2.0 low-profile hot-swap (63 total) |
 | **Stabilizers** | Kailh Choc V2 (2.25U and 2.75U key positions) |
 | **Per-key RGB LEDs** | 63× SK6812MINI-E reverse-mount |
-| **Underglow LEDs** | 26× SK6812MINI-E (B.Cu side) |
-| **Host connector** | 2× HRO TYPE-C-31-M-12 (USB 2.0 16P), side-mounted on the outer edge of each half |
-| **Inter-half connector** | 2× TRRS PJ-320A (TIP=+5V, RING1=split data, RING2=NC spare, SLEEVE=GND), inner-edge mounted on each half |
+| **Underglow LEDs** | 27× SK6812MINI-E (B.Cu side) |
+| **Host connector** | 2× HRO TYPE-C-31-M-12 (USB 2.0 16P), side-mounted on the outer edge of each half (4 mm plank protrusion, 1 mm USB-C overhang past plank face) |
+| **Inter-half connector** | 2× HRO TYPE-C-31-M-12 (same part as host), top-edge mounted near the inner-top corner of each half (4 mm plank protrusion, 1 mm USB-C overhang). Carries A4/A9 VBUS = +5V bridge, A12/B12 = GND, A6/B6 = data (single-wire PIO serial); A7/B7 (D−) and A5/B5 (CC1/CC2) intentionally floating — see Design Notes |
 | **Diodes** | 63× SK matrix diodes, 4× power-path Schottky (PMEG2010BELD), 4× LED indicators |
 | **Polyfuse** | 2× 1.1 A (Fuse_0603) for USB power input |
 | **Ferrite beads** | 2× 600 Ω (FB1/FB2) for VBUS filtering |
@@ -54,8 +54,7 @@ RP2040 MCU | RP2040 (QFN-56) | 2 | LCSC `C2040` / Mouser / DigiKey / direct from
 QSPI Flash | Winbond W25Q128JVPIQ | 2 | LCSC `C190862` / Mouser / DigiKey
 3.3V LDO | TI TLV75533PDQNR | 2 | LCSC `C133572` (X2SON-4)
 12 MHz crystal | 2520 4-pin SMD | 2 | LCSC `C2149204` / Mouser
-USB-C receptacle (host) | HRO TYPE-C-31-M-12 | 2 | LCSC `C963373` / JLC / AliExpress
-TRRS jack (inter-half) | PJ-320A 4-conductor | 2 | LCSC / Keebio / AliExpress — `keebio:TRRS` symbol + `onigaku:TRRS-PJ-320A` footprint
+USB-C receptacle (host + inter-half) | HRO TYPE-C-31-M-12 | 4 | LCSC `C963373` / JLC / AliExpress — same part used for all four positions (J1/J2 outer = host, J3/J4 top = inter-half)
 USB ESD | USBLC6-2P6 | 2 | LCSC `C2827693` (SOT-666)
 Polyfuse | Bourns MF-PSMF110X-2 (1.1 A, 0603) | 2 | LCSC `C89658` / DigiKey
 Ferrite bead | 600 Ω 0402 | 2 | LCSC `C160977`
@@ -172,7 +171,12 @@ Run `python scripts/make_jlc_files.py` from the project root. It produces three 
 * `umiko-bom-jlc.csv` — JLC-formatted BOM (header `Comment,Designator,Footprint,JLCPCB Part #（optional）`, comma-separated designators, ranges expanded)
 * `umiko-cpl.csv` — JLC-formatted CPL (header `Designator,Mid X,Mid Y,Layer,Rotation`, mm-suffixed coords at 4-decimal precision, integer rotations 0–359, capitalized `Top`/`Bottom`)
 
-The script also bakes in LCSC overrides for parts whose schematic symbols don't carry an LCSC field (matrix diode `D3_SMD_v2` → `C81598`, per-key + underglow LED `YS-SK6812MINI-E` → `C5149201`). Add new mappings to the `LCSC_OVERRIDES` dict at the top of the script as needed.
+The script bakes in LCSC overrides for parts whose schematic symbols don't carry an LCSC field (matrix diode `D3_SMD_v2` → `C81598`, per-key + underglow LED `YS-SK6812MINI-E` → `C5149201`). Add new mappings to the `LCSC_OVERRIDES` dict at the top of the script as needed.
+
+It also maintains a `DNP_VALUES` set of schematic Values that are **excluded from both the BOM and CPL** so JLC won't try to assemble them — they're hand-soldered after the boards arrive. Current DNP list:
+
+* **`YS-SK6812MINI-E`** (90 components: 63 per-key + 27 underglow) — the per-key LEDs are reverse-mount (body sits in a PCB cutout, lens facing F.Cu), not a standard PnP placement; the underglow variant is normal SMD but the OPSCO `C5149201` chip layout is 180° from our footprint's pin-corner convention. Hand-soldering side-steps both issues. Source: order ~10% spare from LCSC `C5149201` / AliExpress.
+* **`KEYSW`** (63 components: Gateron KS-33 hot-swap sockets) — not in JLC's standard parts inventory. Source separately from Keebio / Gateron direct / AliExpress and solder with the switches.
 
 ### CAD exports (case / plate design)
 
@@ -181,7 +185,7 @@ Run `python scripts/make_cad_files.py` for SolidWorks-ready 3D, and `python scri
 * **Board thickness: 1.6 mm** — JLCPCB standard 4-layer; tolerance **±10% (≈ 1.44–1.76 mm)**, so give the case PCB pocket clearance up to ~1.76 mm.
 * **Plate thickness: 1.2 mm** — Choc V2 stabilizer spec; the MX-stem KS-33 clips tolerate it.
 * **Switches/keycaps are on `F.Cu`** (the front/typing surface); the **hot-swap sockets are on `B.Cu`** (the back). Note: the switch *footprints* are placed on the `B.Cu` layer — that's just where the socket pads live — but the switch *bodies* render on `F.Cu`. The plate sits on the `F.Cu` side; reference it from the `F.Cu` face and mate the plate underside to the switch plate-shelf.
-* **STEP thickness compensation (important):** KiCad's STEP exporter models only the FR4 substrate — it omits the outer copper (~0.07 mm) and soldermask (~0.02 mm), so a 1.6 mm board would otherwise export as ~1.51 mm (and a 1.2 mm plate as ~1.11 mm). `make_cad_files.py` (board/assembly/halves) and `_gen_plate_cutouts.py` (plate) **bump the nominal thickness +0.09 mm** so the exported solids measure a true **1.6 mm** and **1.2 mm**. Component X/Y placement is unaffected; only the Z thickness is corrected.
+* **STEP thickness compensation (important):** KiCad's STEP exporter models only the FR4 substrate — it omits the outer copper (~0.07 mm) and soldermask (~0.02 mm), so a 1.6 mm board would otherwise export as ~1.51 mm (and a 1.2 mm plate as ~1.11 mm). `make_cad_files.py` (board/assembly/halves) and `make_plate.py` (plate) **bump the nominal thickness +0.09 mm** so the exported solids measure a true **1.6 mm** and **1.2 mm**. Component X/Y placement is unaffected; only the Z thickness is corrected.
 * **How components track the compensation:** correcting the board thickness moves the F.Cu face up, and **F.Cu-layer parts ride up with it automatically** (caps, resistors, RP2040/flash/LDO, crystals, ferrites, BOOTSEL) — they stay flush. The switch *bodies*, however, are anchored to their `B.Cu` socket footprints, so they do **not** ride the F.Cu compensation and would otherwise sit 0.09 mm below the raised F.Cu surface. `make_cad_files.py` therefore also nudges the switch 3D-model offset (`-4.1` → `-4.19`) in the temp export board so the switch bodies rise 0.09 mm and sit flush with the compensated F.Cu (typing) face. Net: on the compensated board every component sits at its true height — F.Cu electronics and switches flush on F.Cu, sockets/LEDs on B.Cu.
 * **PLA case clearance (FDM print):** design the case inner cavity **0.3–0.5 mm larger per side** than the PCB outline. Print tolerance (typically ±0.1–0.2 mm per dimension, plus first-layer squish that grows internal cavities inward) dominates; PLA shrinkage (~0.3–0.5%) and the PLA vs. FR4 thermal differential (~63 ppm/°C, ≈ 0.3 mm over a 15 °C swing on a ~350 mm board) are smaller contributors. Use **0.5 mm per side** on the full-board long axis and **0.3 mm per side** on the short axis; **0.2 mm** in Z between the board and its ledge is plenty. Print a small corner test chunk first and tune your slicer's **XY size compensation** until the PCB slides in with light friction before committing to a full-case print.
 
@@ -200,8 +204,9 @@ JLC's CPL parser is unusually strict about:
 ## Design Notes
 
 * **No reset circuit** — flashing is via BOOTSEL alone. RP2040's `~RUN` pin has an internal pull-up; leaving it floating is safe.
-* **Inter-half connection** uses TRRS (PJ-320A) carrying QMK PIO-serial split (TIP=+5V, RING1=data, SLEEVE=GND; RING2 reserved for future I²C/SCL or 2-wire full-duplex serial). The 5V bridge lets a single host USB-C power both halves through D1/D5 Schottky OR-ing.
-* **Connector placement** — the two host USB-C jacks are mounted on the outer-side edges of each half (aligned with the Q-row keycap top); the TRRS jacks are at the inner-edge top corners of each half. Both sit on small Edge.Cuts plank protrusions (3 mm for the host USB-C, 2 mm for the TRRS).
+* **Inter-half connection** uses **USB-C (HRO TYPE-C-31-M-12, top-edge mounted)** carrying QMK PIO-serial split over a **single wire on D+** (A6/B6 are tied together, A7/B7 D− unused). VBUS (A4/A9) bridges 5 V across halves, GND (A12/B12) ties them. The 5 V bridge lets a single host USB-C power both halves through Schottky OR-ing. **CC1 and CC2 (A5/B5) on J3/J4 are currently floating** — design choice for the serial-bridge use case (the link doesn't speak USB protocol so no CC negotiation is needed). If a host USB-C cable is ever accidentally plugged into J3 or J4, a floating CC pin can pick up VCONN; the conservative add is 5.1 kΩ pull-downs to GND on each CC line at the connector. The host USB-C connectors (J1/J2) already have proper 5.1 kΩ CC pull-downs (R4/R5 and R21/R22).
+* **Inter-half data is single-wire, not differential** — D+ carries half-duplex 12 MHz PIO serial; D− is intentionally floating. This is the same pattern as TRRS-based RING1 splits, just routed through USB-C-shaped pins. The connector is **not** an actual USB device port and should not be addressed as one in firmware.
+* **Connector placement** — the two host USB-C jacks (J1/J2) are mounted on the outer-side edges of each half (aligned with the Q-row keycap top); the inter-half USB-C jacks (J3/J4) are on the **top edge** of each half, near the inner-top corner, so a short USB-C-to-USB-C cable bridges between them across the keyboard's top edge with minimal slack. All four USB-C connectors sit on Edge.Cuts plank protrusions of **4 mm** (with the connector's plug face overhanging the plank by **1 mm**, giving a clean 1 mm recess inside a planned 6 mm case wall).
 * **Each half is fully independent** — you can power and flash each half on its own. Either half can be the master.
 * **Edge cuts** have 1.25 mm fillets on all corners. Both halves form closed loops; no breakaway tabs (order as 2 separate boards, or as a customer panel).
 * The `onigaku` repo (sibling library) contains the custom symbols, footprints, and 3D models referenced by this design. Must be cloned alongside this repo for KiCad to find the libraries.

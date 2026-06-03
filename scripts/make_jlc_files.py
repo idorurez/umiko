@@ -43,6 +43,22 @@ LCSC_OVERRIDES = {
     'onigaku:YS-SK6812MINI-E': 'C5149201',           # SK6812MINI-E reverse-mount RGB
     'onigaku:YS-SK6812MINI-E_underglow': 'C5149201', # same chip, underglow orientation
 }
+
+# Components to exclude from JLC assembly (BOM + CPL). These are hand-soldered
+# after the board comes back. Matched by schematic Value (groups all variants).
+#   - YS-SK6812MINI-E (90 total: 63 per-key + 27 underglow)
+#       Per-key are reverse-mount: body sits in a PCB cutout with lens facing
+#       F.Cu — not a standard PnP placement. Underglow are standard SMD on B.Cu
+#       but the OPSCO C5149201 chip layout is 180° from our footprint convention,
+#       which would short +5V to GND on every LED. Hand-solder both to avoid
+#       both issues.
+#   - KEYSW (63 total: Gateron KS-33 hot-swap sockets)
+#       Not in JLC's standard parts inventory; sourced separately from
+#       Keebio/Gateron/AliExpress and hand-soldered with the switches.
+DNP_VALUES = {
+    'YS-SK6812MINI-E',
+    'KEYSW',
+}
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PCB = os.path.join(PROJECT_DIR, 'umiko.kicad_pcb')
 SCH = os.path.join(PROJECT_DIR, 'umiko.kicad_sch')
@@ -154,10 +170,17 @@ def main():
     # Ranges (e.g. 'C1-C42') must be expanded to comma-separated lists;
     # JLC's parser handles commas but not dashes.
     bom_refs_set = set()
+    dnp_count = 0
     with open(jlc_bom, 'w', encoding='utf-8', newline='') as f:
         w = csv.writer(f)
         w.writerow(['Comment', 'Designator', 'Footprint', 'JLCPCB Part #（optional）'])
         for r in bom_rows:
+            if r['Value'] in DNP_VALUES:
+                # Skip DNP rows entirely — they won't be in BOM, and the CPL
+                # filter below will drop their refs too since they're not in
+                # bom_refs_set.
+                dnp_count += len(expand_refs(r['Reference']).split(','))
+                continue
             expanded = expand_refs(r['Reference'])
             bom_refs_set.update(x.strip() for x in expanded.split(',') if x.strip())
             lcsc = r.get('LCSC', '') or LCSC_OVERRIDES.get(r['Footprint'], '')
@@ -168,6 +191,8 @@ def main():
                 lcsc,
             ])
     print(f'[BOM] wrote {jlc_bom} ({len(bom_rows)} grouped rows; designator ranges expanded)')
+    if dnp_count:
+        print(f'       DNP (excluded from JLC assembly): {dnp_count} components matching {sorted(DNP_VALUES)}')
 
     # 7b. Now write CPL, filtering out any refs not present in the BOM.
     #    This excludes test points (exclude_from_bom), orphan footprints with
