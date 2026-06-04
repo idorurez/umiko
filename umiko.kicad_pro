@@ -63,31 +63,23 @@
       ],
       "drc_exclusions": [
         [
-          "copper_edge_clearance|143158795|125538000|67fbef0c-39dd-4df7-ac28-160390db4b71|8bc2c25a-a1f1-4ce8-b96a-a4f8f4c35079",
+          "copper_edge_clearance|138158795|125538000|67fbef0c-39dd-4df7-ac28-160390db4b71|8bc2c25a-a1f1-4ce8-b96a-a4f8f4c35079",
           ""
         ],
         [
-          "copper_edge_clearance|206743250|125545000|01e273b8-cd0c-49c5-8471-bd776dc5bd5c|feb26ecb-9193-46ea-a41b-d09305bf0a3e",
+          "copper_edge_clearance|216743250|125545000|01e273b8-cd0c-49c5-8471-bd776dc5bd5c|feb26ecb-9193-46ea-a41b-d09305bf0a3e",
           ""
         ],
         [
-          "copper_edge_clearance|224134000|119442000|15fe950f-8ee7-4b22-a97a-9955dc188dbf|eb245694-5d4a-4580-b58e-31acf2bba517",
+          "copper_edge_clearance|311993250|106495000|577a5adf-7e08-4e2e-aa80-5f10d76d9e3b|8d9a3ecc-539f-41da-8099-d37cea9c28e7",
           ""
         ],
         [
-          "copper_edge_clearance|224134000|122992000|15fe950f-8ee7-4b22-a97a-9955dc188dbf|fb7892a0-29e9-4d08-86e9-ed9ad1c00745",
+          "copper_edge_clearance|316755750|87445000|7a322c50-e18e-459d-b907-bd083c769104|17ed3508-fa2e-4593-a799-bfd39a6cc14d",
           ""
         ],
         [
-          "copper_edge_clearance|301993250|106495000|577a5adf-7e08-4e2e-aa80-5f10d76d9e3b|8d9a3ecc-539f-41da-8099-d37cea9c28e7",
-          ""
-        ],
-        [
-          "copper_edge_clearance|306755750|87445000|7a322c50-e18e-459d-b907-bd083c769104|17ed3508-fa2e-4593-a799-bfd39a6cc14d",
-          ""
-        ],
-        [
-          "copper_edge_clearance|47908795|106488000|514ebb41-51ea-4e0c-a772-abcf74ae3da2|eb473bfd-fc2d-4cf0-8714-6b7dd95b0a03",
+          "copper_edge_clearance|42908795|106488000|514ebb41-51ea-4e0c-a772-abcf74ae3da2|eb473bfd-fc2d-4cf0-8714-6b7dd95b0a03",
           ""
         ]
       ],
@@ -864,7 +856,7 @@
         "uuid": "4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
       }
     ],
-    "used_designators": "J2,J5,U4,U12",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
