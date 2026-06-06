@@ -54,7 +54,7 @@ RP2040 MCU | RP2040 (QFN-56) | 2 | LCSC `C2040` / Mouser / DigiKey / direct from
 QSPI Flash | Winbond W25Q128JVPIQ | 2 | LCSC `C190862` / Mouser / DigiKey
 3.3V LDO | TI TLV75533PDQNR | 2 | LCSC `C133572` (X2SON-4)
 12 MHz crystal | 2520 4-pin SMD | 2 | LCSC `C2149204` / Mouser
-USB-C receptacle (host + inter-half) | HRO TYPE-C-31-M-12 | 4 | LCSC `C963373` / JLC / AliExpress — same part used for all four positions (J1/J2 outer = host, J3/J4 top = inter-half)
+USB-C receptacle (host + inter-half) | HRO TYPE-C-31-M-12 | 4 | LCSC `C165948` / JLC / AliExpress — same part used for all four positions (J1/J2 outer = host, J3/J4 top = inter-half)
 USB ESD | USBLC6-2P6 | 2 | LCSC `C2827693` (SOT-666)
 Polyfuse | Bourns MF-PSMF110X-2 (1.1 A, 0603) | 2 | LCSC `C89658` / DigiKey
 Ferrite bead | 600 Ω 0402 | 2 | LCSC `C160977`
@@ -108,7 +108,7 @@ No reset button needed — power-cycle + BOOTSEL handles all flashing.
 2. **MCUs (RP2040)** — these have an exposed thermal pad on the bottom that needs to be soldered (heat from below, use a hotplate or reflow station). Hand-soldering with a fine tip is doable but tricky.
 3. **Flash chips, LDOs, ESD protection** — small SMD work
 4. **Crystals** — fragile, place after the heavy soldering nearby is done
-5. **USB-C receptacles** — mid-mount-ish; can be reflowed or hand-soldered
+5. **USB-C receptacles** (HRO TYPE-C-31-M-12) — SMD signal pads + 4 THT shield legs + 2 NPTH alignment pegs; body sits on top of the PCB. Can be reflowed or hand-soldered.
 6. **LEDs** — start with underglow (back side), then per-key (front side). Test as you solder.
 7. **Switch sockets** (Kailh / Gateron KS33 hot-swap) — last to give all-around access during earlier soldering
 8. **Stabilizers** — clip in before testing switches
