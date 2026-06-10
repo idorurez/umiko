@@ -52,7 +52,7 @@ Part | Part number | Qty | Notes / Source
 --- | --- | --- | ---
 RP2040 MCU | RP2040 (QFN-56) | 2 | LCSC `C2040` / Mouser / DigiKey / direct from Raspberry Pi
 QSPI Flash | Winbond W25Q128JVPIQ | 2 | LCSC `C190862` / Mouser / DigiKey
-3.3V LDO | TI TLV75533PDQNR | 2 | LCSC `C133572` (X2SON-4)
+3.3V LDO | TI LP5907SNX-3.3 | 2 | LCSC `C133572` (XDFN-4, 1×1 mm) — 250 mA / 3.3 V. See [LDO history note](#ldo-history) below for why this instead of the Helios-spec'd TLV75533.
 12 MHz crystal | 2520 4-pin SMD | 2 | LCSC `C2149204` / Mouser
 USB-C receptacle (host + inter-half) | HRO TYPE-C-31-M-12 | 4 | LCSC `C165948` / JLC / AliExpress — same part used for all four positions (J1/J2 outer = host, J3/J4 top = inter-half)
 USB ESD | USBLC6-2P6 | 2 | LCSC `C2827693` (SOT-666)
@@ -210,6 +210,23 @@ JLC's CPL parser is unusually strict about:
 * **Each half is fully independent** — you can power and flash each half on its own. Either half can be the master.
 * **Edge cuts** have 1.25 mm fillets on all corners. Both halves form closed loops; no breakaway tabs (order as 2 separate boards, or as a customer panel).
 * The `onigaku` repo (sibling library) contains the custom symbols, footprints, and 3D models referenced by this design. Must be cloned alongside this repo for KiCad to find the libraries.
+
+### LDO history
+
+The 3.3 V LDO for each half (U2 and U10) is `LP5907SNX-3.3` (TI, XDFN-4, LCSC `C133572`, 250 mA). This diverges from the 0xCB Helios reference design, which spec's a `TLV75533PDQNR` (TI, X2SON-4, LCSC `C2861882`, 500 mA). The history of why:
+
+1. **Schematic originally matched Helios:** `TLV75533PDQNR` in the Value field, X2SON-4 footprint. Helios uses the same `PCM_0xcb:LP5907SNX-3.3-NOPB` schematic symbol for both parts since the 4-pin layout is identical (1=IN, 2=GND, 3=EN, 4=OUT).
+2. **JLC ran out of TLV75533PDQNR in the X2SON-4 package** (TI X2SON parts have had recurring supply issues through 2025–2026; current LCSC and JLC stock for `C2861882` is zero, with no clear restock date). The pin-compatible LP5907 in the same XDFN-4 (1×1 mm) footprint was substituted to keep the existing PCB working without a layout change.
+3. **The Value / MPN fields in the schematic weren't updated** during the substitution, so for a while the repo said `TLV75533PDQNR` while the placed chip was actually LP5907. This was confusing for anyone reading the BOM. **Fixed as of this commit:** Value, MPN, LCSC, Footprint, Datasheet for U2/U10 now all consistently describe the LP5907 that's actually placed.
+
+**Why 250 mA is sufficient here:** Per-half 3.3 V load is ~150 mA peak — RP2040 (~50 mA active) + W25Q128 flash (~15 mA) + indicator LEDs (few mA) + OLED (~20 mA) + biases. **Per-key RGB LEDs are powered from VBUS 5 V, not from the 3.3 V rail**, so they don't load the LDO. The LP5907 has ~1.7× headroom over peak load.
+
+**If a future revision needs the full 500 mA** (e.g. adding Bluetooth, a larger display, encoders on 3.3 V, or expansion headers that hand the rail out to user-added loads), the options are:
+
+* **`TLV75533PDQNR` (X2SON-4, `C2861882`)** — drop-in for the current footprint *if* JLC has stock when you order. Check first.
+* **`TLV75533PDBVR` (SOT-23-5, `C404027`)** — same chip in a larger, more reliably-stocked package. Requires a footprint swap on the PCB and a schematic-symbol replacement (5-pin: pad 5 = OUT, pad 4 = NR; the LP5907 4-pin symbol won't drive this correctly). Worth the rework only when the extra current is genuinely needed.
+
+This note exists so future-you (or a contributor) doesn't re-investigate this from scratch.
 
 ## Stretch / Future Ideas (Rev 2)
 
