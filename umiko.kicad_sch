@@ -64767,7 +64767,7 @@
 				)
 			)
 		)
-		(property "Value" "TLV75533PDQNR"
+		(property "Value" "LP5907SNX-3.3"
 			(at 475.488 67.818 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -64810,7 +64810,7 @@
 				)
 			)
 		)
-		(property "MPN" "TLV75533PDQNR"
+		(property "MPN" "LP5907SNX-3.3"
 			(at 475.488 61.468 0)
 			(hide yes)
 			(show_name no)
@@ -73670,7 +73670,7 @@
 				)
 			)
 		)
-		(property "Value" "TLV75533PDQNR"
+		(property "Value" "LP5907SNX-3.3"
 			(at 327.66 67.31 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -73713,7 +73713,7 @@
 				)
 			)
 		)
-		(property "MPN" "TLV75533PDQNR"
+		(property "MPN" "LP5907SNX-3.3"
 			(at 327.66 60.96 0)
 			(hide yes)
 			(show_name no)
