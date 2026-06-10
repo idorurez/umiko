@@ -56,7 +56,7 @@ QSPI Flash | Winbond W25Q128JVPIQ | 2 | LCSC `C190862` / Mouser / DigiKey
 12 MHz crystal | 2520 4-pin SMD | 2 | LCSC `C2149204` / Mouser
 USB-C receptacle (host + inter-half) | HRO TYPE-C-31-M-12 | 4 | LCSC `C165948` / JLC / AliExpress — same part used for all four positions (J1/J2 outer = host, J3/J4 top = inter-half)
 USB ESD | USBLC6-2P6 | 2 | LCSC `C2827693` (SOT-666)
-Polyfuse | Bourns MF-PSMF110X-2 (1.1 A, 0603) | 2 | LCSC `C89658` / DigiKey
+Polyfuse | Bourns MF-FSMF050X-2 (500 mA hold / 1 A trip, 0603) | 2 | LCSC `C210357` / DigiKey (per Helios reference design)
 Ferrite bead | 600 Ω 0402 | 2 | LCSC `C160977`
 Schottky diode | PMEG2010BELD (SOD-882) | 4 | LCSC `C552820` / DigiKey
 Per-key LEDs | SK6812MINI-E (reverse mount) | 70+ | LCSC `C5149201` / AliExpress — order ~10% spare, fragile. Pin **numbers** between vendors differ but physical VDD/VSS/DIN/DOUT corners match

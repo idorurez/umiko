@@ -69323,7 +69323,7 @@
 				)
 			)
 		)
-		(property "Value" "1.1A"
+		(property "Value" "500mA"
 			(at 429.768 61.468 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69388,7 +69388,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C89658"
+		(property "LCSC" "C210357"
 			(at 429.768 58.928 0)
 			(hide yes)
 			(show_name no)
@@ -71503,7 +71503,7 @@
 				)
 			)
 		)
-		(property "Value" "1.1A"
+		(property "Value" "500mA"
 			(at 281.94 60.96 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -71568,7 +71568,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C89658"
+		(property "LCSC" "C210357"
 			(at 281.94 58.42 0)
 			(hide yes)
 			(show_name no)
