@@ -73,20 +73,90 @@ BOOTSEL push button | 4×4×1.5 mm SMD | 2 | LCSC `C589221`
 
 ## Software (QMK)
 
-### Build
+### Where the keyboard config lives
+
+The umiko QMK keyboard definition lives in a **fresh clone of upstream QMK**, not in the older `idorurez/qmk_firmware` fork (which is on the `bakekujira` branch and carries stale history for an unrelated older board). Clean-slate approach:
 
 ```
-git clone https://github.com/idorurez/qmk_firmware.git
-cd qmk_firmware
-git submodule sync --recursive
-git submodule update --init --recursive
-
-# Compile left half
-qmk compile -kb umiko -km default -bl uf2-split-left
-
-# Compile right half
-qmk compile -kb umiko -km default -bl uf2-split-right
+git clone --depth 1 https://github.com/qmk/qmk_firmware.git ~/dev/keyboard/qmk_umiko
+cd ~/dev/keyboard/qmk_umiko
+git submodule update --init --recursive   # ~2 GB, ~10 min. Required for RP2040 (pico-sdk submodule)
 ```
+
+The `keyboards/umiko/` folder is authored by-hand in this repo. Files: `info.json` (matrix pins, 5×8 scanning matrix, split serial vendor driver on GP0, LAYOUT_all with 63 keys extracted from the schematic), `rules.mk`, `config.h`, `keymaps/default/keymap.c`, `readme.md`. Copy these into `qmk_umiko/keyboards/umiko/` when setting up a fresh clone. (TODO: move keyboards/umiko/ into this repo and symlink or use QMK's external-keyboard support so it lives with the PCB source.)
+
+### Toolchain (Windows) — verified working steps
+
+QMK's CLI **requires** MSYS2 on Windows (its `MSYSTEM` environment check hard-fails in git-bash or a plain Windows shell). The steps below are the exact recipe that worked here — the QMK docs miss a few things (new pkg locations, Python home dir on MSYS2, `keyboard.json` vs `info.json`, jsonschema/rpds-py wheel build failure). Follow verbatim.
+
+**1. Install MSYS2 to `C:/msys64`**
+
+Download from https://www.msys2.org/. Default installer, install to `C:/msys64`. For silent install: `msys2-x86_64-latest.exe install --confirm-command --accept-messages --root C:/msys64`.
+
+**2. Install packages via pacman (in the MSYS2 MINGW64 shell)**
+
+```
+pacman -Syu --noconfirm --disable-download-timeout
+yes '' | pacman -S --noconfirm --needed --disable-download-timeout \
+    base-devel git \
+    mingw-w64-x86_64-python-pip mingw-w64-x86_64-python-cffi \
+    mingw-w64-x86_64-python-pillow mingw-w64-x86_64-rust \
+    mingw-w64-ucrt-x86_64-arm-none-eabi-gcc \
+    mingw-w64-ucrt-x86_64-arm-none-eabi-binutils \
+    mingw-w64-ucrt-x86_64-arm-none-eabi-newlib
+```
+
+Gotchas:
+- The `arm-none-eabi-*` toolchain packages are only under the **UCRT64 repo**, not MINGW64 — that's why the package prefix is `mingw-w64-ucrt-x86_64-` for those three only.
+- `yes ''` is required to answer pacman's group-membership prompts (which `--noconfirm` alone doesn't handle).
+- `python-pillow` and `rust` are prerequisites for the QMK pip install — omitting them causes rpds-py / pillow to try building from source and fail.
+
+**3. Install QMK CLI via pip (still in MSYS2 MINGW64 shell)**
+
+```
+python -m pip install --user --break-system-packages 'jsonschema<4.18'
+python -m pip install --user --break-system-packages qmk
+```
+
+Notes:
+- `--break-system-packages` is required because MSYS2's Python is PEP 668-managed. It just means "install into user site-packages" — safe.
+- Pinning `jsonschema<4.18` avoids the modern `rpds-py` Rust build (which fails on MSYS2's Python ABI). Older jsonschema uses `pyrsistent` instead.
+- Ensure `USERPROFILE` is set correctly before running pip, or the install path will contain a literal `~` and Python won't find its own packages. Set: `export USERPROFILE='C:\Users\<you>'`.
+
+**4. Set up qmk_home + junction**
+
+QMK CLI looks for qmk_firmware at `~/qmk_firmware` on the Windows side (`C:/Users/<you>/qmk_firmware`), regardless of the `user.qmk_home` config value. The cleanest fix is a directory junction:
+
+```
+cmd /c "mklink /J C:\Users\<you>\qmk_firmware C:\Users\<you>\dev\keyboard\qmk_umiko"
+```
+
+**5. Test compile**
+
+Requires setting a few env vars every time you run qmk in MSYS2. The `scripts/qmk_compile.sh` wrapper in this repo handles it — just run:
+
+```
+scripts/qmk_compile.sh
+```
+
+or if you prefer to do it by hand from an MSYS2 MINGW64 shell:
+
+```
+export USERPROFILE='C:\Users\<you>'
+export HOME=/home/<you>
+export PATH=/c/Users/<you>/.local/bin:/ucrt64/bin:$PATH
+qmk compile -kb umiko -km default
+```
+
+Output UF2 lands at `qmk_umiko/umiko_default.uf2` (~74 KB).
+
+### QMK config: `keyboard.json` (NOT `info.json`)
+
+Current QMK expects each keyboard folder to have `keyboard.json` at the top level (the old `info.json` name causes `qmk compile -kb umiko` to fail with `invalid keyboard_folder value`). Umiko's config is at `qmk_umiko/keyboards/umiko/keyboard.json`.
+
+### Split handedness
+
+Umiko has no dedicated handedness pin (`SPLIT_HAND_PIN`), so the default UF2 relies on QMK's USB-detect-based master election (whichever half enumerates as a USB HID device becomes master; the other becomes slave over the inter-half serial link). This may need tweaking if it doesn't behave — options include compile-time `MASTER_LEFT`/`MASTER_RIGHT` defines or `EE_HANDS` (per-half EEPROM handedness). TODO: revisit after first split test.
 
 ### Flash
 
@@ -98,7 +168,19 @@ Each half is flashed independently via BOOTSEL:
 4. **Release BOOTSEL** — the half mounts as a USB mass-storage device (RPI-RP2)
 5. **Drag-and-drop the `.uf2`** for that half onto the drive — it auto-reboots into the new firmware
 
-No reset button needed — power-cycle + BOOTSEL handles all flashing.
+Note: on this board the W25Q128 flash arrives blank from JLC, so first plug-in enters BOOTSEL automatically (RP2040 defaults to USB mass-storage mode when the QSPI flash contains no valid firmware). After first flash, subsequent re-flashes need the BOOTSEL button held.
+
+No reset button on the board — power-cycle + BOOTSEL handles all flashing.
+
+### Split serial: what's happening on the wire
+
+Umiko routes QMK's split-transport protocol over a **single-wire half-duplex PIO serial** running on **GP0** of each RP2040. GP0 connects to the D+ pin of each half's inter-half USB-C connector (J3 left, J4 right). A short USB-C-to-USB-C cable between J3 and J4 ties the two GP0 lines together and provides the 5V bridge (VBUS pins A4/A9) and GND (A12/B12).
+
+QMK config:
+- `info.json` → `split.serial.driver = "vendor"` (uses RP2040 PIO peripheral for the serial protocol)
+- `config.h` → `SERIAL_USART_TX_PIN = GP0` (single pin used for both TX and RX in half-duplex)
+
+The inter-half USB-C is **not** a real USB port — it's just a convenient 4-conductor connector shape (VBUS + GND + D+). Do not plug either J3 or J4 into a computer or USB device.
 
 ## Assembly Notes
 
