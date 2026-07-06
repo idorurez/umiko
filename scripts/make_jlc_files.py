@@ -164,6 +164,16 @@ def main():
     with open(raw_bom, 'r', encoding='utf-8', newline='') as f:
         bom_rows = list(csv.DictReader(f))
 
+    # Cross-check against what's actually on the PCB. The schematic BOM
+    # lists every component the schematic knows about; the CPL (position
+    # file) reflects footprints physically placed on the PCB. If a
+    # designator is in the schematic but not on the PCB (e.g. because
+    # this is a right-half-only variant with the left half trimmed out),
+    # drop it from the BOM so we don't pay JLC to source parts we won't
+    # place.
+    with open(raw_pos, 'r', encoding='utf-8', newline='') as f:
+        pcb_refs_set = {r['Ref'] for r in csv.DictReader(f)}
+
     # Keep BOM grouped (one row per unique part type, comma-separated
     # designators). JLC's parts-selection UI groups by part type anyway —
     # this lets a single LCSC pick apply to all matching designators.
@@ -171,6 +181,7 @@ def main():
     # JLC's parser handles commas but not dashes.
     bom_refs_set = set()
     dnp_count = 0
+    schematic_only_count = 0
     with open(jlc_bom, 'w', encoding='utf-8', newline='') as f:
         w = csv.writer(f)
         w.writerow(['Comment', 'Designator', 'Footprint', 'JLCPCB Part #（optional）'])
@@ -181,18 +192,28 @@ def main():
                 # bom_refs_set.
                 dnp_count += len(expand_refs(r['Reference']).split(','))
                 continue
-            expanded = expand_refs(r['Reference'])
-            bom_refs_set.update(x.strip() for x in expanded.split(',') if x.strip())
+            expanded_refs = [x.strip() for x in expand_refs(r['Reference']).split(',') if x.strip()]
+            # Keep only refs actually placed on the PCB
+            placed_refs = [ref for ref in expanded_refs if ref in pcb_refs_set]
+            schematic_only_count += len(expanded_refs) - len(placed_refs)
+            if not placed_refs:
+                # No designators from this schematic row are on the PCB;
+                # drop the entire row (e.g. left-half parts on the
+                # right-only variant).
+                continue
             lcsc = r.get('LCSC', '') or LCSC_OVERRIDES.get(r['Footprint'], '')
+            bom_refs_set.update(placed_refs)
             w.writerow([
                 r['Value'],
-                expanded,
+                ','.join(placed_refs),
                 r['Footprint'],
                 lcsc,
             ])
     print(f'[BOM] wrote {jlc_bom} ({len(bom_rows)} grouped rows; designator ranges expanded)')
     if dnp_count:
         print(f'       DNP (excluded from JLC assembly): {dnp_count} components matching {sorted(DNP_VALUES)}')
+    if schematic_only_count:
+        print(f'       Schematic-only (not on PCB, dropped): {schematic_only_count} designators')
 
     # 7b. Now write CPL, filtering out any refs not present in the BOM.
     #    This excludes test points (exclude_from_bom), orphan footprints with
