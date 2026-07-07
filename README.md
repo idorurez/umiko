@@ -230,9 +230,11 @@ When printed as an integrated plate (Choc V2 stab cutouts + KS-33 v2.0 switch cu
 
 The right-side widen for body A translates the stab housing pocket outward relative to the keyboard center, which keeps the switch-hole-facing wall intact. Widening symmetrically or inward risks the plate breaking during install pressure.
 
-**Status:** applied via SolidWorks direct edit (Move Face, translate 0.2 mm, per feature) on the left half of the current print. Right-half stabs pending same treatment. If second test-fit is clean, back-port these tolerances to `make_plate.py` for future full-regen cycles. Until then, the plate STEP is edited in SW and does not need to be regenerated from the PCB — this preserves the downstream case CAD dependencies.
+**Status:** applied via SolidWorks direct edit (Move Face, translate 0.2 mm, per feature) on the left half of the current print. Right-half stabs pending same treatment.
 
-**Where the edits live:** the individual `Move Face` operations are preserved as separate entries in the SolidWorks feature tree of the plate/case CAD file — they aren't collapsed into the imported STEP body. Anyone iterating on the tolerance (tighter/looser, or per-stab) can find each Move Face feature in the tree, right-click → **Edit Feature**, adjust the distance, and rebuild. No need to redo the surgery from scratch or reimport the STEP.
+**Why NOT back-port to `make_plate.py`:** the script's job is to produce cutouts true to the Kailh Choc V2 datasheet spec — anyone using it (CNC-milling a metal plate, SLA-printing, injection-molding, or FDM on a differently-tuned printer) should start from the canonical spec and apply their own downstream tolerance. Baking a +0.2 mm fudge into the script would bias future builders in the wrong direction. **The tolerance lives in the SolidWorks CAD, not the plate generator.**
+
+**Where the edits live:** the individual `Move Face` operations are preserved as separate entries in the SolidWorks feature tree of the plate/case CAD file — they aren't collapsed into the imported STEP body. Anyone iterating on the tolerance (tighter/looser, or per-stab, or for a different manufacturing process) can find each Move Face feature in the tree, right-click → **Edit Feature**, adjust the distance, and rebuild. No need to redo the surgery from scratch or reimport the STEP.
 
 ### SWD Debug
 
