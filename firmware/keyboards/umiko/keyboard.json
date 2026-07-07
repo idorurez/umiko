@@ -14,7 +14,9 @@
         "bootmagic": true,
         "extrakey": true,
         "nkro": true,
-        "mousekey": true
+        "mousekey": true,
+        "rgblight": true,
+        "oled": true
     },
     "diode_direction": "COL2ROW",
     "matrix_pins": {
@@ -585,5 +587,37 @@
                 }
             ]
         }
+    },
+    "ws2812": {
+        "driver": "vendor",
+        "pin": "GP25"
+    },
+    "rgblight": {
+        "led_count": 90,
+        "split": true,
+        "split_count": [
+            42,
+            48
+        ],
+        "max_brightness": 80,
+        "animations": {
+            "rainbow_swirl": true,
+            "breathing": true,
+            "static_gradient": true
+        },
+        "default": {
+            "val": 128,
+            "hue": 0,
+            "sat": 255,
+            "animation": "static_light"
+        }
+    },
+    "oled": {
+        "driver": "ssd1306"
+    },
+    "i2c": {
+        "driver": "vendor",
+        "scl_pin": "GP3",
+        "sda_pin": "GP2"
     }
 }

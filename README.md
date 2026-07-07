@@ -212,6 +212,28 @@ The inter-half USB-C is **not** a real USB port — it's just a convenient 4-con
 
 The stabilizer cutouts on this PCB are sized for **Kailh Choc V2 stabilizers**. Standard MX / Cherry-style stabilizers **will not fit** the cutout. Stabilizers are needed at the 2.25U and 2.75U thumb keys.
 
+The stab cutouts follow the Choc V2 spec from `keebio/kb-plategen`, encoded in `scripts/make_plate.py`:
+* Body A: 5.95 × 7.95 mm at (±12, ±0.3441)
+* Neck B: 4.55 × 6.25 mm at (±12, ±6.7559)
+* Wire slot: 24 × 1.4 mm at (0, ±8.2809)
+* r=0.5 mm fillet, unioned into one outline per stab position
+* Sign (±) depends on wire direction — north for SW_30 / SW_35 (bottom-edge keys), south for everything else
+
+#### FDM tolerance tuning (test-fit result on integrated plate print, 2026-07-07)
+
+When printed as an integrated plate (Choc V2 stab cutouts + KS-33 v2.0 switch cutouts on the same 1.2 mm plate face), the CAD dimensions above come in **tight for FDM tolerance**. Switches (14 mm cutouts) fit press-fit and correctly, but the stab housings bind on install and the wire drags in its slot. The **asymmetric tolerance tweak** below relieves this without weakening the thin plate walls near the switch cutout:
+
+* **Wire slot**: widen +0.2 mm on the **far-from-switch** side only (1.4 → 1.6 mm)
+* **Neck B**: widen +0.2 mm on the **far-from-switch** side only (6.25 → 6.45 mm on the far Y face)
+* **Body A**: widen +0.2 mm on the **outer** side only — left face of the left stab moves outboard; right face of the right stab moves outboard
+* **All switch-facing walls untouched** — the thin plate material between the stab cutouts and the 14 mm switch cutout is already ~2 mm and would fail structurally if reduced
+
+The right-side widen for body A translates the stab housing pocket outward relative to the keyboard center, which keeps the switch-hole-facing wall intact. Widening symmetrically or inward risks the plate breaking during install pressure.
+
+**Status:** applied via SolidWorks direct edit (Move Face, translate 0.2 mm, per feature) on the left half of the current print. Right-half stabs pending same treatment. If second test-fit is clean, back-port these tolerances to `make_plate.py` for future full-regen cycles. Until then, the plate STEP is edited in SW and does not need to be regenerated from the PCB — this preserves the downstream case CAD dependencies.
+
+**Where the edits live:** the individual `Move Face` operations are preserved as separate entries in the SolidWorks feature tree of the plate/case CAD file — they aren't collapsed into the imported STEP body. Anyone iterating on the tolerance (tighter/looser, or per-stab) can find each Move Face feature in the tree, right-click → **Edit Feature**, adjust the distance, and rebuild. No need to redo the surgery from scratch or reimport the STEP.
+
 ### SWD Debug
 
 If you need to flash via SWD (rare — BOOTSEL handles most needs):

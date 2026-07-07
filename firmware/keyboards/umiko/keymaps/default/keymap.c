@@ -141,3 +141,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TRNS
     ),
 };
+
+#ifdef OLED_ENABLE
+bool oled_task_user(void) {
+    // Basic render: keyboard name + which half + current layer
+    oled_write_ln_P(PSTR("umiko"), false);
+    oled_write_ln_P(is_keyboard_master() ? PSTR("master") : PSTR("slave"), false);
+    oled_write_P(PSTR("layer "), false);
+    oled_write_char('0' + get_highest_layer(layer_state), false);
+    return false;
+}
+#endif
