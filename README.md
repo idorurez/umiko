@@ -219,22 +219,25 @@ The stab cutouts follow the Choc V2 spec from `keebio/kb-plategen`, encoded in `
 * r=0.5 mm fillet, unioned into one outline per stab position
 * Sign (±) depends on wire direction — north for SW_30 / SW_35 (bottom-edge keys), south for everything else
 
-#### FDM tolerance tuning (test-fit result on integrated plate print, 2026-07-07)
+#### FDM tolerance tuning
 
-When printed as an integrated plate (Choc V2 stab cutouts + KS-33 v2.0 switch cutouts on the same 1.2 mm plate face), the CAD dimensions above come in **tight for FDM tolerance**. Switches (14 mm cutouts) fit press-fit and correctly, but the stab housings bind on install and the wire drags in its slot. The **asymmetric tolerance tweak** below relieves this without weakening the thin plate walls near the switch cutout:
+When printed as an integrated plate (Choc V2 stab cutouts + KS-33 v2.0 switch cutouts on the same 1.2 mm plate face), the canonical `make_plate.py` dimensions come in **tight for FDM tolerance**. Switches (14 mm cutouts) fit press-fit and correctly, but stab housings bind on install and the wire drags in its slot. Iterate on the cutout dimensions in your CAD until the stabs seat and the wire moves freely — this is expected FDM work and every printer will need slightly different numbers.
 
-* **Wire slot**: widen +0.2 mm on the **far-from-switch** side only (1.4 → 1.6 mm)
-* **Neck B**: widen +0.2 mm on the **far-from-switch** side only (6.25 → 6.45 mm on the far Y face)
-* **Body A**: widen +0.2 mm on the **outer** side only — left face of the left stab moves outboard; right face of the right stab moves outboard
-* **All switch-facing walls untouched** — the thin plate material between the stab cutouts and the 14 mm switch cutout is already ~2 mm and would fail structurally if reduced
+**The principle: asymmetric relief, always outward from the switch cutout.**
 
-The right-side widen for body A translates the stab housing pocket outward relative to the keyboard center, which keeps the switch-hole-facing wall intact. Widening symmetrically or inward risks the plate breaking during install pressure.
+The plate material between each stab cutout and the 14 mm switch cutout is thin (~2 mm) — thinning it further risks structural failure during install. So all tolerance relief goes on the **outward-facing edges** of each cutout:
 
-**Status:** applied via SolidWorks direct edit (Move Face, translate 0.2 mm, per feature) on the left half of the current print. Right-half stabs pending same treatment.
+* **Wire slot**: relieve on the **far-from-switch** long side (the outer wall of the wire trough). Never touch the switch-facing side.
+* **Neck B**: relieve on the **far-from-switch** face (the outer wall of the neck pocket). Never touch the switch-facing side.
+* **Body A**: relieve on the **outboard** face — the face that points away from the keyboard center (left face of the left stab, right face of the right stab). Never touch the switch-facing side.
 
-**Why NOT back-port to `make_plate.py`:** the script's job is to produce cutouts true to the Kailh Choc V2 datasheet spec — anyone using it (CNC-milling a metal plate, SLA-printing, injection-molding, or FDM on a differently-tuned printer) should start from the canonical spec and apply their own downstream tolerance. Baking a +0.2 mm fudge into the script would bias future builders in the wrong direction. **The tolerance lives in the SolidWorks CAD, not the plate generator.**
+Expect to need **more relief on the outboard edges of Body A** than the wire/neck features — the stab housing exerts the most lateral install force on the outer walls of the body pocket, and that's typically where binding is worst. Iterate: file, test-fit, transfer the successful delta back into CAD (or Move Face in SW), reprint.
 
-**Where the edits live:** the individual `Move Face` operations are preserved as separate entries in the SolidWorks feature tree of the plate/case CAD file — they aren't collapsed into the imported STEP body. Anyone iterating on the tolerance (tighter/looser, or per-stab, or for a different manufacturing process) can find each Move Face feature in the tree, right-click → **Edit Feature**, adjust the distance, and rebuild. No need to redo the surgery from scratch or reimport the STEP.
+Widening symmetrically, or inward toward the switch cutout, risks the plate breaking during install pressure. Always relieve outward.
+
+**Why NOT back-port to `make_plate.py`:** the script's job is to produce cutouts true to the Kailh Choc V2 datasheet spec. Anyone using it (CNC-milling a metal plate, SLA-printing, injection-molding, or FDM on a differently-tuned printer) should start from the canonical spec and apply their own downstream tolerance. Baking a fudge factor into the script would bias future builders in the wrong direction. **The tolerance lives in your CAD/slicer downstream of the plate generator, not in the generator itself.**
+
+**Where the edits live in this project's SW file:** individual `Move Face` operations are preserved as separate entries in the SolidWorks feature tree of the plate/case CAD — they aren't collapsed into the imported STEP body. Anyone iterating on the tolerance (tighter/looser, per-stab, or for a different manufacturing process) can find each Move Face feature in the tree, right-click → **Edit Feature**, adjust the distance, and rebuild. No need to redo the surgery from scratch or reimport the STEP.
 
 ### SWD Debug
 
