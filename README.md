@@ -5,6 +5,7 @@
 ![PCB perspective](images/umiko_3dview_persp.png)
 ![PCB front (no keys)](images/umiko_3dview_front_nokeys.png)
 ![PCB back (no keys)](images/umiko_3dview_back_nokeys.png)
+![Case CAD in SolidWorks](images/umiko_case_solidworks.png)
 
 A split, low-profile TKL F-row-less mechanical keyboard PCB. Two halves connect via a **top-mounted USB-C inter-half link** (single-wire QMK PIO serial over the D+ pin, with VBUS bridging 5 V across halves), each half is independently powered via its own side-mounted host USB-C and flashable, and each half has its own RP2040 microcontroller, per-key RGB, and underglow. Stabilizer cutouts are sized for Kailh Choc V2 stabilizers. Switches are Gateron KS-33 v2.0 low-profile (MX-compatible, hot-swap). 4-layer board with split L/R power rails and dedicated inner GND/3V3 planes.
 
