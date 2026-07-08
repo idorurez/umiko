@@ -4783,9 +4783,9 @@
 			)
 			(symbol "SSD1306_1_1"
 				(pin input line
-					(at -3.81 8.89 270)
+					(at 3.81 8.89 270)
 					(length 2.54)
-					(name "GND"
+					(name "SDA"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4793,24 +4793,6 @@
 						)
 					)
 					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -1.27 8.89 270)
-					(length 2.54)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4828,6 +4810,24 @@
 							)
 						)
 					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -1.27 8.89 270)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
 					(number "3"
 						(effects
 							(font
@@ -4837,9 +4837,9 @@
 					)
 				)
 				(pin input line
-					(at 3.81 8.89 270)
+					(at -3.81 8.89 270)
 					(length 2.54)
-					(name "SDA"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -65355,7 +65355,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "onigaku:OLED_SSD1306_32x12mm"
+		(property "Footprint" "0xcb:128x64OLED"
 			(at 375.412 262.89 0)
 			(hide yes)
 			(show_name no)
