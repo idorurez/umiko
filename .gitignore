@@ -6,10 +6,32 @@ desktop.ini
 # KiCad lock/autosave files
 ~*.lck
 _autosave-*
-*.kicad_pcb.pre_placement_*.bak
-*.kicad_sch.bak
+*.kicad_pcb.bak*
+*.kicad_pcb.pre_*.bak
+*.kicad_sch.bak*
 *.kicad_sch.pre_*.bak
+
+# KiCad project session/workspace state (per-user, not portable)
+*.kicad_prl
+_*.kicad_prl
 
 # Temp/script files
 *.pyc
 __pycache__/
+scripts/_*.json
+
+# CAD workspace (regenerable from make_cad_files.py / make_plate.py
+# and SolidWorks; contains hundreds of SW-extracted per-component
+# SLDPRTs from STEP imports — not worth versioning)
+cad/
+
+# Fab output (regenerable via make_jlc_files.py)
+fab/
+
+# IDE state
+.history/
+.history_trim/
+
+# umiko-backups: local rotating backup zips of prior states.
+# Not source-controlled — keep for local recovery only.
+umiko-backups/
