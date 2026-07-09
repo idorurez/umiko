@@ -213,6 +213,8 @@ The inter-half USB-C is **not** a real USB port — it's just a convenient 4-con
 
 The stabilizer cutouts on this PCB are sized for **Kailh Choc V2 stabilizers**. Standard MX / Cherry-style stabilizers **will not fit** the cutout. Stabilizers are needed at the 2.25U and 2.75U thumb keys.
 
+**Why not Gateron Low Profile (GLP) plate-mount stabilizers?** Because Gateron LP stabs mechanically limit switch travel — switches don't bottom out fully when installed with GLP stabs, requiring very specific keycaps to compensate. This is a stab-side mechanical constraint, not a cutout dimension issue, so redesigning the plate for GLP dimensions would not fix it. Per direct advice from bakingpy (author of `keebio/kb-plategen`, whose Choc V2 spec `make_plate.py` implements): "Don't use GLP stabs, go with Choc V2 ones." Kailh Choc V2 is the intended stab choice for Gateron KS-33 v2.0 switches and this design.
+
 The stab cutouts follow the Choc V2 spec from `keebio/kb-plategen`, encoded in `scripts/make_plate.py`:
 * Body A: 5.95 × 7.95 mm at (±12, ±0.3441)
 * Neck B: 4.55 × 6.25 mm at (±12, ±6.7559)
