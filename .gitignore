@@ -20,10 +20,11 @@ _*.kicad_prl
 __pycache__/
 scripts/_*.json
 
-# CAD workspace (regenerable from make_cad_files.py / make_plate.py
-# and SolidWorks; contains hundreds of SW-extracted per-component
-# SLDPRTs from STEP imports — not worth versioning)
-cad/
+# CAD workspace tracked so SW work is recoverable from git.
+# Contains hand-authored SW files + auto-extracted per-component
+# SLDPRTs from STEP imports. Not the smallest folder but not huge
+# either (~60MB), and losing the case CAD would be worse than the
+# repo bloat.
 
 # Fab output (regenerable via make_jlc_files.py)
 fab/
