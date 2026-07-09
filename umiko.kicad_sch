@@ -65812,7 +65812,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-074K7L"
+		(property "MPN" "0402WGF4701TCE"
 			(at 386.842 241.808 0)
 			(hide yes)
 			(show_name no)
@@ -65834,7 +65834,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C105871"
+		(property "LCSC" "C25900"
 			(at 386.842 241.808 0)
 			(hide yes)
 			(show_name no)
@@ -75818,7 +75818,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-074K7L"
+		(property "MPN" "0402WGF4701TCE"
 			(at 389.382 253.238 0)
 			(hide yes)
 			(show_name no)
@@ -75840,7 +75840,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C105871"
+		(property "LCSC" "C25900"
 			(at 389.382 253.238 0)
 			(hide yes)
 			(show_name no)
