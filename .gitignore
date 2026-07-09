@@ -6,6 +6,12 @@ desktop.ini
 # KiCad lock/autosave files
 ~*.lck
 _autosave-*
+
+# SolidWorks lockfiles (~$xxx.SLDPRT/SLDASM open-file markers)
+~$*.SLDPRT
+~$*.SLDASM
+~$*.sldprt
+~$*.sldasm
 *.kicad_pcb.bak*
 *.kicad_pcb.pre_*.bak
 *.kicad_sch.bak*
