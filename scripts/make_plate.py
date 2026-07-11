@@ -23,13 +23,29 @@ import re
 import uuid
 import subprocess
 from shapely.geometry import box
-from shapely.ops import unary_union
+from shapely.ops import unary_union as _unary_union
+
+
+def unary_union(polys):
+    """Wrapper around shapely.ops.unary_union that falls back to iterative
+    union if shapely's numpy-based version hits a dtype error (shapely 2.0.4
+    + newer numpy bug)."""
+    try:
+        return _unary_union(polys)
+    except TypeError:
+        polys = list(polys)
+        result = polys[0]
+        for p in polys[1:]:
+            result = result.union(p)
+        return result
 
 PROJECT = r'C:\Users\neuro\dev\keyboard\umiko'
 PCB = os.path.join(PROJECT, 'umiko.kicad_pcb')
 CAD = os.path.join(PROJECT, 'cad')
 OUT_DXF = os.path.join(CAD, 'umiko-plate-cutouts.dxf')
 OUT_STEP = os.path.join(CAD, 'umiko-plate.step')
+OUT_DXF_SW = os.path.join(CAD, 'umiko-switches-only.dxf')
+OUT_STEP_SW = os.path.join(CAD, 'umiko-switches-only.step')
 TEMP_PCB = os.path.join(PROJECT, '_plate_temp.kicad_pcb')
 GEN_STEP = True
 PLATE_THICKNESS = 1.2   # mm — Choc V2 stab spec
@@ -38,6 +54,8 @@ KICAD_CLI = os.environ.get('KICAD_CLI', r'C:\Program Files\KiCad\10.0\bin\kicad-
 LAYER = 'Eco1.User'
 R = 0.5
 SWITCH_W, SWITCH_H = 14.0, 14.0
+# Switches-only alt output: wider east-west for Kailh clip clearance, tight N/S
+SWITCH_W_ALT, SWITCH_H_ALT = 14.2, 14.0
 NORTH_REFS = {'SW_30', 'SW_35'}
 
 
@@ -48,6 +66,11 @@ def rrect(cx, cy, w, h, r=R):
 
 def switch_cutout():
     return box(-SWITCH_W/2, -SWITCH_H/2, SWITCH_W/2, SWITCH_H/2)
+
+
+def switch_cutout_alt():
+    """Wider-in-X switch cutout for Kailh clip clearance. 14.2 x 14 mm."""
+    return box(-SWITCH_W_ALT/2, -SWITCH_H_ALT/2, SWITCH_W_ALT/2, SWITCH_H_ALT/2)
 
 
 def stab_cutout(flip=False):
@@ -111,15 +134,25 @@ def strip_existing(text):
     return text, removed
 
 
-def inject_cutouts(pcb):
+def inject_cutouts(pcb, switches_only=False):
     """In-memory: strip any existing Eco1.User polys, then inject fresh
-    cutouts (switch opening + stab cutout if stabilized) into every switch
-    footprint at its current position."""
+    cutouts into every switch footprint at its current position.
+
+    When switches_only=True: inject ONLY the switch opening (14.2 x 14 mm,
+    the Kailh-clip-clearance variant), no stab cutouts. Used for the
+    switches-only alt output that feeds into the SolidWorks case top plate
+    modeling — you manually cut the case top plate at these positions,
+    then add stab pockets elsewhere.
+    """
     pcb, removed = strip_existing(pcb)
     if removed:
         print(f'(in-memory) stripped {removed} pre-existing {LAYER} polys')
-    sw_shape = switch_cutout()
-    stab_shape = {False: stab_cutout(False), True: stab_cutout(True)}
+    if switches_only:
+        sw_shape = switch_cutout_alt()
+        stab_shape = None
+    else:
+        sw_shape = switch_cutout()
+        stab_shape = {False: stab_cutout(False), True: stab_cutout(True)}
     spans = []
     for m in re.finditer(r'\n\t\(footprint "([^"]+)"', pcb):
         fp_open = m.start() + 1
@@ -129,16 +162,19 @@ def inject_cutouts(pcb):
         if rm:
             spans.append((fp_open, fp_end, '_stabilized' in m.group(1), rm.group(1)))
     n_stab = sum(1 for t in spans if t[2])
-    print(f'switch footprints: {len(spans)} (stabilized: {n_stab})')
-    print(f'north-facing stabs: {sorted(NORTH_REFS)}')
-    assert len(spans) == 63 and n_stab == 5
+    if switches_only:
+        print(f'switch footprints: {len(spans)} (switches-only mode — no stab cutouts)')
+    else:
+        print(f'switch footprints: {len(spans)} (stabilized: {n_stab})')
+        print(f'north-facing stabs: {sorted(NORTH_REFS)}')
+    assert len(spans) == 63 and n_stab == 6
     inj = 0
     for fp_open, fp_end, is_stab, ref in sorted(spans, key=lambda s: s[0], reverse=True):
         span = pcb[fp_open:fp_end]
         ef = span.rfind('(embedded_fonts')
         ins = (fp_open + ef + span[ef:].index(')') + 1) if ef != -1 else fp_end - 1
         block = fp_poly_blocks(sw_shape)
-        if is_stab:
+        if is_stab and not switches_only:
             flip = ref not in NORTH_REFS
             block += '\n' + fp_poly_blocks(stab_shape[flip])
         pcb = pcb[:ins] + '\n' + block + pcb[ins:]
@@ -267,6 +303,39 @@ def main():
         ], 'STEP')
         if os.path.exists(OUT_STEP):
             print(f'wrote {OUT_STEP} ({os.path.getsize(OUT_STEP)/1024:.1f} KB)')
+
+    # ---- ALT output: switches-only plate (14.2 x 14 switch cutouts, no stabs) ----
+    print()
+    print('=== Switches-only alt output ===')
+    switches_pcb = inject_cutouts(source_pcb, switches_only=True)
+    with open(TEMP_PCB, 'w', encoding='utf-8') as f:
+        f.write(switches_pcb)
+    run_cli([
+        KICAD_CLI, 'pcb', 'export', 'dxf',
+        '--output', OUT_DXF_SW,
+        '--layers', f'Edge.Cuts,{LAYER}',
+        '--output-units', 'mm',
+        '--mode-single',
+        '--use-drill-origin',
+        TEMP_PCB,
+    ], 'DXF (switches-only)')
+    clean_dxf(OUT_DXF_SW, layers=(LAYER.replace('Eco1.User', 'User.Eco1'),))
+    if os.path.exists(OUT_DXF_SW):
+        print(f'wrote {OUT_DXF_SW} ({os.path.getsize(OUT_DXF_SW)/1024:.1f} KB)')
+
+    if GEN_STEP:
+        step_sw_pcb = transform_for_step(switches_pcb)
+        with open(TEMP_PCB, 'w', encoding='utf-8') as f:
+            f.write(step_sw_pcb)
+        run_cli([
+            KICAD_CLI, 'pcb', 'export', 'step',
+            '--output', OUT_STEP_SW,
+            '--board-only',
+            '--drill-origin',
+            TEMP_PCB,
+        ], 'STEP (switches-only)')
+        if os.path.exists(OUT_STEP_SW):
+            print(f'wrote {OUT_STEP_SW} ({os.path.getsize(OUT_STEP_SW)/1024:.1f} KB)')
 
     # Clean up temp file.
     try:
