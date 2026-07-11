@@ -54057,7 +54057,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-2U"
+		(property "Footprint" "onigaku:Gateron-KS33-2.0-Hotswap-2U_stabilized"
 			(at 710.438 66.548 0)
 			(hide yes)
 			(show_name no)
