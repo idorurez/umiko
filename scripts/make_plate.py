@@ -54,7 +54,8 @@ KICAD_CLI = os.environ.get('KICAD_CLI', r'C:\Program Files\KiCad\10.0\bin\kicad-
 LAYER = 'Eco1.User'
 R = 0.5
 SWITCH_W, SWITCH_H = 14.0, 14.0
-# Switches-only alt output: wider east-west for Kailh clip clearance, tight N/S
+# Switches-only alt output: wider east-west for Kailh clip clearance, tight N/S.
+# Overridable via CLI arg: python scripts/make_plate.py 14.6 14.0
 SWITCH_W_ALT, SWITCH_H_ALT = 14.2, 14.0
 NORTH_REFS = {'SW_30', 'SW_35'}
 
@@ -68,9 +69,15 @@ def switch_cutout():
     return box(-SWITCH_W/2, -SWITCH_H/2, SWITCH_W/2, SWITCH_H/2)
 
 
-def switch_cutout_alt():
-    """Wider-in-X switch cutout for Kailh clip clearance. 14.2 x 14 mm."""
-    return box(-SWITCH_W_ALT/2, -SWITCH_H_ALT/2, SWITCH_W_ALT/2, SWITCH_H_ALT/2)
+def switch_cutout_alt(w=None, h=None):
+    """Switch cutout for the switches-only alt output. Defaults to
+    SWITCH_W_ALT x SWITCH_H_ALT (14.2 x 14 for Kailh clip clearance).
+    Override w and h to generate any size."""
+    if w is None:
+        w = SWITCH_W_ALT
+    if h is None:
+        h = SWITCH_H_ALT
+    return box(-w/2, -h/2, w/2, h/2)
 
 
 def stab_cutout(flip=False):
@@ -134,21 +141,19 @@ def strip_existing(text):
     return text, removed
 
 
-def inject_cutouts(pcb, switches_only=False):
+def inject_cutouts(pcb, switches_only=False, alt_w=None, alt_h=None):
     """In-memory: strip any existing Eco1.User polys, then inject fresh
     cutouts into every switch footprint at its current position.
 
-    When switches_only=True: inject ONLY the switch opening (14.2 x 14 mm,
-    the Kailh-clip-clearance variant), no stab cutouts. Used for the
-    switches-only alt output that feeds into the SolidWorks case top plate
-    modeling — you manually cut the case top plate at these positions,
-    then add stab pockets elsewhere.
+    When switches_only=True: inject ONLY the switch opening (default
+    14.2 x 14 mm, the Kailh-clip-clearance variant), no stab cutouts.
+    Override alt_w/alt_h to generate a different cutout size.
     """
     pcb, removed = strip_existing(pcb)
     if removed:
         print(f'(in-memory) stripped {removed} pre-existing {LAYER} polys')
     if switches_only:
-        sw_shape = switch_cutout_alt()
+        sw_shape = switch_cutout_alt(alt_w, alt_h)
         stab_shape = None
     else:
         sw_shape = switch_cutout()
@@ -263,6 +268,23 @@ def run_cli(args, label):
 
 
 def main():
+    # CLI: optional [alt_width alt_height] positional args override the
+    # switches-only cutout size. Default is 14.2 x 14. Example:
+    #   python scripts/make_plate.py            → alt is 14.2 x 14
+    #   python scripts/make_plate.py 14.6 14.0  → alt is 14.6 x 14, filename
+    #                                             becomes umiko-switches-only-14.6x14.step
+    import sys
+    alt_w, alt_h = SWITCH_W_ALT, SWITCH_H_ALT
+    if len(sys.argv) >= 3:
+        alt_w, alt_h = float(sys.argv[1]), float(sys.argv[2])
+    # Alt output filenames encode the size if overridden from default
+    if (alt_w, alt_h) == (SWITCH_W_ALT, SWITCH_H_ALT):
+        out_dxf_sw, out_step_sw = OUT_DXF_SW, OUT_STEP_SW
+    else:
+        base = f'umiko-switches-only-{alt_w:g}x{alt_h:g}'
+        out_dxf_sw = os.path.join(CAD, base + '.dxf')
+        out_step_sw = os.path.join(CAD, base + '.step')
+
     print('Reading source PCB (read-only; the source will not be modified)...')
     with open(PCB, encoding='utf-8') as f:
         source_pcb = f.read()
@@ -304,24 +326,24 @@ def main():
         if os.path.exists(OUT_STEP):
             print(f'wrote {OUT_STEP} ({os.path.getsize(OUT_STEP)/1024:.1f} KB)')
 
-    # ---- ALT output: switches-only plate (14.2 x 14 switch cutouts, no stabs) ----
+    # ---- ALT output: switches-only plate at alt_w x alt_h, no stabs ----
     print()
-    print('=== Switches-only alt output ===')
-    switches_pcb = inject_cutouts(source_pcb, switches_only=True)
+    print(f'=== Switches-only alt output ({alt_w} x {alt_h} mm) ===')
+    switches_pcb = inject_cutouts(source_pcb, switches_only=True, alt_w=alt_w, alt_h=alt_h)
     with open(TEMP_PCB, 'w', encoding='utf-8') as f:
         f.write(switches_pcb)
     run_cli([
         KICAD_CLI, 'pcb', 'export', 'dxf',
-        '--output', OUT_DXF_SW,
+        '--output', out_dxf_sw,
         '--layers', f'Edge.Cuts,{LAYER}',
         '--output-units', 'mm',
         '--mode-single',
         '--use-drill-origin',
         TEMP_PCB,
     ], 'DXF (switches-only)')
-    clean_dxf(OUT_DXF_SW, layers=(LAYER.replace('Eco1.User', 'User.Eco1'),))
-    if os.path.exists(OUT_DXF_SW):
-        print(f'wrote {OUT_DXF_SW} ({os.path.getsize(OUT_DXF_SW)/1024:.1f} KB)')
+    clean_dxf(out_dxf_sw, layers=(LAYER.replace('Eco1.User', 'User.Eco1'),))
+    if os.path.exists(out_dxf_sw):
+        print(f'wrote {out_dxf_sw} ({os.path.getsize(out_dxf_sw)/1024:.1f} KB)')
 
     if GEN_STEP:
         step_sw_pcb = transform_for_step(switches_pcb)
@@ -329,13 +351,13 @@ def main():
             f.write(step_sw_pcb)
         run_cli([
             KICAD_CLI, 'pcb', 'export', 'step',
-            '--output', OUT_STEP_SW,
+            '--output', out_step_sw,
             '--board-only',
             '--drill-origin',
             TEMP_PCB,
         ], 'STEP (switches-only)')
-        if os.path.exists(OUT_STEP_SW):
-            print(f'wrote {OUT_STEP_SW} ({os.path.getsize(OUT_STEP_SW)/1024:.1f} KB)')
+        if os.path.exists(out_step_sw):
+            print(f'wrote {out_step_sw} ({os.path.getsize(out_step_sw)/1024:.1f} KB)')
 
     # Clean up temp file.
     try:
