@@ -222,9 +222,20 @@ The stab cutouts follow the Choc V2 spec from `keebio/kb-plategen`, encoded in `
 * r=0.5 mm fillet, unioned into one outline per stab position
 * Sign (±) depends on wire direction — north for SW_30 / SW_35 (bottom-edge keys), south for everything else
 
-#### FDM tolerance tuning
+#### bakingpy's two-level plate design (adopted)
 
-When printed as an integrated plate (Choc V2 stab cutouts + KS-33 v2.0 switch cutouts on the same 1.2 mm plate face), the canonical `make_plate.py` dimensions come in **tight for FDM tolerance**. Switches (14 mm cutouts) fit press-fit and correctly, but stab housings bind on install and the wire drags in its slot. Iterate on the cutout dimensions in your CAD until the stabs seat and the wire moves freely — this is expected FDM work and every printer will need slightly different numbers.
+Rather than a single-layer 1.2 mm plate with all cutouts full-depth, this design uses a **2.2 mm plate with a two-level pocket at each stab position** — a novel approach shared by **bakingpy (Danny at Keebio)** as a printable STL sample (see `reference/choc_v2_stab_holder.stl`). The upper 1.2 mm level is shaped to the housing footprint (body A + neck B + wire slot), providing the exact clip-engagement depth for a Kailh Choc V2 stab. The lower 1.0 mm level uses a different, narrower shape to provide wire clearance below the housing.
+
+**Why this is better than a naïve full-depth plate:**
+* **Sturdier**: 2.2 mm of plate material is measurably more rigid than 1.2 mm, and the un-cut plate volume between the two levels (where their shapes differ) adds mechanical strength across each stab position.
+* **Low-profile-friendly**: total keyboard Z-stack is unchanged — the extra thickness sits within the plate-to-PCB gap that the switch body needs anyway.
+* **Choc V2 stab-friendly**: housing engagement depth is dimensioned to the actual Kailh spec, so clips grip and the wire has proper clearance.
+
+This design was **incorporated directly and printed in PTFE with no additional expansion adjustments needed** — bakingpy's dimensions handle FDM tolerance for that print material out of the box. If you're printing in a different material (PLA / PETG / ABS / SLA resin), you may still need some outward relief per the tolerance-tuning section below.
+
+#### FDM tolerance tuning (materials other than PTFE)
+
+When printed as an integrated plate (Choc V2 stab cutouts + KS-33 v2.0 switch cutouts on the same plate face), the canonical `make_plate.py` dimensions come in **tight for FDM tolerance in most materials**. Switches (14 mm cutouts) fit press-fit and correctly, but stab housings bind on install and the wire drags in its slot. Iterate on the cutout dimensions in your CAD until the stabs seat and the wire moves freely — this is expected FDM work and every printer will need slightly different numbers.
 
 **The principle: asymmetric relief, always outward from the switch cutout.**
 
@@ -358,6 +369,7 @@ This design borrows ideas from:
 
 ## Credits
 
+* **bakingpy (Danny) at [Keebio](https://keeb.io)** — an enormous thank you. bakingpy authored [`keebio/kb-plategen`](https://github.com/keebio/kb-plategen) which is the source of the Kailh Choc V2 stab cutout spec that `scripts/make_plate.py` implements, personally recommended the Kailh Choc V2 stabilizer path over Gateron Low Profile after weighing switch-travel tradeoffs, and shared a printable [reference STL](reference/choc_v2_stab_holder.stl) demonstrating a novel two-level plate design that produces a sturdier, low-profile-friendly, Choc-V2-stab-friendly plate. That design was adopted directly for this build and produces working stabs in PTFE prints with no additional tolerance adjustments needed.
 * The **QMK community** — for firmware help and their patience (without which this wouldn't exist).
 * **Conor at [KeebSupply](https://keebsupply.com)** — manufacturing and build feasibility advice (KS-33 hot-swap pad clipping, stabilizer compatibility, fab tolerances).
 
