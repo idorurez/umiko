@@ -363,6 +363,11 @@ This note exists so future-you (or a contributor) doesn't re-investigate this fr
 * OLED breakout board for SSD1306 / SH1106 (the inter-half I²C lines `SCL_*` / `SDA_*` are currently broken out but unwired)
 * Sound and speakers (piezo or similar)
 * Optional reset buttons per half (in case BOOTSEL alone proves too cumbersome)
+* **Move BOOTSEL buttons away from U12 OLED area.** SW2 (right BOOTSEL) at (188.17, 77.52) sits close enough to U12 at (192.35, 130.19) that the OLED daughterboard PCB partially covers it once installed, complicating both case cutout design and BOOTSEL access. Relocate to an uncluttered PCB area — ideally along an outer edge or in the corner opposite the OLED.
+* **Lower-profile OLED mounting.** Current design uses through-hole 4-pin header (2.54 mm pitch) → daughterboard sits ~10–12 mm above the main PCB, forcing the case OLED cutout to accommodate the entire daughterboard body (not just the display window). Options for v2:
+  * **Low-height SMD pin headers** (e.g. 1.27 mm pitch short-body variants, ~3–5 mm mated height) → drops the stack considerably.
+  * **Board-to-board connectors** (Hirose DF13 / DF23, JAE FI-X, or similar) with a matching mate on the daughterboard → ~2–4 mm mated height, but requires a daughterboard designed for it.
+  * **Direct SMD OLED module** — solder the raw SSD1306 module (flex cable + display) directly onto main-PCB SMD pads. Eliminates the daughterboard entirely; case cutout only needs to clear the display window. Highest integration, lowest profile, but pads must match the specific module chosen.
 
 ## Inspiration
 
