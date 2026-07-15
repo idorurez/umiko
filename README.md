@@ -174,6 +174,10 @@ Note: on this board the W25Q128 flash arrives blank from JLC, so first plug-in e
 
 No reset button on the board — power-cycle + BOOTSEL handles all flashing.
 
+**Case-top BOOTSEL access:** the BOOTSEL buttons (SW1 left, SW2 right) are small SMD tactile switches on F.Cu that would be inaccessible with the plate + switches installed. The case top plate has a **~2 mm pinhole above each button** aligned to its PCB position — press with a paperclip, SIM ejector, or dedicated reset pin to activate BOOTSEL without disassembling. Pattern used by most low-profile keyboards (NuPhy / Keychron K-series). Coordinates in PCB frame:
+* SW1 (left half BOOTSEL): (166.01, 57.53)
+* SW2 (right half BOOTSEL): (188.17, 77.52)
+
 ### Split serial: what's happening on the wire
 
 Umiko routes QMK's split-transport protocol over a **single-wire half-duplex PIO serial** running on **GP0** of each RP2040. GP0 connects to the D+ pin of each half's inter-half USB-C connector (J3 left, J4 right). A short USB-C-to-USB-C cable between J3 and J4 ties the two GP0 lines together and provides the 5V bridge (VBUS pins A4/A9) and GND (A12/B12).
