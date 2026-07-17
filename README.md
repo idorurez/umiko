@@ -73,6 +73,8 @@ Stabilizers | Kailh Choc V2 (2u for 2.25U and 2.75U keys) | 2 sets | Choc V2 —
 0402 resistors | varies | as schematic | LCSC `C25905` (5.1k) / `C11702` (1k) / `C25744` (10k) / `C25100` (27R)
 BOOTSEL push button | 4×4×1.5 mm SMD | 2 | LCSC `C589221`
 0402 status LEDs | red / blue / green (per spec) | 4 | LCSC `C130719` / `C130724`
+Case heat-set inserts | M2 × L4 × D3.5 brass knurled | as case dictates | Ruthex-style or equivalent — Amazon / AliExpress. Print 3.3 mm holes; heat-install with soldering iron ~200°C
+Case screws | M2 × 4 mm machine screws | same qty as heat-set inserts | Any standard M2 × 4 — hardware store / Amazon / AliExpress
 
 ## Software (QMK)
 
