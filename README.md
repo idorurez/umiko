@@ -7,15 +7,11 @@
 ![PCB back (no keys)](images/umiko_3dview_back_nokeys.png)
 ![Case CAD in SolidWorks](images/umiko_case_solidworks.png)
 
-### The name
+## TL;DR
 
-*umiko* — Japanese **umi** (海, sea) + **-ko** (子, an affectionate diminutive).
+*umiko* (Japanese: **海** sea + **子** an affectionate diminutive) is a split, low-profile TKL F-row-less mechanical keyboard PCB. The split sits between your hands like the trough between two waves; typed at speed on Gateron KS-33 low-profile blues, the rolling clicks sound like waves breaking on sand.
 
-The split sits between your hands like the trough between two waves. The switches are Gateron KS-33 low-profile blues; typed at speed, the rolling clicks sound like waves breaking on sand.
-
----
-
-A split, low-profile TKL F-row-less mechanical keyboard PCB. Two halves connect via a **top-mounted USB-C inter-half link** (single-wire QMK PIO serial over the D+ pin, with VBUS bridging 5 V across halves), each half is independently powered via its own side-mounted host USB-C and flashable, and each half has its own RP2040 microcontroller, per-key RGB, and underglow. Stabilizer cutouts are sized for Kailh Choc V2 stabilizers. Switches are Gateron KS-33 v2.0 low-profile (MX-compatible, hot-swap). 4-layer board with split L/R power rails and dedicated inner GND/3V3 planes.
+Two halves connect via a **top-mounted USB-C inter-half link** (single-wire QMK PIO serial over the D+ pin, with VBUS bridging 5 V across halves), each half is independently powered via its own side-mounted host USB-C and flashable, and each half has its own RP2040 microcontroller, per-key RGB, and underglow. Stabilizer cutouts are sized for Kailh Choc V2 stabilizers. Switches are Gateron KS-33 v2.0 low-profile (MX-compatible, hot-swap). 4-layer board with split L/R power rails and dedicated inner GND/3V3 planes.
 
 ## Features
 
