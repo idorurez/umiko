@@ -44,7 +44,8 @@ A split, low-profile TKL F-row-less mechanical keyboard PCB. Two halves connect 
 | **Diodes** | 63× SK matrix diodes, 4× power-path Schottky (PMEG2010BELD), 4× LED indicators |
 | **Polyfuse** | 2× 1.1 A (Fuse_0603) for USB power input |
 | **Ferrite beads** | 2× 600 Ω (FB1/FB2) for VBUS filtering |
-| **Case heat-set inserts** | **M2 × L4 × D3.5** brass knurled heat-set inserts (Ruthex-style or equivalent). Print 3.3 mm diameter holes in the case; insert with a soldering iron at ~200°C. Match with M2 screws (length depends on final case stack). |
+| **Case heat-set inserts** | **M2 × L4 × D3.5** brass knurled heat-set inserts (Ruthex-style or equivalent). Print 3.3 mm diameter holes in the case; insert with a soldering iron at ~200°C. |
+| **Case screws** | **M2 × 4 mm** machine screws — same quantity as heat-set inserts (one per mounting point). |
 
 ## BOM
 
