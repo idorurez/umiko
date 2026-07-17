@@ -75,6 +75,7 @@ BOOTSEL push button | 4×4×1.5 mm SMD | 2 | LCSC `C589221`
 0402 status LEDs | red / blue / green (per spec) | 4 | LCSC `C130719` / `C130724`
 Case heat-set inserts | M2 × L4 × D3.5 brass knurled | as case dictates | Ruthex-style or equivalent — Amazon / AliExpress. Print 3.3 mm holes; heat-install with soldering iron ~200°C
 Case screws | M2 × 4 mm machine screws | same qty as heat-set inserts | Any standard M2 × 4 — hardware store / Amazon / AliExpress
+Rubber feet (sticky) | Adhesive-backed rubber pads | 4–8 per half | Sized to fit the recesses on the case bottom. Any standard "keyboard foot" or "furniture bumper" pack works — Amazon / AliExpress
 
 ## Software (QMK)
 
