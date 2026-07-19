@@ -11,8 +11,6 @@
 
 *umiko* (Japanese: **海** sea + **子** an affectionate diminutive) is a split, low-profile TKL F-row-less mechanical keyboard PCB. The split sits between your hands like the trough between two waves; typed at speed on Gateron KS-33 low-profile blues, the rolling clicks sound like waves breaking on sand.
 
-Two halves connect via a **top-mounted USB-C inter-half link** (single-wire QMK PIO serial over the D+ pin, with VBUS bridging 5 V across halves), each half is independently powered via its own side-mounted host USB-C and flashable, and each half has its own RP2040 microcontroller, per-key RGB, and underglow. Stabilizer cutouts are sized for Kailh Choc V2 stabilizers. Switches are Gateron KS-33 v2.0 low-profile (MX-compatible, hot-swap). 4-layer board with split L/R power rails and dedicated inner GND/3V3 planes.
-
 ## Features
 
 * **Split layout** — two physically separate halves; each half has its own MCU and runs standalone
@@ -336,6 +334,24 @@ JLC's CPL parser is unusually strict about:
 * **Rotation must be a non-negative integer 0–359** — KiCad's default `-90.000000` will be rejected with "Failed processing the CPL file". `make_jlc_files.py` normalizes to integer mod 360.
 * **Coordinates must be fixed at 4-decimal precision** — variable precision like `8.647045mm` also fails. The script formats with `.4f`.
 * **Headers must match JLC's sample exactly**, including the fullwidth Chinese parens in the BOM's `JLCPCB Part #（optional）`.
+
+### Polarity / pin-1 review from JLC (expect these questions)
+
+During engineering review JLC's team sends placement snapshots highlighted with a **pink dot on pin 1** of every polarized (or asymmetric) component and asks you to confirm the orientation matches your intent. This isn't optional — you have to respond one by one. A few patterns from this project's reviews worth banking:
+
+* **Non-polarized parts don't need rotation review, but JLC still marks pin 1.** For **polyfuses (F1/F2, Bourns MF-FSMF050X-2)**, **ceramic capacitors**, and **resistors** the pink dot is a manufacturing / QA marker, not an electrical polarity flag. Reply "no polarity, either orientation works, no correction needed" — the notch or dot on the physical part is a tracking mark from the reel, not an electrical constraint. Same for **ferrite beads**.
+* **Polarized parts need per-part verification against your KiCad footprint.** Diodes (Schottky **D5** power-path), LEDs (**D2/D4/D6** indicator, plus every SK6812MINI-E in the underglow chain), electrolytic caps if any, and orientation-sensitive ICs (RP2040, LDO, USBLC6, level shifter) all have a specific pin-1 convention on your PCB. Check JLC's placement direction against your KiCad footprint's pin-1 assignment; if they're flipped 180°, request a rotation correction.
+* **Different LCSC part numbers for the "same" LED footprint can use opposite pin-1 conventions.** On this project **D4** (`C130724`, Sunny B1811NB) uses **anode = pin 1** while **D6** (`C130719`, Sunny B1811URO) uses **cathode = pin 1** — same 0402 SMD LED footprint, opposite convention. JLC's pink dot points at whichever pin their library considers 1, which doesn't match the KiCad footprint (pin 1 = cathode) for D4. Result: D4 required a **180° rotation correction**, D6 did not. Expect to hit this on any 0402 LED order and check each part individually.
+* **How to answer "is the polarity right?" from JLC:** open the PCB in KiCad, click the flagged pad, note whether pin 1 is anode/cathode (or SDA/SCL, etc.) and which side of the physical part it lands on after any footprint rotation. Compare to JLC's placement snapshot. If the pink dot lands on the electrically-correct side per your schematic → confirm no correction. If it's on the opposite side → request 180° rotation. Also useful to check `pinfunction` fields in `umiko.kicad_pcb` — they carry the intended electrical role (`K_1`, `A_2`, `SDA_1`, etc.).
+* **Rotation corrections that recur across orders** and are worth including proactively in the reply to JLC:
+    * **U10** (LP5907 LDO, X2SON-4): **+90°**
+    * **D5** (PMEG2010BELD Schottky, SOD-882D): **180°**
+    * **J2/J4** (HRO USB-C, if their 3D preview shows them backwards): **180°**
+    * **D4** (Sunny B1811NB User LED): **180°**
+    * **D6** (Sunny B1811URO Power LED): **NO correction** (already correct)
+    * **U6, U8, U9**: **270°** (documented in schematic `JLCPCB_CORRECTION` field, JLC usually applies proactively)
+
+Send those with your BOM upload so their engineers can apply them up front instead of asking one at a time.
 
 ## Design Notes
 
