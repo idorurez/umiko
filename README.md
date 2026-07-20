@@ -134,6 +134,12 @@ The inter-half USB-C is **not** a real USB port — it's just a convenient 4-con
 
 ![PCB front (no keys)](images/umiko_3dview_front_nokeys.png)
 
+> ⚠️ **This board is not intended to be hand-soldered by the average person.** It has 200+ SMD placements per half including a QFN-56 RP2040 with an exposed thermal pad, XDFN-4 LDOs, SOT-666 ESD chips, 0402 passives everywhere, and reverse-mount SK6812MINI-E LEDs on both sides. Hand-soldering it end-to-end is genuinely difficult and extremely risky for a non-professional — burning a $30 RP2040 or 90 tiny LEDs is a real outcome.
+>
+> **Get it JLCPCB-assembled instead.** The whole design is set up for JLC's SMT assembly service — see [Manufacturing Notes (JLCPCB)](#manufacturing-notes-jlcpcb) for the fab workflow, cost breakdown, and everything that's deliberately DNP'd (LEDs + hot-swap sockets) for the more manageable hand-soldering pass after the boards come back assembled.
+>
+> The section below still documents hand-solder order, hints, and gotchas — useful for the DNP hand-solder pass, small rework, or if you're a professional taking the whole board on.
+
 ### Soldering Order
 
 1. **Smallest components first** — 0402 resistors/caps, then 0603, then SMD ICs
@@ -181,6 +187,17 @@ If you need to flash via SWD (rare — BOOTSEL handles most needs):
 * Pad order on right is mirrored: **3V3 / GND / IO / CLK** — so a flipped pogo clip lands on matching signals on both halves
 
 ## Manufacturing Notes (JLCPCB)
+
+### Cost reference
+
+For my most recent right-half-only respin I paid **~$300 for 3 assembled boards** (JLC's PCB fab minimum is 5 boards; you can specify how many of those get PCBA parts placed — I paid for parts on 3, got 2 bare boards free as spares). Rough breakdown at that volume:
+
+* PCB fab (169 × 103 mm, 4-layer, 5 pcs): ~$30–50
+* PCBA labor + parts sourcing for 3 boards: ~$130–170
+* Express shipping to US (only option): ~$80
+* Customs / import handling: ~$50–100 (varies by broker)
+
+Ordering more boards (5 fully assembled vs 3) usually adds only ~$50–100 total because setup fees amortize. If you want spares, 5 assembled is barely more expensive per board than 3.
 
 ### Design rule clearances
 
