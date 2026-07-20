@@ -1,15 +1,10 @@
 # umiko
 
-![Image of schematic](images/umiko_schematic.svg)
-![PCB front (with keycaps)](images/umiko_3dview_front.png)
-![PCB perspective](images/umiko_3dview_persp.png)
-![PCB front (no keys)](images/umiko_3dview_front_nokeys.png)
-![PCB back (no keys)](images/umiko_3dview_back_nokeys.png)
-![Case CAD in SolidWorks](images/umiko_case_solidworks.png)
-
-## TL;DR
+## About
 
 *umiko* (Japanese: **海** sea + **子** an affectionate diminutive) is a split, low-profile TKL F-row-less mechanical keyboard PCB. The split sits between your hands like the trough between two waves; typed at speed on Gateron KS-33 low-profile blues, the rolling clicks sound like waves breaking on sand.
+
+![PCB front (with keycaps)](images/umiko_3dview_front.png)
 
 ## Features
 
@@ -44,6 +39,8 @@
 | **Case hardware** | M2 × L4 × D3.5 heat-set inserts (3.3 mm holes) + M2 × 4 mm screws. |
 
 Full sourcing detail in the [BOM](#bom).
+
+![PCB perspective](images/umiko_3dview_persp.png)
 
 ## BOM
 
@@ -139,6 +136,8 @@ The inter-half USB-C is **not** a real USB port — it's just a convenient 4-con
 
 ## Assembly Notes
 
+![PCB front (no keys)](images/umiko_3dview_front_nokeys.png)
+
 ### Soldering Order
 
 1. **Smallest components first** — 0402 resistors/caps, then 0603, then SMD ICs
@@ -158,6 +157,8 @@ The inter-half USB-C is **not** a real USB port — it's just a convenient 4-con
 * For RP2040's exposed thermal pad, **use the via stitching as a heat sink** — solder paste + hot air, or paste + skillet reflow
 
 ### LEDs
+
+![PCB back (no keys)](images/umiko_3dview_back_nokeys.png)
 
 * The **underglow LEDs are reverse-mounted on B.Cu** (back of board) — their pads are on B.Cu but the body sits below the PCB. **Bend the terminals down to the soldering pads** before reflowing or hand-soldering.
 * **Solder LEDs in the data chain order** and **test as you go** — if one is bad, all LEDs after it in the chain won't light up
@@ -252,6 +253,8 @@ Outputs in `cad/`:
 * **STEP thickness compensation**: KiCad's exporter omits outer copper (~0.07 mm) + soldermask (~0.02 mm), so both scripts bump the extruded thickness by **+0.09 mm** to hit a true 1.6 mm / 1.2 mm. F.Cu components ride up automatically; switch bodies (anchored to B.Cu sockets) get an extra `-4.1 → -4.19` 3D-model offset nudge to stay flush.
 * **PLA case FDM clearance**: **0.5 mm/side long axis, 0.3 mm/side short axis, 0.2 mm Z**. Print tolerance dominates over PLA shrinkage / thermal. Test a corner chunk and tune slicer XY size compensation before a full-case print.
 
+![Case CAD in SolidWorks](images/umiko_case_solidworks.png)
+
 #### Workflow suggestion (case design)
 
 1. Run `python scripts/make_cad_files.py` and `python scripts/make_plate.py` once to seed `cad/` with the STEPs.
@@ -292,6 +295,8 @@ During engineering review JLC's team sends placement snapshots highlighted with 
 Send those with your BOM upload so their engineers can apply them up front instead of asking one at a time.
 
 ## Design Notes
+
+![Schematic](images/umiko_schematic.svg)
 
 * **No reset circuit** — flashing is via BOOTSEL alone. RP2040's `~RUN` pin has an internal pull-up; leaving it floating is safe.
 * **Inter-half connection** uses **USB-C (HRO TYPE-C-31-M-12, top-edge mounted)** carrying QMK PIO-serial split over a **single wire on D+** (A6/B6 are tied together, A7/B7 D− unused). VBUS (A4/A9) bridges 5 V across halves, GND (A12/B12) ties them. The 5 V bridge lets a single host USB-C power both halves through Schottky OR-ing. All four USB-C connectors — J1/J2 (host) and J3/J4 (inter-half) — have 5.1 kΩ CC1/CC2 pull-downs to GND (host J1=R4/R5, host J2=R21/R22, inter-half J3=R6/R24, inter-half J4=R25/R26). J3/J4 don't strictly need CC pull-downs for the serial-bridge use case (the link doesn't speak USB protocol), but they're populated as a safety-conservative choice so an accidentally-plugged host cable can't drive VCONN into a floating pin.
