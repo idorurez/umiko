@@ -339,8 +339,8 @@ This design borrows ideas from:
 ## Credits
 
 * **bakingpy (Danny) at [Keebio](https://keeb.io)** — an enormous thank you. bakingpy authored [`keebio/kb-plategen`](https://github.com/keebio/kb-plategen) which is the source of the Kailh Choc V2 stab cutout spec that `scripts/make_plate.py` implements, personally recommended the Kailh Choc V2 stabilizer path over Gateron Low Profile after weighing switch-travel tradeoffs, and shared a printable [reference STL](reference/choc_v2_stab_holder.stl) demonstrating a novel two-level plate design that produces a sturdier, low-profile-friendly, Choc-V2-stab-friendly plate. That design was adopted directly for this build and produces working stabs in PTFE prints with no additional tolerance adjustments needed.
-* The **QMK community** — for firmware help and their patience (without which this wouldn't exist).
 * **Conor Burns** ([0xCB-dev](https://github.com/0xCB-dev)) — designer of the [0xCB-Helios](https://github.com/0xCB-dev/0xCB-Helios) reference board, and for support and guidance on that design. umiko's schematic patterns (RP2040 + dual flash + LDO + power path) build directly on Helios.
+* The **QMK community** — for firmware help and their patience (without which this wouldn't exist).
 
 ## License
 
