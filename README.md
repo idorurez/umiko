@@ -255,14 +255,24 @@ Outputs in `cad/`:
 
 ![Case CAD in SolidWorks](images/umiko_case_solidworks.png)
 
-#### Workflow suggestion (case design)
+#### Workflow suggestion (case design) 
+
+The following workflow is if you would prefer to build your own case. The included case design is fully complete. If you wish to build your own, it also doubles as a base starting point.
 
 1. Run `python scripts/make_cad_files.py` and `python scripts/make_plate.py` once to seed `cad/` with the STEPs.
 2. In SolidWorks, import `umiko-assembly.step` (or per-half if you're working on one side) as reference geometry, mate to case origin.
 3. Design the case around it — pocket the PCB, add USB-C cutouts, screw holes, feet, BOOTSEL access pinholes (SW1/SW2 positions in the BOOTSEL access note below).
 4. For the plate: import `umiko-plate.step` or build a subtract body from `umiko-switches-only.step` (see [SolidWorks "Combine → Subtract" trick](#).
-5. **Re-run the scripts only when the PCB changes.** Re-importing STEPs into an existing SW assembly usually breaks a lot of downstream in-context references (entity IDs shift). Prefer to keep imports frozen once the case work is going.
+5. Freeze the STEPs once case work starts — see warning below.
 6. Track your working SW files under `cad/` in git — everything else in that folder is regenerable.
+
+> ⚠️ **Warning: don't re-import STEPs into an active case assembly.**
+>
+> Any PCB change followed by a fresh STEP export and re-import into your existing SolidWorks case will **almost certainly break downstream in-context references** — sketches that used Convert Entities on imported edges/faces will show as dangling, features that depended on those sketches will fail, and repairing them one by one is slow and error-prone (SW 2023's "Repair Dangling Reference" doesn't reliably help). Cause: STEP entity IDs shift whenever the source PCB geometry changes even slightly. Every recompile issues fresh IDs; SW's references are ID-based.
+>
+> **Rule of thumb**: re-run the scripts only when the PCB *actually* changes AND you need the case CAD to reflect it visually. If you can live with a slightly stale reference PCB in your case model, you save yourself hours of repair work. The fab side is unaffected either way — `scripts/make_jlc_files.py` reads the current PCB directly.
+>
+> If you must re-import: work on a **copy** of the case assembly, or plan a full afternoon for reference repair.
 
 ### JLC upload gotcha
 
