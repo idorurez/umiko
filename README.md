@@ -202,14 +202,21 @@ If you need to flash via SWD (rare — BOOTSEL handles most needs):
 
 ### Cost reference
 
-For my most recent right-half-only respin I paid **~$300 for 3 assembled boards** (JLC's PCB fab minimum is 5 boards; you can specify how many of those get PCBA parts placed — I paid for parts on 3, got 2 bare boards free as spares). Rough breakdown at that volume:
+Two reference points from actual orders:
 
-* PCB fab (169 × 103 mm, 4-layer, 5 pcs): ~$30–50
-* PCBA labor + parts sourcing for 3 boards: ~$130–170
-* Express shipping to US (only option): ~$80
+* **First-time full-panel build** (both halves per board, 5-board fab minimum with parts placed on 3 = 3 assembled + 2 bare spares): **~$489**
+* **Right-half-only respin** (170 × 103 mm single-half, 5-board fab minimum with parts on 3): **~$300**
+
+A first-time builder needs the full-panel order (~$489). The respin was cheaper because I already had working left halves from the first order and only needed the right half re-fabbed with a schematic fix.
+
+Rough breakdown at those volumes:
+
+* PCB fab (5 pcs, 4-layer, 328 × 103 mm full-panel or 170 × 103 mm half): ~$50–100
+* PCBA labor + parts sourcing (3 boards): ~$200–300
+* Express shipping to US (only option that clears in reasonable time): ~$80
 * Customs / import handling: ~$50–100 (varies by broker)
 
-Ordering more boards (5 fully assembled vs 3) usually adds only ~$50–100 total because setup fees amortize. If you want spares, 5 assembled is barely more expensive per board than 3.
+Ordering 5 assembled vs 3 usually adds only ~$50–100 total because setup and per-part sourcing fees amortize. If you want spares, 5 fully assembled is barely more per board than 3.
 
 ### Design rule clearances
 
