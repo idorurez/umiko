@@ -134,11 +134,23 @@ The inter-half USB-C is **not** a real USB port — it's just a convenient 4-con
 
 ![PCB front (no keys)](images/umiko_3dview_front_nokeys.png)
 
-> ⚠️ **This board is not intended to be hand-soldered by the average person.** It has 200+ SMD placements per half including a QFN-56 RP2040 with an exposed thermal pad, XDFN-4 LDOs, SOT-666 ESD chips, 0402 passives everywhere, and reverse-mount SK6812MINI-E LEDs on both sides. Hand-soldering it end-to-end is genuinely difficult and extremely risky for a non-professional — burning a $30 RP2040 or 90 tiny LEDs is a real outcome.
+> ⚠️ **Hand-solder only the DNP parts. Get everything else JLCPCB-assembled.**
 >
-> **Get it JLCPCB-assembled instead.** The whole design is set up for JLC's SMT assembly service — see [Manufacturing Notes (JLCPCB)](#manufacturing-notes-jlcpcb) for the fab workflow, cost breakdown, and everything that's deliberately DNP'd (LEDs + hot-swap sockets) for the more manageable hand-soldering pass after the boards come back assembled.
+> **✅ Reasonable to hand-solder** (these are already DNP'd for exactly this reason):
+> * **SK6812MINI-E LEDs** — per-key (reverse-mount) and underglow. Fragile and tedious but doable with flux and patience.
+> * **Gateron KS33 hot-swap sockets** — pre-tin the pads, place, reflow one pad at a time. Straightforward.
+> * **HRO TYPE-C-31-M-12 USB-C connectors** — larger through-hole shield legs + reflowable SMD data pads. Manageable with a chisel tip.
 >
-> The section below still documents hand-solder order, hints, and gotchas — useful for the DNP hand-solder pass, small rework, or if you're a professional taking the whole board on.
+> **❌ Do NOT attempt to hand-solder** (unless you're a professional with a reflow / hotplate / hot-air station):
+> * **RP2040 (QFN-56 with exposed thermal pad)** — needs bottom heat. Ruining a $30 chip is very possible.
+> * **LP5907 LDO (XDFN-4, 1×1 mm)** and **SN74LVC1T45 (SOT-563)** — pads so small they're barely visible without magnification.
+> * **W25Q128 QSPI flash (WSON8)** — exposed pad on the bottom.
+> * **USBLC6-2P6 (SOT-666)**, **PMEG2010BELD Schottky (SOD-882)** — sub-millimeter pitch.
+> * **0402 passives, matrix diodes (SOD-123), crystal (SMD-2520)** — 0402 in particular is 90+ tiny caps that add up.
+>
+> **Get JLCPCB to place the "do NOT" list** via SMT assembly — see [Manufacturing Notes (JLCPCB)](#manufacturing-notes-jlcpcb) for the fab workflow, cost, and DNP configuration. Then do the ✅ list yourself when the boards come back.
+>
+> The Soldering Order / Hints / LEDs / Stabilizers sections below are for that hand-solder pass on the DNP parts (plus small rework as needed).
 
 ### Soldering Order
 
