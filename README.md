@@ -44,7 +44,7 @@
 | **Host connector** | 2× HRO TYPE-C-31-M-12 (USB 2.0 16P), side-mounted on the outer edge of each half (4 mm plank protrusion, 1 mm USB-C overhang past plank face) |
 | **Inter-half connector** | 2× HRO TYPE-C-31-M-12 (same part as host), top-edge mounted near the inner-top corner of each half (4 mm plank protrusion, 1 mm USB-C overhang). Carries A4/A9 VBUS = +5V bridge, A12/B12 = GND, A6/B6 = data (single-wire PIO serial); A7/B7 (D−) and A5/B5 (CC1/CC2) intentionally floating — see Design Notes |
 | **Diodes** | 63× SK matrix diodes, 4× power-path Schottky (PMEG2010BELD), 4× LED indicators |
-| **Polyfuse** | 2× 1.1 A (Fuse_0603) for USB power input |
+| **Polyfuse** | 2× 500 mA hold / 1 A trip (Fuse_0603) for USB power input |
 | **Ferrite beads** | 2× 600 Ω (FB1/FB2) for VBUS filtering |
 | **Case heat-set inserts** | **M2 × L4 × D3.5** brass knurled heat-set inserts (Ruthex-style or equivalent). Print 3.3 mm diameter holes in the case; insert with a soldering iron at ~200°C. |
 | **Case screws** | **M2 × 4 mm** machine screws — same quantity as heat-set inserts (one per mounting point). |
@@ -72,7 +72,7 @@ Hot-swap sockets | Gateron KS33 hot-swap socket | 63 | Same source as switches
 Stabilizers | Kailh Choc V2 (2u for 2.25U and 2.75U keys) | 2 sets | Choc V2 — **not** MX stabilizers
 0603 100 nF ceramic caps | CC0603KRX7R9BB104 (or equiv 0.1µF X7R) | 90+ | LCSC auto-matches — confirm prompt is benign
 0402 caps (LDO bypass) | varies (see schematic) | as schematic | LCSC `C1525` / `C15525` / `C52923` etc.
-0402 resistors | varies | as schematic | LCSC `C25905` (5.1k) / `C11702` (1k) / `C25744` (10k) / `C25100` (27R)
+0402 resistors | varies | as schematic | LCSC `C25905` (5.1k, UNI-ROYAL) / `C11702` (1k, UNI-ROYAL) / `C60490` (10k, YAGEO) / `C138021` (27R, YAGEO) / `C25900` (4.7k, UNI-ROYAL) — 10k and 27R switched from UNI-ROYAL to YAGEO after recurring JLC stock shortages on UNI-ROYAL 0402 SKUs; the R30/R31 4.7k previously carried the 5.1k `C25905` code by mistake and is now correct
 BOOTSEL push button | 4×4×1.5 mm SMD | 2 | LCSC `C589221`
 0402 status LEDs | red / blue / green (per spec) | 4 | LCSC `C130719` / `C130724`
 Case heat-set inserts | M2 × L4 × D3.5 brass knurled | as case dictates | Ruthex-style or equivalent — Amazon / AliExpress. Print 3.3 mm holes; heat-install with soldering iron ~200°C
@@ -356,7 +356,7 @@ Send those with your BOM upload so their engineers can apply them up front inste
 ## Design Notes
 
 * **No reset circuit** — flashing is via BOOTSEL alone. RP2040's `~RUN` pin has an internal pull-up; leaving it floating is safe.
-* **Inter-half connection** uses **USB-C (HRO TYPE-C-31-M-12, top-edge mounted)** carrying QMK PIO-serial split over a **single wire on D+** (A6/B6 are tied together, A7/B7 D− unused). VBUS (A4/A9) bridges 5 V across halves, GND (A12/B12) ties them. The 5 V bridge lets a single host USB-C power both halves through Schottky OR-ing. **CC1 and CC2 (A5/B5) on J3/J4 are currently floating** — design choice for the serial-bridge use case (the link doesn't speak USB protocol so no CC negotiation is needed). If a host USB-C cable is ever accidentally plugged into J3 or J4, a floating CC pin can pick up VCONN; the conservative add is 5.1 kΩ pull-downs to GND on each CC line at the connector. The host USB-C connectors (J1/J2) already have proper 5.1 kΩ CC pull-downs (R4/R5 and R21/R22).
+* **Inter-half connection** uses **USB-C (HRO TYPE-C-31-M-12, top-edge mounted)** carrying QMK PIO-serial split over a **single wire on D+** (A6/B6 are tied together, A7/B7 D− unused). VBUS (A4/A9) bridges 5 V across halves, GND (A12/B12) ties them. The 5 V bridge lets a single host USB-C power both halves through Schottky OR-ing. All four USB-C connectors — J1/J2 (host) and J3/J4 (inter-half) — have 5.1 kΩ CC1/CC2 pull-downs to GND (host J1=R4/R5, host J2=R21/R22, inter-half J3=R6/R24, inter-half J4=R25/R26). J3/J4 don't strictly need CC pull-downs for the serial-bridge use case (the link doesn't speak USB protocol), but they're populated as a safety-conservative choice so an accidentally-plugged host cable can't drive VCONN into a floating pin.
 * **Inter-half data is single-wire, not differential** — D+ carries half-duplex 12 MHz PIO serial; D− is intentionally floating. This is the same pattern as TRRS-based RING1 splits, just routed through USB-C-shaped pins. The connector is **not** an actual USB device port and should not be addressed as one in firmware.
 * **Connector placement** — the two host USB-C jacks (J1/J2) are mounted on the outer-side edges of each half (aligned with the Q-row keycap top); the inter-half USB-C jacks (J3/J4) are on the **top edge** of each half, near the inner-top corner, so a short USB-C-to-USB-C cable bridges between them across the keyboard's top edge with minimal slack. All four USB-C connectors sit on Edge.Cuts plank protrusions of **4 mm** (with the connector's plug face overhanging the plank by **1 mm**, giving a clean 1 mm recess inside a planned 6 mm case wall).
 * **Each half is fully independent** — you can power and flash each half on its own. Either half can be the master.
