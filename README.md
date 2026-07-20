@@ -31,23 +31,21 @@
 
 | | |
 |--|--|
-| **Dimensions** | 328.62 mm × 102.85 mm (end-to-end, both halves including the inter-half gap; left half 145.67 × 102.85, right half 169.84 × 102.85, inter-half gap 13.11 mm) |
+| | |
+|--|--|
+| **Dimensions** | 328.62 × 102.85 mm (end-to-end, both halves + 13.11 mm inter-half gap). Left half 145.67 × 102.85 mm, right half 169.84 × 102.85 mm. |
 | **MCU** | 2× Raspberry Pi RP2040 (QFN-56) |
 | **Flash** | 2× Winbond W25Q128JVPIQ (16 MB QSPI) |
-| **LDO** | 2× Texas Instruments LP5907 (3V3, X2SON-4) |
+| **LDO** | 2× TI LP5907SNX-3.3 (XDFN-4, 250 mA) |
 | **Crystal** | 2× 12 MHz (Crystal_SMD_2520-4Pin) |
-| **USB ESD protection** | 2× USBLC6-2P6 |
-| **Switches** | Gateron KS-33 v2.0 low-profile hot-swap (63 total) |
-| **Stabilizers** | Kailh Choc V2 (2.25U and 2.75U key positions) |
-| **Per-key RGB LEDs** | 63× SK6812MINI-E reverse-mount |
-| **Underglow LEDs** | 27× SK6812MINI-E (B.Cu side) |
-| **Host connector** | 2× HRO TYPE-C-31-M-12 (USB 2.0 16P), side-mounted on the outer edge of each half (4 mm plank protrusion, 1 mm USB-C overhang past plank face) |
-| **Inter-half connector** | 2× HRO TYPE-C-31-M-12 (same part as host), top-edge mounted near the inner-top corner of each half (4 mm plank protrusion, 1 mm USB-C overhang). Carries A4/A9 VBUS = +5V bridge, A12/B12 = GND, A6/B6 = data (single-wire PIO serial); A7/B7 (D−) and A5/B5 (CC1/CC2) intentionally floating — see Design Notes |
-| **Diodes** | 63× SK matrix diodes, 4× power-path Schottky (PMEG2010BELD), 4× LED indicators |
-| **Polyfuse** | 2× 500 mA hold / 1 A trip (Fuse_0603) for USB power input |
-| **Ferrite beads** | 2× 600 Ω (FB1/FB2) for VBUS filtering |
-| **Case heat-set inserts** | **M2 × L4 × D3.5** brass knurled heat-set inserts (Ruthex-style or equivalent). Print 3.3 mm diameter holes in the case; insert with a soldering iron at ~200°C. |
-| **Case screws** | **M2 × 4 mm** machine screws — same quantity as heat-set inserts (one per mounting point). |
+| **Switches** | 63× Gateron KS-33 v2.0 low-profile (MX-compatible, hot-swap) |
+| **Stabilizers** | Kailh Choc V2 (2.25U + 2.75U + 2U backspace) |
+| **RGB LEDs** | 63× per-key + 27× underglow (both SK6812MINI-E) |
+| **Host USB-C** | 2× HRO TYPE-C-31-M-12 (side-mounted, outer edge, 4 mm plank protrusion + 1 mm connector overhang) |
+| **Inter-half USB-C** | 2× HRO TYPE-C-31-M-12 (top-edge mounted, near inner-top corner). Carries VBUS (+5V bridge), GND, and single-wire PIO serial on D+. |
+| **Case hardware** | M2 × L4 × D3.5 heat-set inserts (3.3 mm holes) + M2 × 4 mm screws. |
+
+Full sourcing detail in the [BOM](#bom).
 
 ## BOM
 
@@ -69,7 +67,7 @@ Underglow LEDs | SK6812MINI-E | 30+ | Same as above; same part (`C5149201`)
 Switch diodes | 1N4148W (SOD-123) | 70+ | LCSC `C81598` / Mouser. Footprint `onigaku:D3_SMD_v2` is SOD-123, **not** SOD-323
 Switches | Gateron KS-33 v2.0 low-profile | 63 | Keebio / Keychron / Gateron direct (hand-place; not from JLC stock)
 Hot-swap sockets | Gateron KS33 hot-swap socket | 63 | Same source as switches
-Stabilizers | Kailh Choc V2 (2u for 2.25U and 2.75U keys) | 2 sets | Choc V2 — **not** MX stabilizers
+Stabilizers | Kailh Choc V2 (2u for 2.25U, 2.75U, and 2U keys) | 2 sets | Choc V2 — **not** MX. Kailh has EOL'd this part — stock spares while retailers still have them. See [Stabilizers](#stabilizers) for the full story.
 0603 100 nF ceramic caps | CC0603KRX7R9BB104 (or equiv 0.1µF X7R) | 90+ | LCSC auto-matches — confirm prompt is benign
 0402 caps (LDO bypass) | varies (see schematic) | as schematic | LCSC `C1525` / `C15525` / `C52923` etc.
 0402 resistors | varies | as schematic | LCSC `C25905` (5.1k, UNI-ROYAL) / `C11702` (1k, UNI-ROYAL) / `C60490` (10k, YAGEO) / `C138021` (27R, YAGEO) / `C25900` (4.7k, UNI-ROYAL) — 10k and 27R switched from UNI-ROYAL to YAGEO after recurring JLC stock shortages on UNI-ROYAL 0402 SKUs; the R30/R31 4.7k previously carried the 5.1k `C25905` code by mistake and is now correct
@@ -93,67 +91,16 @@ git submodule update --init --recursive   # ~2 GB, ~10 min. Required for RP2040 
 
 The `keyboards/umiko/` folder is authored by-hand in this repo. Files: `info.json` (matrix pins, 5×8 scanning matrix, split serial vendor driver on GP0, LAYOUT_all with 63 keys extracted from the schematic), `rules.mk`, `config.h`, `keymaps/default/keymap.c`, `readme.md`. Copy these into `qmk_umiko/keyboards/umiko/` when setting up a fresh clone. (TODO: move keyboards/umiko/ into this repo and symlink or use QMK's external-keyboard support so it lives with the PCB source.)
 
-### Toolchain (Windows) — verified working steps
+### Toolchain (Windows)
 
-QMK's CLI **requires** MSYS2 on Windows (its `MSYSTEM` environment check hard-fails in git-bash or a plain Windows shell). The steps below are the exact recipe that worked here — the QMK docs miss a few things (new pkg locations, Python home dir on MSYS2, `keyboard.json` vs `info.json`, jsonschema/rpds-py wheel build failure). Follow verbatim.
+QMK's CLI requires MSYS2 on Windows (its `MSYSTEM` environment check hard-fails in git-bash or a plain shell). Once set up, use `scripts/qmk_compile.sh` for compiles — the wrapper handles all env vars.
 
-**1. Install MSYS2 to `C:/msys64`**
+**One-time setup**: see [docs/toolchain-windows.md](docs/toolchain-windows.md) for the exact MSYS2 install + pacman packages + QMK CLI pip + junction recipe. The QMK docs miss a few Windows-specific gotchas (jsonschema/rpds-py build failure, `USERPROFILE` variable, `keyboard.json` vs `info.json`); the doc covers them all.
 
-Download from https://www.msys2.org/. Default installer, install to `C:/msys64`. For silent install: `msys2-x86_64-latest.exe install --confirm-command --accept-messages --root C:/msys64`.
-
-**2. Install packages via pacman (in the MSYS2 MINGW64 shell)**
-
-```
-pacman -Syu --noconfirm --disable-download-timeout
-yes '' | pacman -S --noconfirm --needed --disable-download-timeout \
-    base-devel git \
-    mingw-w64-x86_64-python-pip mingw-w64-x86_64-python-cffi \
-    mingw-w64-x86_64-python-pillow mingw-w64-x86_64-rust \
-    mingw-w64-ucrt-x86_64-arm-none-eabi-gcc \
-    mingw-w64-ucrt-x86_64-arm-none-eabi-binutils \
-    mingw-w64-ucrt-x86_64-arm-none-eabi-newlib
-```
-
-Gotchas:
-- The `arm-none-eabi-*` toolchain packages are only under the **UCRT64 repo**, not MINGW64 — that's why the package prefix is `mingw-w64-ucrt-x86_64-` for those three only.
-- `yes ''` is required to answer pacman's group-membership prompts (which `--noconfirm` alone doesn't handle).
-- `python-pillow` and `rust` are prerequisites for the QMK pip install — omitting them causes rpds-py / pillow to try building from source and fail.
-
-**3. Install QMK CLI via pip (still in MSYS2 MINGW64 shell)**
-
-```
-python -m pip install --user --break-system-packages 'jsonschema<4.18'
-python -m pip install --user --break-system-packages qmk
-```
-
-Notes:
-- `--break-system-packages` is required because MSYS2's Python is PEP 668-managed. It just means "install into user site-packages" — safe.
-- Pinning `jsonschema<4.18` avoids the modern `rpds-py` Rust build (which fails on MSYS2's Python ABI). Older jsonschema uses `pyrsistent` instead.
-- Ensure `USERPROFILE` is set correctly before running pip, or the install path will contain a literal `~` and Python won't find its own packages. Set: `export USERPROFILE='C:\Users\<you>'`.
-
-**4. Set up qmk_home + junction**
-
-QMK CLI looks for qmk_firmware at `~/qmk_firmware` on the Windows side (`C:/Users/<you>/qmk_firmware`), regardless of the `user.qmk_home` config value. The cleanest fix is a directory junction:
-
-```
-cmd /c "mklink /J C:\Users\<you>\qmk_firmware C:\Users\<you>\dev\keyboard\qmk_umiko"
-```
-
-**5. Test compile**
-
-Requires setting a few env vars every time you run qmk in MSYS2. The `scripts/qmk_compile.sh` wrapper in this repo handles it — just run:
+**Compile** (after setup):
 
 ```
 scripts/qmk_compile.sh
-```
-
-or if you prefer to do it by hand from an MSYS2 MINGW64 shell:
-
-```
-export USERPROFILE='C:\Users\<you>'
-export HOME=/home/<you>
-export PATH=/c/Users/<you>/.local/bin:/ucrt64/bin:$PATH
-qmk compile -kb umiko -km default
 ```
 
 Output UF2 lands at `qmk_umiko/umiko_default.uf2` (~74 KB).
@@ -222,47 +169,36 @@ The inter-half USB-C is **not** a real USB port — it's just a convenient 4-con
 
 ### Stabilizers
 
-The stabilizer cutouts on this PCB are sized for **Kailh Choc V2 stabilizers**. Standard MX / Cherry-style stabilizers **will not fit** the cutout. Stabilizers are needed at the 2.25U and 2.75U thumb keys.
+Umiko uses **Kailh Choc V2 stabilizers** on the six stabbed positions (2.25U shifts + 2.75U thumbs + 2U backspace). Standard MX/Cherry stabs won't fit — the plate + PCB cutouts are Choc V2 dimensions.
 
-**Why not Gateron Low Profile (GLP) plate-mount stabilizers?** Because Gateron LP stabs mechanically limit switch travel — switches don't bottom out fully when installed with GLP stabs, requiring very specific keycaps to compensate. This is a stab-side mechanical constraint, not a cutout dimension issue, so redesigning the plate for GLP dimensions would not fix it. Per direct advice from bakingpy (author of `keebio/kb-plategen`, whose Choc V2 spec `make_plate.py` implements): "Don't use GLP stabs, go with Choc V2 ones." Kailh Choc V2 is the intended stab choice for Gateron KS-33 v2.0 switches and this design.
+**Why Choc V2 and not Gateron LP** — per direct advice from bakingpy (Danny at Keebio, author of `keebio/kb-plategen`): Gateron LP stabs mechanically limit switch travel so keys don't bottom out fully, and no cutout change fixes this. Kailh Choc V2 is the correct pairing for Gateron KS-33 v2.0 switches.
 
-The stab cutouts follow the Choc V2 spec from `keebio/kb-plategen`, encoded in `scripts/make_plate.py`:
-* Body A: 5.95 × 7.95 mm at (±12, ±0.3441)
-* Neck B: 4.55 × 6.25 mm at (±12, ±6.7559)
-* Wire slot: 24 × 1.4 mm at (0, ±8.2809)
-* r=0.5 mm fillet, unioned into one outline per stab position
-* Sign (±) depends on wire direction — north for SW_30 / SW_35 (bottom-edge keys), south for everything else
+**Kailh has EOL'd the Choc V2 stab (confirmed 2026)** — remaining supply is what's on retailer shelves. Stock spares while you can. See [`project_stab_choice_choc_v2_not_glp`](../.claude/projects/C--Users-neuro-dev-keyboard-umiko/memory/project_stab_choice_choc_v2_not_glp.md) for the full decision context.
 
-#### bakingpy's two-level plate design (adopted)
+**Cutout spec** (from `keebio/kb-plategen`, encoded in `scripts/make_plate.py`):
+* Body A: 5.95 × 7.95 mm at (±12, ±0.3441), Neck B: 4.55 × 6.25 mm at (±12, ±6.7559), Wire slot: 24 × 1.4 mm at (0, ±8.2809)
+* r=0.5 mm fillet, unioned per stab position
+* Sign (±) tracks wire direction — north for SW_30 / SW_35 (bottom-edge keys), south for everything else
 
-Rather than a single-layer 1.2 mm plate with all cutouts full-depth, this design uses a **2.2 mm plate with a two-level pocket at each stab position** — a novel approach shared by **bakingpy (Danny at Keebio)** as a printable STL sample (see `reference/choc_v2_stab_holder.stl`). The upper 1.2 mm level is shaped to the housing footprint (body A + neck B + wire slot), providing the exact clip-engagement depth for a Kailh Choc V2 stab. The lower 1.0 mm level uses a different, narrower shape to provide wire clearance below the housing.
+#### Two-level plate design (bakingpy)
 
-**Why this is better than a naïve full-depth plate:**
-* **Sturdier**: 2.2 mm of plate material is measurably more rigid than 1.2 mm, and the un-cut plate volume between the two levels (where their shapes differ) adds mechanical strength across each stab position.
-* **Low-profile-friendly**: total keyboard Z-stack is unchanged — the extra thickness sits within the plate-to-PCB gap that the switch body needs anyway.
-* **Choc V2 stab-friendly**: housing engagement depth is dimensioned to the actual Kailh spec, so clips grip and the wire has proper clearance.
+Rather than a 1.2 mm plate with full-depth cutouts, this build uses a **2.2 mm plate with a stepped pocket at each stab position** — top 1.2 mm shaped to the housing (clip engagement), bottom 1.0 mm to a narrower wire-clearance shape. Reference STL: [`reference/choc_v2_stab_holder.stl`](reference/choc_v2_stab_holder.stl). Sturdier than a thin plate, keeps the low-profile Z-stack (extra thickness sits inside the plate-to-PCB gap the switch needs anyway), and dimensioned to the actual Kailh clip depth.
 
-This design was **incorporated directly and printed in PTFE with no additional expansion adjustments needed** — bakingpy's dimensions handle FDM tolerance for that print material out of the box. If you're printing in a different material (PLA / PETG / ABS / SLA resin), you may still need some outward relief per the tolerance-tuning section below.
+Printed in **PTFE with no tolerance adjustments needed**. Other FDM materials (PLA / PETG / ABS / SLA) may need outward relief — see below.
 
-#### FDM tolerance tuning (materials other than PTFE)
+#### FDM tolerance tuning (non-PTFE materials)
 
-When printed as an integrated plate (Choc V2 stab cutouts + KS-33 v2.0 switch cutouts on the same plate face), the canonical `make_plate.py` dimensions come in **tight for FDM tolerance in most materials**. Switches (14 mm cutouts) fit press-fit and correctly, but stab housings bind on install and the wire drags in its slot. Iterate on the cutout dimensions in your CAD until the stabs seat and the wire moves freely — this is expected FDM work and every printer will need slightly different numbers.
+`make_plate.py` stays true to the Kailh datasheet spec — no fudge factors are baked into the script. Tolerance lives downstream in your CAD/slicer, so different printers and materials can each start from the canonical geometry.
 
-**The principle: asymmetric relief, always outward from the switch cutout.**
+**The principle: asymmetric relief, always outward from the switch cutout.** The plate material between each stab cutout and the 14 mm switch cutout is thin (~2 mm); thinning it further risks structural failure during install. Relieve only the outer faces:
 
-The plate material between each stab cutout and the 14 mm switch cutout is thin (~2 mm) — thinning it further risks structural failure during install. So all tolerance relief goes on the **outward-facing edges** of each cutout:
+* **Wire slot**: outer (far-from-switch) long side only.
+* **Neck B**: outer face only.
+* **Body A**: outboard face only — the face pointing away from the keyboard center.
 
-* **Wire slot**: relieve on the **far-from-switch** long side (the outer wall of the wire trough). Never touch the switch-facing side.
-* **Neck B**: relieve on the **far-from-switch** face (the outer wall of the neck pocket). Never touch the switch-facing side.
-* **Body A**: relieve on the **outboard** face — the face that points away from the keyboard center (left face of the left stab, right face of the right stab). Never touch the switch-facing side.
+Body A outer walls need the most relief (housing exerts most lateral force there during install). Iterate: file, test-fit, transfer the delta back to CAD (or Move Face in SW), reprint. **Never** widen inward toward the switch cutout, or symmetrically — both risk breaking the plate during install pressure.
 
-Expect to need **more relief on the outboard edges of Body A** than the wire/neck features — the stab housing exerts the most lateral install force on the outer walls of the body pocket, and that's typically where binding is worst. Iterate: file, test-fit, transfer the successful delta back into CAD (or Move Face in SW), reprint.
-
-Widening symmetrically, or inward toward the switch cutout, risks the plate breaking during install pressure. Always relieve outward.
-
-**Why NOT back-port to `make_plate.py`:** the script's job is to produce cutouts true to the Kailh Choc V2 datasheet spec. Anyone using it (CNC-milling a metal plate, SLA-printing, injection-molding, or FDM on a differently-tuned printer) should start from the canonical spec and apply their own downstream tolerance. Baking a fudge factor into the script would bias future builders in the wrong direction. **The tolerance lives in your CAD/slicer downstream of the plate generator, not in the generator itself.**
-
-**Where the edits live in this project's SW file:** individual `Move Face` operations are preserved as separate entries in the SolidWorks feature tree of the plate/case CAD — they aren't collapsed into the imported STEP body. Anyone iterating on the tolerance (tighter/looser, per-stab, or for a different manufacturing process) can find each Move Face feature in the tree, right-click → **Edit Feature**, adjust the distance, and rebuild. No need to redo the surgery from scratch or reimport the STEP.
+**Edits are preserved in the SW feature tree** — individual `Move Face` operations aren't collapsed into the imported STEP body, so anyone iterating (per-stab, different material, different printer) can Edit Feature → change distance → rebuild without redoing the surgery.
 
 ### SWD Debug
 
@@ -316,12 +252,11 @@ It also maintains a `DNP_VALUES` set of schematic Values that are **excluded fro
 
 Run `python scripts/make_cad_files.py` for SolidWorks-ready 3D, and `python scripts/make_plate.py` for the plate. Outputs land in `cad/` (per-group + assembly + per-half STEP, board-outline DXF, plus `umiko-plate.step` and `umiko-plate-cutouts.dxf`). Both scripts are **read-only on the source PCB** — all transforms happen in memory / on a self-deleting temp file; you can run them any time without affecting `umiko.kicad_pcb`.
 
-* **Board thickness: 1.6 mm** — JLCPCB standard 4-layer; tolerance **±10% (≈ 1.44–1.76 mm)**, so give the case PCB pocket clearance up to ~1.76 mm.
-* **Plate thickness: 1.2 mm** — Choc V2 stabilizer spec; the MX-stem KS-33 clips tolerate it.
-* **Switches/keycaps are on `F.Cu`** (the front/typing surface); the **hot-swap sockets are on `B.Cu`** (the back). Note: the switch *footprints* are placed on the `B.Cu` layer — that's just where the socket pads live — but the switch *bodies* render on `F.Cu`. The plate sits on the `F.Cu` side; reference it from the `F.Cu` face and mate the plate underside to the switch plate-shelf.
-* **STEP thickness compensation (important):** KiCad's STEP exporter models only the FR4 substrate — it omits the outer copper (~0.07 mm) and soldermask (~0.02 mm), so a 1.6 mm board would otherwise export as ~1.51 mm (and a 1.2 mm plate as ~1.11 mm). `make_cad_files.py` (board/assembly/halves) and `make_plate.py` (plate) **bump the nominal thickness +0.09 mm** so the exported solids measure a true **1.6 mm** and **1.2 mm**. Component X/Y placement is unaffected; only the Z thickness is corrected.
-* **How components track the compensation:** correcting the board thickness moves the F.Cu face up, and **F.Cu-layer parts ride up with it automatically** (caps, resistors, RP2040/flash/LDO, crystals, ferrites, BOOTSEL) — they stay flush. The switch *bodies*, however, are anchored to their `B.Cu` socket footprints, so they do **not** ride the F.Cu compensation and would otherwise sit 0.09 mm below the raised F.Cu surface. `make_cad_files.py` therefore also nudges the switch 3D-model offset (`-4.1` → `-4.19`) in the temp export board so the switch bodies rise 0.09 mm and sit flush with the compensated F.Cu (typing) face. Net: on the compensated board every component sits at its true height — F.Cu electronics and switches flush on F.Cu, sockets/LEDs on B.Cu.
-* **PLA case clearance (FDM print):** design the case inner cavity **0.3–0.5 mm larger per side** than the PCB outline. Print tolerance (typically ±0.1–0.2 mm per dimension, plus first-layer squish that grows internal cavities inward) dominates; PLA shrinkage (~0.3–0.5%) and the PLA vs. FR4 thermal differential (~63 ppm/°C, ≈ 0.3 mm over a 15 °C swing on a ~350 mm board) are smaller contributors. Use **0.5 mm per side** on the full-board long axis and **0.3 mm per side** on the short axis; **0.2 mm** in Z between the board and its ledge is plenty. Print a small corner test chunk first and tune your slicer's **XY size compensation** until the PCB slides in with light friction before committing to a full-case print.
+* **Board thickness**: 1.6 mm (JLC standard, ±10% tolerance — plan the case pocket for up to 1.76 mm).
+* **Plate thickness**: 1.2 mm (Choc V2 stabilizer spec).
+* **Switch bodies render on `F.Cu`, hot-swap sockets on `B.Cu`.** The switch *footprints* are placed on B.Cu (socket pads live there); the switch *bodies* still sit on F.Cu.
+* **STEP thickness compensation**: KiCad's STEP exporter omits outer copper (~0.07 mm) + soldermask (~0.02 mm). Both `make_cad_files.py` and `make_plate.py` add +0.09 mm to the nominal thickness so exports measure a true 1.6 mm / 1.2 mm. F.Cu components (caps, resistors, ICs, crystals, ferrites, BOOTSEL) ride up with the compensation automatically. Switch bodies, anchored to B.Cu socket footprints, are separately nudged (3D-model offset `-4.1` → `-4.19`) so they stay flush with the raised F.Cu face.
+* **PLA case FDM clearance**: 0.3–0.5 mm larger per side than PCB outline (print tolerance dominates; PLA shrinkage and PLA-vs-FR4 thermal are secondary). Use **0.5 mm/side long axis, 0.3 mm/side short axis, 0.2 mm Z**. Print a corner test chunk and tune slicer XY size compensation before printing a full case.
 
 ### JLC upload gotcha
 
@@ -365,33 +300,19 @@ Send those with your BOM upload so their engineers can apply them up front inste
 
 ### LDO history
 
-The 3.3 V LDO for each half (U2 and U10) is `LP5907SNX-3.3` (TI, XDFN-4, LCSC `C133572`, 250 mA). This diverges from the 0xCB Helios reference design, which spec's a `TLV75533PDQNR` (TI, X2SON-4, LCSC `C2861882`, 500 mA). The history of why:
+U2/U10 use **LP5907SNX-3.3** (TI, XDFN-4, LCSC `C133572`, 250 mA) — a pin-compatible substitute for the 0xCB Helios reference `TLV75533PDQNR` (X2SON-4, 500 mA, LCSC `C2861882`) after JLC/LCSC ran out of X2SON stock through 2025–2026. Symbol/footprint stayed the same; only the placed chip changed.
 
-1. **Schematic originally matched Helios:** `TLV75533PDQNR` in the Value field, X2SON-4 footprint. Helios uses the same `PCM_0xcb:LP5907SNX-3.3-NOPB` schematic symbol for both parts since the 4-pin layout is identical (1=IN, 2=GND, 3=EN, 4=OUT).
-2. **JLC ran out of TLV75533PDQNR in the X2SON-4 package** (TI X2SON parts have had recurring supply issues through 2025–2026; current LCSC and JLC stock for `C2861882` is zero, with no clear restock date). The pin-compatible LP5907 in the same XDFN-4 (1×1 mm) footprint was substituted to keep the existing PCB working without a layout change.
-3. **The Value / MPN fields in the schematic weren't updated** during the substitution, so for a while the repo said `TLV75533PDQNR` while the placed chip was actually LP5907. This was confusing for anyone reading the BOM. **Fixed as of this commit:** Value, MPN, LCSC, Footprint, Datasheet for U2/U10 now all consistently describe the LP5907 that's actually placed.
+**250 mA is enough**: per-half 3.3 V load is ~150 mA peak (RP2040 ~50 mA + flash ~15 mA + OLED ~20 mA + LEDs/biases). Per-key RGB runs off VBUS 5 V, not this rail.
 
-**Why 250 mA is sufficient here:** Per-half 3.3 V load is ~150 mA peak — RP2040 (~50 mA active) + W25Q128 flash (~15 mA) + indicator LEDs (few mA) + OLED (~20 mA) + biases. **Per-key RGB LEDs are powered from VBUS 5 V, not from the 3.3 V rail**, so they don't load the LDO. The LP5907 has ~1.7× headroom over peak load.
-
-**If a future revision needs the full 500 mA** (e.g. adding Bluetooth, a larger display, encoders on 3.3 V, or expansion headers that hand the rail out to user-added loads), the options are:
-
-* **`TLV75533PDQNR` (X2SON-4, `C2861882`)** — drop-in for the current footprint *if* JLC has stock when you order. Check first.
-* **`TLV75533PDBVR` (SOT-23-5, `C404027`)** — same chip in a larger, more reliably-stocked package. Requires a footprint swap on the PCB and a schematic-symbol replacement (5-pin: pad 5 = OUT, pad 4 = NR; the LP5907 4-pin symbol won't drive this correctly). Worth the rework only when the extra current is genuinely needed.
-
-This note exists so future-you (or a contributor) doesn't re-investigate this from scratch.
+**If a future rev needs 500 mA** (Bluetooth, bigger display, expansion headers): `TLV75533PDQNR` drops into the current footprint if JLC restocks; `TLV75533PDBVR` (SOT-23-5, LCSC `C404027`) is more reliably stocked but requires a footprint + symbol swap (5-pin: pad 5 = OUT, pad 4 = NR).
 
 ## Stretch / Future Ideas (Rev 2)
 
-* Build a matching case (likely integrated-plate style given the low-profile switches — see design notes)
-* Build a plate (Kailh Choc V2 plate cutouts)
-* OLED breakout board for SSD1306 / SH1106 (the inter-half I²C lines `SCL_*` / `SDA_*` are currently broken out but unwired)
-* Sound and speakers (piezo or similar)
-* Optional reset buttons per half (in case BOOTSEL alone proves too cumbersome)
-* **Move BOOTSEL buttons away from U12 OLED area.** SW2 (right BOOTSEL) at (188.17, 77.52) sits close enough to U12 at (192.35, 130.19) that the OLED daughterboard PCB partially covers it once installed, complicating both case cutout design and BOOTSEL access. Relocate to an uncluttered PCB area — ideally along an outer edge or in the corner opposite the OLED.
-* **Lower-profile OLED mounting.** Current design uses through-hole 4-pin header (2.54 mm pitch) → daughterboard sits ~10–12 mm above the main PCB, forcing the case OLED cutout to accommodate the entire daughterboard body (not just the display window). Options for v2:
-  * **Low-height SMD pin headers** (e.g. 1.27 mm pitch short-body variants, ~3–5 mm mated height) → drops the stack considerably.
-  * **Board-to-board connectors** (Hirose DF13 / DF23, JAE FI-X, or similar) with a matching mate on the daughterboard → ~2–4 mm mated height, but requires a daughterboard designed for it.
-  * **Direct SMD OLED module** — solder the raw SSD1306 module (flex cable + display) directly onto main-PCB SMD pads. Eliminates the daughterboard entirely; case cutout only needs to clear the display window. Highest integration, lowest profile, but pads must match the specific module chosen.
+* **Relocate BOOTSEL buttons** — SW2 at (188.17, 77.52) is close enough to U12 OLED at (192.35, 130.19) that the daughterboard partially covers it once installed, complicating both case cutout and access. Move to an uncluttered outer-edge area.
+* **Lower-profile OLED mounting** — current through-hole 4-pin header puts the daughterboard ~10–12 mm above the PCB, forcing the case cutout to swallow the whole board (not just the display window). Options: short-body SMD headers (~3–5 mm mated), board-to-board connectors (Hirose DF13 / JAE FI-X, ~2–4 mm), or a direct SMD OLED module (eliminates the daughterboard entirely).
+* **OLED breakout board** for the inter-half I²C lines (`SCL_*` / `SDA_*` are broken out but unwired).
+* **Sound** — piezo or small speaker.
+* **Dedicated reset button** per half — BOOTSEL access is workable with a case pinhole, but a separate reset would be cleaner.
 
 ## Inspiration
 
