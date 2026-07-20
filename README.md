@@ -166,7 +166,7 @@ The inter-half USB-C is **not** a real USB port — it's just a convenient 4-con
 
 **Not Gateron LP** — per bakingpy (Keebio, author of `keebio/kb-plategen`): Gateron LP stabs mechanically limit switch travel so keys don't bottom out fully; no cutout tweak fixes it.
 
-**Plate design**: 2.2 mm plate, stepped pocket per stab position (1.2 mm housing pocket on top, 1.0 mm wire clearance on bottom). Reference: [`reference/choc_v2_stab_holder.stl`](reference/choc_v2_stab_holder.stl). **Printed in PTFE with no tolerance adjustments needed**; other FDM materials may need outward relief on the far-from-switch faces (never widen inward, plate breaks during install).
+**Plate design**: 2.2 mm plate, stepped pocket per stab position (1.2 mm housing pocket on top, 1.0 mm wire clearance on bottom). Reference: [`reference/choc_v2_stab_holder.stl`](reference/choc_v2_stab_holder.stl). **Printed in PETG with no tolerance adjustments needed**; other FDM materials may need outward relief on the far-from-switch faces (never widen inward, plate breaks during install).
 
 Cutout dimensions (from `keebio/kb-plategen`, encoded in `scripts/make_plate.py`): Body A 5.95×7.95 mm at (±12, ±0.3441), Neck B 4.55×6.25 mm at (±12, ±6.7559), Wire slot 24×1.4 mm at (0, ±8.2809), r=0.5 mm fillet unioned per stab. Sign flips for SW_30/SW_35 (bottom-edge keys → wire points north).
 
@@ -338,7 +338,7 @@ This design borrows ideas from:
 ## Credits
 
 * **Conor Burns** ([0xCB-dev](https://github.com/0xCB-dev)) — designer of the [0xCB-Helios](https://github.com/0xCB-dev/0xCB-Helios) reference board and for direct guidance on it. umiko's schematic (RP2040 + dual flash + LDO + USB-C power path) builds directly on Helios; without that reference this project wouldn't exist.
-* **bakingpy (Danny) at [Keebio](https://keeb.io)** — source of the Kailh Choc V2 stab cutout spec ([`keebio/kb-plategen`](https://github.com/keebio/kb-plategen)) that `scripts/make_plate.py` implements, the recommendation to use Choc V2 over Gateron LP, and the two-level plate design shared as a printable [reference STL](reference/choc_v2_stab_holder.stl). Adopted directly; works in PTFE with no tolerance tuning.
+* **bakingpy (Danny) at [Keebio](https://keeb.io)** — source of the Kailh Choc V2 stab cutout spec ([`keebio/kb-plategen`](https://github.com/keebio/kb-plategen)) that `scripts/make_plate.py` implements, the recommendation to use Choc V2 over Gateron LP, and the two-level plate design shared as a printable [reference STL](reference/choc_v2_stab_holder.stl). Adopted directly; works in PETG with no tolerance tuning.
 * The **QMK community** — firmware help and patience.
 
 ## License
