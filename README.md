@@ -31,8 +31,6 @@
 
 | | |
 |--|--|
-| | |
-|--|--|
 | **Dimensions** | 328.62 × 102.85 mm (end-to-end, both halves + 13.11 mm inter-half gap). Left half 145.67 × 102.85 mm, right half 169.84 × 102.85 mm. |
 | **MCU** | 2× Raspberry Pi RP2040 (QFN-56) |
 | **Flash** | 2× Winbond W25Q128JVPIQ (16 MB QSPI) |
@@ -93,17 +91,15 @@ The `keyboards/umiko/` folder is authored by-hand in this repo. Files: `info.jso
 
 ### Toolchain (Windows)
 
-QMK's CLI requires MSYS2 on Windows (its `MSYSTEM` environment check hard-fails in git-bash or a plain shell). Once set up, use `scripts/qmk_compile.sh` for compiles — the wrapper handles all env vars.
+QMK's CLI requires MSYS2 on Windows (its `MSYSTEM` environment check hard-fails in git-bash or plain shells).
 
-**One-time setup**: see [docs/toolchain-windows.md](docs/toolchain-windows.md) for the exact MSYS2 install + pacman packages + QMK CLI pip + junction recipe. The QMK docs miss a few Windows-specific gotchas (jsonschema/rpds-py build failure, `USERPROFILE` variable, `keyboard.json` vs `info.json`); the doc covers them all.
+**One-time setup**: [docs/toolchain-windows.md](docs/toolchain-windows.md) — exact MSYS2 install, pacman packages, QMK CLI pip, junction. Covers the Windows gotchas the QMK docs miss (jsonschema/rpds-py, `USERPROFILE`, `keyboard.json` vs `info.json`).
 
 **Compile** (after setup):
 
-```
-scripts/qmk_compile.sh
-```
-
-Output UF2 lands at `qmk_umiko/umiko_default.uf2` (~74 KB).
+| Script | What it does |
+|---|---|
+| `scripts/qmk_compile.sh [keymap]` | Wraps `qmk compile -kb umiko -km <keymap>` inside MSYS2 with all the required env vars (USERPROFILE, HOME, PATH). Defaults to `default` keymap. Output UF2 lands at `qmk_umiko/umiko_default.uf2` (~74 KB). |
 
 ### QMK config: `keyboard.json` (NOT `info.json`)
 
@@ -169,36 +165,13 @@ The inter-half USB-C is **not** a real USB port — it's just a convenient 4-con
 
 ### Stabilizers
 
-Umiko uses **Kailh Choc V2 stabilizers** on the six stabbed positions (2.25U shifts + 2.75U thumbs + 2U backspace). Standard MX/Cherry stabs won't fit — the plate + PCB cutouts are Choc V2 dimensions.
+**Kailh Choc V2 stabilizers** on all 6 stabbed positions (2.25U shifts + 2.75U thumbs + 2U backspace). Standard MX stabs won't fit. Kailh **EOL'd this part in 2026** — stock spares from retailer inventory while it lasts.
 
-**Why Choc V2 and not Gateron LP** — per direct advice from bakingpy (Danny at Keebio, author of `keebio/kb-plategen`): Gateron LP stabs mechanically limit switch travel so keys don't bottom out fully, and no cutout change fixes this. Kailh Choc V2 is the correct pairing for Gateron KS-33 v2.0 switches.
+**Not Gateron LP** — per bakingpy (Keebio, author of `keebio/kb-plategen`): Gateron LP stabs mechanically limit switch travel so keys don't bottom out fully; no cutout tweak fixes it.
 
-**Kailh has EOL'd the Choc V2 stab (confirmed 2026)** — remaining supply is what's on retailer shelves. Stock spares while you can. See [`project_stab_choice_choc_v2_not_glp`](../.claude/projects/C--Users-neuro-dev-keyboard-umiko/memory/project_stab_choice_choc_v2_not_glp.md) for the full decision context.
+**Plate design**: 2.2 mm plate, stepped pocket per stab position (1.2 mm housing pocket on top, 1.0 mm wire clearance on bottom). Reference: [`reference/choc_v2_stab_holder.stl`](reference/choc_v2_stab_holder.stl). **Printed in PTFE with no tolerance adjustments needed**; other FDM materials may need outward relief on the far-from-switch faces (never widen inward, plate breaks during install).
 
-**Cutout spec** (from `keebio/kb-plategen`, encoded in `scripts/make_plate.py`):
-* Body A: 5.95 × 7.95 mm at (±12, ±0.3441), Neck B: 4.55 × 6.25 mm at (±12, ±6.7559), Wire slot: 24 × 1.4 mm at (0, ±8.2809)
-* r=0.5 mm fillet, unioned per stab position
-* Sign (±) tracks wire direction — north for SW_30 / SW_35 (bottom-edge keys), south for everything else
-
-#### Two-level plate design (bakingpy)
-
-Rather than a 1.2 mm plate with full-depth cutouts, this build uses a **2.2 mm plate with a stepped pocket at each stab position** — top 1.2 mm shaped to the housing (clip engagement), bottom 1.0 mm to a narrower wire-clearance shape. Reference STL: [`reference/choc_v2_stab_holder.stl`](reference/choc_v2_stab_holder.stl). Sturdier than a thin plate, keeps the low-profile Z-stack (extra thickness sits inside the plate-to-PCB gap the switch needs anyway), and dimensioned to the actual Kailh clip depth.
-
-Printed in **PTFE with no tolerance adjustments needed**. Other FDM materials (PLA / PETG / ABS / SLA) may need outward relief — see below.
-
-#### FDM tolerance tuning (non-PTFE materials)
-
-`make_plate.py` stays true to the Kailh datasheet spec — no fudge factors are baked into the script. Tolerance lives downstream in your CAD/slicer, so different printers and materials can each start from the canonical geometry.
-
-**The principle: asymmetric relief, always outward from the switch cutout.** The plate material between each stab cutout and the 14 mm switch cutout is thin (~2 mm); thinning it further risks structural failure during install. Relieve only the outer faces:
-
-* **Wire slot**: outer (far-from-switch) long side only.
-* **Neck B**: outer face only.
-* **Body A**: outboard face only — the face pointing away from the keyboard center.
-
-Body A outer walls need the most relief (housing exerts most lateral force there during install). Iterate: file, test-fit, transfer the delta back to CAD (or Move Face in SW), reprint. **Never** widen inward toward the switch cutout, or symmetrically — both risk breaking the plate during install pressure.
-
-**Edits are preserved in the SW feature tree** — individual `Move Face` operations aren't collapsed into the imported STEP body, so anyone iterating (per-stab, different material, different printer) can Edit Feature → change distance → rebuild without redoing the surgery.
+Cutout dimensions (from `keebio/kb-plategen`, encoded in `scripts/make_plate.py`): Body A 5.95×7.95 mm at (±12, ±0.3441), Neck B 4.55×6.25 mm at (±12, ±6.7559), Wire slot 24×1.4 mm at (0, ±8.2809), r=0.5 mm fillet unioned per stab. Sign flips for SW_30/SW_35 (bottom-edge keys → wire points north).
 
 ### SWD Debug
 
@@ -235,28 +208,58 @@ If you want **tighter clearances** (down to 0.089 mm / 3.5 mil), JLC will accept
 
 ### Fab file generation
 
-Run `python scripts/make_jlc_files.py` from the project root. It produces three upload-ready files in `fab/`:
+| Script | What it does |
+|---|---|
+| `scripts/make_jlc_files.py` | Reads the schematic + PCB (read-only) and writes 3 JLC-upload-ready files to `fab/`: gerbers zip, BOM CSV, CPL CSV — all in JLC's exact required format (specific headers, 4-decimal mm-suffixed coords, integer rotations, DNP filter, LCSC overrides). Regenerate any time. |
 
-* `umiko-jlc-gerbers.zip` — gerbers + Excellon drill files (the fab upload)
-* `umiko-bom-jlc.csv` — JLC-formatted BOM (header `Comment,Designator,Footprint,JLCPCB Part #（optional）`, comma-separated designators, ranges expanded)
-* `umiko-cpl.csv` — JLC-formatted CPL (header `Designator,Mid X,Mid Y,Layer,Rotation`, mm-suffixed coords at 4-decimal precision, integer rotations 0–359, capitalized `Top`/`Bottom`)
+Outputs in `fab/`:
 
-The script bakes in LCSC overrides for parts whose schematic symbols don't carry an LCSC field (matrix diode `D3_SMD_v2` → `C81598`, per-key + underglow LED `YS-SK6812MINI-E` → `C5149201`). Add new mappings to the `LCSC_OVERRIDES` dict at the top of the script as needed.
+| File | Purpose |
+|---|---|
+| `umiko-jlc-gerbers.zip` | Gerbers + Excellon drill files — the fab upload |
+| `umiko-bom-jlc.csv` | BOM in JLC format (header uses fullwidth Chinese parens; ref ranges expanded; DNP rows filtered out) |
+| `umiko-cpl.csv` | Placement (Designator, Mid X/Y with `mm` suffix at 4-decimal precision, capitalized Top/Bottom, integer rotation 0–359) |
 
-It also maintains a `DNP_VALUES` set of schematic Values that are **excluded from both the BOM and CPL** so JLC won't try to assemble them — they're hand-soldered after the boards arrive. Current DNP list:
+**DNP list** (excluded from both BOM and CPL — hand-soldered later):
 
-* **`YS-SK6812MINI-E`** (90 components: 63 per-key + 27 underglow) — the per-key LEDs are reverse-mount (body sits in a PCB cutout, lens facing F.Cu), not a standard PnP placement; the underglow variant is normal SMD but the OPSCO `C5149201` chip layout is 180° from our footprint's pin-corner convention. Hand-soldering side-steps both issues. Source: order ~10% spare from LCSC `C5149201` / AliExpress.
-* **`KEYSW`** (63 components: Gateron KS-33 hot-swap sockets) — not in JLC's standard parts inventory. Source separately from Keebio / Gateron direct / AliExpress and solder with the switches.
+* `YS-SK6812MINI-E` (90 total) — per-key are reverse-mount (not standard PnP); underglow OPSCO layout is 180° from our footprint. Both hand-soldered.
+* `KEYSW` (63) — Gateron KS-33 hot-swap sockets, not in JLC's stock. Sourced from Keebio / Gateron / AliExpress.
+
+**LCSC overrides** (baked into the script for parts whose schematic symbols don't carry an LCSC field): matrix diode `D3_SMD_v2` → `C81598`, per-key + underglow LED `YS-SK6812MINI-E` → `C5149201`.
 
 ### CAD exports (case / plate design)
 
-Run `python scripts/make_cad_files.py` for SolidWorks-ready 3D, and `python scripts/make_plate.py` for the plate. Outputs land in `cad/` (per-group + assembly + per-half STEP, board-outline DXF, plus `umiko-plate.step` and `umiko-plate-cutouts.dxf`). Both scripts are **read-only on the source PCB** — all transforms happen in memory / on a self-deleting temp file; you can run them any time without affecting `umiko.kicad_pcb`.
+| Script | What it does |
+|---|---|
+| `scripts/make_cad_files.py` | 3D STEP exports of the whole board + component groups (assembly, halves, switches, LEDs, ICs, connectors, passives) for case CAD import into SolidWorks. Read-only on the source PCB — uses an in-memory copy + self-deleting temp file. |
+| `scripts/make_plate.py` | Plate STEP + DXF for the case top plate (integrated switch cutouts + Choc V2 stab cutouts). Optional CLI arg to also generate a "switches-only" alt plate with configurable switch cutout size (`14.2 14.0` recommended for FDM). Read-only on the source PCB. |
 
-* **Board thickness**: 1.6 mm (JLC standard, ±10% tolerance — plan the case pocket for up to 1.76 mm).
-* **Plate thickness**: 1.2 mm (Choc V2 stabilizer spec).
-* **Switch bodies render on `F.Cu`, hot-swap sockets on `B.Cu`.** The switch *footprints* are placed on B.Cu (socket pads live there); the switch *bodies* still sit on F.Cu.
-* **STEP thickness compensation**: KiCad's STEP exporter omits outer copper (~0.07 mm) + soldermask (~0.02 mm). Both `make_cad_files.py` and `make_plate.py` add +0.09 mm to the nominal thickness so exports measure a true 1.6 mm / 1.2 mm. F.Cu components (caps, resistors, ICs, crystals, ferrites, BOOTSEL) ride up with the compensation automatically. Switch bodies, anchored to B.Cu socket footprints, are separately nudged (3D-model offset `-4.1` → `-4.19`) so they stay flush with the raised F.Cu face.
-* **PLA case FDM clearance**: 0.3–0.5 mm larger per side than PCB outline (print tolerance dominates; PLA shrinkage and PLA-vs-FR4 thermal are secondary). Use **0.5 mm/side long axis, 0.3 mm/side short axis, 0.2 mm Z**. Print a corner test chunk and tune slicer XY size compensation before printing a full case.
+Outputs in `cad/`:
+
+| File | Purpose |
+|---|---|
+| `umiko-assembly.step` | Full board + all components |
+| `umiko-half-{left,right}.step` | Split into just one half |
+| `umiko-{switches,leds,ics,connectors,passives,board}.step` | Component-group subsets |
+| `umiko-plate.step` / `.dxf` | Plate with switch + stab cutouts (canonical Choc V2 spec) |
+| `umiko-switches-only[-WxH].step` / `.dxf` | Alt plate with just switch cutouts at custom size |
+
+**Key numbers**:
+
+* **Board thickness**: 1.6 mm (JLC standard, ±10% — plan case pocket for up to 1.76 mm).
+* **Plate thickness**: 1.2 mm (Choc V2 stab spec). Two-level bakingpy design uses 2.2 mm total — see [Stabilizers](#stabilizers).
+* **Switch bodies render on F.Cu; hot-swap sockets on B.Cu.** Switch *footprints* are on B.Cu (socket pads live there) but the switch *bodies* still show on F.Cu.
+* **STEP thickness compensation**: KiCad's exporter omits outer copper (~0.07 mm) + soldermask (~0.02 mm), so both scripts bump the extruded thickness by **+0.09 mm** to hit a true 1.6 mm / 1.2 mm. F.Cu components ride up automatically; switch bodies (anchored to B.Cu sockets) get an extra `-4.1 → -4.19` 3D-model offset nudge to stay flush.
+* **PLA case FDM clearance**: **0.5 mm/side long axis, 0.3 mm/side short axis, 0.2 mm Z**. Print tolerance dominates over PLA shrinkage / thermal. Test a corner chunk and tune slicer XY size compensation before a full-case print.
+
+#### Workflow suggestion (case design)
+
+1. Run `python scripts/make_cad_files.py` and `python scripts/make_plate.py` once to seed `cad/` with the STEPs.
+2. In SolidWorks, import `umiko-assembly.step` (or per-half if you're working on one side) as reference geometry, mate to case origin.
+3. Design the case around it — pocket the PCB, add USB-C cutouts, screw holes, feet, BOOTSEL access pinholes (SW1/SW2 positions in the BOOTSEL access note below).
+4. For the plate: import `umiko-plate.step` or build a subtract body from `umiko-switches-only.step` (see [SolidWorks "Combine → Subtract" trick](#).
+5. **Re-run the scripts only when the PCB changes.** Re-importing STEPs into an existing SW assembly usually breaks a lot of downstream in-context references (entity IDs shift). Prefer to keep imports frozen once the case work is going.
+6. Track your working SW files under `cad/` in git — everything else in that folder is regenerable.
 
 ### JLC upload gotcha
 
