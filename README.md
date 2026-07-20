@@ -272,7 +272,7 @@ The following workflow is if you would prefer to build your own case. The includ
 >
 > **Rule of thumb**: re-run the scripts only when the PCB *actually* changes AND you need the case CAD to reflect it visually. If you can live with a slightly stale reference PCB in your case model, you save yourself hours of repair work. The fab side is unaffected either way — `scripts/make_jlc_files.py` reads the current PCB directly.
 >
-> If you must re-import: work on a **copy** of the case assembly, or plan a full afternoon for reference repair.
+> **If you must re-import, isolate the update.** `make_cad_files.py` writes per-group STEPs (`umiko-switches.step`, `umiko-leds.step`, `umiko-connectors.step`, `umiko-ics.step`, `umiko-passives.step`, `umiko-board.step`) — swap only the subset your change actually touched (e.g. re-import just `umiko-switches.step` if you moved a switch, not the whole assembly). Damage stays contained to references that used that specific subset. And still work on a **copy** of the case assembly first as a safety net.
 
 ### JLC upload gotcha
 
