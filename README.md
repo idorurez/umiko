@@ -248,7 +248,7 @@ Outputs in `cad/`:
 **Key numbers**:
 
 * **Board thickness**: 1.6 mm (JLC standard, ±10% — plan case pocket for up to 1.76 mm).
-* **Plate thickness**: 1.2 mm (Choc V2 stab spec). Two-level bakingpy design uses 2.2 mm total — see [Stabilizers](#stabilizers).
+* **Plate thickness**: **2.2 mm total** (bakingpy two-level design), split as **1.2 mm housing pocket on top** (Choc V2 clip engagement depth) + **1.0 mm wire clearance pocket on bottom** — see [Stabilizers](#stabilizers).
 * **Switch bodies render on F.Cu; hot-swap sockets on B.Cu.** Switch *footprints* are on B.Cu (socket pads live there) but the switch *bodies* still show on F.Cu.
 * **STEP thickness compensation**: KiCad's exporter omits outer copper (~0.07 mm) + soldermask (~0.02 mm), so both scripts bump the extruded thickness by **+0.09 mm** to hit a true 1.6 mm / 1.2 mm. F.Cu components ride up automatically; switch bodies (anchored to B.Cu sockets) get an extra `-4.1 → -4.19` 3D-model offset nudge to stay flush.
 * **PLA case FDM clearance**: **0.5 mm/side long axis, 0.3 mm/side short axis, 0.2 mm Z**. Print tolerance dominates over PLA shrinkage / thermal. Test a corner chunk and tune slicer XY size compensation before a full-case print.
