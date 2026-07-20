@@ -118,11 +118,7 @@ Each half is flashed independently via BOOTSEL:
 
 Note: on this board the W25Q128 flash arrives blank from JLC, so first plug-in enters BOOTSEL automatically (RP2040 defaults to USB mass-storage mode when the QSPI flash contains no valid firmware). After first flash, subsequent re-flashes need the BOOTSEL button held.
 
-No reset button on the board — power-cycle + BOOTSEL handles all flashing.
-
-**Case-top BOOTSEL access:** the BOOTSEL buttons (SW1 left, SW2 right) are small SMD tactile switches on F.Cu that would be inaccessible with the plate + switches installed. The case top plate has a **~2 mm pinhole above each button** aligned to its PCB position — press with a paperclip, SIM ejector, or dedicated reset pin to activate BOOTSEL without disassembling. Pattern used by most low-profile keyboards (NuPhy / Keychron K-series). Coordinates in PCB frame:
-* SW1 (left half BOOTSEL): (166.01, 57.53)
-* SW2 (right half BOOTSEL): (188.17, 77.52)
+No reset button on the board — power-cycle + BOOTSEL handles all flashing. Case access to SW1/SW2 is a design decision left to the case (v1 uses pinhole access; v2 plans to integrate the buttons directly — see [Rev 2 ideas](#stretch--future-ideas-rev-2)).
 
 ### Split serial: what's happening on the wire
 
@@ -261,7 +257,7 @@ The following workflow is if you would prefer to build your own case. The includ
 
 1. Run `python scripts/make_cad_files.py` and `python scripts/make_plate.py` once to seed `cad/` with the STEPs.
 2. In SolidWorks, import `umiko-assembly.step` (or per-half if you're working on one side) as reference geometry, mate to case origin.
-3. Design the case around it — pocket the PCB, add USB-C cutouts, screw holes, feet, BOOTSEL access pinholes (SW1/SW2 positions in the BOOTSEL access note below).
+3. Design the case around it — pocket the PCB, add USB-C cutouts, screw holes, feet, BOOTSEL access at SW1 (166.01, 57.53) and SW2 (188.17, 77.52). v1 uses pinholes; v2 plans a case-integrated button — see [Rev 2 ideas](#stretch--future-ideas-rev-2).
 4. For the plate: import `umiko-plate.step` or build a subtract body from `umiko-switches-only.step` (see [SolidWorks "Combine → Subtract" trick](#).
 5. Freeze the STEPs once case work starts — see warning below.
 6. Track your working SW files under `cad/` in git — everything else in that folder is regenerable.
@@ -326,17 +322,17 @@ U2/U10 use **LP5907SNX-3.3** (TI, XDFN-4, LCSC `C133572`, 250 mA) — a pin-comp
 
 ## Stretch / Future Ideas (Rev 2)
 
-* **Relocate BOOTSEL buttons** — SW2 at (188.17, 77.52) is close enough to U12 OLED at (192.35, 130.19) that the daughterboard partially covers it once installed, complicating both case cutout and access. Move to an uncluttered outer-edge area.
+* **Bigger, case-integrated BOOTSEL button per half** — v1 uses tiny 4×4×1.5 mm SMD tacts (SW1/SW2) requiring a pinhole in the case top for paperclip access. v2 should either (a) swap the PCB switch to a **larger through-hole or lower-mount tactile** so a case-integrated **cantilever / living-hinge button** (3D-printed flexure that presses the PCB switch when pushed from outside) works cleanly, or (b) go directly to a case-integrated button style with the tact positioned to sit under the flexure. Also relocate SW2 out of U12 OLED's daughterboard footprint (currently at (188.17, 77.52) — daughterboard partially covers it).
 * **Lower-profile OLED mounting** — current through-hole 4-pin header puts the daughterboard ~10–12 mm above the PCB, forcing the case cutout to swallow the whole board (not just the display window). Options: short-body SMD headers (~3–5 mm mated), board-to-board connectors (Hirose DF13 / JAE FI-X, ~2–4 mm), or a direct SMD OLED module (eliminates the daughterboard entirely).
 * **OLED breakout board** for the inter-half I²C lines (`SCL_*` / `SDA_*` are broken out but unwired).
-* **Sound** — piezo or small speaker.
-* **Dedicated reset button** per half — BOOTSEL access is workable with a case pinhole, but a separate reset would be cleaner.
+* **Sound** — small speaker + amp (e.g. PAM8302 mono class-D) + audio storage/playback path. A dedicated audio DAC or a codec IC with I²S from the RP2040 can play short WAV/MP3 clips off an SD card or an extra flash chip. Fun options: ocean/wave sample loops (naming-appropriate), click/keypress feedback, boot chime.
 
 ## Inspiration
 
 This design borrows ideas from:
 
 * marvelous65 split — TKL split with separate inter-half data path
+* [Keebio](https://keeb.io) — the entire ecosystem around Kailh Choc V2 + Gateron KS-33 low-profile builds; `keebio/kb-plategen` (canonical Choc V2 stab cutout spec), the two-level plate design shared by bakingpy, and general reference for split ergo hardware conventions
 * [0xCB-Helios](https://github.com/0xCB-dev/0xCB-Helios) — schematic patterns for RP2040 + dual flash + LDO
 * [0xCB-libs](https://github.com/0xCB-dev/0xCB-libs) — footprints for RP2040, W25Q128 flash (WSON8), LP5907 (X2SON-4), USB-C receptacle, SOD-882 Schottky and other small SMD parts used throughout this design
 
