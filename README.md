@@ -328,7 +328,7 @@ During engineering review JLC's team sends placement snapshots highlighted with 
 * **How to answer "is the polarity right?" from JLC:** open the PCB in KiCad, click the flagged pad, note whether pin 1 is anode/cathode (or SDA/SCL, etc.) and which side of the physical part it lands on after any footprint rotation. Compare to JLC's placement snapshot. If the pink dot lands on the electrically-correct side per your schematic → confirm no correction. If it's on the opposite side → request 180° rotation. Also useful to check `pinfunction` fields in `umiko.kicad_pcb` — they carry the intended electrical role (`K_1`, `A_2`, `SDA_1`, etc.).
 * **Rotation corrections that recur across orders** and are worth including proactively in the reply to JLC:
     * **U10** (LP5907 LDO, X2SON-4): **+90°**
-    * **D5** (PMEG2010BELD Schottky, SOD-882D): **180°**
+    * ~~**D5** (PMEG2010BELD Schottky, SOD-882D): ~~ **DO NOT rotate.** JLC's default placement of this SOD-882D matches the KiCad footprint's pin 1 = cathode convention correctly. A prior version of this doc listed D5 = 180° which is wrong; applying that correction reverses the diode and blocks the entire J2 host USB power path. Confirmed empirically on a 3-board respin where the "correction" was applied and all 3 boards were dead on J2. Just leave D5 alone.
     * **J2/J4** (HRO USB-C, if their 3D preview shows them backwards): **180°**
     * **D4** (Sunny B1811NB User LED): **180°**
     * **D6** (Sunny B1811URO Power LED): **NO correction** (already correct)
