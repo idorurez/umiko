@@ -35,6 +35,9 @@ scripts/_*.json
 # Fab output (regenerable via make_jlc_files.py)
 fab/
 
+# kicad-cli output (DRC reports, gerbers, etc. — regenerable via scripts/prefab_check.sh)
+output/
+
 # IDE state
 .history/
 .history_trim/
