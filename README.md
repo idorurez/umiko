@@ -306,6 +306,27 @@ The following workflow is if you would prefer to build your own case. The includ
 >
 > **If you must re-import, isolate the update.** `make_cad_files.py` writes per-group STEPs (`umiko-switches.step`, `umiko-leds.step`, `umiko-connectors.step`, `umiko-ics.step`, `umiko-passives.step`, `umiko-board.step`) — swap only the subset your change actually touched (e.g. re-import just `umiko-switches.step` if you moved a switch, not the whole assembly). Damage stays contained to references that used that specific subset. And still work on a **copy** of the case assembly first as a safety net.
 
+### Pre-fab sanity gate (catches the "forgot to save to disk" short)
+
+Remember to check and follow the steps outlined below. We originally had a short by not following this guidance — it's corrected in latest, but the guard rails are there to catch forgetting to save to disk.
+
+**Field rework (your boards):** 2 boards saved by cutting the short at B.Cu (~322,55) — fully functional after cut. 3rd board same cut + burned Schottky after F2 (D5) now jumpered — works for testing but has **no reverse-polarity protection on J2 host USB**, replace D5 (PMEG2010BELD) before daily use.
+
+Before you export:
+
+1.  **Fresh open/close before export.** Close KiCad, reopen the project fresh, and do `Edit → Fill All Zones` (`B` key in PCB editor) so you force the on-disk zone fills to match what you see. Save. If you skip this, GUI DRC can lie.
+2.  **Run the deterministic CLI gate: `scripts/prefab_check.sh`** (added in `d164d0c`).
+
+    ```bash
+    scripts/prefab_check.sh            # checks umiko.kicad_pcb
+    # or
+    scripts/prefab_check.sh path/to/other.kicad_pcb
+    ```
+
+    What it does: uses `kicad-cli` directly (no GUI cache) to `--refill-zones`, `--save-board`, then runs DRC with `--severity-error --exit-code-violations --format json --output output/prefab_drc.json`. Exit 0 = safe to export gerbers. Non-zero = DO NOT fab, fix errors first. On Windows the default CLI path is `C:/Program Files/KiCad/10.0/bin/kicad-cli.exe` — edit the script if yours is elsewhere.
+
+3.  Only after that gate passes should you run `scripts/make_jlc_files.py` and upload.
+
 ### JLC upload gotcha
 
 **Updates to BOM or CPL won't apply unless you restart the upload from the project menu.** Re-uploading just the BOM/CPL after a failed attempt will appear to succeed but JLC keeps the prior validation state, leading to errors like "Failed processing the CPL file" or "BOM doesn't match CPL" that don't actually correspond to the current file contents. The fix is to back up to the **PCB quote** step in JLC's flow and start the whole upload over (gerbers → BOM → CPL).
@@ -319,6 +340,8 @@ JLC's CPL parser is unusually strict about:
 * **Headers must match JLC's sample exactly**, including the fullwidth Chinese parens in the BOM's `JLCPCB Part #（optional）`.
 
 ### Polarity / pin-1 review from JLC (expect these questions)
+
+**Always cross-check JLC's BOM placement preview against your own KiCad board before you approve.** Open your PCB, click the flagged part, and verify cathode/anode (or pin-1 function) matches JLC's pink-dot orientation. Don't trust LCSC codes or JLC's library shorthand — their footprint convention may be opposite yours.
 
 During engineering review JLC's team sends placement snapshots highlighted with a **pink dot on pin 1** of every polarized (or asymmetric) component and asks you to confirm the orientation matches your intent. This isn't optional — you have to respond one by one. A few patterns from this project's reviews worth banking:
 
