@@ -287,6 +287,18 @@ Outputs in `cad/`:
 
 ![Case CAD in SolidWorks](images/umiko_case_solidworks.png)
 
+#### Sample print (Bambu Lab)
+
+A sliced Bambu Lab project file is included at [`cad/print/umiko.3mf`](cad/print/umiko.3mf), with `umiko_top.STL` and `umiko_bottom.STL` alongside it. Covers top and bottom plates for both halves.
+
+The bottom plate is designed for a **transparency-color layer sandwich**: the embedded Umiko kanji (海子) prints in your color of choice, sandwiched inside transparent PETG for the branding effect.
+
+**Filament note:** PETG for the outer transparent shell works reliably. For the embedded kanji layer, PETG is safest — some PLA brands don't fully adhere to PETG at the interface, so portions of the embedded logo may separate and give a splotchy look. If you want to use PLA for the kanji, test-print a small sample with your specific filament brand first.
+
+![Bambu Lab slicer preview](cad/print/bambu_sample.png)
+![Bambu Lab slicer preview (angle 2)](cad/print/bambu_sample2.png)
+![Printed umiko (black)](cad/print/printed_umiko_black.png)
+
 #### Workflow suggestion (case design) 
 
 The following workflow is if you would prefer to build your own case. The included case design is fully complete. If you wish to build your own, it also doubles as a base starting point.
