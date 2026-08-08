@@ -36,7 +36,7 @@
 | **RGB LEDs** | 63× per-key + 27× underglow (both SK6812MINI-E) |
 | **Host USB-C** | 2× HRO TYPE-C-31-M-12, outer edge (4 mm plank + 1 mm connector overhang) |
 | **Inter-half USB-C** | 2× HRO TYPE-C-31-M-12, top edge. Carries VBUS (+5 V bridge), GND, and single-wire PIO serial on D+ |
-| **Case hardware** | M2 × L4 × D3.5 heat-set inserts (3.3 mm holes) + M2 × 4 mm screws |
+| **Case hardware** | M2 × L3 × D3.5 heat-set inserts (3.3 mm holes) + M2 × 4 mm screws |
 
 Full sourcing detail in the [BOM](#bom).
 
@@ -68,7 +68,7 @@ Stabilizers | Kailh Choc V2 (2u for 2.25U, 2.75U, and 2U keys) | 2 sets | Choc V
 0402 resistors | varies | as schematic | LCSC `C25905` (5.1k, UNI-ROYAL) / `C11702` (1k, UNI-ROYAL) / `C60490` (10k, YAGEO) / `C138021` (27R, YAGEO) / `C25900` (4.7k, UNI-ROYAL) — 10k and 27R switched from UNI-ROYAL to YAGEO after recurring JLC stock shortages on UNI-ROYAL 0402 SKUs; the R30/R31 4.7k previously carried the 5.1k `C25905` code by mistake and is now correct
 BOOTSEL push button | 4×4×1.5 mm SMD | 2 | LCSC `C589221`
 0402 status LEDs | red / blue / green (per spec) | 4 | LCSC `C130719` / `C130724`
-Case heat-set inserts | M2 × L4 × D3.5 brass knurled | as case dictates | Ruthex-style or equivalent — Amazon / AliExpress. Print 3.3 mm holes; heat-install with soldering iron ~200°C
+Case heat-set inserts | M2 × L3 × D3.5 brass knurled | as case dictates | Ruthex-style or equivalent — Amazon / AliExpress. Print 3.3 mm holes; heat-install with soldering iron ~200°C
 Case screws | M2 × 4 mm machine screws | same qty as heat-set inserts | Any standard M2 × 4 — hardware store / Amazon / AliExpress
 Rubber feet (sticky) | Adhesive-backed rubber pads | 4–8 per half | Sized to fit the recesses on the case bottom. Any standard "keyboard foot" or "furniture bumper" pack works — Amazon / AliExpress
 
