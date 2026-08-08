@@ -14,8 +14,13 @@ _autosave-*
 ~$*.sldasm
 *.kicad_pcb.bak*
 *.kicad_pcb.pre_*.bak
+*.kicad_pcb-bak
 *.kicad_sch.bak*
 *.kicad_sch.pre_*.bak
+*.kicad_sch-bak
+*.bak_*
+*.bak
+*_bak
 
 # KiCad project session/workspace state (per-user, not portable)
 *.kicad_prl

@@ -120,6 +120,46 @@ Note: on this board the W25Q128 flash arrives blank from JLC, so first plug-in e
 
 No reset button on the board — power-cycle + BOOTSEL handles all flashing. Case access to SW1/SW2 is a design decision left to the case (v1 uses pinhole access; v2 plans to integrate the buttons directly — see [Rev 2 ideas](#stretch--future-ideas-rev-2)).
 
+### Remap keys with VIA (optional)
+
+**You don't have to do this.** The compiled default keymap works out of the box — tap-dance grave/esc, F-row on the number row via FN, arrows on the left hand via FN, RGB controls on the right hand via FN, Ctrl+Win+Left/Right for prev/next desktop on FN+[/]. VIA is only for changing those bindings **live in a browser** without recompiling.
+
+The default UF2 already has VIA compiled in. To use it:
+
+1. Flash `qmk_umiko/umiko_default.uf2` as usual.
+2. Open **https://usevia.app** in Chrome or Edge (Firefox works but has limited WebHID).
+3. Click the **gear icon** (top right) → **Settings** → toggle **Show Design tab**.
+4. In the new **Design** tab, click **Load** and pick `qmk_umiko/keyboards/umiko/umiko_via.json`.
+5. Switch to the **Configure** tab. Plug in the keyboard (master half) and it should appear — click it, then remap keys by clicking a position and picking a new keycode.
+
+Changes save to the keyboard's EEPROM immediately and persist across unplug/replug and power-cycle. If you ever want to wipe your remaps and reload the compiled defaults, use **Settings → Reset Keyboard** inside VIA.
+
+**Two things VIA can't change** (they stay hardwired in the firmware):
+- The **tap-dance grave/esc** definition itself — VIA sees it as a custom keycode `TD_GRV_ESC` you can move around or remove, but not redefine.
+- The **water OLED animation** — that's separate C code, unrelated to keymaps.
+
+### Clearing EEPROM (when new defaults don't take effect)
+
+**What EEPROM is:** a tiny chunk of persistent storage on the keyboard's chip. It survives power-cycles and even reflashing new firmware — that's the whole point of it.
+
+**What it stores:**
+- Current RGB color, saturation, brightness, animation mode
+- Any key remaps you've made in VIA
+- Some firmware-level settings
+
+**Why you'd clear it:** If you flash new firmware with different default colors, a different startup animation, or a new default keymap, **the new defaults won't take effect** on their own — the keyboard reads its saved state from EEPROM first and only falls back to the compiled defaults when EEPROM is empty. So the classic "I flashed a new firmware and it still looks/behaves the same as before" is almost always this. Clear EEPROM once and the compiled defaults apply.
+
+**How to clear it** (bootmagic — no browser needed):
+
+1. Unplug the master half's USB
+2. **Hold** the top-left key (grave/escape position — this is matrix `[0,0]`, wired to bootmagic)
+3. **Plug USB in** while still holding
+4. Release after ~1 second
+
+Next boot uses whatever the compiled firmware defines as defaults.
+
+**Alternative** (if you already have VIA loaded): VIA → gear icon → `Reset Keyboard`. Same result.
+
 ### Split serial: what's happening on the wire
 
 Umiko routes QMK's split-transport protocol over a **single-wire half-duplex PIO serial** running on **GP0** of each RP2040. GP0 connects to the D+ pin of each half's inter-half USB-C connector (J3 left, J4 right). A short USB-C-to-USB-C cable between J3 and J4 ties the two GP0 lines together and provides the 5V bridge (VBUS pins A4/A9) and GND (A12/B12).
@@ -187,6 +227,29 @@ The inter-half USB-C is **not** a real USB port — it's just a convenient 4-con
 **Plate design**: 2.2 mm plate, stepped pocket per stab position (1.2 mm housing pocket on top, 1.0 mm wire clearance on bottom). Reference: [`reference/choc_v2_stab_holder.stl`](reference/choc_v2_stab_holder.stl). **Printed in PETG with no tolerance adjustments needed**; other FDM materials may need outward relief on the far-from-switch faces (never widen inward, plate breaks during install).
 
 Cutout dimensions (from `keebio/kb-plategen`, encoded in `scripts/make_plate.py`): Body A 5.95×7.95 mm at (±12, ±0.3441), Neck B 4.55×6.25 mm at (±12, ±6.7559), Wire slot 24×1.4 mm at (0, ±8.2809), r=0.5 mm fillet unioned per stab. Sign flips for SW_30/SW_35 (bottom-edge keys → wire points north).
+
+### OLED (optional: socketed mount)
+
+**Optional.** Solder the OLED module directly and it works fine. This section is only if you want the OLED **removable** — swap it later, replace it if damaged, or lift the top plate without desoldering.
+
+Use low-profile Mill-Max pins + receptacles instead of standard 0.1" headers. The receptacle sits flush enough to stay **under the 2.2 mm plate height**, so it doesn't interfere with plate mounting.
+
+**Parts**:
+
+| Description | Manufacturer PN | Source |
+|---|---|---|
+| PC pin, circular 0.020" DIA gold — one per OLED pin (typically 4) | Mill-Max `3320-0-00-15-00-00-03-0` | [Digi-Key `ED1134-ND`](https://www.digikey.com/en/products/result?keywords=ED1134-ND) |
+| Receptacle strip 64-pos, 0.1" pitch gold — snap off / trim to your pin count | Mill-Max `315-47-164-41-001000` | [Digi-Key `ED11182-ND`](https://www.digikey.com/en/products/result?keywords=ED11182-ND) |
+
+**Assembly**:
+
+1. Cut the 64-pos receptacle strip down to match your OLED pin count (usually 4 pins for a standard SSD1306 module: GND, VCC, SDA, SCL).
+2. Solder the receptacle strip into the OLED footprint on the PCB.
+3. Insert the Mill-Max pins into the OLED module (from the top side), then solder them from the bottom of the OLED PCB.
+4. Plug the OLED (with pins attached) into the receptacles on the main board.
+
+![OLED plugged into socketed receptacles](images/oled_socketed_installed.jpg)
+![OLED removed, showing pins on module and receptacles on PCB](images/oled_socketed_removed.jpg)
 
 ### SWD Debug
 
