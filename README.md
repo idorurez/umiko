@@ -8,18 +8,18 @@
 
 ## Features
 
-* **Split layout** — two physically separate halves; each half has its own MCU and runs standalone
-* **TKL, F-row-less** — full alpha + nav cluster on the right, no function row
-* **Per-key RGB** (SK6812MINI-E reverse-mount, lights through PCB cutouts to underside of keycap)
-* **Underglow** (SK6812MINI-E underglow variant, mounted on the back of the PCB)
-* **Gateron KS-33 v2.0 low-profile hot-swap** switches (MX-compatible footprint, low-profile body)
-* **Kailh Choc V2 stabilizers** (stabilizer cutouts on PCB sized for Choc V2, not MX stabs)
-* **Side-mounted host USB-C** per half (on the outer edge of each board) for host connection and power
-* **Top-mounted USB-C inter-half link** (HRO Type-C, on the top edge of each board near the inner-top corner) carrying single-wire PIO serial (over D+), GND, and 5 V bridge between halves
-* **RP2040** — one per half, each with its own external QSPI flash (W25Q128) and 3V3 LDO (LP5907)
-* **BOOTSEL-only flashing** — each half has a BOOTSEL button (SW1 left, SW2 right). No reset circuit by design; flashing is via "unplug USB → hold BOOTSEL → plug USB → release → drop .uf2"
-* **SWD test points** — 8 pads per half organized as a pogo-clip pattern (CLK/IO/GND/3V3); pads mirrored across halves so a flipped 6-pin clip lands on matching signals
-* **4-layer PCB** with split L/R rails — F.Cu signal/copper, In1.Cu split 3V3 planes (L/R), In2.Cu split GND planes (L/R), B.Cu signal/copper
+* **Split layout** — two independent halves, each with its own MCU
+* **TKL, no F-row** — full alpha + nav cluster on the right
+* **Per-key RGB** — SK6812MINI-E reverse-mount, shines through PCB cutouts up into the keycap
+* **Underglow** — SK6812MINI-E on the back of each PCB
+* **Gateron KS-33 v2.0 low-profile hot-swap** switches (MX-compatible footprint)
+* **Kailh Choc V2 stabilizers** (cutouts sized for Choc V2, not MX)
+* **Host USB-C** on the outer edge of each half
+* **Inter-half USB-C** on the top edge of each half. Carries single-wire PIO serial on D+, GND, and 5 V bridge
+* **RP2040** with external QSPI flash (W25Q128) and 3.3 V LDO (LP5907) per half
+* **BOOTSEL-only flashing** — dedicated SW1 (left) / SW2 (right); no reset circuit
+* **SWD test points** — 8 pads per half in a pogo-clip pattern (CLK/IO/GND/3V3), mirrored so a flipped clip lands on matching signals
+* **4-layer PCB** with split L/R rails: F.Cu signal, In1.Cu 3V3 planes, In2.Cu GND planes, B.Cu signal
 * **QMK firmware**
 
 ## Hardware Specs
@@ -34,9 +34,9 @@
 | **Switches** | 63× Gateron KS-33 v2.0 low-profile (MX-compatible, hot-swap) |
 | **Stabilizers** | Kailh Choc V2 (2.25U + 2.75U + 2U backspace) |
 | **RGB LEDs** | 63× per-key + 27× underglow (both SK6812MINI-E) |
-| **Host USB-C** | 2× HRO TYPE-C-31-M-12 (side-mounted, outer edge, 4 mm plank protrusion + 1 mm connector overhang) |
-| **Inter-half USB-C** | 2× HRO TYPE-C-31-M-12 (top-edge mounted, near inner-top corner). Carries VBUS (+5V bridge), GND, and single-wire PIO serial on D+. |
-| **Case hardware** | M2 × L4 × D3.5 heat-set inserts (3.3 mm holes) + M2 × 4 mm screws. |
+| **Host USB-C** | 2× HRO TYPE-C-31-M-12, outer edge (4 mm plank + 1 mm connector overhang) |
+| **Inter-half USB-C** | 2× HRO TYPE-C-31-M-12, top edge. Carries VBUS (+5 V bridge), GND, and single-wire PIO serial on D+ |
+| **Case hardware** | M2 × L4 × D3.5 heat-set inserts (3.3 mm holes) + M2 × 4 mm screws |
 
 Full sourcing detail in the [BOM](#bom).
 
@@ -44,7 +44,7 @@ Full sourcing detail in the [BOM](#bom).
 
 ## BOM
 
-Quantities are rounded up to account for spares — order more than the minimum.
+Quantities are rounded up for spares — order more than the minimum.
 
 Part | Part number | Qty | Notes / Source
 --- | --- | --- | ---
@@ -76,15 +76,15 @@ Rubber feet (sticky) | Adhesive-backed rubber pads | 4–8 per half | Sized to f
 
 ### Where the keyboard config lives
 
-The umiko QMK keyboard definition lives in a **fresh clone of upstream QMK**, not in the older `idorurez/qmk_firmware` fork (which is on the `bakekujira` branch and carries stale history for an unrelated older board). Clean-slate approach:
+Use a **fresh clone of upstream QMK** — not the older `idorurez/qmk_firmware` fork (that carries stale history for an unrelated board):
 
 ```
 git clone --depth 1 https://github.com/qmk/qmk_firmware.git ~/dev/keyboard/qmk_umiko
 cd ~/dev/keyboard/qmk_umiko
-git submodule update --init --recursive   # ~2 GB, ~10 min. Required for RP2040 (pico-sdk submodule)
+git submodule update --init --recursive   # ~2 GB, ~10 min. Required for RP2040 (pico-sdk)
 ```
 
-The `keyboards/umiko/` folder is authored by-hand in this repo. Files: `info.json` (matrix pins, 5×8 scanning matrix, split serial vendor driver on GP0, LAYOUT_all with 63 keys extracted from the schematic), `rules.mk`, `config.h`, `keymaps/default/keymap.c`, `readme.md`. Copy these into `qmk_umiko/keyboards/umiko/` when setting up a fresh clone. (TODO: move keyboards/umiko/ into this repo and symlink or use QMK's external-keyboard support so it lives with the PCB source.)
+The `keyboards/umiko/` folder is authored by hand here: `keyboard.json` (matrix pins, 5×8 matrix, split serial on GP0, LAYOUT_all with 63 keys), `rules.mk`, `config.h`, `keymaps/default/keymap.c`, `readme.md`. Copy these into `qmk_umiko/keyboards/umiko/` after cloning. (TODO: move this folder into the repo and use QMK's external-keyboard support so it lives next to the PCB source.)
 
 ### Toolchain (Windows)
 
@@ -104,21 +104,21 @@ Current QMK expects each keyboard folder to have `keyboard.json` at the top leve
 
 ### Split handedness
 
-Umiko has no dedicated handedness pin (`SPLIT_HAND_PIN`), so the default UF2 relies on QMK's USB-detect-based master election (whichever half enumerates as a USB HID device becomes master; the other becomes slave over the inter-half serial link). This may need tweaking if it doesn't behave — options include compile-time `MASTER_LEFT`/`MASTER_RIGHT` defines or `EE_HANDS` (per-half EEPROM handedness). TODO: revisit after first split test.
+There's no dedicated handedness pin. The default UF2 uses QMK's USB-detect master election: whichever half enumerates as a USB HID device becomes master, the other becomes slave over the inter-half serial link. If that misbehaves, fall back to `MASTER_LEFT` / `MASTER_RIGHT` compile defines or `EE_HANDS`.
 
 ### Flash
 
-Each half is flashed independently via BOOTSEL:
+Each half flashes independently via BOOTSEL:
 
 1. **Unplug USB** from the half you want to flash
-2. **Hold the BOOTSEL button** on that half (SW1 left, SW2 right)
-3. **Plug USB back in** while holding BOOTSEL
-4. **Release BOOTSEL** — the half mounts as a USB mass-storage device (RPI-RP2)
-5. **Drag-and-drop the `.uf2`** for that half onto the drive — it auto-reboots into the new firmware
+2. **Hold BOOTSEL** (SW1 left, SW2 right)
+3. **Plug USB back in** while still holding
+4. **Release** — the half mounts as `RPI-RP2` (USB mass-storage)
+5. **Drag-and-drop the `.uf2`** onto the drive; it auto-reboots into the new firmware
 
-Note: on this board the W25Q128 flash arrives blank from JLC, so first plug-in enters BOOTSEL automatically (RP2040 defaults to USB mass-storage mode when the QSPI flash contains no valid firmware). After first flash, subsequent re-flashes need the BOOTSEL button held.
+First plug-in enters BOOTSEL automatically because the W25Q128 flash arrives blank from JLC. After the first flash, subsequent re-flashes need the button held.
 
-No reset button on the board — power-cycle + BOOTSEL handles all flashing. Case access to SW1/SW2 is a design decision left to the case (v1 uses pinhole access; v2 plans to integrate the buttons directly — see [Rev 2 ideas](#stretch--future-ideas-rev-2)).
+No reset button on the board — power-cycle + BOOTSEL covers all flashing. Case access to SW1/SW2 is up to the case (v1 uses pinholes; v2 plans an integrated button — see [Rev 2 ideas](#stretch--future-ideas-rev-2)).
 
 ### Remap keys with VIA (optional)
 
@@ -160,15 +160,15 @@ Next boot uses whatever the compiled firmware defines as defaults.
 
 **Alternative** (if you already have VIA loaded): VIA → gear icon → `Reset Keyboard`. Same result.
 
-### Split serial: what's happening on the wire
+### Split serial: what's on the wire
 
-Umiko routes QMK's split-transport protocol over a **single-wire half-duplex PIO serial** running on **GP0** of each RP2040. GP0 connects to the D+ pin of each half's inter-half USB-C connector (J3 left, J4 right). A short USB-C-to-USB-C cable between J3 and J4 ties the two GP0 lines together and provides the 5V bridge (VBUS pins A4/A9) and GND (A12/B12).
+QMK's split transport runs over **single-wire half-duplex PIO serial** on **GP0** of each RP2040. GP0 connects to the D+ pin of each half's inter-half USB-C (J3 left, J4 right). A short USB-C-to-USB-C cable between J3 and J4 ties the GP0 lines together and bridges 5 V (VBUS pins A4/A9) and GND (A12/B12).
 
 QMK config:
-- `info.json` → `split.serial.driver = "vendor"` (uses RP2040 PIO peripheral for the serial protocol)
-- `config.h` → `SERIAL_USART_TX_PIN = GP0` (single pin used for both TX and RX in half-duplex)
+- `keyboard.json` → `split.serial.driver = "vendor"` (RP2040 PIO peripheral)
+- `config.h` → `SERIAL_USART_TX_PIN = GP0` (same pin for TX and RX, half-duplex)
 
-The inter-half USB-C is **not** a real USB port — it's just a convenient 4-conductor connector shape (VBUS + GND + D+). Do not plug either J3 or J4 into a computer or USB device.
+The inter-half USB-C is **not** a real USB port — just a convenient 4-conductor shape carrying VBUS + GND + D+. **Never plug J3 or J4 into a computer or USB device.**
 
 ## Assembly Notes
 
@@ -176,63 +176,63 @@ The inter-half USB-C is **not** a real USB port — it's just a convenient 4-con
 
 > ⚠️ **Hand-solder only the DNP parts. Get everything else JLCPCB-assembled.**
 >
-> **✅ Reasonable to hand-solder** (these are already DNP'd for exactly this reason):
-> * **SK6812MINI-E LEDs** — per-key (reverse-mount) and underglow. Fragile and tedious but doable with flux and patience.
-> * **Gateron KS33 hot-swap sockets** — pre-tin the pads, place, reflow one pad at a time. Straightforward.
-> * **HRO TYPE-C-31-M-12 USB-C connectors** — larger through-hole shield legs + reflowable SMD data pads. Manageable with a chisel tip.
+> **✅ Reasonable to hand-solder** (these are DNP'd for exactly this reason):
+> * **SK6812MINI-E LEDs** — per-key (reverse-mount) and underglow. Fragile, tedious, doable with flux and patience.
+> * **Gateron KS33 hot-swap sockets** — pre-tin pads, place, reflow one pad at a time.
+> * **HRO TYPE-C-31-M-12 USB-C** — through-hole shield legs + reflowable SMD data pads. Manageable with a chisel tip.
 >
-> **❌ Do NOT attempt to hand-solder** (unless you're a professional with a reflow / hotplate / hot-air station):
-> * **RP2040 (QFN-56 with exposed thermal pad)** — needs bottom heat. Ruining a $30 chip is very possible.
-> * **LP5907 LDO (XDFN-4, 1×1 mm)** and **SN74LVC1T45 (SOT-563)** — pads so small they're barely visible without magnification.
-> * **W25Q128 QSPI flash (WSON8)** — exposed pad on the bottom.
-> * **USBLC6-2P6 (SOT-666)**, **PMEG2010BELD Schottky (SOD-882)** — sub-millimeter pitch.
-> * **0402 passives, matrix diodes (SOD-123), crystal (SMD-2520)** — 0402 in particular is 90+ tiny caps that add up.
+> **❌ Do NOT hand-solder** (unless you have reflow / hotplate / hot-air):
+> * **RP2040 (QFN-56)** — exposed thermal pad, needs bottom heat. Easy to kill a $30 chip.
+> * **LP5907 (XDFN-4, 1×1 mm)** and **SN74LVC1T45 (SOT-563)** — pads barely visible without magnification.
+> * **W25Q128 (WSON8)** — exposed pad on the bottom.
+> * **USBLC6-2P6 (SOT-666)**, **PMEG2010BELD Schottky (SOD-882)** — sub-mm pitch.
+> * **0402 passives, matrix diodes (SOD-123), crystal (SMD-2520)** — 90+ tiny caps alone.
 >
-> **Get JLCPCB to place the "do NOT" list** via SMT assembly — see [Manufacturing Notes (JLCPCB)](#manufacturing-notes-jlcpcb) for the fab workflow, cost, and DNP configuration. Then do the ✅ list yourself when the boards come back.
+> Get JLCPCB to place the "do NOT" list via SMT assembly (see [Manufacturing Notes](#manufacturing-notes-jlcpcb)). Do the ✅ list yourself when the boards come back.
 >
-> The Soldering Order / Hints / LEDs / Stabilizers sections below are for that hand-solder pass on the DNP parts (plus small rework as needed).
+> The Soldering Order / Hints / LEDs / Stabilizers sections below cover that hand-solder pass.
 
 ### Soldering Order
 
-1. **Smallest components first** — 0402 resistors/caps, then 0603, then SMD ICs
-2. **MCUs (RP2040)** — these have an exposed thermal pad on the bottom that needs to be soldered (heat from below, use a hotplate or reflow station). Hand-soldering with a fine tip is doable but tricky.
-3. **Flash chips, LDOs, ESD protection** — small SMD work
-4. **Crystals** — fragile, place after the heavy soldering nearby is done
-5. **USB-C receptacles** (HRO TYPE-C-31-M-12) — SMD signal pads + 4 THT shield legs + 2 NPTH alignment pegs; body sits on top of the PCB. Can be reflowed or hand-soldered.
-6. **LEDs** — start with underglow (back side), then per-key (front side). Test as you solder.
-7. **Switch sockets** (Kailh / Gateron KS33 hot-swap) — last to give all-around access during earlier soldering
+1. **Smallest first** — 0402 resistors/caps, then 0603, then SMD ICs
+2. **RP2040** — exposed thermal pad on the bottom needs bottom heat (hotplate / reflow). Fine-tip hand-soldering is doable but tricky.
+3. **Flash, LDOs, ESD protection** — small SMD work
+4. **Crystals** — fragile; place after nearby heavy soldering is done
+5. **USB-C receptacles** — SMD signal pads + 4 THT shield legs + 2 NPTH alignment pegs. Reflow or hand-solder.
+6. **LEDs** — underglow first (back), then per-key (front). Test as you go.
+7. **Hot-swap sockets** — leave for last so nothing gets in the way of earlier soldering
 8. **Stabilizers** — clip in before testing switches
-9. **Switches** — plug in last, after firmware flash works
+9. **Switches** — after firmware flashes successfully
 
 ### Soldering Hints
 
-* For 0402 / 0603 SMD pads, **flux liberally** and keep your tip tinned with a fine bead of solder
-* For Kailh / KS-33 hot-swap sockets, **pre-tin both pads**, then place the socket and reheat one pad at a time while pressing down
-* For RP2040's exposed thermal pad, **use the via stitching as a heat sink** — solder paste + hot air, or paste + skillet reflow
+* 0402 / 0603 pads: **flux liberally**, keep your tip tinned with a fine bead
+* Hot-swap sockets: **pre-tin both pads**, place, reheat one pad at a time while pressing down
+* RP2040 thermal pad: **use the via stitching as a heat sink** — paste + hot air, or paste + skillet reflow
 
 ### LEDs
 
 ![PCB back (no keys)](images/umiko_3dview_back_nokeys.png)
 
-* The **underglow LEDs are reverse-mounted on B.Cu** (back of board) — their pads are on B.Cu but the body sits below the PCB. **Bend the terminals down to the soldering pads** before reflowing or hand-soldering.
-* **Solder LEDs in the data chain order** and **test as you go** — if one is bad, all LEDs after it in the chain won't light up
-* If an LED looks broken or melted after soldering, it's probably broken — desolder and replace
+* Underglow LEDs are **reverse-mounted on B.Cu** — pads on B.Cu, body below the PCB. **Bend the terminals down to the pads** before soldering.
+* **Solder in chain order and test as you go** — a bad LED kills every LED downstream of it.
+* An LED that looks melted probably is. Desolder and replace.
 
 ### Stabilizers
 
-**Kailh Choc V2 stabilizers** on all 6 stabbed positions (2.25U shifts + 2.75U thumbs + 2U backspace). Standard MX stabs won't fit. Kailh **EOL'd this part in 2026** — stock spares from retailer inventory while it lasts.
+**Kailh Choc V2 stabilizers** on all 6 stabbed positions (2.25U shifts + 2.75U thumbs + 2U backspace). MX stabs won't fit. Kailh **EOL'd this part in 2026** — stock spares while retailers still have them.
 
-**Not Gateron LP** — per bakingpy (Keebio, author of `keebio/kb-plategen`): Gateron LP stabs mechanically limit switch travel so keys don't bottom out fully; no cutout tweak fixes it.
+**Not Gateron LP.** Per bakingpy (Keebio, author of `keebio/kb-plategen`): LP stabs mechanically limit switch travel so keys don't bottom out; no cutout tweak fixes it.
 
-**Plate design**: 2.2 mm plate, stepped pocket per stab position (1.2 mm housing pocket on top, 1.0 mm wire clearance on bottom). Reference: [`reference/choc_v2_stab_holder.stl`](reference/choc_v2_stab_holder.stl). **Printed in PETG with no tolerance adjustments needed**; other FDM materials may need outward relief on the far-from-switch faces (never widen inward, plate breaks during install).
+**Plate design**: 2.2 mm plate with a stepped pocket per stab (1.2 mm housing on top, 1.0 mm wire clearance on bottom). Reference: [`reference/choc_v2_stab_holder.stl`](reference/choc_v2_stab_holder.stl). **PETG needs no tolerance tuning.** Other FDM materials may need outward relief on the far-from-switch faces (never widen inward — plate breaks during install).
 
-Cutout dimensions (from `keebio/kb-plategen`, encoded in `scripts/make_plate.py`): Body A 5.95×7.95 mm at (±12, ±0.3441), Neck B 4.55×6.25 mm at (±12, ±6.7559), Wire slot 24×1.4 mm at (0, ±8.2809), r=0.5 mm fillet unioned per stab. Sign flips for SW_30/SW_35 (bottom-edge keys → wire points north).
+Cutout dimensions (from `keebio/kb-plategen`, encoded in `scripts/make_plate.py`): Body A 5.95×7.95 mm at (±12, ±0.3441), Neck B 4.55×6.25 mm at (±12, ±6.7559), Wire slot 24×1.4 mm at (0, ±8.2809), r=0.5 mm fillet. Sign flips for SW_30/SW_35 (bottom-edge keys → wire points north).
 
 ### OLED (optional: socketed mount)
 
-**Optional.** Solder the OLED module directly and it works fine. This section is only if you want the OLED **removable** — swap it later, replace it if damaged, or lift the top plate without desoldering.
+**Optional.** Direct-soldering the OLED works fine. This section is for when you want it **removable** — swap, replace, or lift the top plate without desoldering.
 
-Use low-profile Mill-Max pins + receptacles instead of standard 0.1" headers. The receptacle sits flush enough to stay **under the 2.2 mm plate height**, so it doesn't interfere with plate mounting.
+Use low-profile Mill-Max pins + receptacles instead of 0.1" headers. The receptacle stays **under the 2.2 mm plate height**, so it doesn't foul plate mounting.
 
 **Parts**:
 
@@ -253,13 +253,13 @@ Use low-profile Mill-Max pins + receptacles instead of standard 0.1" headers. Th
 
 ### SWD Debug
 
-If you need to flash via SWD (rare — BOOTSEL handles most needs):
+Rarely needed — BOOTSEL covers most flashing. If you do need SWD:
 
-* TP1-TP4 are SWD signals on the left half (CLK, IO) and right half (CLK, IO)
-* TP5-TP8 are power references (GND_L, 3V3_L, GND_R, 3V3_R)
-* All 8 pads are arranged in two mirrored 4-pad columns at 2.54 mm pitch (Adafruit pogo-clip 5433 compatible)
-* Pad order on left is top-to-bottom: **CLK / IO / GND / 3V3**
-* Pad order on right is mirrored: **3V3 / GND / IO / CLK** — so a flipped pogo clip lands on matching signals on both halves
+* TP1-TP4: SWD signals (left CLK/IO, right CLK/IO)
+* TP5-TP8: power references (GND_L, 3V3_L, GND_R, 3V3_R)
+* All 8 pads in two mirrored 4-pad columns at 2.54 mm pitch (Adafruit pogo-clip 5433 compatible)
+* Left order top-to-bottom: **CLK / IO / GND / 3V3**
+* Right order (mirrored): **3V3 / GND / IO / CLK** — a flipped pogo clip lands on matching signals
 
 ## Manufacturing Notes (JLCPCB)
 
@@ -268,30 +268,30 @@ If you need to flash via SWD (rare — BOOTSEL handles most needs):
 Two reference points from actual orders:
 
 * **First-time full-panel build** (both halves per board, 5-board fab minimum with parts placed on 3 = 3 assembled + 2 bare spares): **~$489**
-* **Right-half-only respin** (170 × 103 mm single-half, 5-board fab minimum with parts on 3): **~$300**
+* **Right-half-only re-order** (170 × 103 mm single-half, 5-board fab minimum with parts on 3): **~$300**
 
-A first-time builder needs the full-panel order (~$489). The respin was cheaper because I already had working left halves from the first order and only needed the right half re-fabbed with a schematic fix.
+A first-time builder needs the full-panel order (~$489). The single-half re-order was cheaper because I already had working left halves from the first fab and only needed the right half re-made with a schematic fix.
 
-Rough breakdown at those volumes:
+Rough breakdown:
 
-* PCB fab (5 pcs, 4-layer, 328 × 103 mm full-panel or 170 × 103 mm half): ~$50–100
+* PCB fab (5 pcs, 4-layer, full-panel or half): ~$50–100
 * PCBA labor + parts sourcing (3 boards): ~$200–300
-* Express shipping to US (only option that clears in reasonable time): ~$80
-* Customs / import handling: ~$50–100 (varies by broker)
+* Express shipping to US: ~$80
+* Customs / import handling: ~$50–100
 
-Ordering 5 assembled vs 3 usually adds only ~$50–100 total because setup and per-part sourcing fees amortize. If you want spares, 5 fully assembled is barely more per board than 3.
+5 assembled vs 3 usually adds only ~$50–100 total — setup and per-part sourcing fees amortize. If you want spares, 5 fully assembled is barely more per board than 3.
 
 ### Design rule clearances
 
-This board is set up for **JLCPCB's standard 4-layer pricing tier**:
+Set up for **JLCPCB's standard 4-layer tier** (no surcharge):
 
-* **Minimum clearance**: 0.1 mm (4 mil) — JLC's standard min for 4-layer at no surcharge
+* **Minimum clearance**: 0.1 mm (4 mil)
 * **Net class clearance**: 0.1 mm
-* **Track widths**: 0.2 mm (signals), 0.3 mm (power/GND) — well above the 0.1 mm minimum
-* **Min via**: 0.4 mm diameter / 0.2 mm drill
-* **Min hole**: 0.3 mm (matches JLC standard)
+* **Track widths**: 0.2 mm signals, 0.3 mm power/GND — well above the minimum
+* **Min via**: 0.4 mm / 0.2 mm drill
+* **Min hole**: 0.3 mm
 
-If you want **tighter clearances** (down to 0.089 mm / 3.5 mil), JLC will accept the files but add a **+20% surcharge** on 4-8 layer boards.
+Tighter clearances (down to 0.089 mm / 3.5 mil) are accepted but incur a **+20% surcharge** on 4–8 layer boards.
 
 ### JLC fab options used for this design
 
@@ -342,11 +342,11 @@ Outputs in `cad/`:
 
 **Key numbers**:
 
-* **Board thickness**: 1.6 mm (JLC standard, ±10% — plan case pocket for up to 1.76 mm).
-* **Plate thickness**: **2.2 mm total** (bakingpy two-level design), split as **1.2 mm housing pocket on top** (Choc V2 clip engagement depth) + **1.0 mm wire clearance pocket on bottom** — see [Stabilizers](#stabilizers).
-* **Switch bodies render on F.Cu; hot-swap sockets on B.Cu.** Switch *footprints* are on B.Cu (socket pads live there) but the switch *bodies* still show on F.Cu.
-* **STEP thickness compensation**: KiCad's exporter omits outer copper (~0.07 mm) + soldermask (~0.02 mm), so both scripts bump the extruded thickness by **+0.09 mm** to hit a true 1.6 mm / 1.2 mm. F.Cu components ride up automatically; switch bodies (anchored to B.Cu sockets) get an extra `-4.1 → -4.19` 3D-model offset nudge to stay flush.
-* **PLA case FDM clearance**: **0.5 mm/side long axis, 0.3 mm/side short axis, 0.2 mm Z**. Print tolerance dominates over PLA shrinkage / thermal. Test a corner chunk and tune slicer XY size compensation before a full-case print.
+* **Board thickness**: 1.6 mm (JLC standard, ±10% — plan case pocket for up to 1.76 mm)
+* **Plate thickness**: **2.2 mm total** (bakingpy two-level) — 1.2 mm housing pocket on top + 1.0 mm wire clearance on bottom (see [Stabilizers](#stabilizers))
+* **Switch bodies render on F.Cu, hot-swap sockets on B.Cu.** Footprints live on B.Cu (where the socket pads are), but the switch body still shows on F.Cu.
+* **STEP thickness compensation**: KiCad's exporter omits outer copper (~0.07 mm) + soldermask (~0.02 mm), so both scripts add **+0.09 mm** to hit true 1.6 mm / 1.2 mm. F.Cu components ride up automatically; switch bodies (anchored to B.Cu sockets) get a `-4.1 → -4.19` 3D-model nudge to stay flush.
+* **PLA case FDM clearance**: **0.5 mm/side long axis, 0.3 mm/side short axis, 0.2 mm Z**. Print tolerance dominates PLA shrinkage / thermal. Test a corner chunk and tune slicer XY size compensation before a full-case print.
 
 ![Case CAD in SolidWorks](images/umiko_case_solidworks.png)
 
@@ -362,104 +362,103 @@ The bottom plate is designed for a **transparency-color layer sandwich**: the em
 ![Bambu Lab slicer preview (angle 2)](cad/print/bambu_sample2.png)
 ![Printed umiko (black)](cad/print/printed_umiko_black.png)
 
-#### Workflow suggestion (case design) 
+#### Workflow suggestion (case design)
 
-The following workflow is if you would prefer to build your own case. The included case design is fully complete. If you wish to build your own, it also doubles as a base starting point.
+The included case design is complete — this workflow is only if you want to build your own (or use the included one as a starting point).
 
 1. Run `python scripts/make_cad_files.py` and `python scripts/make_plate.py` once to seed `cad/` with the STEPs.
-2. In SolidWorks, import `umiko-assembly.step` (or per-half if you're working on one side) as reference geometry, mate to case origin.
-3. Design the case around it — pocket the PCB, add USB-C cutouts, screw holes, feet, BOOTSEL access at SW1 (166.01, 57.53) and SW2 (188.17, 77.52). v1 uses pinholes; v2 plans a case-integrated button — see [Rev 2 ideas](#stretch--future-ideas-rev-2).
-4. For the plate: import `umiko-plate.step` or build a subtract body from `umiko-switches-only.step` (see [SolidWorks "Combine → Subtract" trick](#).
+2. In SolidWorks, import `umiko-assembly.step` (or per-half) as reference geometry and mate to case origin.
+3. Design the case around it — pocket the PCB, add USB-C cutouts, screw holes, feet, BOOTSEL access at SW1 (166.01, 57.53) and SW2 (188.17, 77.52). v1 uses pinholes; v2 plans an integrated button — see [Rev 2 ideas](#stretch--future-ideas-rev-2).
+4. Plate: import `umiko-plate.step`, or build a subtract body from `umiko-switches-only.step` (SolidWorks "Combine → Subtract").
 5. Freeze the STEPs once case work starts — see warning below.
-6. Track your working SW files under `cad/` in git — everything else in that folder is regenerable.
+6. Track your working SW files under `cad/` in git — everything else there is regenerable.
 
-> ⚠️ **Warning: don't re-import STEPs into an active case assembly.**
+> ⚠️ **Don't re-import STEPs into an active case assembly.**
 >
-> Any PCB change followed by a fresh STEP export and re-import into your existing SolidWorks case will **almost certainly break downstream in-context references** — sketches that used Convert Entities on imported edges/faces will show as dangling, features that depended on those sketches will fail, and repairing them one by one is slow and error-prone (SW 2023's "Repair Dangling Reference" doesn't reliably help). Cause: STEP entity IDs shift whenever the source PCB geometry changes even slightly. Every recompile issues fresh IDs; SW's references are ID-based.
+> A PCB change → fresh STEP export → re-import into your existing SolidWorks case will almost certainly **break downstream in-context references.** Sketches that used Convert Entities on imported edges show as dangling; dependent features fail; SW 2023's "Repair Dangling Reference" doesn't reliably help. Cause: STEP entity IDs shift on every recompile, and SW references are ID-based.
 >
-> **Rule of thumb**: re-run the scripts only when the PCB *actually* changes AND you need the case CAD to reflect it visually. If you can live with a slightly stale reference PCB in your case model, you save yourself hours of repair work. The fab side is unaffected either way — `scripts/make_jlc_files.py` reads the current PCB directly.
+> **Rule of thumb**: only re-run the scripts when the PCB actually changes AND you need the case CAD to reflect it visually. A slightly stale reference PCB in your case model saves hours of repair. The fab side is unaffected — `scripts/make_jlc_files.py` reads the current PCB directly.
 >
-> **If you must re-import, isolate the update.** `make_cad_files.py` writes per-group STEPs (`umiko-switches.step`, `umiko-leds.step`, `umiko-connectors.step`, `umiko-ics.step`, `umiko-passives.step`, `umiko-board.step`) — swap only the subset your change actually touched (e.g. re-import just `umiko-switches.step` if you moved a switch, not the whole assembly). Damage stays contained to references that used that specific subset. And still work on a **copy** of the case assembly first as a safety net.
+> **If you must re-import, isolate.** `make_cad_files.py` writes per-group STEPs (`umiko-switches.step`, `umiko-leds.step`, `umiko-connectors.step`, `umiko-ics.step`, `umiko-passives.step`, `umiko-board.step`). Swap only the subset your change touched — re-import just `umiko-switches.step` if you moved a switch, not the whole assembly. Damage stays contained. And work on a **copy** of the case first as a safety net.
 
 ### Pre-fab sanity gate (catches the "forgot to save to disk" short)
 
-Remember to check and follow the steps outlined below. We originally had a short by not following this guidance — it's corrected in latest, but the guard rails are there to catch forgetting to save to disk.
+We shipped a short once because the GUI DRC looked clean but the disk file wasn't. The gate below prevents that.
 
-**Field rework (your boards):** 2 boards saved by cutting the short at B.Cu (~322,55) — fully functional after cut. 3rd board same cut + burned Schottky after F2 (D5) now jumpered — works for testing but has **no reverse-polarity protection on J2 host USB**, replace D5 (PMEG2010BELD) before daily use.
+**Field rework (this build):** 2 boards saved by cutting the short at B.Cu (~322, 55) — fully functional after the cut. 3rd board: same cut + burned Schottky, F2 (D5) jumpered — works for testing but has **no reverse-polarity protection on J2**, so replace D5 (PMEG2010BELD) before daily use.
 
 Before you export:
 
-1.  **Fresh open/close before export.** Close KiCad, reopen the project fresh, and do `Edit → Fill All Zones` (`B` key in PCB editor) so you force the on-disk zone fills to match what you see. Save. If you skip this, GUI DRC can lie.
-2.  **Run the deterministic CLI gate: `scripts/prefab_check.sh`** (added in `d164d0c`).
+1.  **Fresh open/close before export.** Close KiCad, reopen the project, `Edit → Fill All Zones` (`B` in the PCB editor) to force on-disk fills to match the display. Save. Skipping this lets GUI DRC lie.
+2.  **Run the CLI gate: `scripts/prefab_check.sh`** (added in `d164d0c`).
 
     ```bash
     scripts/prefab_check.sh            # checks umiko.kicad_pcb
-    # or
     scripts/prefab_check.sh path/to/other.kicad_pcb
     ```
 
-    What it does: uses `kicad-cli` directly (no GUI cache) to `--refill-zones`, `--save-board`, then runs DRC with `--severity-error --exit-code-violations --format json --output output/prefab_drc.json`. Exit 0 = safe to export gerbers. Non-zero = DO NOT fab, fix errors first. On Windows the default CLI path is `C:/Program Files/KiCad/10.0/bin/kicad-cli.exe` — edit the script if yours is elsewhere.
+    Uses `kicad-cli` directly (no GUI cache) to `--refill-zones`, `--save-board`, then DRC with `--severity-error --exit-code-violations --format json --output output/prefab_drc.json`. Exit 0 = safe to fab. Non-zero = fix first. On Windows the default CLI path is `C:/Program Files/KiCad/10.0/bin/kicad-cli.exe` — edit the script if yours is elsewhere.
 
-3.  Only after that gate passes should you run `scripts/make_jlc_files.py` and upload.
+3.  Only after the gate passes: run `scripts/make_jlc_files.py` and upload.
 
 ### JLC upload gotcha
 
-**Updates to BOM or CPL won't apply unless you restart the upload from the project menu.** Re-uploading just the BOM/CPL after a failed attempt will appear to succeed but JLC keeps the prior validation state, leading to errors like "Failed processing the CPL file" or "BOM doesn't match CPL" that don't actually correspond to the current file contents. The fix is to back up to the **PCB quote** step in JLC's flow and start the whole upload over (gerbers → BOM → CPL).
+**Updates to BOM or CPL won't apply unless you restart the upload from the project menu.** Re-uploading just the changed file after a failed attempt appears to succeed but JLC keeps the prior validation state, giving errors like "Failed processing the CPL file" or "BOM doesn't match CPL" that don't match the current files. Fix: back up to the **PCB quote** step and restart the whole upload (gerbers → BOM → CPL).
 
 ### CPL format quirks (learned the hard way)
 
-JLC's CPL parser is unusually strict about:
+JLC's CPL parser is strict about:
 
-* **Rotation must be a non-negative integer 0–359** — KiCad's default `-90.000000` will be rejected with "Failed processing the CPL file". `make_jlc_files.py` normalizes to integer mod 360.
-* **Coordinates must be fixed at 4-decimal precision** — variable precision like `8.647045mm` also fails. The script formats with `.4f`.
-* **Headers must match JLC's sample exactly**, including the fullwidth Chinese parens in the BOM's `JLCPCB Part #（optional）`.
+* **Rotation must be a non-negative integer 0–359.** KiCad's default `-90.000000` is rejected. `make_jlc_files.py` normalizes with mod 360.
+* **Coordinates must be fixed at 4-decimal precision** (`8.6470mm`, not `8.647045mm`). Script formats with `.4f`.
+* **Headers must match JLC's sample exactly** — including the fullwidth Chinese parens in `JLCPCB Part #（optional）`.
 
 ### Polarity / pin-1 review from JLC (expect these questions)
 
-**Always cross-check JLC's BOM placement preview against your own KiCad board before you approve.** Open your PCB, click the flagged part, and verify cathode/anode (or pin-1 function) matches JLC's pink-dot orientation. Don't trust LCSC codes or JLC's library shorthand — their footprint convention may be opposite yours.
+**Always cross-check JLC's placement preview against your KiCad board before approving.** Click each flagged part in KiCad, verify pin-1 or cathode/anode matches JLC's pink-dot orientation. Don't trust LCSC codes or JLC library shorthand — their footprint convention may be opposite yours.
 
-During engineering review JLC's team sends placement snapshots highlighted with a **pink dot on pin 1** of every polarized (or asymmetric) component and asks you to confirm the orientation matches your intent. This isn't optional — you have to respond one by one. A few patterns from this project's reviews worth banking:
+JLC's engineering review sends placement snapshots with a **pink dot on pin 1** of every polarized part and asks you to confirm one by one. Patterns worth banking:
 
-* **Non-polarized parts don't need rotation review, but JLC still marks pin 1.** For **polyfuses (F1/F2, Bourns MF-FSMF050X-2)**, **ceramic capacitors**, and **resistors** the pink dot is a manufacturing / QA marker, not an electrical polarity flag. Reply "no polarity, either orientation works, no correction needed" — the notch or dot on the physical part is a tracking mark from the reel, not an electrical constraint. Same for **ferrite beads**.
-* **Polarized parts need per-part verification against your KiCad footprint.** Diodes (Schottky **D5** power-path), LEDs (**D2/D4/D6** indicator, plus every SK6812MINI-E in the underglow chain), electrolytic caps if any, and orientation-sensitive ICs (RP2040, LDO, USBLC6, level shifter) all have a specific pin-1 convention on your PCB. Check JLC's placement direction against your KiCad footprint's pin-1 assignment; if they're flipped 180°, request a rotation correction.
-* **Different LCSC part numbers for the "same" LED footprint can use opposite pin-1 conventions.** On this project **D4** (`C130724`, Sunny B1811NB) uses **anode = pin 1** while **D6** (`C130719`, Sunny B1811URO) uses **cathode = pin 1** — same 0402 SMD LED footprint, opposite convention. JLC's pink dot points at whichever pin their library considers 1, which doesn't match the KiCad footprint (pin 1 = cathode) for D4. Result: D4 required a **180° rotation correction**, D6 did not. Expect to hit this on any 0402 LED order and check each part individually.
-* **How to answer "is the polarity right?" from JLC:** open the PCB in KiCad, click the flagged pad, note whether pin 1 is anode/cathode (or SDA/SCL, etc.) and which side of the physical part it lands on after any footprint rotation. Compare to JLC's placement snapshot. If the pink dot lands on the electrically-correct side per your schematic → confirm no correction. If it's on the opposite side → request 180° rotation. Also useful to check `pinfunction` fields in `umiko.kicad_pcb` — they carry the intended electrical role (`K_1`, `A_2`, `SDA_1`, etc.).
-* **Rotation corrections that recur across orders** and are worth including proactively in the reply to JLC:
-    * **U10** (LP5907 LDO, X2SON-4): **+90°**
-    * **D5** (PMEG2010BELD Schottky, SOD-882D): **⚠️ Do NOT specify a rotation. Compare directly against D1 (left half, same part, known-working from the full-panel order) in JLC's DFM rendering. Match D5's orientation to D1's.** Don't reason from rotation math or the KiCad footprint's pad 1 = cathode convention — the interpretation is ambiguous with B.Cu mirroring and JLC library conventions, and a bad "180° correction" request on the right-only-respin resulted in 3 dead boards. History: full-panel Y47 order had D5 placed correctly with no rotation → worked. Right-only-respin Y49 had D5 = 180° requested → JLC applied it → all 3 boards had D5 reversed → J2 host USB power path blocked.
-    * **J2/J4** (HRO USB-C, if their 3D preview shows them backwards): **180°**
-    * **D4** (Sunny B1811NB User LED): **180°**
-    * **D6** (Sunny B1811URO Power LED): **NO correction** (already correct)
-    * **U6, U8, U9**: **270°** (documented in schematic `JLCPCB_CORRECTION` field, JLC usually applies proactively)
+* **Non-polarized parts** (polyfuses, ceramic caps, resistors, ferrite beads) — reply "no polarity, either orientation works, no correction needed." The pink dot is a manufacturing marker, not an electrical flag.
+* **Polarized parts** need per-part checks: diodes (D5 Schottky), LEDs (D2/D4/D6 + every SK6812MINI-E), any electrolytics, and orientation-sensitive ICs (RP2040, LDO, USBLC6, level shifter). Compare JLC's pink-dot direction to your KiCad footprint's pin-1. If flipped 180°, request rotation.
+* **Same LED footprint, different LCSC codes → opposite pin-1 conventions.** On this project D4 (`C130724`, Sunny B1811NB) uses **anode = pin 1**; D6 (`C130719`, Sunny B1811URO) uses **cathode = pin 1** — same footprint, opposite convention. D4 required 180°; D6 did not. Check each 0402 LED individually.
+* **How to answer:** open the PCB, click the flagged pad, note pin-1's electrical role and which physical side it lands on after footprint rotation. Compare to JLC's snapshot. Correct side → confirm. Wrong side → request 180°. The `pinfunction` fields in `umiko.kicad_pcb` (`K_1`, `A_2`, `SDA_1`, etc.) show the intended role.
 
-Send those with your BOM upload so their engineers can apply them up front instead of asking one at a time.
+**Rotation corrections that recur** — send these with your BOM upload so engineers apply up front:
+
+* **U10** (LP5907 LDO, X2SON-4): **+90°**
+* **D5** (PMEG2010BELD Schottky, SOD-882D): **⚠️ Don't specify a rotation.** Compare D5 directly against D1 (left half, known-working from the full-panel order) in JLC's rendering and match D5's orientation to D1's. Don't reason from rotation math — B.Cu mirroring and library conventions make it ambiguous. A bad 180° request on the right-only re-order killed 3 boards.
+* **J2/J4** (HRO USB-C, if their 3D preview looks backwards): **180°**
+* **D4** (Sunny B1811NB User LED): **180°**
+* **D6** (Sunny B1811URO Power LED): **no correction**
+* **U6, U8, U9**: **270°** (documented in schematic `JLCPCB_CORRECTION`; JLC usually applies proactively)
 
 ## Design Notes
 
 ![Schematic](images/umiko_schematic.svg)
 
-* **No reset circuit** — flashing is via BOOTSEL alone. RP2040's `~RUN` pin has an internal pull-up; leaving it floating is safe.
-* **Inter-half connection** uses **USB-C (HRO TYPE-C-31-M-12, top-edge mounted)** carrying QMK PIO-serial split over a **single wire on D+** (A6/B6 are tied together, A7/B7 D− unused). VBUS (A4/A9) bridges 5 V across halves, GND (A12/B12) ties them. The 5 V bridge lets a single host USB-C power both halves through Schottky OR-ing. All four USB-C connectors — J1/J2 (host) and J3/J4 (inter-half) — have 5.1 kΩ CC1/CC2 pull-downs to GND (host J1=R4/R5, host J2=R21/R22, inter-half J3=R6/R24, inter-half J4=R25/R26). J3/J4 don't strictly need CC pull-downs for the serial-bridge use case (the link doesn't speak USB protocol), but they're populated as a safety-conservative choice so an accidentally-plugged host cable can't drive VCONN into a floating pin.
-* **Inter-half data is single-wire, not differential** — D+ carries half-duplex 12 MHz PIO serial; D− is intentionally floating. This is the same pattern as TRRS-based RING1 splits, just routed through USB-C-shaped pins. The connector is **not** an actual USB device port and should not be addressed as one in firmware.
-* **Connector placement** — the two host USB-C jacks (J1/J2) are mounted on the outer-side edges of each half (aligned with the Q-row keycap top); the inter-half USB-C jacks (J3/J4) are on the **top edge** of each half, near the inner-top corner, so a short USB-C-to-USB-C cable bridges between them across the keyboard's top edge with minimal slack. All four USB-C connectors sit on Edge.Cuts plank protrusions of **4 mm** (with the connector's plug face overhanging the plank by **1 mm**, giving a clean 1 mm recess inside a planned 6 mm case wall).
-* **Each half is fully independent** — you can power and flash each half on its own. Either half can be the master.
-* **Edge cuts** have 1.25 mm fillets on all corners. Both halves form closed loops; no breakaway tabs (order as 2 separate boards, or as a customer panel).
-* The `onigaku` repo (sibling library) contains the custom symbols, footprints, and 3D models referenced by this design. Must be cloned alongside this repo for KiCad to find the libraries.
+* **No reset circuit** — flashing via BOOTSEL only. RP2040's `~RUN` has an internal pull-up; floating is safe.
+* **Inter-half connection** uses HRO TYPE-C-31-M-12 USB-C on the top edge, carrying QMK PIO-serial on a **single wire on D+** (A6/B6 tied, A7/B7 D− unused). VBUS (A4/A9) bridges 5 V across halves; GND (A12/B12) ties them. The 5 V bridge lets one host USB-C power both halves through Schottky OR-ing. All four USB-C connectors (J1/J2 host, J3/J4 inter-half) carry 5.1 kΩ CC1/CC2 pull-downs to GND. J3/J4 don't strictly need them (no USB protocol on the link), but they're populated so an accidentally-plugged host cable can't drive VCONN into a floating pin.
+* **Inter-half data is single-wire, not differential** — D+ carries half-duplex 12 MHz PIO serial; D− is intentionally floating. Same idea as TRRS RING1 splits, just routed through USB-C-shaped pins. **Not** a real USB port; don't address it as one.
+* **Connector placement** — host jacks J1/J2 on outer edges (aligned with Q-row keycap top). Inter-half jacks J3/J4 on the top edge near the inner corner, so a short USB-C cable bridges them with minimal slack. All four sit on 4 mm Edge.Cuts planks with the connector plug face overhanging the plank by 1 mm — 1 mm recess inside a planned 6 mm case wall.
+* **Each half is fully independent** — power and flash each on its own. Either can be master.
+* **Edge cuts** have 1.25 mm corner fillets. Both halves are closed loops; no breakaway tabs (order as 2 separate boards or a customer panel).
+* The **`onigaku` sibling repo** holds the custom symbols, footprints, and 3D models. Clone it next to this repo so KiCad can find the libraries.
 
 ### LDO history
 
-U2/U10 use **LP5907SNX-3.3** (TI, XDFN-4, LCSC `C133572`, 250 mA) — a pin-compatible substitute for the 0xCB Helios reference `TLV75533PDQNR` (X2SON-4, 500 mA, LCSC `C2861882`) after JLC/LCSC ran out of X2SON stock through 2025–2026. Symbol/footprint stayed the same; only the placed chip changed.
+U2/U10 use **LP5907SNX-3.3** (TI, XDFN-4, LCSC `C133572`, 250 mA) — a pin-compatible substitute for the 0xCB Helios reference `TLV75533PDQNR` (X2SON-4, 500 mA, LCSC `C2861882`) after JLC/LCSC ran out of X2SON stock through 2025–2026. Same symbol and footprint; only the placed chip changed.
 
-**250 mA is enough**: per-half 3.3 V load is ~150 mA peak (RP2040 ~50 mA + flash ~15 mA + OLED ~20 mA + LEDs/biases). Per-key RGB runs off VBUS 5 V, not this rail.
+**250 mA is enough**: per-half 3.3 V load is ~150 mA peak (RP2040 ~50 mA + flash ~15 mA + OLED ~20 mA + LEDs/biases). Per-key RGB runs off 5 V, not this rail.
 
-**If a future rev needs 500 mA** (Bluetooth, bigger display, expansion headers): `TLV75533PDQNR` drops into the current footprint if JLC restocks; `TLV75533PDBVR` (SOT-23-5, LCSC `C404027`) is more reliably stocked but requires a footprint + symbol swap (5-pin: pad 5 = OUT, pad 4 = NR).
+**If a future rev needs 500 mA** (Bluetooth, larger display, expansion): `TLV75533PDQNR` drops into the current footprint if JLC restocks; `TLV75533PDBVR` (SOT-23-5, LCSC `C404027`) is more reliably stocked but needs a footprint + symbol swap (5-pin: pad 5 = OUT, pad 4 = NR).
 
 ## Stretch / Future Ideas (Rev 2)
 
-* **Bigger, case-integrated BOOTSEL button per half** — v1 uses tiny 4×4×1.5 mm SMD tacts (SW1/SW2) requiring a pinhole in the case top for paperclip access. v2 should either (a) swap the PCB switch to a **larger through-hole or lower-mount tactile** so a case-integrated **cantilever / living-hinge button** (3D-printed flexure that presses the PCB switch when pushed from outside) works cleanly, or (b) go directly to a case-integrated button style with the tact positioned to sit under the flexure.
-* **Lower-profile OLED mounting** — current through-hole 4-pin header puts the daughterboard ~10–12 mm above the PCB, forcing the case cutout to swallow the whole board (not just the display window). Options: short-body SMD headers (~3–5 mm mated), board-to-board connectors (Hirose DF13 / JAE FI-X, ~2–4 mm), or a direct SMD OLED module (eliminates the daughterboard entirely).
+* **Case-integrated BOOTSEL button per half** — v1's tiny SMD tacts (SW1/SW2) need a case pinhole and paperclip. v2: swap to a larger through-hole tact so a printed cantilever / living-hinge button can press it from outside, or use a case-integrated button style with the tact positioned under the flexure.
+* **Lower-profile OLED mounting** — the current 4-pin through-hole header puts the daughterboard 10–12 mm above the PCB, forcing the case cutout to swallow the whole board (not just the display window). Options: short-body SMD headers (~3–5 mm mated), board-to-board connectors (Hirose DF13 / JAE FI-X, 2–4 mm), or a direct SMD OLED module (eliminates the daughterboard).
 * **OLED breakout board** for the inter-half I²C lines (`SCL_*` / `SDA_*` are broken out but unwired).
-* **Sound** — small speaker + amp (e.g. PAM8302 mono class-D) + audio storage/playback path. A dedicated audio DAC or a codec IC with I²S from the RP2040 can play short WAV/MP3 clips off an SD card or an extra flash chip. Fun options: ocean/wave sample loops (naming-appropriate), click/keypress feedback, boot chime.
+* **Sound** — small speaker + amp (e.g. PAM8302 mono class-D) + I²S DAC or codec on the RP2040 for short WAV/MP3 clips off SD or extra flash. Ocean/wave sample loops (fitting the name), click/keypress feedback, boot chime.
 
 ## Inspiration
 
