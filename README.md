@@ -104,14 +104,35 @@ Current QMK expects each keyboard folder to have `keyboard.json` at the top leve
 
 ### Split handedness
 
-**`EE_HANDS` + `SPLIT_USB_DETECT`.** Each half's EEPROM stores which side it is; USB-detect picks master at boot. Either side can be the host.
+**Default: `MASTER_LEFT`.** Left is always master; right is always slave over the inter-half serial. Plug USB into left's J2 — done. No per-half EEPROM setup required. This is what the shipped UF2 uses.
 
-The trade: first-time setup requires writing the handedness marker into each half's EEPROM. Options:
+Trade-off: right's J2 as host doesn't work — the right half won't enumerate as a keyboard when plugged in directly.
 
-* Build two variants and flash the matching UF2 to each half (`qmk flash --bootloader uf2-split-left` / `-right`).
-* Or flash the same UF2 on both halves, then use a key combo / `qmk` CLI to write handedness per side (one-time).
+#### Optional: dynamic handedness via `EE_HANDS`
 
-Until handedness is set, both halves default to "left" and the right side won't enumerate correctly when plugged in as master.
+If you ever want either half to be the host (plug into either side, USB-detect picks master), swap `#define MASTER_LEFT` for `#define EE_HANDS` in `keyboards/umiko/config.h`, and in `keymaps/default/keymap.c` swap the single `rgblight_set_layer_state(RGB_LAYER_LEFT_MASTER, true)` call for the dynamic form (both layer variants are already defined — commented block in the file). Then rebuild and follow the one-time per-half handedness setup below.
+
+**One-time handedness write (per half):**
+
+1. Unplug both halves. Disconnect the split cable.
+2. Open the MSYS2 MINGW64 shell (same one used for `qmk compile`).
+3. Flash LEFT with the left-hand bootloader target — this compiles the UF2 AND writes the handedness marker to EEPROM as part of the flash:
+
+   ```bash
+   qmk flash -kb umiko -km default -bl uf2-split-left
+   ```
+
+   When prompted, hold **SW1** (BOOTSEL on left PCB) and plug USB into **left's J2**. Release, drive appears, UF2 copies, done.
+4. Unplug left. Flash RIGHT with the right-hand bootloader target:
+
+   ```bash
+   qmk flash -kb umiko -km default -bl uf2-split-right
+   ```
+
+   Hold **SW2** on right PCB, plug USB into **right's J2**. Release, drive appears, done.
+5. Reconnect the split cable. Plug USB into either half — everything works, RGB underglow lands on the correct physical LEDs regardless of who's master.
+
+You only do this once per half, ever. EEPROM keeps the marker until you explicitly clear it. If `-bl uf2-split-left/right` isn't available in your QMK checkout, alternative is to bind `QK_MAKE_HAND_LEFT` / `_RIGHT` keycodes into the FN layer and press them once on each half.
 
 ### Flash
 
@@ -231,11 +252,9 @@ Each half's LED chain interleaves per-key LEDs with underglow LEDs (both `SK6812
 * Left: local 0..11 = underglow (12 LEDs), 12..41 = per-key (30 LEDs)
 * Right: local 0..14 = underglow (15 LEDs), 15..47 = per-key (33 LEDs)
 
-Only the underglow should show animation, so the compiled default forces per-key positions to `HSV_OFF` via `RGBLIGHT_LAYERS`. Two layers are defined — one for each master case (left-master vs right-master) — because the global-index → local-LED mapping shifts with handedness. `keyboard_post_init_user` enables the appropriate layer based on `is_keyboard_master()` and `is_keyboard_left()`.
+Only the underglow should show animation, so the compiled default forces per-key positions to `HSV_OFF` via `RGBLIGHT_LAYERS`. With the default `MASTER_LEFT` handedness (see [Split handedness](#split-handedness)), a single layer targeting the left-master global-index mapping is enabled at boot. A second layer variant for the right-master case is defined in the source but unused unless you switch to `EE_HANDS`.
 
 Base animation is `snake` (a moving band chases through each half's underglow) in a deep Prussian-blue Kanagawa hue (H=150, S=190, V=60). Cycle animations via `FN + Y` (next) / `FN + H` (prev); adjust hue/sat/val/speed via the other FN + right-hand keys.
-
-Note: `EE_HANDS` handedness setup is required for the underglow layer to target the correct LEDs when either side is master — see [Split handedness](#split-handedness).
 
 ### Split serial: what's on the wire
 
