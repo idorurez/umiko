@@ -170,10 +170,36 @@ static const uint8_t sin_lut[16] = {
 // ─── RGB Matrix ────────────────────────────────────────────────────────
 // g_led_config (matrix map, per-LED positions and flags) lives in
 // keyboards/umiko/umiko.c, derived from the trace in docs/led-chain.md.
-// No custom rgb_matrix logic needed here — QMK handles animations
-// natively via LED_FLAG_UNDERGLOW / LED_FLAG_KEYLIGHT / LED_FLAG_MODIFIER,
-// and cycles through the effect list enabled in keyboard.json via FN+Y/H.
+//
+// Per-key LEDs follow the base RGB Matrix effect (cycled via FN+Y/H).
+// Underglow LEDs are OVERRIDDEN each frame with a slow blue↔white cycle,
+// so their look is independent of whatever per-key effect is active.
 // ──────────────────────────────────────────────────────────────────────
+
+#ifdef RGB_MATRIX_ENABLE
+#include "lib/lib8tion/lib8tion.h"
+
+// Slow blue-to-white breathing loop for underglow LEDs.
+// - Saturation oscillates 0..255 slowly (~20s period) — full sat = deep blue,
+//   zero sat = pure white at the given value.
+// - Hue gently wobbles inside the blue band (~154..186) so it feels alive.
+// - Value stays modest (~80) so it never blinds you.
+bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+    uint32_t t       = timer_read32();
+    uint8_t  sat_idx = (uint8_t)((t / 80) & 0xFF);          // ~20s per full cycle
+    uint8_t  hue_idx = (uint8_t)((t / 40) & 0xFF);          // ~10s per hue wobble
+    uint8_t  sat     = sin8(sat_idx);                        // 0..255
+    int8_t   hue_off = (int8_t)((sin8(hue_idx) - 128) / 8);  // -16..+15
+    hsv_t    hsv     = {(uint8_t)(170 + hue_off), sat, 80};
+    rgb_t    rgb     = hsv_to_rgb(hsv);
+    for (uint8_t i = led_min; i < led_max; i++) {
+        if (g_led_config.flags[i] & LED_FLAG_UNDERGLOW) {
+            rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
+        }
+    }
+    return false;
+}
+#endif
 
 // Force portrait orientation on init (flip other way)
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {

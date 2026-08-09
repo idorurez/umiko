@@ -649,7 +649,7 @@
             "solid_multisplash": true
         },
         "default": {
-            "animation": "band_spiral_val",
+            "animation": "cycle_left_right",
             "hue": 170,
             "sat": 200,
             "val": 60,
