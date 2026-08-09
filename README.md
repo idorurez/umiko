@@ -202,6 +202,11 @@ Everything else on FN is transparent (falls through to base).
 
 The right-side 0.91" SSD1306 (128×32) is rotated to portrait (32×128) via `OLED_ROTATION_270`. The scene is a diver's-eye view of a reef with a live-swimming fish, a bobbing silhouette fish, and rising bubbles. Frame rate scales with WPM: ~7 fps idle, up to ~25 fps at fast typing.
 
+<img src="images/oled_reef_source_scaled.png" alt="Source reef PNG (32x128, scaled 8x)" width="128" align="left">
+<img src="images/oled_animation_preview.png" alt="What the OLED renders (32x128, scaled 8x)" width="128">
+
+*Left: source 32×128 line-art PNG ([`images/oled_reef_source.png`](images/oled_reef_source.png), viewed 8× here). Right: what the firmware renders after threshold + overlays — text at top, backdrop from the source, bobbing silhouette fish in the reef, swimming fish above, bubbles rising through the water.*
+
 **Composition (top → bottom):**
 
 * Row 0 (pixel y=0-7): master/slave + layer indicator (`M L0` / `S L0`)
