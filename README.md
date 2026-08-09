@@ -76,15 +76,19 @@ Rubber feet (sticky) | Adhesive-backed rubber pads | 4–8 per half | Sized to f
 
 ### Where the keyboard config lives
 
-Use a **fresh clone of upstream QMK** — not the older `idorurez/qmk_firmware` fork (that carries stale history for an unrelated board):
+The QMK keyboard folder lives in **this repo** at [`keyboards/umiko/`](keyboards/umiko/) — alongside the PCB source, versioned together. Files: `keyboard.json`, `config.h`, `rules.mk`, `umiko.c` (with `g_led_config` for RGB Matrix), `keymaps/default/keymap.c`, `umiko_via.json`.
+
+To build, clone upstream QMK once and junction the keyboard folder into it:
 
 ```
 git clone --depth 1 https://github.com/qmk/qmk_firmware.git ~/dev/keyboard/qmk_umiko
 cd ~/dev/keyboard/qmk_umiko
 git submodule update --init --recursive   # ~2 GB, ~10 min. Required for RP2040 (pico-sdk)
+# then junction from qmk_umiko's keyboards folder to this repo:
+cmd /c "mklink /J C:\Users\<you>\dev\keyboard\qmk_umiko\keyboards\umiko C:\Users\<you>\dev\keyboard\umiko\keyboards\umiko"
 ```
 
-The `keyboards/umiko/` folder is authored by hand here: `keyboard.json` (matrix pins, 5×8 matrix, split serial on GP0, LAYOUT_all with 63 keys), `rules.mk`, `config.h`, `keymaps/default/keymap.c`, `readme.md`. Copy these into `qmk_umiko/keyboards/umiko/` after cloning. (TODO: move this folder into the repo and use QMK's external-keyboard support so it lives next to the PCB source.)
+After the junction, edits to `keyboards/umiko/*` in this repo are seen by QMK's build system — `scripts/qmk_compile.sh` picks them up with no extra sync step.
 
 ### Toolchain (Windows)
 
