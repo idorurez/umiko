@@ -104,7 +104,14 @@ Current QMK expects each keyboard folder to have `keyboard.json` at the top leve
 
 ### Split handedness
 
-There's no dedicated handedness pin. The default UF2 uses QMK's USB-detect master election: whichever half enumerates as a USB HID device becomes master, the other becomes slave over the inter-half serial link. If that misbehaves, fall back to `MASTER_LEFT` / `MASTER_RIGHT` compile defines or `EE_HANDS`.
+**`EE_HANDS` + `SPLIT_USB_DETECT`.** Each half's EEPROM stores which side it is; USB-detect picks master at boot. Either side can be the host.
+
+The trade: first-time setup requires writing the handedness marker into each half's EEPROM. Options:
+
+* Build two variants and flash the matching UF2 to each half (`qmk flash --bootloader uf2-split-left` / `-right`).
+* Or flash the same UF2 on both halves, then use a key combo / `qmk` CLI to write handedness per side (one-time).
+
+Until handedness is set, both halves default to "left" and the right side won't enumerate correctly when plugged in as master.
 
 ### Flash
 
@@ -159,6 +166,71 @@ Changes save to the keyboard's EEPROM immediately and persist across unplug/repl
 Next boot uses whatever the compiled firmware defines as defaults.
 
 **Alternative** (if you already have VIA loaded): VIA → gear icon → `Reset Keyboard`. Same result.
+
+### Default keymap
+
+Two layers: `_BASE` (0) and `_FN` (1). Layer state is synced across the split so the OLED's layer indicator updates when the master fires an `MO(_FN)`.
+
+**Base thumb rows:**
+
+* Left: `LCTL, LGUI, LALT, MO(_FN), SPC`
+* Right: `SPC, MO(_FN), RALT, RGUI, RCTL`
+
+**Special base keys:**
+
+| Position | Base behavior |
+|---|---|
+| Top-left | **Tap dance** — single tap = `` ` `` (grave/tilde), double tap = `Esc` |
+| Caps position | `MO(_FN)` — third FN trigger (also functions as a caps position by not doing caps at all; use `FN + Backspace` if you need Caps state — see FN layer) |
+| Number row (right of `=`) | `Backspace` |
+| QWERTY row (right of `]`) | `Backslash` (`\`) |
+
+**FN layer** (hold any `MO(_FN)`):
+
+| Group | Keys |
+|---|---|
+| Reset | `Esc` → `QK_BOOT` |
+| F-row | `1..6` → `F1..F6`, `7..0, -, =` → `F7..F12` |
+| Nav (left hand) | `Q W E R` → `HOME UP END PGUP`; `A S D F` → `LEFT DOWN RIGHT PGDN` |
+| Delete | `FN + Backslash` → `Delete` |
+| Virtual desktop | `[` → `Ctrl+Win+Left` (prev desktop); `]` → `Ctrl+Win+Right` (next) |
+| Underglow | `Y U I O P` → `TOG NEXT HUE+ SAT+ VAL+ SPD+`; `H J K L ;` → `PREV HUE- SAT- VAL- SPD-`; `N` → toggle on/off |
+
+Everything else on FN is transparent (falls through to base).
+
+### OLED animation
+
+The right-side 0.91" SSD1306 (128×32) is rotated to portrait (32×128) via `OLED_ROTATION_270`. The scene is a diver's-eye view of a reef with a live-swimming fish, a bobbing silhouette fish, and rising bubbles. Frame rate scales with WPM: ~7 fps idle, up to ~25 fps at fast typing.
+
+**Composition (top → bottom):**
+
+* Row 0 (pixel y=0-7): master/slave + layer indicator (`M L0` / `S L0`)
+* Backdrop: pre-baked 32×128 reef bitmap in `PROGMEM` (512 bytes) — dense line art of coral, waves, and small creatures
+* Overlay 1: **bobbing silhouette fish** — the 11×6 sprite is the exact pixels lifted from the source PNG at (7,73)..(17,78), with the corresponding bitmap cells zeroed so the sprite can drift vertically without leaving residue
+* Overlay 2: **small swimming fish** — 5×3 body + wiggling tail, patrols left→right in the empty water below the text
+* Overlay 3: **rising bubbles** — 1-pixel bubbles spawn near y=40 (just above the reef top), rise up to y=18 and pop at the surface. Up to 4 alive at a time, deterministic xorshift PRNG picks x and spawn cadence.
+
+**How the reef bitmap is made** (workflow for regenerating from a new source):
+
+1. Start with any black-and-white line-art PNG. Portrait aspect ratio works best; 32×128 already-sized skips a step.
+2. Resize/threshold to 32×128 1-bit (Pillow: `im.convert("L").point(lambda p: 255 if p >= T else 0, mode="1")`). Threshold ≈145 gave the best balance of coral silhouette vs negative space.
+3. Pack row-major, 4 bytes per row (LSB = leftmost column), into a `static const uint8_t reef_bitmap[128 * 4] PROGMEM = { ... }` array.
+4. Paste into `keymaps/default/keymap.c` replacing the existing table.
+
+If you extract a new silhouette to animate (like the fish), also zero the corresponding bitmap bits so the backdrop doesn't double up on the moving sprite.
+
+### Underglow-only RGB (per-key LEDs held dark)
+
+Each half's LED chain interleaves per-key LEDs with underglow LEDs (both `SK6812MINI-E`, wired in one chain per side). Chain layout:
+
+* Left: local 0..11 = underglow (12 LEDs), 12..41 = per-key (30 LEDs)
+* Right: local 0..14 = underglow (15 LEDs), 15..47 = per-key (33 LEDs)
+
+Only the underglow should show animation, so the compiled default forces per-key positions to `HSV_OFF` via `RGBLIGHT_LAYERS`. Two layers are defined — one for each master case (left-master vs right-master) — because the global-index → local-LED mapping shifts with handedness. `keyboard_post_init_user` enables the appropriate layer based on `is_keyboard_master()` and `is_keyboard_left()`.
+
+Base animation is `snake` (a moving band chases through each half's underglow) in a deep Prussian-blue Kanagawa hue (H=150, S=190, V=60). Cycle animations via `FN + Y` (next) / `FN + H` (prev); adjust hue/sat/val/speed via the other FN + right-hand keys.
+
+Note: `EE_HANDS` handedness setup is required for the underglow layer to target the correct LEDs when either side is master — see [Split handedness](#split-handedness).
 
 ### Split serial: what's on the wire
 
