@@ -46,31 +46,31 @@ Full sourcing detail in the [BOM](#bom).
 
 Quantities are rounded up for spares — order more than the minimum.
 
-Part | Part number | Qty | Notes / Source
---- | --- | --- | ---
-RP2040 MCU | RP2040 (QFN-56) | 2 | LCSC `C2040` / Mouser / DigiKey / direct from Raspberry Pi
-QSPI Flash | Winbond W25Q128JVPIQ | 2 | LCSC `C190862` / Mouser / DigiKey
-3.3V LDO | TI LP5907SNX-3.3 | 2 | LCSC `C133572` (XDFN-4, 1×1 mm) — 250 mA / 3.3 V. See [LDO history note](#ldo-history) below for why this instead of the Helios-spec'd TLV75533.
-12 MHz crystal | 2520 4-pin SMD | 2 | LCSC `C2149204` / Mouser
-USB-C receptacle (host + inter-half) | HRO TYPE-C-31-M-12 | 4 | LCSC `C165948` / JLC / AliExpress — same part used for all four positions (J1/J2 outer = host, J3/J4 top = inter-half)
-USB ESD | USBLC6-2P6 | 2 | LCSC `C2827693` (SOT-666)
-Polyfuse | Bourns MF-FSMF050X-2 (500 mA hold / 1 A trip, 0603) | 2 | LCSC `C210357` / DigiKey (per Helios reference design)
-Ferrite bead | 600 Ω 0402 | 2 | LCSC `C160977`
-Schottky diode | PMEG2010BELD (SOD-882) | 4 | LCSC `C552820` / DigiKey
-Per-key LEDs | SK6812MINI-E (reverse mount) | 70+ | LCSC `C5149201` / AliExpress — order ~10% spare, fragile. Pin **numbers** between vendors differ but physical VDD/VSS/DIN/DOUT corners match
-Underglow LEDs | SK6812MINI-E | 30+ | Same as above; same part (`C5149201`)
-Switch diodes | 1N4148W (SOD-123) | 70+ | LCSC `C81598` / Mouser. Footprint `onigaku:D3_SMD_v2` is SOD-123, **not** SOD-323
-Switches | Gateron KS-33 v2.0 low-profile | 63 | Keebio / Keychron / Gateron direct (hand-place; not from JLC stock)
-Hot-swap sockets | Gateron KS33 hot-swap socket | 63 | Same source as switches
-Stabilizers | Kailh Choc V2 (2u for 2.25U, 2.75U, and 2U keys) | 2 sets | Choc V2 — **not** MX. Kailh has EOL'd this part — stock spares while retailers still have them. See [Stabilizers](#stabilizers) for the full story.
-0603 100 nF ceramic caps | CC0603KRX7R9BB104 (or equiv 0.1µF X7R) | 90+ | LCSC auto-matches — confirm prompt is benign
-0402 caps (LDO bypass) | varies (see schematic) | as schematic | LCSC `C1525` / `C15525` / `C52923` etc.
-0402 resistors | varies | as schematic | LCSC `C25905` (5.1k, UNI-ROYAL) / `C11702` (1k, UNI-ROYAL) / `C60490` (10k, YAGEO) / `C138021` (27R, YAGEO) / `C25900` (4.7k, UNI-ROYAL) — 10k and 27R switched from UNI-ROYAL to YAGEO after recurring JLC stock shortages on UNI-ROYAL 0402 SKUs; the R30/R31 4.7k previously carried the 5.1k `C25905` code by mistake and is now correct
-BOOTSEL push button | 4×4×1.5 mm SMD | 2 | LCSC `C589221`
-0402 status LEDs | red / blue / green (per spec) | 4 | LCSC `C130719` / `C130724`
-Case heat-set inserts | M2 × L3 × D3.5 brass knurled | as case dictates | Ruthex-style or equivalent — Amazon / AliExpress. Print 3.3 mm holes; heat-install with soldering iron ~200°C
-Case screws | M2 × 4 mm machine screws | same qty as heat-set inserts | Any standard M2 × 4 — hardware store / Amazon / AliExpress
-Rubber feet (sticky) | Adhesive-backed rubber pads | 4–8 per half | Sized to fit the recesses on the case bottom. Any standard "keyboard foot" or "furniture bumper" pack works — Amazon / AliExpress
+Part | Part number | Qty | Source | Notes
+--- | --- | --- | --- | ---
+RP2040 MCU | RP2040 (QFN-56) | 2 | [LCSC C2040](https://www.lcsc.com/product-detail/C2040.html) / Mouser / DigiKey / Raspberry Pi direct | —
+QSPI Flash | Winbond W25Q128JVPIQ | 2 | [LCSC C190862](https://www.lcsc.com/product-detail/C190862.html) / Mouser / DigiKey | —
+3.3V LDO | TI LP5907SNX-3.3 | 2 | [LCSC C133572](https://www.lcsc.com/product-detail/C133572.html) | XDFN-4, 1×1 mm — 250 mA / 3.3 V. See [LDO history note](#ldo-history) for why this instead of the Helios-spec'd TLV75533.
+12 MHz crystal | 2520 4-pin SMD | 2 | [LCSC C2149204](https://www.lcsc.com/product-detail/C2149204.html) / Mouser | —
+USB-C receptacle (host + inter-half) | HRO TYPE-C-31-M-12 | 4 | [LCSC C165948](https://www.lcsc.com/product-detail/C165948.html) / JLC / AliExpress | Same part used for all four positions (J1/J2 outer = host, J3/J4 top = inter-half).
+USB ESD | USBLC6-2P6 | 2 | [LCSC C2827693](https://www.lcsc.com/product-detail/C2827693.html) | SOT-666.
+Polyfuse | Bourns MF-FSMF050X-2 (500 mA hold / 1 A trip, 0603) | 2 | [LCSC C210357](https://www.lcsc.com/product-detail/C210357.html) / DigiKey | Per Helios reference design.
+Ferrite bead | 600 Ω 0402 | 2 | [LCSC C160977](https://www.lcsc.com/product-detail/C160977.html) | —
+Schottky diode | PMEG2010BELD (SOD-882) | 4 | [LCSC C552820](https://www.lcsc.com/product-detail/C552820.html) / DigiKey | —
+Per-key LEDs | SK6812MINI-E (reverse mount) | 70+ | [LCSC C5149201](https://www.lcsc.com/product-detail/C5149201.html) / AliExpress | Order ~10% spare, fragile. Pin **numbers** between vendors differ but physical VDD/VSS/DIN/DOUT corners match.
+Underglow LEDs | SK6812MINI-E | 30+ | [LCSC C5149201](https://www.lcsc.com/product-detail/C5149201.html) / AliExpress | Same part as per-key LEDs.
+Switch diodes | 1N4148W (SOD-123) | 70+ | [LCSC C81598](https://www.lcsc.com/product-detail/C81598.html) / Mouser | Footprint `onigaku:D3_SMD_v2` is SOD-123, **not** SOD-323.
+Switches | Gateron KS-33 v2.0 low-profile | 63 | Keebio / Keychron / Gateron direct | Hand-place; not from JLC stock.
+Hot-swap sockets | Gateron KS33 hot-swap socket | 63 | Keebio / Keychron / Gateron direct | Same source as switches.
+Stabilizers | Kailh Choc V2 (2u for 2.25U, 2.75U, and 2U keys) | 2 sets | Retailer stock while it lasts | Choc V2 — **not** MX. Kailh has EOL'd this part; stock spares while retailers still have them. See [Stabilizers](#stabilizers) for the full story.
+0603 100 nF ceramic caps | CC0603KRX7R9BB104 (or equiv 0.1µF X7R) | 90+ | LCSC auto-matches | Confirm the JLC prompt is benign.
+0402 caps (LDO bypass) | varies (see schematic) | as schematic | [LCSC C1525](https://www.lcsc.com/product-detail/C1525.html) / [C15525](https://www.lcsc.com/product-detail/C15525.html) / [C52923](https://www.lcsc.com/product-detail/C52923.html) etc. | —
+0402 resistors | varies | as schematic | [C25905](https://www.lcsc.com/product-detail/C25905.html) 5.1k UNI-ROYAL / [C11702](https://www.lcsc.com/product-detail/C11702.html) 1k UNI-ROYAL / [C60490](https://www.lcsc.com/product-detail/C60490.html) 10k YAGEO / [C138021](https://www.lcsc.com/product-detail/C138021.html) 27R YAGEO / [C25900](https://www.lcsc.com/product-detail/C25900.html) 4.7k UNI-ROYAL | 10k and 27R switched from UNI-ROYAL to YAGEO after recurring JLC stock shortages on UNI-ROYAL 0402 SKUs. The R30/R31 4.7k previously carried the 5.1k `C25905` code by mistake and is now correct.
+BOOTSEL push button | 4×4×1.5 mm SMD | 2 | [LCSC C589221](https://www.lcsc.com/product-detail/C589221.html) | —
+0402 status LEDs | red / blue / green (per spec) | 4 | [LCSC C130719](https://www.lcsc.com/product-detail/C130719.html) / [C130724](https://www.lcsc.com/product-detail/C130724.html) | —
+Case heat-set inserts | M2 × L3 × D3.5 brass knurled | as case dictates | Amazon / AliExpress (Ruthex-style or equivalent) | Print 3.3 mm holes; heat-install with soldering iron ~200°C.
+Case screws | M2 × 4 mm machine screws | same qty as heat-set inserts | Hardware store / Amazon / AliExpress | Any standard M2 × 4.
+Rubber feet (sticky) | Adhesive-backed rubber pads | 4–8 per half | Amazon / AliExpress | Sized to fit the recesses on the case bottom. Any standard "keyboard foot" or "furniture bumper" pack works.
 
 ## Software (QMK)
 
@@ -210,18 +210,72 @@ Two layers: `_BASE` (0) and `_FN` (1). Layer state is synced across the split so
 | Number row (right of `=`) | `Backspace` |
 | QWERTY row (right of `]`) | `Backslash` (`\`) |
 
-**FN layer** (hold any `MO(_FN)`):
+**FN layer** (hold any `MO(_FN)`) — one table per group below. Everything not listed is transparent (falls through to base).
 
-| Group | Keys |
+#### Reset
+
+| Key | Action |
 |---|---|
-| Reset | `Esc` → `QK_BOOT` |
-| F-row | `1..6` → `F1..F6`, `7..0, -, =` → `F7..F12` |
-| Nav (left hand) | `Q W E R` → `HOME UP END PGUP`; `A S D F` → `LEFT DOWN RIGHT PGDN` |
-| Delete | `FN + Backslash` → `Delete` |
-| Virtual desktop | `[` → `Ctrl+Win+Left` (prev desktop); `]` → `Ctrl+Win+Right` (next) |
-| Underglow | `Y U I O P` → `TOG NEXT HUE+ SAT+ VAL+ SPD+`; `H J K L ;` → `PREV HUE- SAT- VAL- SPD-`; `N` → toggle on/off |
+| `Esc` | `QK_BOOT` — reboot into BOOTSEL for flashing |
 
-Everything else on FN is transparent (falls through to base).
+#### F-row (number-row substitutes)
+
+| Key | Action |
+|---|---|
+| `1` | `F1` |
+| `2` | `F2` |
+| `3` | `F3` |
+| `4` | `F4` |
+| `5` | `F5` |
+| `6` | `F6` |
+| `7` | `F7` |
+| `8` | `F8` |
+| `9` | `F9` |
+| `0` | `F10` |
+| `-` | `F11` |
+| `=` | `F12` |
+
+#### Navigation (FN + left hand)
+
+| Key | Action |
+|---|---|
+| `Q` | `Home` |
+| `W` | `Up` |
+| `E` | `End` |
+| `R` | `PgUp` |
+| `A` | `Left` |
+| `S` | `Down` |
+| `D` | `Right` |
+| `F` | `PgDn` |
+
+#### Editing
+
+| Key | Action |
+|---|---|
+| `Backslash` (`\`) | `Delete` |
+
+#### Virtual desktops (Windows)
+
+| Key | Action |
+|---|---|
+| `[` | `Ctrl + Win + Left` — previous virtual desktop |
+| `]` | `Ctrl + Win + Right` — next virtual desktop |
+
+#### RGB Matrix controls (FN + right hand)
+
+| Key | Action |
+|---|---|
+| `Y` | `RM_NEXT` — next RGB Matrix effect |
+| `U` | `RM_HUEU` — hue up |
+| `I` | `RM_SATU` — saturation up |
+| `O` | `RM_VALU` — value / brightness up |
+| `P` | `RM_SPDU` — animation speed up |
+| `H` | `RM_PREV` — previous RGB Matrix effect |
+| `J` | `RM_HUED` — hue down |
+| `K` | `RM_SATD` — saturation down |
+| `L` | `RM_VALD` — value / brightness down |
+| `;` | `RM_SPDD` — animation speed down |
+| `N` | `RM_TOGG` — toggle RGB Matrix on / off |
 
 ### OLED animation
 
