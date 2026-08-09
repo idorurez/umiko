@@ -210,17 +210,15 @@ Two layers: `_BASE` (0) and `_FN` (1). Layer state is synced across the split so
 | Number row (right of `=`) | `Backspace` |
 | QWERTY row (right of `]`) | `Backslash` (`\`) |
 
-**FN layer** (hold any `MO(_FN)`) — one table per group below. Everything not listed is transparent (falls through to base).
+**FN layer** (hold any `MO(_FN)`) — grouped side-by-side below. Everything not listed is transparent (falls through to base).
 
-#### Reset
+<table>
+<tr>
+<td valign="top">
 
-| Key | Action |
-|---|---|
-| `Esc` | `QK_BOOT` — reboot into BOOTSEL for flashing |
+**F-row (number-row substitutes)**
 
-#### F-row (number-row substitutes)
-
-| Key | Action |
+| Key | → |
 |---|---|
 | `1` | `F1` |
 | `2` | `F2` |
@@ -235,9 +233,31 @@ Two layers: `_BASE` (0) and `_FN` (1). Layer state is synced across the split so
 | `-` | `F11` |
 | `=` | `F12` |
 
-#### Navigation (FN + left hand)
+</td>
+<td valign="top">
 
-| Key | Action |
+**RGB Matrix (right hand)**
+
+| Key | → |
+|---|---|
+| `Y` | `RM_NEXT` — next effect |
+| `U` | `RM_HUEU` — hue + |
+| `I` | `RM_SATU` — sat + |
+| `O` | `RM_VALU` — brightness + |
+| `P` | `RM_SPDU` — speed + |
+| `H` | `RM_PREV` — prev effect |
+| `J` | `RM_HUED` — hue − |
+| `K` | `RM_SATD` — sat − |
+| `L` | `RM_VALD` — brightness − |
+| `;` | `RM_SPDD` — speed − |
+| `N` | `RM_TOGG` — on / off |
+
+</td>
+<td valign="top">
+
+**Navigation (left hand)**
+
+| Key | → |
 |---|---|
 | `Q` | `Home` |
 | `W` | `Up` |
@@ -248,34 +268,28 @@ Two layers: `_BASE` (0) and `_FN` (1). Layer state is synced across the split so
 | `D` | `Right` |
 | `F` | `PgDn` |
 
-#### Editing
+**Reset**
 
-| Key | Action |
+| Key | → |
 |---|---|
-| `Backslash` (`\`) | `Delete` |
+| `Esc` | `QK_BOOT` — into BOOTSEL |
 
-#### Virtual desktops (Windows)
+**Editing**
 
-| Key | Action |
+| Key | → |
 |---|---|
-| `[` | `Ctrl + Win + Left` — previous virtual desktop |
-| `]` | `Ctrl + Win + Right` — next virtual desktop |
+| `\` | `Delete` |
 
-#### RGB Matrix controls (FN + right hand)
+**Virtual desktops (Windows)**
 
-| Key | Action |
+| Key | → |
 |---|---|
-| `Y` | `RM_NEXT` — next RGB Matrix effect |
-| `U` | `RM_HUEU` — hue up |
-| `I` | `RM_SATU` — saturation up |
-| `O` | `RM_VALU` — value / brightness up |
-| `P` | `RM_SPDU` — animation speed up |
-| `H` | `RM_PREV` — previous RGB Matrix effect |
-| `J` | `RM_HUED` — hue down |
-| `K` | `RM_SATD` — saturation down |
-| `L` | `RM_VALD` — value / brightness down |
-| `;` | `RM_SPDD` — animation speed down |
-| `N` | `RM_TOGG` — toggle RGB Matrix on / off |
+| `[` | prev desktop (Ctrl+Win+←) |
+| `]` | next desktop (Ctrl+Win+→) |
+
+</td>
+</tr>
+</table>
 
 ### OLED animation
 
