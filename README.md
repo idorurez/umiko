@@ -662,7 +662,6 @@ Ordered roughly: fix-the-defects first (things we bled on in v1), then feature a
 
 ### Defect-avoidance (lessons from the v1 build)
 
-* **SPLIT_HAND_PIN wiring** — a hardware handedness marker (one extra GPIO wired differently on each half via a jumper or trace-cut option) means users get dynamic handedness (either side can be master) without the EE_HANDS per-half EEPROM setup dance. One-time PCB decision, zero user friction.
 * **D5 Schottky footprint choice** — the SOD-882D on v1 is small enough that pin-1 orientation is genuinely ambiguous in JLCPCB's placement preview. It didn't actually cost us any boards on v1 (that was a misdiagnosis of a separate B.Cu short — see [`docs/y47-y49-history.md`](docs/y47-y49-history.md)), but the ambiguity is real and worth removing. Rev 2: pick a bigger, unmistakable package (SOD-123, SOT-23, or SMA) with a clear cathode band. Trade a hair of board space for zero-doubt orientation.
 * **OLED footprint pin-order verification** — v1's right-side OLED footprint shipped with reversed pins (drove the Y49 respin). Rev 2: before fab, print the OLED footprint 1:1 and physically test-fit the module. Pay special attention to the F.Cu-vs-B.Cu mirror flip — a footprint drawn against F.Cu logic won't work on a B.Cu-mounted module.
 
@@ -681,6 +680,7 @@ Ordered roughly: fix-the-defects first (things we bled on in v1), then feature a
 * **Reset button per half** — physical reset (RUN pin momentary) separate from BOOTSEL. Some users want it; costs one 4×4 tact + a pinhole in the case.
 * **Alt stabilizer spec** — Kailh Choc V2 is EOL'd (already noted in [Stabilizers](#stabilizers)). Survey what's still made and, if there's a viable replacement, tweak the plate cutout to accommodate it as a fallback.
 * **Status LED on GPIO** — v1's power LED is hard-wired across the 3.3V rail (can't be turned off in software). Rev 2: put at least one indicator LED on a GPIO so QMK can drive it (caps lock, layer, etc.) and users can disable it entirely if they want.
+* **Optional: `SPLIT_USB_DETECT` for either-half-master** — pure config change, no PCB work. Lets whichever half has USB plugged in become master, auto-detected via VBUS. Zero per-half setup (unlike EE_HANDS). v1 tried `EE_HANDS + SPLIT_USB_DETECT` briefly (`5e7643d`) and reverted next day (`94bf797`) — but the friction was the EE_HANDS per-half EEPROM write, not the USB detection itself. Plain `SPLIT_USB_DETECT` alone would give either-half-master with single firmware, single flash per half, no setup step. Only worth doing if you actually want to plug USB into either half; MASTER_LEFT is fine if you always plug into left.
 
 ## Inspiration
 
