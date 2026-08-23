@@ -439,18 +439,11 @@ Rarely needed — BOOTSEL covers most flashing. If you do need SWD:
 
 ### Cost reference
 
-Two reference points from actual orders:
+From an actual order — a **first-time full-panel build** (both halves per board, 5-board fab minimum with parts placed on 3 = 3 assembled + 2 bare spares): **~$489 TOTAL, delivered.** Rough breakdown of where that goes:
 
-* **First-time full-panel build** (both halves per board, 5-board fab minimum with parts placed on 3 = 3 assembled + 2 bare spares): **~$489**
-* **Right-half-only re-order** (170 × 103 mm single-half, 5-board fab minimum with parts on 3): **~$300**
-
-A first-time builder needs the full-panel order (~$489). The single-half re-order was cheaper because I already had working left halves from the first fab and only needed the right half re-made with a schematic fix.
-
-Rough breakdown:
-
-* PCB fab (5 pcs, 4-layer, full-panel or half): ~$50–100
+* PCB fab (5 pcs, 4-layer, full-panel): ~$50–100
 * PCBA labor + parts sourcing (3 boards): ~$200–300
-* Express shipping to US: ~$80
+* DHL shipping to US (their **minimum** for a parcel this size — not "express" upcharge, just what DHL costs at the low end): ~$80
 * Customs / import handling: ~$50–100
 
 5 assembled vs 3 usually adds only ~$50–100 total — setup and per-part sourcing fees amortize. If you want spares, 5 fully assembled is barely more per board than 3.
