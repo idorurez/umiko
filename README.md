@@ -54,7 +54,7 @@ RP2040 MCU | RP2040 (QFN-56) | 2 | [LCSC C2040](https://www.lcsc.com/product-det
 QSPI Flash | Winbond W25Q128JVPIQ | 2 | [LCSC C190862](https://www.lcsc.com/product-detail/C190862.html) / Mouser / DigiKey | —
 3.3V LDO | TI LP5907SNX-3.3 | 2 | [LCSC C133572](https://www.lcsc.com/product-detail/C133572.html) | XDFN-4, 1×1 mm — 250 mA / 3.3 V. See [LDO history note](#ldo-history) for why this instead of the Helios-spec'd TLV75533.
 12 MHz crystal | 2520 4-pin SMD | 2 | [LCSC C2149204](https://www.lcsc.com/product-detail/C2149204.html) / Mouser | —
-USB-C receptacle (host + inter-half) | HRO TYPE-C-31-M-12 | 4 | [LCSC C165948](https://www.lcsc.com/product-detail/C165948.html) / JLC / AliExpress | Same part used for all four positions (J1/J2 outer = host, J3/J4 top = inter-half).
+USB-C receptacle (host + inter-half) | HRO TYPE-C-31-M-12 | 4 | [LCSC C165948](https://www.lcsc.com/product-detail/C165948.html) / JLCPCB / AliExpress | Same part used for all four positions (J1/J2 outer = host, J3/J4 top = inter-half).
 USB ESD | USBLC6-2P6 | 2 | [LCSC C2827693](https://www.lcsc.com/product-detail/C2827693.html) | SOT-666.
 Polyfuse | Bourns MF-FSMF050X-2 (500 mA hold / 1 A trip, 0603) | 2 | [LCSC C210357](https://www.lcsc.com/product-detail/C210357.html) / DigiKey | Per Helios reference design.
 Ferrite bead | 600 Ω 0402 | 2 | [LCSC C160977](https://www.lcsc.com/product-detail/C160977.html) | —
@@ -62,12 +62,12 @@ Schottky diode | PMEG2010BELD (SOD-882) | 4 | [LCSC C552820](https://www.lcsc.co
 Per-key LEDs | SK6812MINI-E (reverse mount) | 70+ | [LCSC C5149201](https://www.lcsc.com/product-detail/C5149201.html) / AliExpress | Order ~10% spare, fragile. Pin **numbers** between vendors differ but physical VDD/VSS/DIN/DOUT corners match.
 Underglow LEDs | SK6812MINI-E | 30+ | [LCSC C5149201](https://www.lcsc.com/product-detail/C5149201.html) / AliExpress | Same part as per-key LEDs.
 Switch diodes | 1N4148W (SOD-123) | 70+ | [LCSC C81598](https://www.lcsc.com/product-detail/C81598.html) / Mouser | Footprint `onigaku:D3_SMD_v2` is SOD-123, **not** SOD-323.
-Switches | Gateron KS-33 v2.0 low-profile | 63 | Keebio / Keychron / Gateron direct | Hand-place; not from JLC stock.
+Switches | Gateron KS-33 v2.0 low-profile | 63 | Keebio / Keychron / Gateron direct | Hand-place; not from JLCPCB stock.
 Hot-swap sockets | Gateron KS33 hot-swap socket | 63 | Keebio / Keychron / Gateron direct | Same source as switches.
 Stabilizers | Kailh Choc V2 (2u for 2.25U, 2.75U, and 2U keys) | 2 sets | Retailer stock while it lasts | Choc V2 — **not** MX. Kailh has EOL'd this part; stock spares while retailers still have them. See [Stabilizers](#stabilizers) for the full story.
-0603 100 nF ceramic caps | CC0603KRX7R9BB104 (or equiv 0.1µF X7R) | 90+ | LCSC auto-matches | Confirm the JLC prompt is benign.
+0603 100 nF ceramic caps | CC0603KRX7R9BB104 (or equiv 0.1µF X7R) | 90+ | LCSC auto-matches | Confirm the JLCPCB prompt is benign.
 0402 caps (LDO bypass) | varies (see schematic) | as schematic | [LCSC C1525](https://www.lcsc.com/product-detail/C1525.html) / [C15525](https://www.lcsc.com/product-detail/C15525.html) / [C52923](https://www.lcsc.com/product-detail/C52923.html) etc. | —
-0402 resistors | varies | as schematic | [C25905](https://www.lcsc.com/product-detail/C25905.html) 5.1k UNI-ROYAL / [C11702](https://www.lcsc.com/product-detail/C11702.html) 1k UNI-ROYAL / [C60490](https://www.lcsc.com/product-detail/C60490.html) 10k YAGEO / [C138021](https://www.lcsc.com/product-detail/C138021.html) 27R YAGEO / [C25900](https://www.lcsc.com/product-detail/C25900.html) 4.7k UNI-ROYAL | 10k and 27R switched from UNI-ROYAL to YAGEO after recurring JLC stock shortages on UNI-ROYAL 0402 SKUs. The R30/R31 4.7k previously carried the 5.1k `C25905` code by mistake and is now correct.
+0402 resistors | varies | as schematic | [C25905](https://www.lcsc.com/product-detail/C25905.html) 5.1k UNI-ROYAL / [C11702](https://www.lcsc.com/product-detail/C11702.html) 1k UNI-ROYAL / [C60490](https://www.lcsc.com/product-detail/C60490.html) 10k YAGEO / [C138021](https://www.lcsc.com/product-detail/C138021.html) 27R YAGEO / [C25900](https://www.lcsc.com/product-detail/C25900.html) 4.7k UNI-ROYAL | 10k and 27R switched from UNI-ROYAL to YAGEO after recurring JLCPCB stock shortages on UNI-ROYAL 0402 SKUs. The R30/R31 4.7k previously carried the 5.1k `C25905` code by mistake and is now correct.
 BOOTSEL push button | 4×4×1.5 mm SMD | 2 | [LCSC C589221](https://www.lcsc.com/product-detail/C589221.html) | —
 0402 status LEDs | red / blue / green (per spec) | 4 | [LCSC C130719](https://www.lcsc.com/product-detail/C130719.html) / [C130724](https://www.lcsc.com/product-detail/C130724.html) | —
 Case heat-set inserts | M2 × L3 × D3.5 brass knurled | as case dictates | Amazon / AliExpress (Ruthex-style or equivalent) | Print 3.3 mm holes; heat-install with soldering iron ~200°C.
@@ -150,7 +150,7 @@ Each half flashes independently via BOOTSEL:
 4. **Release** — the half mounts as `RPI-RP2` (USB mass-storage)
 5. **Drag-and-drop the `.uf2`** onto the drive; it auto-reboots into the new firmware
 
-First plug-in enters BOOTSEL automatically because the W25Q128 flash arrives blank from JLC. After the first flash, subsequent re-flashes need the button held.
+First plug-in enters BOOTSEL automatically because the W25Q128 flash arrives blank from JLCPCB. After the first flash, subsequent re-flashes need the button held.
 
 No reset button on the board — power-cycle + BOOTSEL covers all flashing. Case access to SW1/SW2 is up to the case (v1 uses pinholes; v2 plans an integrated button — see [Rev 2 ideas](#stretch--future-ideas-rev-2)).
 
@@ -460,7 +460,7 @@ Set up for **JLCPCB's standard 4-layer tier** (no surcharge):
 
 Tighter clearances (down to 0.089 mm / 3.5 mil) are accepted but incur a **+20% surcharge** on 4–8 layer boards.
 
-### JLC fab options used for this design
+### JLCPCB fab options used for this design
 
 * **Layers**: 4
 * **Different Design in Panel**: 2 (left and right halves are separate outlines)
@@ -473,20 +473,20 @@ Tighter clearances (down to 0.089 mm / 3.5 mil) are accepted but incur a **+20% 
 
 | Script | What it does |
 |---|---|
-| `scripts/make_jlc_files.py` | Reads the schematic + PCB (read-only) and writes 3 JLC-upload-ready files to `fab/`: gerbers zip, BOM CSV, CPL CSV — all in JLC's exact required format (specific headers, 4-decimal mm-suffixed coords, integer rotations, DNP filter, LCSC overrides). Regenerate any time. |
+| `scripts/make_jlc_files.py` | Reads the schematic + PCB (read-only) and writes 3 JLCPCB-upload-ready files to `fab/`: gerbers zip, BOM CSV, CPL CSV — all in JLCPCB's exact required format (specific headers, 4-decimal mm-suffixed coords, integer rotations, DNP filter, LCSC overrides). Regenerate any time. |
 
 Outputs in `fab/`:
 
 | File | Purpose |
 |---|---|
 | `umiko-jlc-gerbers.zip` | Gerbers + Excellon drill files — the fab upload |
-| `umiko-bom-jlc.csv` | BOM in JLC format (header uses fullwidth Chinese parens; ref ranges expanded; DNP rows filtered out) |
+| `umiko-bom-jlc.csv` | BOM in JLCPCB format (header uses fullwidth Chinese parens; ref ranges expanded; DNP rows filtered out) |
 | `umiko-cpl.csv` | Placement (Designator, Mid X/Y with `mm` suffix at 4-decimal precision, capitalized Top/Bottom, integer rotation 0–359) |
 
 **DNP list** (excluded from both BOM and CPL — hand-soldered later):
 
 * `YS-SK6812MINI-E` (90 total) — per-key are reverse-mount (not standard PnP); underglow OPSCO layout is 180° from our footprint. Both hand-soldered.
-* `KEYSW` (63) — Gateron KS-33 hot-swap sockets, not in JLC's stock. Sourced from Keebio / Gateron / AliExpress.
+* `KEYSW` (63) — Gateron KS-33 hot-swap sockets, not in JLCPCB's stock. Sourced from Keebio / Gateron / AliExpress.
 
 **LCSC overrides** (baked into the script for parts whose schematic symbols don't carry an LCSC field): matrix diode `D3_SMD_v2` → `C81598`, per-key + underglow LED `YS-SK6812MINI-E` → `C5149201`.
 
@@ -510,50 +510,50 @@ Before you export:
 
 3.  Only after the gate passes: run `scripts/make_jlc_files.py` and upload.
 
-### JLC upload gotcha
+### JLCPCB upload gotcha
 
-**Updates to BOM or CPL won't apply unless you restart the upload from the project menu.** Re-uploading just the changed file after a failed attempt appears to succeed but JLC keeps the prior validation state, giving errors like "Failed processing the CPL file" or "BOM doesn't match CPL" that don't match the current files. Fix: back up to the **PCB quote** step and restart the whole upload (gerbers → BOM → CPL).
+**Updates to BOM or CPL won't apply unless you restart the upload from the project menu.** Re-uploading just the changed file after a failed attempt appears to succeed but JLCPCB keeps the prior validation state, giving errors like "Failed processing the CPL file" or "BOM doesn't match CPL" that don't match the current files. Fix: back up to the **PCB quote** step and restart the whole upload (gerbers → BOM → CPL).
 
 ### CPL format quirks (learned the hard way)
 
-JLC's CPL parser is strict about:
+JLCPCB's CPL parser is strict about:
 
 * **Rotation must be a non-negative integer 0–359.** KiCad's default `-90.000000` is rejected. `make_jlc_files.py` normalizes with mod 360.
 * **Coordinates must be fixed at 4-decimal precision** (`8.6470mm`, not `8.647045mm`). Script formats with `.4f`.
-* **Headers must match JLC's sample exactly** — including the fullwidth Chinese parens in `JLCPCB Part #（optional）`.
+* **Headers must match JLCPCB's sample exactly** — including the fullwidth Chinese parens in `JLCPCB Part #（optional）`.
 
-### JLC will ask you about polarity / pin-1 orientation
+### JLCPCB will ask you about polarity / pin-1 orientation
 
-**Turn on the review checkboxes at order time.** In the JLC order flow, make sure the two "Confirm" options are **enabled**:
+**Turn on the review checkboxes at order time.** In the JLCPCB order flow, make sure the two "Confirm" options are **enabled**:
 
-* ☑ **Confirm design (Product Description)** — JLC reviews the fab files and flags anything ambiguous
-* ☑ **Confirm parts placement (BOM & CPL)** — JLC sends you a rendered placement preview of every part with pin-1 markers and waits for your per-part sign-off
+* ☑ **Confirm design (Product Description)** — JLCPCB reviews the fab files and flags anything ambiguous
+* ☑ **Confirm parts placement (BOM & CPL)** — JLCPCB sends you a rendered placement preview of every part with pin-1 markers and waits for your per-part sign-off
 
 Both cost you nothing extra and are the only line of defense against a mis-rotated polarized part shipping on all 5 boards. Skipping them = you own whatever they build.
 
-**Do your own visual due diligence when the BOM confirmation arrives.** JLC's engineering team is careful but not infallible, and their footprint conventions sometimes flip pin-1 from yours (see the D4 vs D6 gotcha below). For every polarized part in their preview: open your KiCad PCB, click the same part, and eyeball that the pin-1 dot lands on the same physical side in both views. If in doubt on any part, ask them to hold and clarify before they run — a single reply catches a whole batch.
+**Do your own visual due diligence when the BOM confirmation arrives.** JLCPCB's engineering team is careful but not infallible, and their footprint conventions sometimes flip pin-1 from yours (see the D4 vs D6 gotcha below). For every polarized part in their preview: open your KiCad PCB, click the same part, and eyeball that the pin-1 dot lands on the same physical side in both views. If in doubt on any part, ask them to hold and clarify before they run — a single reply catches a whole batch.
 
-**Always cross-check JLC's placement preview against your KiCad board before approving.** Click each flagged part in KiCad, verify pin-1 or cathode/anode matches JLC's pink-dot orientation. Don't trust LCSC codes or JLC library shorthand — their footprint convention may be opposite yours.
+**Always cross-check JLCPCB's placement preview against your KiCad board before approving.** Click each flagged part in KiCad, verify pin-1 or cathode/anode matches JLCPCB's pink-dot orientation. Don't trust LCSC codes or JLCPCB library shorthand — their footprint convention may be opposite yours.
 
-JLC's engineering review sends placement snapshots with a **pink dot on pin 1** of every polarized part and asks you to confirm one by one. Patterns worth banking:
+JLCPCB's engineering review sends placement snapshots with a **pink dot on pin 1** of every polarized part and asks you to confirm one by one. Patterns worth banking:
 
 * **Non-polarized parts** (polyfuses, ceramic caps, resistors, ferrite beads) — reply "no polarity, either orientation works, no correction needed." The pink dot is a manufacturing marker, not an electrical flag.
-* **Polarized parts** need per-part checks: diodes (D5 Schottky), LEDs (D2/D4/D6 + every SK6812MINI-E), any electrolytics, and orientation-sensitive ICs (RP2040, LDO, USBLC6, level shifter). Compare JLC's pink-dot direction to your KiCad footprint's pin-1. If flipped 180°, request rotation.
+* **Polarized parts** need per-part checks: diodes (D5 Schottky), LEDs (D2/D4/D6 + every SK6812MINI-E), any electrolytics, and orientation-sensitive ICs (RP2040, LDO, USBLC6, level shifter). Compare JLCPCB's pink-dot direction to your KiCad footprint's pin-1. If flipped 180°, request rotation.
 * **Same LED footprint, different LCSC codes → opposite pin-1 conventions.** On this project D4 (`C130724`, Sunny B1811NB) uses **anode = pin 1**; D6 (`C130719`, Sunny B1811URO) uses **cathode = pin 1** — same footprint, opposite convention. D4 required 180°; D6 did not. Check each 0402 LED individually.
-* **How to answer:** open the PCB, click the flagged pad, note pin-1's electrical role and which physical side it lands on after footprint rotation. Compare to JLC's snapshot. Correct side → confirm. Wrong side → request 180°. The `pinfunction` fields in `umiko.kicad_pcb` (`K_1`, `A_2`, `SDA_1`, etc.) show the intended role.
+* **How to answer:** open the PCB, click the flagged pad, note pin-1's electrical role and which physical side it lands on after footprint rotation. Compare to JLCPCB's snapshot. Correct side → confirm. Wrong side → request 180°. The `pinfunction` fields in `umiko.kicad_pcb` (`K_1`, `A_2`, `SDA_1`, etc.) show the intended role.
 
 **Rotation corrections that recur** — send these with your BOM upload so engineers apply up front:
 
 * **U10** (LP5907 LDO, X2SON-4): **+90°**
-* **D5** (PMEG2010BELD Schottky, SOD-882D): **⚠️ Don't specify a rotation.** Compare D5 directly against D1 (left half, known-working from the full-panel order) in JLC's rendering and match D5's orientation to D1's. Don't reason from rotation math — B.Cu mirroring and library conventions make it ambiguous. A bad 180° request on the right-only re-order killed 3 boards.
+* **D5** (PMEG2010BELD Schottky, SOD-882D): **⚠️ Don't specify a rotation.** Compare D5 directly against D1 (left half, known-working from the full-panel order) in JLCPCB's rendering and match D5's orientation to D1's. Don't reason from rotation math — B.Cu mirroring and library conventions make it ambiguous. A bad 180° request on the right-only re-order killed 3 boards.
 * **J2/J4** (HRO USB-C, if their 3D preview looks backwards): **180°**
 * **D4** (Sunny B1811NB User LED): **180°**
 * **D6** (Sunny B1811URO Power LED): **no correction**
-* **U6, U8, U9**: **270°** (documented in schematic `JLCPCB_CORRECTION`; JLC usually applies proactively)
+* **U6, U8, U9**: **270°** (documented in schematic `JLCPCB_CORRECTION`; JLCPCB usually applies proactively)
 
 ## Case & Print
 
-Everything below is about the **3D-printed case, plate, and STEP/DXF exports** — not JLC-related. Move here from the old "Manufacturing Notes" section so JLC content stays purely fab-focused.
+Everything below is about the **3D-printed case, plate, and STEP/DXF exports** — not JLCPCB-related. Move here from the old "Manufacturing Notes" section so JLCPCB content stays purely fab-focused.
 
 ### CAD exports (case / plate design)
 
@@ -574,7 +574,7 @@ Outputs in `cad/`:
 
 **Key numbers**:
 
-* **Board thickness**: 1.6 mm (JLC standard, ±10% — plan case pocket for up to 1.76 mm)
+* **Board thickness**: 1.6 mm (JLCPCB standard, ±10% — plan case pocket for up to 1.76 mm)
 * **Plate thickness**: **2.2 mm total** (bakingpy two-level) — 1.2 mm housing pocket on top + 1.0 mm wire clearance on bottom (see [Stabilizers](#stabilizers))
 * **Switch bodies render on F.Cu, hot-swap sockets on B.Cu.** Footprints live on B.Cu (where the socket pads are), but the switch body still shows on F.Cu.
 * **STEP thickness compensation**: KiCad's exporter omits outer copper (~0.07 mm) + soldermask (~0.02 mm), so both scripts add **+0.09 mm** to hit true 1.6 mm / 1.2 mm. F.Cu components ride up automatically; switch bodies (anchored to B.Cu sockets) get a `-4.1 → -4.19` 3D-model nudge to stay flush.
@@ -631,11 +631,11 @@ The included case design is complete — this workflow is only if you want to bu
 
 ### LDO history
 
-U2/U10 use **LP5907SNX-3.3** (TI, XDFN-4, LCSC `C133572`, 250 mA) — a pin-compatible substitute for the 0xCB Helios reference `TLV75533PDQNR` (X2SON-4, 500 mA, LCSC `C2861882`) after JLC/LCSC ran out of X2SON stock through 2025–2026. Same symbol and footprint; only the placed chip changed.
+U2/U10 use **LP5907SNX-3.3** (TI, XDFN-4, LCSC `C133572`, 250 mA) — a pin-compatible substitute for the 0xCB Helios reference `TLV75533PDQNR` (X2SON-4, 500 mA, LCSC `C2861882`) after JLCPCB/LCSC ran out of X2SON stock through 2025–2026. Same symbol and footprint; only the placed chip changed.
 
 **250 mA is enough**: per-half 3.3 V load is ~150 mA peak (RP2040 ~50 mA + flash ~15 mA + OLED ~20 mA + LEDs/biases). Per-key RGB runs off 5 V, not this rail.
 
-**If a future rev needs 500 mA** (Bluetooth, larger display, expansion): `TLV75533PDQNR` drops into the current footprint if JLC restocks; `TLV75533PDBVR` (SOT-23-5, LCSC `C404027`) is more reliably stocked but needs a footprint + symbol swap (5-pin: pad 5 = OUT, pad 4 = NR).
+**If a future rev needs 500 mA** (Bluetooth, larger display, expansion): `TLV75533PDQNR` drops into the current footprint if JLCPCB restocks; `TLV75533PDBVR` (SOT-23-5, LCSC `C404027`) is more reliably stocked but needs a footprint + symbol swap (5-pin: pad 5 = OUT, pad 4 = NR).
 
 ## Stretch / Future Ideas (Rev 2)
 
