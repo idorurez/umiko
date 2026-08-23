@@ -638,9 +638,7 @@ U2/U10 use **LP5907SNX-3.3** (TI, XDFN-4, LCSC `C133572`, 250 mA) — a pin-comp
 ## Stretch / Future Ideas (Rev 2)
 
 * **Case-integrated BOOTSEL button per half** — v1's tiny SMD tacts (SW1/SW2) need a case pinhole and paperclip. v2: swap to a larger through-hole tact so a printed cantilever / living-hinge button can press it from outside, or use a case-integrated button style with the tact positioned under the flexure.
-* **Lower-profile OLED mounting** — the current 4-pin through-hole header puts the daughterboard 10–12 mm above the PCB, forcing the case cutout to swallow the whole board (not just the display window). Options: short-body SMD headers (~3–5 mm mated), board-to-board connectors (Hirose DF13 / JAE FI-X, 2–4 mm), or a direct SMD OLED module (eliminates the daughterboard).
 * **Relocate the OLED closer to the PCB edge** — right now it sits in the middle of the right half's top-edge zone, so any case-side "housing" around the display window has to reach inward across the plate. Shifting the OLED footprint (or a re-routed break-out) closer to the top edge gives room for a proper printed bezel/housing, and makes an **e-paper edition** viable in the same slot — a slightly larger E-Ink panel (e.g. 2.13" Waveshare) fits if the display window is at the edge instead of surrounded by keys.
-* **OLED breakout board** for the inter-half I²C lines (`SCL_*` / `SDA_*` are broken out but unwired).
 * **Sound** — small speaker + amp (e.g. PAM8302 mono class-D) + I²S DAC or codec on the RP2040 for short WAV/MP3 clips off SD or extra flash. Ocean/wave sample loops (fitting the name), click/keypress feedback, boot chime.
 
 ## Inspiration
