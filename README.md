@@ -6,6 +6,8 @@
 
 ![PCB front (with keycaps)](images/umiko_3dview_front.png)
 
+![Both halves built out, translucent blue keycaps, right-side OLED lit](images/built_both_halves.jpg)
+
 ## Features
 
 * **Split layout** — two independent halves, each with its own MCU
@@ -342,6 +344,8 @@ The inter-half USB-C is **not** a real USB port — just a convenient 4-conducto
 
 ![PCB front (no keys)](images/umiko_3dview_front_nokeys.png)
 
+![Left half — angled, keycaps on, exposed stab showing Kailh Choc V2](images/built_left_angled.jpg)
+
 > ⚠️ **Hand-solder only the DNP parts. Get everything else JLCPCB-assembled.**
 >
 > **✅ Reasonable to hand-solder** (these are DNP'd for exactly this reason):
@@ -361,6 +365,8 @@ The inter-half USB-C is **not** a real USB port — just a convenient 4-conducto
 > The Soldering Order / Hints / LEDs / Stabilizers sections below cover that hand-solder pass.
 
 ### Soldering Order
+
+![Left plate mid-assembly — Gateron KS-33 v2 blues installed, stabs in place, before keycaps](images/assembly_switches_no_keycaps.jpg)
 
 1. **Smallest first** — 0402 resistors/caps, then 0603, then SMD ICs
 2. **RP2040** — exposed thermal pad on the bottom needs bottom heat (hotplate / reflow). Fine-tip hand-soldering is doable but tricky.
@@ -520,12 +526,16 @@ Outputs in `cad/`:
 
 #### Sample print (Bambu Lab)
 
-A sliced Bambu Lab project file is included at [`cad/print/umiko.3mf`](cad/print/umiko.3mf), with `umiko_top.STL` and `umiko_bottom.STL` alongside it. Covers top and bottom plates for both halves.
+A sliced Bambu Studio project is included at [`cad/print/umiko.3mf`](cad/print/umiko.3mf). It contains **two variants of the branded bottom case**:
 
-The bottom plate is designed for a **transparency-color layer sandwich**: the embedded Umiko kanji (海子) prints in your color of choice, sandwiched inside transparent PETG for the branding effect.
+* **Solid** — plain bottom, no branding cutout. STL: [`cad/print/umiko_bottom_solid.STL`](cad/print/umiko_bottom_solid.STL).
+* **Inlay** — bottom with the embedded Umiko kanji (海子) cutout for the transparency-color layer sandwich. STLs: [`cad/print/umiko_bottom.STL`](cad/print/umiko_bottom.STL) for the shell, [`cad/print/umiko_top_inlay.STL`](cad/print/umiko_top_inlay.STL) for the branding piece that sits inside the cutout. Top plate: [`cad/print/umiko_top.STL`](cad/print/umiko_top.STL).
 
-**Filament note:** PETG for the outer transparent shell works reliably. For the embedded kanji layer, PETG is safest — some PLA brands don't fully adhere to PETG at the interface, so portions of the embedded logo may separate and give a splotchy look. If you want to use PLA for the kanji, test-print a small sample with your specific filament brand first.
+The inlay variant is the branded look: the embedded kanji prints in your color of choice, sandwiched inside transparent PETG for the transparency effect. Solid is there if you want a plain unbranded bottom.
 
+**Filament note:** PETG for the outer transparent shell works reliably. For the embedded kanji layer, PETG is safest — some PLA brands don't fully adhere to PETG at the interface, so portions of the embedded logo may separate and give a splotchy look. If you want PLA for the kanji, test-print a small sample with your specific filament brand first.
+
+![Printed bottom in real life — embedded Umiko kanji visible through transparent PETG shell](images/printed_bottom_kanji.jpg)
 ![Bambu Lab slicer preview](cad/print/bambu_sample.png)
 ![Bambu Lab slicer preview (angle 2)](cad/print/bambu_sample2.png)
 ![Printed umiko (black)](cad/print/printed_umiko_black.png)
