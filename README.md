@@ -522,7 +522,16 @@ JLC's CPL parser is strict about:
 * **Coordinates must be fixed at 4-decimal precision** (`8.6470mm`, not `8.647045mm`). Script formats with `.4f`.
 * **Headers must match JLC's sample exactly** — including the fullwidth Chinese parens in `JLCPCB Part #（optional）`.
 
-### Polarity / pin-1 review from JLC (expect these questions)
+### JLC will ask you about polarity / pin-1 orientation
+
+**Turn on the review checkboxes at order time.** In the JLC order flow, make sure the two "Confirm" options are **enabled**:
+
+* ☑ **Confirm design (Product Description)** — JLC reviews the fab files and flags anything ambiguous
+* ☑ **Confirm parts placement (BOM & CPL)** — JLC sends you a rendered placement preview of every part with pin-1 markers and waits for your per-part sign-off
+
+Both cost you nothing extra and are the only line of defense against a mis-rotated polarized part shipping on all 5 boards. Skipping them = you own whatever they build.
+
+**Do your own visual due diligence when the BOM confirmation arrives.** JLC's engineering team is careful but not infallible, and their footprint conventions sometimes flip pin-1 from yours (see the D4 vs D6 gotcha below). For every polarized part in their preview: open your KiCad PCB, click the same part, and eyeball that the pin-1 dot lands on the same physical side in both views. If in doubt on any part, ask them to hold and clarify before they run — a single reply catches a whole batch.
 
 **Always cross-check JLC's placement preview against your KiCad board before approving.** Click each flagged part in KiCad, verify pin-1 or cathode/anode matches JLC's pink-dot orientation. Don't trust LCSC codes or JLC library shorthand — their footprint convention may be opposite yours.
 
