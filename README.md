@@ -142,17 +142,42 @@ You only do this once per half, ever. EEPROM keeps the marker until you explicit
 
 ### Flash
 
-Each half flashes independently via BOOTSEL:
+Each half flashes independently. Three ways to get the RP2040 into BOOTSEL mode (mass-storage) — use whichever is easiest for your situation:
 
-1. **Unplug USB** from the half you want to flash
-2. **Hold BOOTSEL** (SW1 left, SW2 right)
+#### Easiest — from a running keyboard (no case-poking, no unplug)
+
+`FN + Esc` is mapped to `QK_BOOT`. If your firmware is running and the FN layer works:
+
+1. Hold **FN** on the half you want to flash, press **Esc**
+2. Board resets into BOOTSEL and mounts as `RPI-RP2`
+3. Drag-and-drop the `.uf2` — auto-reboots into new firmware
+
+That's it. No unplugging, no button-poking. Works from a normal typing state.
+
+#### If FN + Esc doesn't work — hold the top-left key at power-on
+
+Any time firmware won't respond (bad flash, wrong keymap, EEPROM issue), you can still get into BOOTSEL by holding a physical **key on the keyboard matrix** at plug-in — no PCB button needed. On RP2040 QMK's bootmagic clears EEPROM and its reset path lands in BOOTSEL:
+
+1. **Unplug USB** from the half
+2. **Hold the top-left key** (the backtick/grave key — matrix position `[0,0]`)
 3. **Plug USB back in** while still holding
-4. **Release** — the half mounts as `RPI-RP2` (USB mass-storage)
-5. **Drag-and-drop the `.uf2`** onto the drive; it auto-reboots into the new firmware
+4. **Release** after ~1 second — board mounts as `RPI-RP2`
+5. Drag the `.uf2` onto the drive
 
-First plug-in enters BOOTSEL automatically because the W25Q128 flash arrives blank from JLCPCB. After the first flash, subsequent re-flashes need the button held.
+This is the "I broke something" recovery path — also clears EEPROM as a side effect (which is often what you want after a bad flash anyway).
 
-No reset button on the board — power-cycle + BOOTSEL covers all flashing. Case access to SW1/SW2 is up to the case (v1 uses pinholes; v2 plans an integrated button — see [Rev 2 ideas](#stretch--future-ideas-rev-2)).
+#### Fallback — the tiny SMD button on the PCB
+
+Only needed if you can't reach either method above (e.g. brand-new board with no firmware yet, or you shorted the matrix pins somehow):
+
+1. **Unplug USB**
+2. **Hold SW1** (on the left PCB) or **SW2** (on the right PCB) — the small SMD tact between the RP2040 and the OLED cutout. Access via case pinhole with a paperclip.
+3. **Plug USB back in** while holding
+4. **Release** — mounts as `RPI-RP2`, drag the `.uf2`
+
+**First plug-in ever**: the W25Q128 flash ships blank from JLCPCB, so the RP2040 boots straight into BOOTSEL automatically — no button/key held required. Subsequent flashes need one of the methods above.
+
+No hardware reset button on the board — power-cycle + BOOTSEL covers everything. Rev 2 plans a case-integrated BOOTSEL button (see [Rev 2 ideas](#stretch--future-ideas-rev-2)).
 
 ### Remap keys with VIA (optional)
 
