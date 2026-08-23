@@ -639,9 +639,30 @@ U2/U10 use **LP5907SNX-3.3** (TI, XDFN-4, LCSC `C133572`, 250 mA) — a pin-comp
 
 ## Stretch / Future Ideas (Rev 2)
 
+Ordered roughly: fix-the-defects first (things we bled on in v1), then feature adds, then nice-to-haves.
+
+### Defect-avoidance (lessons from the v1 build)
+
+* **CC pull-down reliability on host USB-C** — v1 wouldn't power from certain "strict" USB-C ports (some laptops / hubs). Root cause was ambiguous CC pull-down behavior. Rev 2: verify the 5.1 kΩ pull-downs on both CC1 and CC2 are correctly placed, and validate on a mix of USB-C sources before ordering.
+* **SPLIT_HAND_PIN wiring** — a hardware handedness marker (one extra GPIO wired differently on each half via a jumper or trace-cut option) means users get dynamic handedness (either side can be master) without the EE_HANDS per-half EEPROM setup dance. One-time PCB decision, zero user friction.
+* **D5 Schottky footprint choice** — the SOD-882D on v1 was tiny enough that the die's pin-1 orientation was visually ambiguous, which caused the "kill 3 boards" incident. Rev 2: pick a bigger, unmistakable package (SOD-123, SOT-23, or SMA) with a clear cathode band. Trade a hair of board space for zero-doubt orientation.
+* **GND_R pour vs +5V_R trace conflict on B.Cu** — two +5V_R tracks near (322, 55) touched the GND_R pour and shorted 3 boards from the JLCPCB Y49 run (user hand-cut the shorts with an X-acto to recover them). Rev 2: keep power traces out of the pour zone in that area (or set stricter zone clearance) and add the pre-fab sanity gate as a repo commit hook so it can't be bypassed.
+* **LED chain routing** — v1's chain works but the per-key ordering is a hand-traced discovery (see `docs/led-chain.md`). Rev 2: route the chain in a predictable pattern (e.g. row-by-row from a corner, à la bakekujira) so RGB Matrix effects with position-aware behavior are trivial to define and any future re-derivation is instant.
+
+### Feature adds
+
+* **Bigger display support** — plan a Rev 2 footprint that fits **1.3" 128×64 OLED** (SH1106) as the default, plus room for a **2.13" e-paper** panel via a 6-8 pin SPI break-out at the same location. The current 4-pin I²C footprint locks us to small OLEDs; a footprint with both I²C and SPI pads gives a future-proof display slot.
+* **Relocate the display closer to the top edge** — currently the OLED sits inward from the top edge of the right half, so any case-side "housing" around the display window has to reach inward across the plate. Shifting the display footprint closer to the top edge (paired with the bigger-display footprint above) gives room for a proper printed bezel or e-paper window.
+* **Inter-half I²C actually usable** — the `SCL_L` / `SDA_L` bus on the left half is routed but not broken out to anything useful. Rev 2: add a clean 4-pin I²C header on the left half so the left could also host a display or auxiliary device (haptic driver, second OLED with a different animation, sensor).
+* **Per-key RGB position mapping designed-in** — for RGB Matrix, we currently approximate per-LED (x, y) positions from the switch layout because the chain routing is discovered, not designed. Rev 2: route the chain deliberately and bake the exact position map into `umiko.c` up front. Reactive effects (SPLASH, SOLID_REACTIVE) become pixel-perfect.
 * **Case-integrated BOOTSEL button per half** — v1's tiny SMD tacts (SW1/SW2) need a case pinhole and paperclip. v2: swap to a larger through-hole tact so a printed cantilever / living-hinge button can press it from outside, or use a case-integrated button style with the tact positioned under the flexure.
-* **Relocate the OLED closer to the PCB edge** — right now it sits in the middle of the right half's top-edge zone, so any case-side "housing" around the display window has to reach inward across the plate. Shifting the OLED footprint (or a re-routed break-out) closer to the top edge gives room for a proper printed bezel/housing, and makes an **e-paper edition** viable in the same slot — a slightly larger E-Ink panel (e.g. 2.13" Waveshare) fits if the display window is at the edge instead of surrounded by keys.
 * **Sound** — small speaker + amp (e.g. PAM8302 mono class-D) + I²S DAC or codec on the RP2040 for short WAV/MP3 clips off SD or extra flash. Ocean/wave sample loops (fitting the name), click/keypress feedback, boot chime.
+
+### Nice-to-haves
+
+* **Reset button per half** — physical reset (RUN pin momentary) separate from BOOTSEL. Some users want it; costs one 4×4 tact + a pinhole in the case.
+* **Alt stabilizer spec** — Kailh Choc V2 is EOL'd (already noted in [Stabilizers](#stabilizers)). Survey what's still made and, if there's a viable replacement, tweak the plate cutout to accommodate it as a fallback.
+* **Status LED on GPIO** — v1's power LED is hard-wired across the 3.3V rail (can't be turned off in software). Rev 2: put at least one indicator LED on a GPIO so QMK can drive it (caps lock, layer, etc.) and users can disable it entirely if they want.
 
 ## Inspiration
 
