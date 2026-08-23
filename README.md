@@ -497,68 +497,6 @@ Outputs in `fab/`:
 
 **LCSC overrides** (baked into the script for parts whose schematic symbols don't carry an LCSC field): matrix diode `D3_SMD_v2` → `C81598`, per-key + underglow LED `YS-SK6812MINI-E` → `C5149201`.
 
-### CAD exports (case / plate design)
-
-| Script | What it does |
-|---|---|
-| `scripts/make_cad_files.py` | 3D STEP exports of the whole board + component groups (assembly, halves, switches, LEDs, ICs, connectors, passives) for case CAD import into SolidWorks. Read-only on the source PCB — uses an in-memory copy + self-deleting temp file. |
-| `scripts/make_plate.py` | Plate STEP + DXF for the case top plate (integrated switch cutouts + Choc V2 stab cutouts). Optional CLI arg to also generate a "switches-only" alt plate with configurable switch cutout size (`14.2 14.0` recommended for FDM). Read-only on the source PCB. |
-
-Outputs in `cad/`:
-
-| File | Purpose |
-|---|---|
-| `umiko-assembly.step` | Full board + all components |
-| `umiko-half-{left,right}.step` | Split into just one half |
-| `umiko-{switches,leds,ics,connectors,passives,board}.step` | Component-group subsets |
-| `umiko-plate.step` / `.dxf` | Plate with switch + stab cutouts (canonical Choc V2 spec) |
-| `umiko-switches-only[-WxH].step` / `.dxf` | Alt plate with just switch cutouts at custom size |
-
-**Key numbers**:
-
-* **Board thickness**: 1.6 mm (JLC standard, ±10% — plan case pocket for up to 1.76 mm)
-* **Plate thickness**: **2.2 mm total** (bakingpy two-level) — 1.2 mm housing pocket on top + 1.0 mm wire clearance on bottom (see [Stabilizers](#stabilizers))
-* **Switch bodies render on F.Cu, hot-swap sockets on B.Cu.** Footprints live on B.Cu (where the socket pads are), but the switch body still shows on F.Cu.
-* **STEP thickness compensation**: KiCad's exporter omits outer copper (~0.07 mm) + soldermask (~0.02 mm), so both scripts add **+0.09 mm** to hit true 1.6 mm / 1.2 mm. F.Cu components ride up automatically; switch bodies (anchored to B.Cu sockets) get a `-4.1 → -4.19` 3D-model nudge to stay flush.
-* **PLA case FDM clearance**: **0.5 mm/side long axis, 0.3 mm/side short axis, 0.2 mm Z**. Print tolerance dominates PLA shrinkage / thermal. Test a corner chunk and tune slicer XY size compensation before a full-case print.
-
-![Case CAD in SolidWorks](images/umiko_case_solidworks.png)
-
-#### Sample print (Bambu Lab)
-
-A sliced Bambu Studio project is included at [`cad/print/umiko.3mf`](cad/print/umiko.3mf). It contains **two variants of the branded bottom case**:
-
-* **Solid** — plain bottom, no branding cutout. STL: [`cad/print/umiko_bottom_solid.STL`](cad/print/umiko_bottom_solid.STL).
-* **Inlay** — bottom with the embedded Umiko kanji (海子) cutout for the transparency-color layer sandwich. STLs: [`cad/print/umiko_bottom.STL`](cad/print/umiko_bottom.STL) for the shell, [`cad/print/umiko_top_inlay.STL`](cad/print/umiko_top_inlay.STL) for the branding piece that sits inside the cutout. Top plate: [`cad/print/umiko_top.STL`](cad/print/umiko_top.STL).
-
-The inlay variant is the branded look: the embedded kanji prints in your color of choice, sandwiched inside transparent PETG for the transparency effect. Solid is there if you want a plain unbranded bottom.
-
-**Filament note:** PETG for the outer transparent shell works reliably. For the embedded kanji layer, PETG is safest — some PLA brands don't fully adhere to PETG at the interface, so portions of the embedded logo may separate and give a splotchy look. If you want PLA for the kanji, test-print a small sample with your specific filament brand first.
-
-![Printed bottom in real life — embedded Umiko kanji visible through transparent PETG shell](images/printed_bottom_kanji.jpg)
-![Bambu Lab slicer preview](cad/print/bambu_sample.png)
-![Bambu Lab slicer preview (angle 2)](cad/print/bambu_sample2.png)
-![Printed umiko (black)](cad/print/printed_umiko_black.png)
-
-#### Workflow suggestion (case design)
-
-The included case design is complete — this workflow is only if you want to build your own (or use the included one as a starting point).
-
-1. Run `python scripts/make_cad_files.py` and `python scripts/make_plate.py` once to seed `cad/` with the STEPs.
-2. In SolidWorks, import `umiko-assembly.step` (or per-half) as reference geometry and mate to case origin.
-3. Design the case around it — pocket the PCB, add USB-C cutouts, screw holes, feet, BOOTSEL access at SW1 (166.01, 57.53) and SW2 (188.17, 77.52). v1 uses pinholes; v2 plans an integrated button — see [Rev 2 ideas](#stretch--future-ideas-rev-2).
-4. Plate: import `umiko-plate.step`, or build a subtract body from `umiko-switches-only.step` (SolidWorks "Combine → Subtract").
-5. Freeze the STEPs once case work starts — see warning below.
-6. Track your working SW files under `cad/` in git — everything else there is regenerable.
-
-> ⚠️ **Don't re-import STEPs into an active case assembly.**
->
-> A PCB change → fresh STEP export → re-import into your existing SolidWorks case will almost certainly **break downstream in-context references.** Sketches that used Convert Entities on imported edges show as dangling; dependent features fail; SW 2023's "Repair Dangling Reference" doesn't reliably help. Cause: STEP entity IDs shift on every recompile, and SW references are ID-based.
->
-> **Rule of thumb**: only re-run the scripts when the PCB actually changes AND you need the case CAD to reflect it visually. A slightly stale reference PCB in your case model saves hours of repair. The fab side is unaffected — `scripts/make_jlc_files.py` reads the current PCB directly.
->
-> **If you must re-import, isolate.** `make_cad_files.py` writes per-group STEPs (`umiko-switches.step`, `umiko-leds.step`, `umiko-connectors.step`, `umiko-ics.step`, `umiko-passives.step`, `umiko-board.step`). Swap only the subset your change touched — re-import just `umiko-switches.step` if you moved a switch, not the whole assembly. Damage stays contained. And work on a **copy** of the case first as a safety net.
-
 ### Pre-fab sanity gate (catches the "forgot to save to disk" short)
 
 We shipped a short once because the GUI DRC looked clean but the disk file wasn't. The gate below prevents that.
@@ -611,6 +549,72 @@ JLC's engineering review sends placement snapshots with a **pink dot on pin 1** 
 * **D6** (Sunny B1811URO Power LED): **no correction**
 * **U6, U8, U9**: **270°** (documented in schematic `JLCPCB_CORRECTION`; JLC usually applies proactively)
 
+## Case & Print
+
+Everything below is about the **3D-printed case, plate, and STEP/DXF exports** — not JLC-related. Move here from the old "Manufacturing Notes" section so JLC content stays purely fab-focused.
+
+### CAD exports (case / plate design)
+
+| Script | What it does |
+|---|---|
+| `scripts/make_cad_files.py` | 3D STEP exports of the whole board + component groups (assembly, halves, switches, LEDs, ICs, connectors, passives) for case CAD import into SolidWorks. Read-only on the source PCB — uses an in-memory copy + self-deleting temp file. |
+| `scripts/make_plate.py` | Plate STEP + DXF for the case top plate (integrated switch cutouts + Choc V2 stab cutouts). Optional CLI arg to also generate a "switches-only" alt plate with configurable switch cutout size (`14.2 14.0` recommended for FDM). Read-only on the source PCB. |
+
+Outputs in `cad/`:
+
+| File | Purpose |
+|---|---|
+| `umiko-assembly.step` | Full board + all components |
+| `umiko-half-{left,right}.step` | Split into just one half |
+| `umiko-{switches,leds,ics,connectors,passives,board}.step` | Component-group subsets |
+| `umiko-plate.step` / `.dxf` | Plate with switch + stab cutouts (canonical Choc V2 spec) |
+| `umiko-switches-only[-WxH].step` / `.dxf` | Alt plate with just switch cutouts at custom size |
+
+**Key numbers**:
+
+* **Board thickness**: 1.6 mm (JLC standard, ±10% — plan case pocket for up to 1.76 mm)
+* **Plate thickness**: **2.2 mm total** (bakingpy two-level) — 1.2 mm housing pocket on top + 1.0 mm wire clearance on bottom (see [Stabilizers](#stabilizers))
+* **Switch bodies render on F.Cu, hot-swap sockets on B.Cu.** Footprints live on B.Cu (where the socket pads are), but the switch body still shows on F.Cu.
+* **STEP thickness compensation**: KiCad's exporter omits outer copper (~0.07 mm) + soldermask (~0.02 mm), so both scripts add **+0.09 mm** to hit true 1.6 mm / 1.2 mm. F.Cu components ride up automatically; switch bodies (anchored to B.Cu sockets) get a `-4.1 → -4.19` 3D-model nudge to stay flush.
+* **PLA case FDM clearance**: **0.5 mm/side long axis, 0.3 mm/side short axis, 0.2 mm Z**. Print tolerance dominates PLA shrinkage / thermal. Test a corner chunk and tune slicer XY size compensation before a full-case print.
+
+![Case CAD in SolidWorks](images/umiko_case_solidworks.png)
+
+### Sample print (Bambu Lab)
+
+A sliced Bambu Studio project is included at [`cad/print/umiko.3mf`](cad/print/umiko.3mf). It contains **two variants of the branded bottom case**:
+
+* **Solid** — plain bottom, no branding cutout. STL: [`cad/print/umiko_bottom_solid.STL`](cad/print/umiko_bottom_solid.STL).
+* **Inlay** — bottom with the embedded Umiko kanji (海子) cutout for the transparency-color layer sandwich. STLs: [`cad/print/umiko_bottom.STL`](cad/print/umiko_bottom.STL) for the shell, [`cad/print/umiko_top_inlay.STL`](cad/print/umiko_top_inlay.STL) for the branding piece that sits inside the cutout. Top plate: [`cad/print/umiko_top.STL`](cad/print/umiko_top.STL).
+
+The inlay variant is the branded look: the embedded kanji prints in your color of choice, sandwiched inside transparent PETG for the transparency effect. Solid is there if you want a plain unbranded bottom.
+
+**Filament note:** PETG for the outer transparent shell works reliably. For the embedded kanji layer, PETG is safest — some PLA brands don't fully adhere to PETG at the interface, so portions of the embedded logo may separate and give a splotchy look. If you want PLA for the kanji, test-print a small sample with your specific filament brand first.
+
+![Printed bottom in real life — embedded Umiko kanji visible through transparent PETG shell](images/printed_bottom_kanji.jpg)
+![Bambu Lab slicer preview](cad/print/bambu_sample.png)
+![Bambu Lab slicer preview (angle 2)](cad/print/bambu_sample2.png)
+![Printed umiko (black)](cad/print/printed_umiko_black.png)
+
+### Workflow suggestion (case design)
+
+The included case design is complete — this workflow is only if you want to build your own (or use the included one as a starting point).
+
+1. Run `python scripts/make_cad_files.py` and `python scripts/make_plate.py` once to seed `cad/` with the STEPs.
+2. In SolidWorks, import `umiko-assembly.step` (or per-half) as reference geometry and mate to case origin.
+3. Design the case around it — pocket the PCB, add USB-C cutouts, screw holes, feet, BOOTSEL access at SW1 (166.01, 57.53) and SW2 (188.17, 77.52). v1 uses pinholes; v2 plans an integrated button — see [Rev 2 ideas](#stretch--future-ideas-rev-2).
+4. Plate: import `umiko-plate.step`, or build a subtract body from `umiko-switches-only.step` (SolidWorks "Combine → Subtract").
+5. Freeze the STEPs once case work starts — see warning below.
+6. Track your working SW files under `cad/` in git — everything else there is regenerable.
+
+> ⚠️ **Don't re-import STEPs into an active case assembly.**
+>
+> A PCB change → fresh STEP export → re-import into your existing SolidWorks case will almost certainly **break downstream in-context references.** Sketches that used Convert Entities on imported edges show as dangling; dependent features fail; SW 2023's "Repair Dangling Reference" doesn't reliably help. Cause: STEP entity IDs shift on every recompile, and SW references are ID-based.
+>
+> **Rule of thumb**: only re-run the scripts when the PCB actually changes AND you need the case CAD to reflect it visually. A slightly stale reference PCB in your case model saves hours of repair. The fab side is unaffected — `scripts/make_jlc_files.py` reads the current PCB directly.
+>
+> **If you must re-import, isolate.** `make_cad_files.py` writes per-group STEPs (`umiko-switches.step`, `umiko-leds.step`, `umiko-connectors.step`, `umiko-ics.step`, `umiko-passives.step`, `umiko-board.step`). Swap only the subset your change touched — re-import just `umiko-switches.step` if you moved a switch, not the whole assembly. Damage stays contained. And work on a **copy** of the case first as a safety net.
+
 ## Design Notes
 
 ![Schematic](images/umiko_schematic.svg)
@@ -635,6 +639,7 @@ U2/U10 use **LP5907SNX-3.3** (TI, XDFN-4, LCSC `C133572`, 250 mA) — a pin-comp
 
 * **Case-integrated BOOTSEL button per half** — v1's tiny SMD tacts (SW1/SW2) need a case pinhole and paperclip. v2: swap to a larger through-hole tact so a printed cantilever / living-hinge button can press it from outside, or use a case-integrated button style with the tact positioned under the flexure.
 * **Lower-profile OLED mounting** — the current 4-pin through-hole header puts the daughterboard 10–12 mm above the PCB, forcing the case cutout to swallow the whole board (not just the display window). Options: short-body SMD headers (~3–5 mm mated), board-to-board connectors (Hirose DF13 / JAE FI-X, 2–4 mm), or a direct SMD OLED module (eliminates the daughterboard).
+* **Relocate the OLED closer to the PCB edge** — right now it sits in the middle of the right half's top-edge zone, so any case-side "housing" around the display window has to reach inward across the plate. Shifting the OLED footprint (or a re-routed break-out) closer to the top edge gives room for a proper printed bezel/housing, and makes an **e-paper edition** viable in the same slot — a slightly larger E-Ink panel (e.g. 2.13" Waveshare) fits if the display window is at the edge instead of surrounded by keys.
 * **OLED breakout board** for the inter-half I²C lines (`SCL_*` / `SDA_*` are broken out but unwired).
 * **Sound** — small speaker + amp (e.g. PAM8302 mono class-D) + I²S DAC or codec on the RP2040 for short WAV/MP3 clips off SD or extra flash. Ocean/wave sample loops (fitting the name), click/keypress feedback, boot chime.
 
