@@ -142,40 +142,33 @@ You only do this once per half, ever. EEPROM keeps the marker until you explicit
 
 ### Flash
 
-Each half flashes independently. Three ways to get the RP2040 into BOOTSEL mode (mass-storage) — use whichever is easiest for your situation:
+**Both halves must be flashed independently** — same UF2, one at a time. With `MASTER_LEFT`, right half only enumerates USB when it's flashed in isolation (unplug split cable, plug USB straight into right's J2). Two ways to get either half into BOOTSEL mode:
 
-#### Easiest — from a running keyboard (no case-poking, no unplug)
+#### Method 1 — SMD button (SW1 for left, SW2 for right)
 
-`FN + Esc` is mapped to `QK_BOOT`. If your firmware is running and the FN layer works:
+The primary path. Works on both halves identically. Case v1 exposes each button via a pinhole; press with a paperclip / SIM ejector.
 
-1. Hold **FN** on the half you want to flash, press **Esc**
-2. Board resets into BOOTSEL and mounts as `RPI-RP2`
-3. Drag-and-drop the `.uf2` — auto-reboots into new firmware
+1. **Unplug USB** and the split cable
+2. **Hold SW1** (left PCB) or **SW2** (right PCB) — the small SMD tact next to the RP2040
+3. **Plug USB** into that half's J2 while still holding
+4. **Release** — board mounts as `RPI-RP2`
+5. Drag-and-drop the `.uf2` — the board auto-reboots into new firmware
+6. Repeat for the other half
 
-That's it. No unplugging, no button-poking. Works from a normal typing state.
+#### Method 2 — bootmagic key at power-on (**LEFT half only**)
 
-#### If FN + Esc doesn't work — hold the top-left key at power-on
+If you can't get to SW1 (case sealed, paperclip lost), the left half can enter BOOTSEL by holding a matrix key at plug-in. This also clears EEPROM as a side effect — usually what you want after a bad flash anyway.
 
-Any time firmware won't respond (bad flash, wrong keymap, EEPROM issue), you can still get into BOOTSEL by holding a physical **key on the keyboard matrix** at plug-in — no PCB button needed. On RP2040 QMK's bootmagic clears EEPROM and its reset path lands in BOOTSEL:
+1. **Unplug USB** and the split cable
+2. **Hold the top-left key** on the LEFT half — the backtick/grave key `` ` ``, matrix position `[0,0]`
+3. **Plug USB** into left's J2 while still holding
+4. **Release** after ~1 second — mounts as `RPI-RP2`, drag the `.uf2`
 
-1. **Unplug USB** from the half
-2. **Hold the top-left key** (the backtick/grave key — matrix position `[0,0]`)
-3. **Plug USB back in** while still holding
-4. **Release** after ~1 second — board mounts as `RPI-RP2`
-5. Drag the `.uf2` onto the drive
+**This does not work for the right half.** With `MASTER_LEFT`, right never becomes master and doesn't run bootmagic. Right always needs SW2 (Method 1).
 
-This is the "I broke something" recovery path — also clears EEPROM as a side effect (which is often what you want after a bad flash anyway).
+#### First plug-in ever
 
-#### Fallback — the tiny SMD button on the PCB
-
-Only needed if you can't reach either method above (e.g. brand-new board with no firmware yet, or you shorted the matrix pins somehow):
-
-1. **Unplug USB**
-2. **Hold SW1** (on the left PCB) or **SW2** (on the right PCB) — the small SMD tact between the RP2040 and the OLED cutout. Access via case pinhole with a paperclip.
-3. **Plug USB back in** while holding
-4. **Release** — mounts as `RPI-RP2`, drag the `.uf2`
-
-**First plug-in ever**: the W25Q128 flash ships blank from JLCPCB, so the RP2040 boots straight into BOOTSEL automatically — no button/key held required. Subsequent flashes need one of the methods above.
+The W25Q128 flash ships blank from JLCPCB, so the RP2040 boots straight into BOOTSEL automatically on first plug-in — no button or key held required. Applies to both halves on their first flash.
 
 No hardware reset button on the board — power-cycle + BOOTSEL covers everything. Rev 2 plans a case-integrated BOOTSEL button (see [Rev 2 ideas](#stretch--future-ideas-rev-2)).
 
@@ -294,12 +287,6 @@ Two layers: `_BASE` (0) and `_FN` (1). Layer state is synced across the split so
 | `S` | `Down` |
 | `D` | `Right` |
 | `F` | `PgDn` |
-
-**Reset**
-
-| Key | → |
-|---|---|
-| `Esc` | `QK_BOOT` — into BOOTSEL |
 
 **Editing**
 

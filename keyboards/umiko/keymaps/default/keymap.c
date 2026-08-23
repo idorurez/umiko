@@ -85,7 +85,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_RCTL
     ),
     // _FN: momentary layer
-    //   Esc → QK_BOOT
     //   Left nav:  Q=HOME W=UP  E=END  R=PGUP    A=LEFT S=DOWN D=RIGHT F=PGDN
     //   Number row: 1-6 → F1-F6, 7-0 → F7-F10, - → F11, = → F12
     //   FN + [ = prev desktop, FN + ] = next desktop
@@ -93,8 +92,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //     Y=NEXT U=HUE+ I=SAT+ O=VAL+ P=SPD+
     //     H=PREV J=HUE- K=SAT- L=VAL- ;=SPD-
     //     N=TOG
+    //   Reset: no software reset. Use SW1/SW2 (PCB tacts) or hold the
+    //   top-left key at plug-in (bootmagic, left half only).
     [_FN] = LAYOUT_all(
-        QK_BOOT,    // 0  Esc
+        KC_TRNS,    // 0  Esc/backtick — falls through to base tap dance
         KC_F1,      // 1
         KC_F2,      // 2
         KC_F3,      // 3
