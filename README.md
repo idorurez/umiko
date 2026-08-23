@@ -677,8 +677,11 @@ Ordered roughly: fix-the-defects first (things we bled on in v1), then feature a
 
 ### Nice-to-haves
 
-* **Reset button per half** — physical reset (RUN pin momentary) separate from BOOTSEL. Some users want it; costs one 4×4 tact + a pinhole in the case.
-* **Alt stabilizer spec** — Kailh Choc V2 is EOL'd (already noted in [Stabilizers](#stabilizers)). Survey what's still made and, if there's a viable replacement, tweak the plate cutout to accommodate it as a fallback.
+* **Alt stabilizer spec** — Kailh Choc V2 is EOL'd (already noted in [Stabilizers](#stabilizers)) and the plate cutout is spec'd only for it. Before committing Rev 2 plate geometry, survey what's still in production and pick a viable fallback. Alternatives worth investigating:
+  * **Gateron KS-33 v2 stabs** if they exist in Gateron's low-profile catalog (natural first check — matches the switch family).
+  * **Any in-production Choc V2-compatible low-profile stab** from Everglide, Durock, C³Equalz, KTT, or similar makers.
+  * **Switch family swap** — moving off Gateron KS-33 to a family with better stab availability. Bigger Rev 2 call; cascades to hot-swap socket footprint changes too.
+  * **Ruled out (don't re-investigate):** GLP stabs limit KS-33 v2 switch travel. bakingpy directly recommended against, and our own build experience confirmed. Not a viable fallback.
 * **Status LED on GPIO** — v1's power LED is hard-wired across the 3.3V rail (can't be turned off in software). Rev 2: put at least one indicator LED on a GPIO so QMK can drive it (caps lock, layer, etc.) and users can disable it entirely if they want.
 * **Optional: `SPLIT_USB_DETECT` for either-half-master** — pure config change, no PCB work. Lets whichever half has USB plugged in become master, auto-detected via VBUS. Zero per-half setup (unlike EE_HANDS). v1 tried `EE_HANDS + SPLIT_USB_DETECT` briefly (`5e7643d`) and reverted next day (`94bf797`) — but the friction was the EE_HANDS per-half EEPROM write, not the USB detection itself. Plain `SPLIT_USB_DETECT` alone would give either-half-master with single firmware, single flash per half, no setup step. Only worth doing if you actually want to plug USB into either half; MASTER_LEFT is fine if you always plug into left.
 
