@@ -155,16 +155,23 @@ The primary path. Works on both halves identically. Case v1 exposes each button 
 5. Drag-and-drop the `.uf2` — the board auto-reboots into new firmware
 6. Repeat for the other half
 
-#### Method 2 — bootmagic key at power-on (**LEFT half only**)
+#### Method 2 — bootmagic key at power-on (**works on either half**)
 
-If you can't get to SW1 (case sealed, paperclip lost), the left half can enter BOOTSEL by holding a matrix key at plug-in. This also clears EEPROM as a side effect — usually what you want after a bad flash anyway.
+Bootmagic runs during each half's local boot — before master/slave roles are determined — so it fires on whichever half you plug in. Handy when SW1/SW2 is sealed inside the case or the paperclip is lost. Also clears EEPROM as a side effect, which is usually what you want after a bad flash anyway.
+
+Each half's local top-left key is what bootmagic watches for:
+
+| Half | Local top-left key | Where it is physically |
+|---|---|---|
+| **Left** | `` ` `` (backtick / grave) | Top-left corner of left half |
+| **Right** | `7` | Top-left corner of right half |
+
+Steps (same for either half):
 
 1. **Unplug USB** and the split cable
-2. **Hold the top-left key** on the LEFT half — the backtick/grave key `` ` ``, matrix position `[0,0]`
-3. **Plug USB** into left's J2 while still holding
+2. **Hold the top-left key of the half you're flashing** (backtick for left, `7` for right)
+3. **Plug USB** into that half's J2 while still holding
 4. **Release** after ~1 second — mounts as `RPI-RP2`, drag the `.uf2`
-
-**This does not work for the right half.** With `MASTER_LEFT`, right never becomes master and doesn't run bootmagic. Right always needs SW2 (Method 1).
 
 #### First plug-in ever
 
