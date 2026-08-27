@@ -3,6 +3,11 @@ nul
 Thumbs.db
 desktop.ini
 
+# Windows Snipping Tool / Screenshot auto-names (e.g. "2026-08-10 20_54_21-.png").
+# Screenshots to keep should be renamed intentionally and placed in images/.
+cad/print/????-??-?? ??_??_??*.png
+????-??-?? ??_??_??*.png
+
 # KiCad lock/autosave files
 ~*.lck
 _autosave-*
