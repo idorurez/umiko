@@ -6,21 +6,19 @@
 - [x] Part selected: SK6812SIDE-A 4.0×2.0×1.5mm side-view (thin 0.85mm Adafruit 4691 variant same pads, compatible)
 - [x] Footprints created: `files/footprints/SK6812-4020-SideView.pretty/SK6812-4020-SideView.kicad_mod` and `_0p85mm` variant
 - [x] Datasheet: DIN/VDD/DOUT/GND left→right toward edge, 4 pads 1.0mm pitch 0.6×0.9mm land, 5V 800kHz GRB
+- [x] Decision: 16.7mm pitch (60/m) — 30 left / 33 right = 63 underglow total, 60 left total / 66 right total = 126 with per-key
 - [ ] Measure actual Edge.Cuts perimeter in KiCad (left/right, not bounding box)
 - [ ] Map keepouts: USB-C, inserts, screws, support ring 2×2mm hollow, OLED, TRRS
 - [ ] Draw usable LED path offset 0.8-1mm from Edge.Cuts
-- [ ] Choose density: 20mm pitch (~20 left / 22 right, total 42 underglow + 63 per-key = 105 total) vs 16.7mm pitch (~30/33 per half, total 126) vs 15mm pitch (~33/36)
 - [ ] Recalc power: worst white 45mA/LED, typical mixed 15-20mA, RP2040 100mA, OLED 20-40mA, polyfuse 500mA hold / 1A trip per half — set `RGB_MATRIX_MAXIMUM_BRIGHTNESS` 100-120 after bench, not 150
 - [ ] Build 2-4 LED optical coupon with Proto-pasta iris material, test diffusion and seam
 - [ ] New KiCad symbol for SIDE pinout, update schematic, maintain GP25 single chain, add 0-ohm bypass for optional DNP positions (empty breaks chain)
 
-## LED ordering numbers (with spares)
+## LED ordering numbers (with spares) — decision 16.7mm
 - Per-key: 63 total (30 left, 33 right) SK6812MINI-E — order 70+ (10% spare)
-- Underglow side-view: provisional 20-33 per half depending on pitch:
-  - Sparse 20mm: 20 left + 22 right = 42 underglow → 42 + 10% = ~46-50 order
-  - Dense 16.7mm: 30 left + 33 right = 63 underglow → 63 + 15% = ~72-75 order
-  - Dense 15mm: 33 left + 36 right = 69 underglow → ~80 order
-- Total to order: 70 per-key + 50-80 underglow = 120-150 LEDs to cover either density with spares
+- Underglow side-view 16.7mm: 30 left + 33 right = 63 underglow → 63 + 15% = ~72-75 order
+- Total to order for 16.7mm: 70 per-key + 75 underglow = ~145 LEDs
+- Other densities for reference: 20mm sparse 42 underglow → ~50 order, 15mm dense 69 → ~80 order
 
 ## Switch support (keep narrow)
 - Existing: Gateron KS-33 (and likely KS-27 compatible — verify official drawings before claiming)
