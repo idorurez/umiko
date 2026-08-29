@@ -7,4 +7,5 @@
   (lib (name "mj-4pp-9")(type "KiCad")(uri "C:/Users/neuro/dev/keyboard/kicad-MJ-4PP-9/MJ-4PP-9.pretty")(options "")(descr ""))
   (lib (name "bake-kujira")(type "KiCad")(uri "C:/Users/neuro/dev/keyboard/umiko/lib")(options "")(descr "")(disabled))
   (lib (name "proton_c")(type "KiCad")(uri "C:/Users/neuro/dev/keyboard/qmk_hardware/kicad/proton_c")(options "")(descr "")(disabled))
+  (lib (name "umiko-rev2")(type "KiCad")(uri "${KIPRJMOD}/footprints/SK6812-4020-SideView.pretty")(options "")(descr "Rev 2 project-local footprints (SK6812-4020 SIDE views)"))
 )

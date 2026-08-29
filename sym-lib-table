@@ -6,4 +6,5 @@
   (lib (name "mj-4pp-9")(type "Legacy")(uri "C:/Users/neuro/dev/keyboard/kicad-MJ-4PP-9/MJ-4PP-9-symbol/MJ-4PP-9.lib")(options "")(descr ""))
   (lib (name "proton_c")(type "Legacy")(uri "C:/Users/neuro/dev/keyboard/qmk_hardware/kicad/proton_c/proton_c.lib")(options "")(descr ""))
   (lib (name "umiko-rescue")(type "Legacy")(uri "${KIPRJMOD}/umiko-rescue.lib")(options "")(descr ""))
+  (lib (name "umiko-rev2")(type "KiCad")(uri "${KIPRJMOD}/symbols/umiko-rev2.kicad_sym")(options "")(descr "Rev 2 project-local symbols (SK6812-4020-SideView etc.)"))
 )
