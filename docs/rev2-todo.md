@@ -10,7 +10,14 @@
 - [ ] Measure actual Edge.Cuts perimeter in KiCad (left/right, not bounding box)
 - [ ] Map keepouts: USB-C, inserts, screws, support ring 2×2mm hollow, OLED, TRRS
 - [ ] Draw usable LED path offset 0.8-1mm from Edge.Cuts
-- [ ] Recalc power: worst white 45mA/LED, typical mixed 15-20mA, RP2040 100mA, OLED 20-40mA, polyfuse 500mA hold / 1A trip per half — set `RGB_MATRIX_MAXIMUM_BRIGHTNESS` 100-120 after bench, not 150
+- [x] Power budget analysis (2026-08-28): Rev 1 polyfuse (MF-PSMF110X-2, marked 500 mA in Value but likely 1.1 A hold in reality) is undersized for 126-LED Rev 2. Worst-case per half at brightness 150/255: left 60 LEDs × 45 mA × 59% = ~1.56 A, right 66 LEDs × ~1.72 A. Solid-white sustained peaks exceed 1 A hold. **Decision: upgrade polyfuse to 2 A hold / 4 A trip so we can keep `RGB_MATRIX_MAXIMUM_BRIGHTNESS` at 150 (brighter than expected). Bench-verify final cap after Rev 2 build.**
+
+## Polyfuse upgrade (Rev 2)
+- [ ] **Replace F1 + F2** with 2 A hold / 4 A trip polyfuse. Bourns candidate: `MF-FSMF200X-2` (2.00 A hold / 4.00 A trip). Package is likely **1206 (3.2 × 1.6 mm)** — larger than the current 0603.
+- [ ] **Verify LCSC availability + exact package** at order time. If MF-FSMF200X-2 isn't stocked, plausible fallbacks in the same 1206 range: MF-FSMF250X-2 (2.5 A), MF-USMF200 (2 A, 1812). Any 2 A+ hold / 4 A+ trip polyfuse works — physical footprint dictates the pick.
+- [ ] **Update PCB footprint** from `Fuse:Fuse_0603_1608Metric` → `Fuse:Fuse_1206_3216Metric` (or the matching pretty for the chosen part). Requires PCB redraw at F1/F2 positions on both halves.
+- [ ] **Update BOM:** MPN + LCSC + value fields on F1/F2 after part is finalized. Current placeholders in schematic: Value=`2A`, MPN=`MF-FSMF200X-2`, LCSC=`TBD-verify` (from Aug 2026 update).
+- [ ] **Verify USB-C host will actually supply 2 A.** Basic USB-C is 900 mA. Need at least USB-C 5V/1.5A (upgraded) or 5V/3A profile. Board doesn't negotiate PD, so relies on host default. Cheap hubs may cap current — document in README as "requires ≥1.5A USB-C source for full-brightness Rev 2 operation."
 - [ ] Build 2-4 LED optical coupon with Proto-pasta iris material, test diffusion and seam
 - [ ] New KiCad symbol for SIDE pinout, update schematic, maintain GP25 single chain, add 0-ohm bypass for optional DNP positions (empty breaks chain)
 
