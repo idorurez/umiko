@@ -13,11 +13,20 @@
 - [x] Power budget analysis (2026-08-28): Rev 1 polyfuse (MF-PSMF110X-2, marked 500 mA in Value but likely 1.1 A hold in reality) is undersized for 126-LED Rev 2. Worst-case per half at brightness 150/255: left 60 LEDs × 45 mA × 59% = ~1.56 A, right 66 LEDs × ~1.72 A. Solid-white sustained peaks exceed 1 A hold. **Decision: upgrade polyfuse to 2 A hold / 4 A trip so we can keep `RGB_MATRIX_MAXIMUM_BRIGHTNESS` at 150 (brighter than expected). Bench-verify final cap after Rev 2 build.**
 
 ## Polyfuse upgrade (Rev 2)
-- [ ] **Replace F1 + F2** with 2 A hold / 4 A trip polyfuse. Bourns candidate: `MF-FSMF200X-2` (2.00 A hold / 4.00 A trip). Package is likely **1206 (3.2 × 1.6 mm)** — larger than the current 0603.
-- [ ] **Verify LCSC availability + exact package** at order time. If MF-FSMF200X-2 isn't stocked, plausible fallbacks in the same 1206 range: MF-FSMF250X-2 (2.5 A), MF-USMF200 (2 A, 1812). Any 2 A+ hold / 4 A+ trip polyfuse works — physical footprint dictates the pick.
-- [ ] **Update PCB footprint** from `Fuse:Fuse_0603_1608Metric` → `Fuse:Fuse_1206_3216Metric` (or the matching pretty for the chosen part). Requires PCB redraw at F1/F2 positions on both halves.
-- [ ] **Update BOM:** MPN + LCSC + value fields on F1/F2 after part is finalized. Current placeholders in schematic: Value=`2A`, MPN=`MF-FSMF200X-2`, LCSC=`TBD-verify` (from Aug 2026 update).
-- [ ] **Verify USB-C host will actually supply 2 A.** Basic USB-C is 900 mA. Need at least USB-C 5V/1.5A (upgraded) or 5V/3A profile. Board doesn't negotiate PD, so relies on host default. Cheap hubs may cap current — document in README as "requires ≥1.5A USB-C source for full-brightness Rev 2 operation."
+- [x] **Part selected: Bourns MF-MSMF200-2** (LCSC `C210837`, ~$0.057, in stock). 2.0 A hold / 4.0 A trip / 6 V max / 1206 package. Verified 2026-08-28 via LCSC search. My earlier `MF-FSMF200X-2` guess was wrong on the series code (FSMF is through-hole radial, MSMF is the 1206 SMD series). Schematic F1/F2 updated to reflect: Value=`2A`, MPN=`MF-MSMF200-2`, LCSC=`C210837`, Footprint=`Fuse:Fuse_1206_3216Metric`.
+- [ ] **Update PCB footprint** at F1/F2 from `Fuse:Fuse_0603_1608Metric` → `Fuse:Fuse_1206_3216Metric` via "Update PCB from Schematic" in KiCad. Requires PCB redraw at F1/F2 positions on both halves (pads are slightly bigger; check track clearances after the update).
+- [ ] **Backup part options** if C210837 goes out of stock: MF-NSMF200-2 (LCSC `C89656`, same 2A/1206), SF-1206F200-2 (LCSC `C719183`, pricier).
+- [ ] **Verify USB-C host will actually supply the current.** Basic USB-C is 900 mA. Need at least USB-C 5V/1.5A (upgraded) or 5V/3A profile. Board doesn't negotiate PD, so relies on host default. Cheap hubs may cap current — document in README as "requires ≥1.5 A USB-C source for full-brightness Rev 2 operation."
+
+### Power-draw research (2026-08-28)
+
+Adafruit's rule-of-thumb for real-world SK6812 animation load: **~20 mA/LED average** (not 45 mA worst-case, not Dygma's 0.85 mA — those are the wireless-battery-capped outliers). For umiko Rev 2:
+- Left: 60 LEDs × 20 mA + 100 mA MCU/OLED = ~1.3 A typical
+- Right: 66 LEDs × 20 mA + 100 mA = ~1.42 A typical
+
+Existing MF-PSMF110X-2 (1.1 A hold) is **undersized for typical animation**, not just worst case. Aligns with r/olkb reports of random RGB dropouts on 100+ LED splits. 2 A / 1206 gives thermal-cool margin at 1.4 A sustained, handles solid-white transient peaks at brightness 150 without concern, and USB-C source current-limiting is the primary short-circuit protection anyway.
+
+Sources: [Adafruit NeoPixel Überguide](https://learn.adafruit.com/adafruit-neopixel-uberguide/powering-neopixels), [SK6812 measurements (dest-unreach.be)](https://blog.dest-unreach.be/2023/08/31/sk6812/), [Digital LED power (quinled.info)](https://quinled.info/2020/03/12/digital-led-power-usage/).
 - [ ] Build 2-4 LED optical coupon with Proto-pasta iris material, test diffusion and seam
 - [ ] New KiCad symbol for SIDE pinout, update schematic, maintain GP25 single chain, add 0-ohm bypass for optional DNP positions (empty breaks chain)
 
