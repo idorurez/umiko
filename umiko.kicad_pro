@@ -860,7 +860,7 @@
         "uuid": "4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
       }
     ],
-    "used_designators": "LED91",
+    "used_designators": "#PWR67,#PWR69,#PWR73,#PWR75,#PWR78-79,#PWR81,#PWR85,#PWR152,#PWR234,#PWR237-238,C75,C159",
     "variants": []
   },
   "sheets": [
