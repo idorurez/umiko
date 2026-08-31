@@ -1,0 +1,94 @@
+#VRML V2.0 utf8
+# Placeholder 3D model for SK6812/WS2812B SIDE 4020.
+# Package height varies by manufacturer:
+#   SK6812 datasheet nominal:      1.60 mm
+#   Some WS2812B-branded variants: 1.90-2.00 mm
+# Using 2.00 mm to represent the worst-case (thickest known variant).
+# Footprint origin at (0,0,0), Z is height above PCB surface, +Y is emit direction.
+# KiCad expects WRL in inches (1 inch = 25.4 mm) — scaled below.
+# TODO: replace with proper SolidWorks-exported STEP if precise case clearance matters.
+
+Transform {
+  scale 0.03937 0.03937 0.03937
+  children [
+    # ---- Main package body (white plastic), 4.0 x 2.0 x 2.00 mm ----
+    Transform {
+      translation 0 0 1.00
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.92 0.92 0.88
+              specularColor 0.30 0.30 0.30
+              shininess 0.30
+            }
+          }
+          geometry Box { size 4.0 2.0 2.00 }
+        }
+      ]
+    }
+
+    # ---- Emit face silicone lens (translucent, on +Y side) ----
+    Transform {
+      translation 0 1.02 1.00
+      rotation 1 0 0 1.5708
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.95 0.95 0.92
+              transparency 0.30
+              emissiveColor 0.10 0.10 0.10
+            }
+          }
+          geometry Box { size 3.2 1.90 0.05 }
+        }
+      ]
+    }
+
+    # ---- Back-face dark stripe ----
+    Transform {
+      translation 0 -1.02 0.30
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.10 0.10 0.10
+            }
+          }
+          geometry Box { size 3.2 0.05 0.40 }
+        }
+      ]
+    }
+
+    # ---- Four solder pads, 0.60 x 0.90 mm at 1.0 mm pitch ----
+    Transform {
+      translation -1.5 0 0.02
+      children [ Shape {
+        appearance Appearance { material Material { diffuseColor 0.75 0.75 0.75 } }
+        geometry Box { size 0.60 0.90 0.05 }
+      } ]
+    }
+    Transform {
+      translation -0.5 0 0.02
+      children [ Shape {
+        appearance Appearance { material Material { diffuseColor 0.75 0.75 0.75 } }
+        geometry Box { size 0.60 0.90 0.05 }
+      } ]
+    }
+    Transform {
+      translation 0.5 0 0.02
+      children [ Shape {
+        appearance Appearance { material Material { diffuseColor 0.75 0.75 0.75 } }
+        geometry Box { size 0.60 0.90 0.05 }
+      } ]
+    }
+    Transform {
+      translation 1.5 0 0.02
+      children [ Shape {
+        appearance Appearance { material Material { diffuseColor 0.75 0.75 0.75 } }
+        geometry Box { size 0.60 0.90 0.05 }
+      } ]
+    }
+  ]
+}
