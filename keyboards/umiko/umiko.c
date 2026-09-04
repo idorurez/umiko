@@ -216,3 +216,28 @@ led_config_t g_led_config = { {
 } };
 
 #endif
+
+// ─── OLED — SSD1312 orientation fix ─────────────────────────────────────
+// The 1.09" SSD1312 128×64 module used on rev2 has its column mapping
+// opposite to what QMK's stock ssd1306 driver expects. The driver's init
+// sends SEG_REMAP=0xA1 for non-180 rotations, which mirrors this module
+// horizontally (text reads backwards).
+//
+// Fix: after init, re-send SEG_REMAP=0xA0 (normal) + COM_SCAN_DEC=0xC8 +
+// NORMAL_DISPLAY=0xA6. A one-shot at boot didn't stick during testing
+// (probably races the driver's init tail); per-frame flooded I2C and
+// didn't stick either. Re-sending every ~5s works reliably.
+//
+// See memory/hardware_ssd1312_seg_remap_fix.md for the debugging trail.
+#ifdef OLED_ENABLE
+bool oled_task_kb(void) {
+    static uint32_t last_fix = 0;
+    uint32_t now = timer_read32();
+    if (last_fix == 0 || TIMER_DIFF_32(now, last_fix) > 5000) {
+        last_fix = now;
+        static const uint8_t fix[] = {0x00, 0xA0, 0xC8, 0xA6};
+        oled_send_cmd(fix, sizeof(fix));
+    }
+    return oled_task_user();
+}
+#endif

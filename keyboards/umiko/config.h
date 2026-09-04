@@ -5,10 +5,12 @@
 // split.serial.pin field. Half-duplex single-wire mode is inferred
 // when RX and TX pins are the same (no full-duplex flag needed).
 
-// OLED (0.91" SSD1306, 128x32)
+// OLED (1.09" SSD1312, 128x64) — Estardyn module, I2C, 4-pin
 // Portrait rotation is set via oled_init_user() in keymap.c
 // (OLED_ROTATION_90/270 is an enum value, not a define, so it lives in code)
-#define OLED_DISPLAY_128X32
+// Orientation fix (mirrored under stock ssd1306 driver) lives in
+// umiko.c oled_task_kb — see memory/hardware_ssd1312_seg_remap_fix.md.
+#define OLED_DISPLAY_128X64
 #define OLED_TIMEOUT 0         // never sleep — reef keeps swimming
 
 // Sync WPM across split so the OLED (on right) can react to typing
