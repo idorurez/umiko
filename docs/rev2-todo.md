@@ -56,6 +56,11 @@ Sources: [Adafruit NeoPixel Überguide](https://learn.adafruit.com/adafruit-neop
 - At-surface lettering (changed 2026-08-11)
 - Prefab gate: `kicad-cli --refill-zones --save-board --severity-error --exit-code-violations`
 
+## Underglow chain wiring (2026-09-04)
+- [ ] **LED49 is mis-wired into the RIGHT chain** — physically on the LEFT half (X=90.09, bottom edge) but its DIN/DOUT sits between LED55 and LED48 in the right chain. Move to LEFT chain, between LED37 and LED91 in bottom-edge order.
+- [ ] **Full chain re-order to clean perimeter walks** on both halves — current chain zigzags (right-edge skips LED17, bottom edge jumps LED37→LED36→LED30 backwards, similar on top-edge and right half). A perimeter CW walk from LED16 (left) / LED74 area (right) would shorten trace length and eliminate crossovers. See conversation 2026-09-04 for the recommended orderings.
+- [ ] **Right-half LED placement pass** — mirror what was done for the left half (rotation review + edge redistribution with corner tightening). Right rotations may still be wrong from earlier scripts (user's tweaks were left-only).
+
 ## Power / firmware
 - led_count currently 90 (split_count [42,48] left 12+30 right 15+33). Update to new counts after layout.
 - Pins: GP0, GP2–GP16, GP25 (verify unused pins against schematic/PCB)
