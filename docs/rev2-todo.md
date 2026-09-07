@@ -56,6 +56,12 @@ Sources: [Adafruit NeoPixel Überguide](https://learn.adafruit.com/adafruit-neop
 - At-surface lettering (changed 2026-08-11)
 - Prefab gate: `kicad-cli --refill-zones --save-board --severity-error --exit-code-violations`
 
+## Underglow decoupling cap placement (blocked on socket decision, 2026-09-06)
+- [ ] **Mill-Max vs Kailh hotswap decision** — Mill-Max sockets are ~6.5mm round pads vs hotswap's 13×15mm rectangular body. Mill-Max frees ~10-13mm of perimeter-adjacent real estate that would otherwise force underglow caps into awkward spots.
+- [ ] **If Mill-Max**: swap all switch footprints, re-evaluate cap placement with new free space.
+- [ ] **Cap placement pattern (post-decision)**: each SK6812-4020-SideView LED (LED5, LED6, LED15-LED18, LED24-LED25, LED30-LED31, LED36-LED37, LED48-LED49, LED54-LED55, LED60-LED61, LED67-LED68, LED74-LED75, LED79, LED84, LED88-LED90, LED91-LED107, LED108-LED127) needs its 100nF decoupling cap placed adjacent. User confirmed **LED16 ↔ C10** as the reference pair; Hungarian-optimal 1:1 mapping saved at `scratchpad/led_cap_pairs.json`.
+- [x] C10 placed as example (3.6mm above LED16 along right-edge perimeter, rot 180) — user tuned by hand. Pattern rule TBD once socket footprint is finalized.
+
 ## Underglow chain wiring (2026-09-04)
 - [ ] **LED49 is mis-wired into the RIGHT chain** — physically on the LEFT half (X=90.09, bottom edge) but its DIN/DOUT sits between LED55 and LED48 in the right chain. Move to LEFT chain, between LED37 and LED91 in bottom-edge order.
 - [ ] **Full chain re-order to clean perimeter walks** on both halves — current chain zigzags (right-edge skips LED17, bottom edge jumps LED37→LED36→LED30 backwards, similar on top-edge and right half). A perimeter CW walk from LED16 (left) / LED74 area (right) would shorten trace length and eliminate crossovers. See conversation 2026-09-04 for the recommended orderings.
