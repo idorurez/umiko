@@ -58,7 +58,7 @@
 		(effects (font (size 0.6 0.6) (thickness 0.1))))
 
 	(pad "" np_thru_hole circle (at 0 0)
-		(size 5.25 5.25) (drill 5.25)
+		(size 5.1 5.1) (drill 5.1)
 		(layers "F&B.Cu" "*.Mask")
 		(uuid "10000000-0000-0000-0000-000000000010"))
 	(pad "" np_thru_hole circle (at -5.08 0)
