@@ -61,32 +61,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "copper_edge_clearance|138158795|125538000|67fbef0c-39dd-4df7-ac28-160390db4b71|8bc2c25a-a1f1-4ce8-b96a-a4f8f4c35079",
-          ""
-        ],
-        [
-          "copper_edge_clearance|216743250|125545000|01e273b8-cd0c-49c5-8471-bd776dc5bd5c|feb26ecb-9193-46ea-a41b-d09305bf0a3e",
-          ""
-        ],
-        [
-          "copper_edge_clearance|311993250|106495000|577a5adf-7e08-4e2e-aa80-5f10d76d9e3b|8d9a3ecc-539f-41da-8099-d37cea9c28e7",
-          ""
-        ],
-        [
-          "copper_edge_clearance|316755750|87445000|7a322c50-e18e-459d-b907-bd083c769104|17ed3508-fa2e-4593-a799-bfd39a6cc14d",
-          ""
-        ],
-        [
-          "copper_edge_clearance|319137000|49345000|16dd0d9f-780e-404c-a6f2-0d6543686858|114b97d7-8a7a-416d-a820-d9a8edbf11a7",
-          ""
-        ],
-        [
-          "copper_edge_clearance|42908795|106488000|514ebb41-51ea-4e0c-a772-abcf74ae3da2|eb473bfd-fc2d-4cf0-8714-6b7dd95b0a03",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -860,7 +835,7 @@
         "uuid": "4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
       }
     ],
-    "used_designators": "C75,C160,LED49,LED127,#PWR239",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
