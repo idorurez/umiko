@@ -149,129 +149,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:TestPoint_Small"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.762)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "TP"
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TestPoint_Small"
-				(at 0 2.032 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "test point"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TestPoint_Small_0_1"
-				(circle
-					(center 0 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "TestPoint_Small_1_1"
-				(pin passive line
-					(at 0 0 90)
-					(length 0)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Connector:USB_C_Receptacle_USB2.0"
 			(pin_names
 				(offset 1.016)
@@ -4639,214 +4516,6 @@
 						)
 					)
 					(number "57"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "PCM_0xcb:SSD1306"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U1"
-				(at 1.0794 7.62 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "SSD1306"
-				(at 1.0794 -4.445 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "0xcb:128x64OLED"
-				(at -6.35 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "amazon"
-				(at -6.35 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "SSD1306 OLED"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Alt Part Nb." "-"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Another Part Nb." "-"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Part Nb." "-"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "SSD1306"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "SSD1306-128x64_OLED:SSD1306"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SSD1306_0_1"
-				(rectangle
-					(start -6.35 6.35)
-					(end 6.35 -6.35)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "SSD1306_1_1"
-				(pin input line
-					(at 3.81 8.89 270)
-					(length 2.54)
-					(name "SDA"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 1.27 8.89 270)
-					(length 2.54)
-					(name "SCL"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -1.27 8.89 270)
-					(length 2.54)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -3.81 8.89 270)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -9392,12 +9061,6 @@
 		(uuid "302f32a5-a9a2-47b2-864c-75078af0cd4e")
 	)
 	(junction
-		(at 385.572 253.238)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "304c4307-38eb-4c29-9e89-f5e4e16b6e8c")
-	)
-	(junction
 		(at 335.28 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11502,12 +11165,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d1e3a861-4432-48a4-9cbb-35920a815b4b")
-	)
-	(junction
-		(at 383.032 241.808)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d28d31b0-c781-46e8-8b7b-9e0aba07c91f")
 	)
 	(junction
 		(at 371.856 161.798)
@@ -15987,16 +15644,6 @@
 	)
 	(wire
 		(pts
-			(xy 385.572 251.46) (xy 385.572 253.238)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "505cd1bc-6751-4ed5-b073-722c250c0975")
-	)
-	(wire
-		(pts
 			(xy 87.63 227.584) (xy 89.408 227.584)
 		)
 		(stroke
@@ -16204,16 +15851,6 @@
 			(type default)
 		)
 		(uuid "550305b6-00c9-4ffa-bf82-08d8bb9994f7")
-	)
-	(wire
-		(pts
-			(xy 383.032 240.792) (xy 383.032 241.808)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "553ebf77-e509-43c5-b3d9-37d44e8b65e4")
 	)
 	(wire
 		(pts
@@ -18367,16 +18004,6 @@
 	)
 	(wire
 		(pts
-			(xy 383.032 241.808) (xy 383.032 254)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8bed4881-0ce0-4991-bdfd-59a39127612a")
-	)
-	(wire
-		(pts
 			(xy 311.404 171.704) (xy 319.024 171.704)
 		)
 		(stroke
@@ -18614,16 +18241,6 @@
 			(type default)
 		)
 		(uuid "92bd5e94-c28a-40b2-a2bd-6f1a5097b850")
-	)
-	(wire
-		(pts
-			(xy 385.572 253.238) (xy 385.572 254)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "92bed72b-765a-4f7f-8d6b-8a17b33e81d2")
 	)
 	(wire
 		(pts
@@ -24915,30 +24532,6 @@
 			)
 		)
 	)
-	(global_label "SDA_R"
-		(shape input)
-		(at 385.572 251.46 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "966a54ff-18aa-4d4a-abf2-be4815ab3ea0")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 385.572 242.574 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "col1_R"
 		(shape input)
 		(at 463.55 178.308 0)
@@ -25467,30 +25060,6 @@
 			)
 		)
 	)
-	(global_label "SCL_R"
-		(shape input)
-		(at 383.032 240.792 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "dc17b881-764e-4f8f-b2a1-b314fef198bd")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 383.032 231.9665 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "col1_L"
 		(shape input)
 		(at 85.09 54.61 180)
@@ -25897,7 +25466,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 151.13 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -25975,7 +25544,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 176.53 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -26053,7 +25622,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 201.93 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -26131,7 +25700,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 558.038 66.548 0)
 			(hide yes)
 			(show_name no)
@@ -26209,7 +25778,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 608.838 66.548 0)
 			(hide yes)
 			(show_name no)
@@ -26390,7 +25959,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.5U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1.5U"
 			(at 49.53 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -26468,7 +26037,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 634.238 91.948 0)
 			(hide yes)
 			(show_name no)
@@ -26649,7 +26218,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 685.038 91.948 0)
 			(hide yes)
 			(show_name no)
@@ -26933,7 +26502,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 558.038 117.348 0)
 			(hide yes)
 			(show_name no)
@@ -27011,7 +26580,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 583.438 117.348 0)
 			(hide yes)
 			(show_name no)
@@ -27089,7 +26658,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 100.33 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -27270,7 +26839,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 125.73 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -27657,7 +27226,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 583.438 142.748 0)
 			(hide yes)
 			(show_name no)
@@ -27941,7 +27510,7 @@
 				)
 			)
 		)
-		(property "Footprint" "onigaku:Gateron-KS33-2.0-Hotswap-2.75U_stabilized"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_Stabilized_2.75U"
 			(at 685.038 142.748 0)
 			(hide yes)
 			(show_name no)
@@ -28122,7 +27691,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.25U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1.25U"
 			(at 608.838 168.148 0)
 			(hide yes)
 			(show_name no)
@@ -30003,7 +29572,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 49.53 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -30184,7 +29753,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 125.73 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -30468,7 +30037,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 532.638 66.548 0)
 			(hide yes)
 			(show_name no)
@@ -30649,7 +30218,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 659.638 66.548 0)
 			(hide yes)
 			(show_name no)
@@ -30727,7 +30296,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 100.33 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -30908,7 +30477,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 201.93 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -31192,7 +30761,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 583.438 91.948 0)
 			(hide yes)
 			(show_name no)
@@ -31373,7 +30942,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 608.838 91.948 0)
 			(hide yes)
 			(show_name no)
@@ -31451,7 +31020,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.75U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1.75U"
 			(at 49.53 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -31529,7 +31098,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 100.33 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -31607,7 +31176,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 151.13 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -31685,7 +31254,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 201.93 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -31866,7 +31435,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 532.638 117.348 0)
 			(hide yes)
 			(show_name no)
@@ -32356,7 +31925,7 @@
 				)
 			)
 		)
-		(property "Footprint" "onigaku:Gateron-KS33-2.0-Hotswap-2.25U_stabilized"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_Stabilized_2.25U"
 			(at 74.93 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -32537,7 +32106,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 608.838 142.748 0)
 			(hide yes)
 			(show_name no)
@@ -32615,7 +32184,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 634.238 142.748 0)
 			(hide yes)
 			(show_name no)
@@ -32796,7 +32365,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.25U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1.25U"
 			(at 634.238 168.148 0)
 			(hide yes)
 			(show_name no)
@@ -32977,7 +32546,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.25U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1.25U"
 			(at 685.038 168.148 0)
 			(hide yes)
 			(show_name no)
@@ -33158,7 +32727,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.25U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1.25U"
 			(at 710.438 168.148 0)
 			(hide yes)
 			(show_name no)
@@ -33580,7 +33149,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.25U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1.25U"
 			(at 100.33 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -39895,7 +39464,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 634.238 66.548 0)
 			(hide yes)
 			(show_name no)
@@ -40282,7 +39851,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 151.13 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -40463,7 +40032,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 176.53 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -40541,7 +40110,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 532.638 91.948 0)
 			(hide yes)
 			(show_name no)
@@ -40619,7 +40188,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 558.038 91.948 0)
 			(hide yes)
 			(show_name no)
@@ -40800,7 +40369,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 659.638 91.948 0)
 			(hide yes)
 			(show_name no)
@@ -41084,7 +40653,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 125.73 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -41265,7 +40834,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 659.638 117.348 0)
 			(hide yes)
 			(show_name no)
@@ -41446,7 +41015,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 532.638 142.748 0)
 			(hide yes)
 			(show_name no)
@@ -41627,7 +41196,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.25U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1.25U"
 			(at 49.53 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -43934,7 +43503,7 @@
 				)
 			)
 		)
-		(property "Footprint" "onigaku:Gateron-KS33-2.0-Hotswap-2.75U_stabilized"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_Stabilized_2.75U"
 			(at 532.638 168.148 0)
 			(hide yes)
 			(show_name no)
@@ -56631,7 +56200,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 74.93 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -56812,7 +56381,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 100.33 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -56993,7 +56562,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 583.438 66.548 0)
 			(hide yes)
 			(show_name no)
@@ -57174,7 +56743,7 @@
 				)
 			)
 		)
-		(property "Footprint" "onigaku:Gateron-KS33-2.0-Hotswap-2U_stabilized"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_Stabilized_2U"
 			(at 710.438 66.548 0)
 			(hide yes)
 			(show_name no)
@@ -57252,7 +56821,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 125.73 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -57639,7 +57208,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.5U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1.5U"
 			(at 710.438 91.948 0)
 			(hide yes)
 			(show_name no)
@@ -57923,7 +57492,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 176.53 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -58001,7 +57570,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 608.838 117.348 0)
 			(hide yes)
 			(show_name no)
@@ -58182,7 +57751,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 634.238 117.348 0)
 			(hide yes)
 			(show_name no)
@@ -58363,7 +57932,7 @@
 				)
 			)
 		)
-		(property "Footprint" "onigaku:Gateron-KS33-2.0-Hotswap-2.25U_stabilized"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_Stabilized_2.25U"
 			(at 685.038 117.348 0)
 			(hide yes)
 			(show_name no)
@@ -58544,7 +58113,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 151.13 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -58622,7 +58191,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 176.53 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -58803,7 +58372,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 201.93 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -58881,7 +58450,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1U"
 			(at 558.038 142.748 0)
 			(hide yes)
 			(show_name no)
@@ -59062,7 +58631,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.25U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1.25U"
 			(at 74.93 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -59140,7 +58709,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Gateron_KS33_Hotswap:Gateron-KS33-Hotswap-1.25U"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_1.25U"
 			(at 125.73 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -59218,7 +58787,7 @@
 				)
 			)
 		)
-		(property "Footprint" "onigaku:Gateron-KS33-2.0-Hotswap-2.25U_stabilized"
+		(property "Footprint" "umiko-hybrid-switches:SW_MX_Gateron_LowProfile_Hybrid_THT_Stabilized_2.25U"
 			(at 201.93 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -62246,85 +61815,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 261.874 205.994 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "108134c4-9d52-4f24-8b1c-45dc21f39d60")
-		(property "Reference" "TP5"
-			(at 258.064 205.994 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 263.144 202.184 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "PCM_0xcb:TestPoint_Pad_D0.8mm"
-			(at 266.954 205.994 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 266.954 205.994 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 261.874 205.994 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "37a1ab8c-cadd-4212-a7cf-a25922dfdd80")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "TP5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 495.3 197.358 0)
 		(unit 1)
@@ -62543,107 +62033,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 261.874 200.914 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "12a4c27a-302c-4afb-ab3e-66be7cd84995")
-		(property "Reference" "TP1"
-			(at 258.064 200.914 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "CLK"
-			(at 263.144 197.104 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "PCM_0xcb:TestPoint_Pad_D0.8mm"
-			(at 266.954 200.914 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 266.954 200.914 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 261.874 200.914 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB_CORRECTION" ""
-			(at 261.874 200.914 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 261.874 200.914 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b20ea5d2-6eb9-4995-a53b-e543d6b4e40f")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -63515,107 +62904,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 261.874 203.454 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1a3ea7f4-58ad-4eaa-9cea-52fc7f40f72a")
-		(property "Reference" "TP2"
-			(at 258.064 203.454 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "DIO"
-			(at 263.144 207.264 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "PCM_0xcb:TestPoint_Pad_D0.8mm"
-			(at 266.954 203.454 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 266.954 203.454 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 261.874 203.454 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB_CORRECTION" ""
-			(at 261.874 203.454 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 261.874 203.454 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "517935cf-48ae-4be2-89cf-18582d2c1f51")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "TP2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 316.23 97.79 0)
 		(unit 1)
@@ -64143,85 +63431,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "R25")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 406.4 204.978 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "219d8525-8416-447c-a1fb-d58e71fda9f9")
-		(property "Reference" "TP7"
-			(at 402.59 204.978 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 407.67 201.168 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "PCM_0xcb:TestPoint_Pad_D0.8mm"
-			(at 411.48 204.978 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 411.48 204.978 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 406.4 204.978 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2cb6c602-a607-4dba-906d-032a12ccc0e2")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "TP7")
 					(unit 1)
 				)
 			)
@@ -65010,85 +64219,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "R10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 261.874 208.534 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "288eca7b-a2ac-478d-a3e8-1ce05e687107")
-		(property "Reference" "TP6"
-			(at 258.064 208.534 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "3V3"
-			(at 263.144 204.724 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "PCM_0xcb:TestPoint_Pad_D0.8mm"
-			(at 266.954 208.534 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 266.954 208.534 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 261.874 208.534 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ee5f03ec-3deb-475d-9c22-d6f414ee4658")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "TP6")
 					(unit 1)
 				)
 			)
@@ -68976,83 +68106,6 @@
 		)
 	)
 	(symbol
-		(lib_id "onigaku:GND_L")
-		(at 23.876 239.522 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "486ff49e-8894-4858-b722-a64740a2937a")
-		(property "Reference" "#PWR069"
-			(at 17.526 239.522 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND_L"
-			(at 20.066 239.522 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 23.876 239.522 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 23.876 239.522 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 23.876 239.522 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "42bfa20b-89bf-46bb-a9c2-d7023063aa29")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "#PWR069")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 56.134 242.062 180)
 		(unit 1)
@@ -70853,127 +69906,6 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_0xcb:SSD1306")
-		(at 381.762 262.89 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "589b645e-e0f7-4356-841b-29270126c232")
-		(property "Reference" "U12"
-			(at 389.89 261.6199 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SSD1306"
-			(at 389.89 264.1599 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "0xcb:128x64OLED"
-			(at 375.412 262.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "amazon"
-			(at 375.412 262.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "SSD1306 OLED"
-			(at 381.762 262.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt Part Nb." "-"
-			(at 381.762 262.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Another Part Nb." "-"
-			(at 381.762 262.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Part Nb." "-"
-			(at 381.762 262.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "4"
-			(uuid "35b3dc59-428b-453d-8424-343f3400f924")
-		)
-		(pin "3"
-			(uuid "11748e2c-461a-4c01-9fcd-a7aa603c4909")
-		)
-		(pin "1"
-			(uuid "c382199f-9228-417f-86ea-6c9a12d2adae")
-		)
-		(pin "2"
-			(uuid "1d38dcc6-366a-4eec-95d3-3d3d2da3ce23")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "U12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "umiko-rev2:SK6812-4020-SideView")
 		(at 669.544 231.902 0)
 		(unit 1)
@@ -71453,117 +70385,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 386.842 241.808 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5ec99fa6-1467-4bc9-a385-f5bc9b99e270")
-		(property "Reference" "R30"
-			(at 386.842 239.268 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "4.7k"
-			(at 386.842 241.808 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 386.842 240.03 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 386.842 241.808 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 386.842 241.808 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "0402WGF4701TCE"
-			(at 386.842 241.808 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB_CORRECTION" ""
-			(at 386.842 241.808 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C25900"
-			(at 386.842 241.808 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fbc94194-b86e-457e-a8ae-ac17e4f30c2c")
-		)
-		(pin "2"
-			(uuid "e33176d3-5b80-4cf8-83a9-7dfcd366d01c")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "R30")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 449.58 127.508 0)
 		(unit 1)
@@ -71946,107 +70767,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "C46")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 406.4 199.898 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "61994ab0-b534-460c-8c68-f08b28e0e3aa")
-		(property "Reference" "TP3"
-			(at 402.59 199.898 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "CLK"
-			(at 407.67 196.088 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "PCM_0xcb:TestPoint_Pad_D0.8mm"
-			(at 411.48 199.898 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 411.48 199.898 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 406.4 199.898 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB_CORRECTION" ""
-			(at 406.4 199.898 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 406.4 199.898 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "118549aa-cee5-48bf-a301-88ce41823783")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -74227,85 +72947,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 406.4 207.518 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "6de46599-0999-4bb6-a7a9-09ed4292125a")
-		(property "Reference" "TP8"
-			(at 402.59 207.518 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "3V3"
-			(at 407.67 203.708 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "PCM_0xcb:TestPoint_Pad_D0.8mm"
-			(at 411.48 207.518 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 411.48 207.518 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 406.4 207.518 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6e0c4610-41ca-48d6-8c11-c07640bae748")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "TP8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "umiko-rev2:SK6812-4020-SideView")
 		(at 592.074 268.478 0)
 		(unit 1)
@@ -75334,83 +73975,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "LED100")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "onigaku:GND_L")
-		(at 121.666 271.526 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "7b8d0975-252a-4279-b2aa-3add436d95fd")
-		(property "Reference" "#PWR075"
-			(at 115.316 271.526 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND_L"
-			(at 117.856 271.526 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 121.666 271.526 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 121.666 271.526 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 121.666 271.526 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5061f8c8-e743-42ca-95c9-6c637025f884")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "#PWR075")
 					(unit 1)
 				)
 			)
@@ -77062,84 +75626,6 @@
 		)
 	)
 	(symbol
-		(lib_id "onigaku:+3V3_R")
-		(at 380.492 254 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8a0bebf0-25f4-4337-adfb-71f519b663bb")
-		(property "Reference" "#PWR0155"
-			(at 380.492 257.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3_R"
-			(at 380.492 248.92 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 380.492 254 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 380.492 254 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 380.492 254 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "198102a9-2b0f-435c-b871-897fa03b4574")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "#PWR0155")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "onigaku:GND_L")
 		(at 232.664 223.774 0)
 		(unit 1)
@@ -78026,6 +76512,83 @@
 		)
 	)
 	(symbol
+		(lib_id "power:VBUS")
+		(at 35.814 235.204 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "935db5e0-d371-40f4-a13a-81ebbc07855c")
+		(property "Reference" "#PWR0147"
+			(at 39.624 235.204 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V_L"
+			(at 32.258 235.204 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 35.814 235.204 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 35.814 235.204 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VBUS\""
+			(at 35.814 235.204 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bd493ee5-2648-4db3-8889-a05743371349")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "#PWR0147")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 89.916 242.062 180)
 		(unit 1)
@@ -78182,6 +76745,83 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "C160")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "onigaku:GND_L")
+		(at 18.034 254.762 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "97a8872c-57c1-4004-afda-30ff3d1add31")
+		(property "Reference" "#PWR069"
+			(at 11.684 254.762 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND_L"
+			(at 14.224 254.762 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 18.034 254.762 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 18.034 254.762 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 18.034 254.762 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d257260c-eea4-4c7a-b526-32b139b13f98")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "#PWR069")
 					(unit 1)
 				)
 			)
@@ -78676,6 +77316,83 @@
 		)
 	)
 	(symbol
+		(lib_id "power:VBUS")
+		(at 121.666 271.526 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9e819018-ab7f-48bf-8655-68a7f02732fe")
+		(property "Reference" "#PWR078"
+			(at 125.476 271.526 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V_L"
+			(at 118.11 271.526 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 121.666 271.526 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.666 271.526 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VBUS\""
+			(at 121.666 271.526 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8cff8199-e6f8-426b-8fbd-83bdb44c51ad")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "#PWR078")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "umiko-rev2:SK6812-4020-SideView")
 		(at 134.62 263.906 180)
 		(unit 1)
@@ -78837,83 +77554,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "C144")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VBUS")
-		(at 18.034 254.762 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a140bc0c-5be2-4b50-972f-fcd98172796c")
-		(property "Reference" "#PWR070"
-			(at 21.844 254.762 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+5V_L"
-			(at 14.478 254.762 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 18.034 254.762 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 18.034 254.762 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VBUS\""
-			(at 18.034 254.762 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8f4fe21c-cf3e-4b35-bfae-467b02f42009")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "#PWR070")
 					(unit 1)
 				)
 			)
@@ -79940,85 +78580,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "U8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "onigaku:+3V3_R")
-		(at 390.652 241.808 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ac4669f6-ac6b-40a2-b77e-ee46fd15a2bf")
-		(property "Reference" "#PWR0235"
-			(at 386.842 241.808 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3_R"
-			(at 394.208 241.8079 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 390.652 241.808 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 390.652 241.808 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 390.652 241.808 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c33baaed-b519-45b2-9320-12b6133f7e7f")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "#PWR0235")
 					(unit 1)
 				)
 			)
@@ -81124,83 +79685,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VBUS")
-		(at 120.396 256.286 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b7db7980-cb34-4298-9efd-38b88914f329")
-		(property "Reference" "#PWR078"
-			(at 124.206 256.286 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+5V_L"
-			(at 116.84 256.286 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 120.396 256.286 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 120.396 256.286 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VBUS\""
-			(at 120.396 256.286 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4c6f4e67-69d6-4da5-aa21-918ab159e187")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "#PWR078")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "onigaku:+5V_R")
 		(at 481.33 206.248 0)
 		(unit 1)
@@ -81433,18 +79917,18 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 406.4 202.438 0)
+		(lib_id "power:VBUS")
+		(at 23.876 239.522 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "b981aea6-c6ab-4c55-a0cf-b65e64252066")
-		(property "Reference" "TP4"
-			(at 402.59 202.438 0)
+		(uuid "b9496f29-2854-4769-88af-df6defa359c8")
+		(property "Reference" "#PWR0153"
+			(at 27.686 239.522 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -81452,23 +79936,20 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "DIO"
-			(at 407.67 206.248 0)
-			(hide yes)
+		(property "Value" "+5V_L"
+			(at 20.32 239.522 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_0xcb:TestPoint_Pad_D0.8mm"
-			(at 411.48 202.438 0)
+		(property "Footprint" ""
+			(at 23.876 239.522 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -81479,7 +79960,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 411.48 202.438 0)
+			(at 23.876 239.522 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -81489,29 +79970,8 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 406.4 202.438 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB_CORRECTION" ""
-			(at 406.4 202.438 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 406.4 202.438 0)
+		(property "Description" "Power symbol creates a global label with name \"VBUS\""
+			(at 23.876 239.522 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -81522,12 +79982,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "01a05cbb-9274-4245-9972-7c363df9565a")
+			(uuid "aec6cde6-a802-4ecc-8b1a-ec226d77a48d")
 		)
 		(instances
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "TP4")
+					(reference "#PWR0153")
 					(unit 1)
 				)
 			)
@@ -82041,83 +80501,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "C6_A1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "onigaku:GND_L")
-		(at 35.814 235.204 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "bdc18b3a-02cf-49bf-846d-10f20d6bbe9d")
-		(property "Reference" "#PWR067"
-			(at 29.464 235.204 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND_L"
-			(at 32.004 235.204 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 35.814 235.204 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 35.814 235.204 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 35.814 235.204 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b74919d8-e4f7-456f-87de-bf7e98b9e2bd")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "#PWR067")
 					(unit 1)
 				)
 			)
@@ -84572,84 +82955,6 @@
 	)
 	(symbol
 		(lib_id "onigaku:GND_R")
-		(at 377.952 254 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cff902ec-4556-44ce-8c7a-869c182a5084")
-		(property "Reference" "#PWR0147"
-			(at 377.952 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND_R"
-			(at 377.952 248.666 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 377.952 254 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 377.952 254 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 377.952 254 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b5f00527-cab8-45cf-9f12-aa9e7b0cf1bd")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "#PWR0147")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "onigaku:GND_R")
 		(at 383.032 191.516 0)
 		(unit 1)
 		(body_style 1)
@@ -85559,117 +83864,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "C100")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 389.382 253.238 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "db8bcb86-1fa9-4cc2-8376-cfc2bdb3c81b")
-		(property "Reference" "R31"
-			(at 389.382 250.698 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "4.7k"
-			(at 389.382 253.238 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 389.382 251.46 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 389.382 253.238 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 389.382 253.238 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "0402WGF4701TCE"
-			(at 389.382 253.238 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB_CORRECTION" ""
-			(at 389.382 253.238 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C25900"
-			(at 389.382 253.238 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f813a154-129d-4845-886e-02523412ec97")
-		)
-		(pin "2"
-			(uuid "7ffe0006-66fb-4b17-bcc0-49840802c5ec")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -86770,6 +84964,83 @@
 		)
 	)
 	(symbol
+		(lib_id "onigaku:GND_L")
+		(at 120.396 256.286 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e91b26d3-68c5-4791-aa4e-9eb65dd47267")
+		(property "Reference" "#PWR070"
+			(at 114.046 256.286 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND_L"
+			(at 116.586 256.286 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 120.396 256.286 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.396 256.286 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 120.396 256.286 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "aeb4cfc2-f579-456c-9c7f-05d54dff8760")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "#PWR070")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 680.466 226.822 0)
 		(unit 1)
@@ -87623,85 +85894,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "#FLG01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "onigaku:+3V3_R")
-		(at 393.192 253.238 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f69072f3-6097-4ddb-95e7-4355926e639f")
-		(property "Reference" "#PWR0236"
-			(at 389.382 253.238 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3_R"
-			(at 397.51 253.2379 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 393.192 253.238 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 393.192 253.238 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 393.192 253.238 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "96d5edb5-52fb-4af3-bbd5-b1029c7941b8")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "#PWR0236")
 					(unit 1)
 				)
 			)
