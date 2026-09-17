@@ -74750,7 +74750,7 @@
 				)
 			)
 		)
-		(property "Value" "2A"
+		(property "Value" "750mA"
 			(at 429.768 61.468 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -74760,7 +74760,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Fuse:Fuse_1206_3216Metric"
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
 			(at 434.848 57.658 0)
 			(hide yes)
 			(show_name no)
@@ -74793,7 +74793,7 @@
 				)
 			)
 		)
-		(property "MPN" "MF-MSMF200-2"
+		(property "MPN" "SMD0805-075"
 			(at 429.768 58.928 0)
 			(hide yes)
 			(show_name no)
@@ -74815,7 +74815,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C210837"
+		(property "LCSC" "C70060"
 			(at 429.768 58.928 0)
 			(hide yes)
 			(show_name no)
@@ -77994,7 +77994,7 @@
 				)
 			)
 		)
-		(property "Value" "2A"
+		(property "Value" "750mA"
 			(at 281.94 60.96 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -78004,7 +78004,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Fuse:Fuse_1206_3216Metric"
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
 			(at 287.02 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -78037,7 +78037,7 @@
 				)
 			)
 		)
-		(property "MPN" "MF-MSMF200-2"
+		(property "MPN" "SMD0805-075"
 			(at 281.94 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -78059,7 +78059,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C210837"
+		(property "LCSC" "C70060"
 			(at 281.94 58.42 0)
 			(hide yes)
 			(show_name no)
