@@ -18,5 +18,9 @@
       "Bash(copy:*)",
       "Bash(ls:*)"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "konnect"
+  ],
+  "enableAllProjectMcpServers": true
 }

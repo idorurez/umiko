@@ -180,21 +180,53 @@ static const uint8_t sin_lut[16] = {
 #ifdef RGB_MATRIX_ENABLE
 #include "lib/lib8tion/lib8tion.h"
 
-// Slow blue-to-white breathing loop for underglow LEDs.
-// - Saturation oscillates 0..255 slowly (~20s period) — full sat = deep blue,
-//   zero sat = pure white at the given value.
-// - Hue gently wobbles inside the blue band (~154..186) so it feels alive.
-// - Value stays modest (~80) so it never blinds you.
+// Purple + Gold motif for BOTH per-key and underglow, applied every frame so
+// it overrides whatever RGB Matrix effect is active. The user can still cycle
+// effects with FN+Y/H — the underlying effect runs, but this indicator hook
+// re-paints on top of it in-palette.
+//
+//   Underglow: two-color ring rotating around each half's perimeter (~8s
+//   per revolution). Left and right halves rotate independently.
+//
+//   Per-key: Midnight Purple base with a Gold wave sweeping across the
+//   keyboard, driven by the LED's x-position + a time phase. Both hue
+//   (purple/gold) and value (dim/bright) modulate with the wave so it
+//   feels alive without ever leaving the palette.
+//
+// Underglow chain layout (from umiko.c):
+//   Left  half: chain indices 0..11 (12 LEDs), CCW around left perimeter
+//   Right half: chain indices 42..56 (15 LEDs), CCW around right perimeter
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
-    uint32_t t       = timer_read32();
-    uint8_t  sat_idx = (uint8_t)((t / 80) & 0xFF);          // ~20s per full cycle
-    uint8_t  hue_idx = (uint8_t)((t / 40) & 0xFF);          // ~10s per hue wobble
-    uint8_t  sat     = sin8(sat_idx);                        // 0..255
-    int8_t   hue_off = (int8_t)((sin8(hue_idx) - 128) / 8);  // -16..+15
-    hsv_t    hsv     = {(uint8_t)(170 + hue_off), sat, 80};
-    rgb_t    rgb     = hsv_to_rgb(hsv);
+    // Midnight Purple (H≈195): deep, high sat, near-black richness.
+    // Gold (H≈32): warm yellow-orange.
+    const uint8_t HUE_PURPLE = 195;
+    const uint8_t HUE_GOLD   = 32;
+
+    uint32_t t     = timer_read32();
+    uint8_t  phase = (uint8_t)((t >> 5) & 0xFF);   // ~8s per full rotation
+
     for (uint8_t i = led_min; i < led_max; i++) {
         if (g_led_config.flags[i] & LED_FLAG_UNDERGLOW) {
+            // Underglow ring: purple half + gold half, boundary rotates.
+            uint8_t pos, group_size;
+            if (i < 42) { pos = i;      group_size = 12; }
+            else        { pos = i - 42; group_size = 15; }
+            uint8_t angular   = (uint8_t)(((uint16_t)pos * 256) / group_size);
+            uint8_t effective = angular + phase;
+            uint8_t hue       = (effective < 128) ? HUE_PURPLE : HUE_GOLD;
+            hsv_t   hsv       = {hue, 255, 80};
+            rgb_t   rgb       = hsv_to_rgb(hsv);
+            rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
+        } else {
+            // Per-key: purple base with a gold wave sweeping across x.
+            // Wave amplitude modulates value; hue snaps at midpoint.
+            led_point_t p    = g_led_config.point[i];
+            uint8_t     wave = sin8((uint8_t)(p.x + (phase << 1)));
+            uint8_t     hue  = (wave < 128) ? HUE_PURPLE : HUE_GOLD;
+            // Value: dim floor (~40) + wave amplitude → 40..103 range.
+            uint8_t     val  = 40 + (wave >> 2);
+            hsv_t       hsv  = {hue, 255, val};
+            rgb_t       rgb  = hsv_to_rgb(hsv);
             rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
         }
     }
