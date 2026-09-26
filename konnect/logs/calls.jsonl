@@ -1,1 +1,7 @@
 {"call_id":"2f0ce4f800000000","ts":1789966283789,"tool":"list_toolboxes","dur_ms":3,"status":"ok","args_bytes":2,"result_bytes":3927}
+{"call_id":"39d74dec00000000","ts":1790396174970,"tool":"load_toolset","dur_ms":2,"status":"ok","args_bytes":23,"result_bytes":2263}
+{"call_id":"295e594c00000001","ts":1790396178694,"tool":"get_effective_config","toolset":"config","dur_ms":0,"status":"ok","args_bytes":56,"result_bytes":772}
+{"call_id":"2efeb2fc00000002","ts":1790396184788,"tool":"load_toolset","dur_ms":0,"status":"error","args_bytes":47,"result_bytes":93}
+{"call_id":"05bee6c800000003","ts":1790396188096,"tool":"load_toolset","dur_ms":0,"status":"ok","args_bytes":25,"result_bytes":5408}
+{"call_id":"38c6512800000004","ts":1790396190952,"tool":"load_toolset","dur_ms":0,"status":"ok","args_bytes":21,"result_bytes":3290}
+{"call_id":"32585de000000005","ts":1790396192844,"tool":"get_recent_calls","dur_ms":0,"status":"ok","args_bytes":11,"result_bytes":805}

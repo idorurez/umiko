@@ -72547,7 +72547,7 @@
 				)
 			)
 		)
-		(property "Value" "+5V_L"
+		(property "Value" "+5V_R"
 			(at 517.398 258.064 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -79783,7 +79783,7 @@
 				)
 			)
 		)
-		(property "Value" "+5V_L"
+		(property "Value" "+5V_R"
 			(at 517.398 260.858 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -80718,7 +80718,7 @@
 				)
 			)
 		)
-		(property "Value" "+5V_L"
+		(property "Value" "+5V_R"
 			(at 521.462 224.282 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -83891,7 +83891,7 @@
 				)
 			)
 		)
-		(property "Value" "+5V_L"
+		(property "Value" "+5V_R"
 			(at 521.462 219.71 0)
 			(show_name no)
 			(do_not_autoplace no)
