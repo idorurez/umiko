@@ -537,7 +537,7 @@
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
-        "microvia_diameter": 0.3,
+        "microvia_diameter": 0.46,
         "microvia_drill": 0.1,
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
@@ -545,8 +545,26 @@
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.2,
         "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
+        "via_diameter": 0.46,
+        "via_drill": 0.2,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.1,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "1V1/3V3",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.2,
+        "tuning_profile": "",
+        "via_diameter": 0.46,
+        "via_drill": 0.2,
         "wire_width": 6
       },
       {
@@ -557,32 +575,14 @@
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
-        "name": "0.2mm",
+        "name": "GND",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
-        "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.1,
-        "diff_pair_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "0.3mm",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2,
+        "priority": 3,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.3,
         "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
+        "via_diameter": 0.46,
+        "via_drill": 0.2,
         "wire_width": 6
       },
       {
@@ -593,7 +593,7 @@
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
-        "name": "GND",
+        "name": "PWR/GND",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
@@ -611,15 +611,15 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "Default",
+        "netclass": "GND",
         "pattern": "GND"
       },
       {
-        "netclass": "Default",
+        "netclass": "GND",
         "pattern": "GNDA"
       },
       {
-        "netclass": "Default",
+        "netclass": "PWR/GND",
         "pattern": "VCC"
       },
       {
@@ -631,27 +631,35 @@
         "pattern": "GND_L"
       },
       {
-        "netclass": "0.3mm",
+        "netclass": "PWR/GND",
         "pattern": "+5V_L"
       },
       {
-        "netclass": "0.3mm",
+        "netclass": "PWR/GND",
         "pattern": "+5V_R"
       },
       {
-        "netclass": "0.2mm",
+        "netclass": "PWR/GND",
+        "pattern": "VBUS_L"
+      },
+      {
+        "netclass": "PWR/GND",
+        "pattern": "VBUS_R"
+      },
+      {
+        "netclass": "1V1/3V3",
         "pattern": "+3V3_L"
       },
       {
-        "netclass": "0.2mm",
+        "netclass": "1V1/3V3",
         "pattern": "+3V3_R"
       },
       {
-        "netclass": "0.2mm",
+        "netclass": "1V1/3V3",
         "pattern": "+1V1_L"
       },
       {
-        "netclass": "0.2mm",
+        "netclass": "1V1/3V3",
         "pattern": "+1V1_R"
       }
     ]
