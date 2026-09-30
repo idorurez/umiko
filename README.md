@@ -701,5 +701,6 @@ This design borrows ideas from:
 
 ## License
 
-PCB files: CERN OHL v2 — Permissive (or your preferred license; verify before forking).
-Firmware: GPL-2.0 (inherited from QMK).
+- **3D-printable case files** (STL/3MF and case CAD): **MIT** — do whatever you want with them, just keep the credit line.
+- **PCB design files** (schematic, layout, gerbers, manufacturing outputs): **CERN-OHL-P v2** (permissive — make and sell freely, keep attribution, no requirement to share your changes back).
+- **Firmware** (`keyboards/umiko/`): **GPL-2.0** (inherited from QMK — not negotiable).
