@@ -7,3 +7,11 @@
 {"call_id":"32585de000000005","ts":1790396192844,"tool":"get_recent_calls","dur_ms":0,"status":"ok","args_bytes":11,"result_bytes":805}
 {"call_id":"1ed4645800000000","ts":1790485508517,"tool":"get_active_toolsets","dur_ms":3,"status":"ok","args_bytes":2,"result_bytes":340}
 {"call_id":"1b06cd4800000001","ts":1790485513453,"tool":"open_project","toolset":"project","dur_ms":0,"status":"ok","args_bytes":66,"result_bytes":433}
+{"call_id":"0874a4d400000000","ts":1790917634142,"tool":"list_toolboxes","dur_ms":6,"status":"ok","args_bytes":2,"result_bytes":3927}
+{"call_id":"0075f1c000000001","ts":1790917637007,"tool":"load_toolset","dur_ms":1,"status":"error","args_bytes":80,"result_bytes":122}
+{"call_id":"252f333c00000002","ts":1790917641623,"tool":"load_toolset","dur_ms":1,"status":"ok","args_bytes":23,"result_bytes":2133}
+{"call_id":"01f0becc00000003","ts":1790917644032,"tool":"load_toolset","dur_ms":1,"status":"ok","args_bytes":22,"result_bytes":3435}
+{"call_id":"1dcd38dc00000004","ts":1790917646499,"tool":"load_toolset","dur_ms":1,"status":"ok","args_bytes":24,"result_bytes":1552}
+{"call_id":"18f3f2d800000005","ts":1790917648418,"tool":"load_toolset","dur_ms":1,"status":"ok","args_bytes":20,"result_bytes":3511}
+{"call_id":"1941bb5800000006","ts":1790917654423,"tool":"get_project_info","toolset":"project","dur_ms":1,"status":"ok","args_bytes":66,"result_bytes":323}
+{"call_id":"2bf9931000000007","ts":1790917669737,"tool":"get_recent_calls","dur_ms":0,"status":"ok","args_bytes":12,"result_bytes":1071}
