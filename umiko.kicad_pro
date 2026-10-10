@@ -859,7 +859,7 @@
         "uuid": "4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
       }
     ],
-    "used_designators": "#PWR69-70,#PWR78,#PWR147,#PWR153",
+    "used_designators": "#PWR69-70,#PWR78,#PWR147,#PWR153,LED48,LED54-55,LED60-61,LED67-68,LED74-75,LED79,LED84,LED88,LED90,LED108-127",
     "variants": []
   },
   "sheets": [

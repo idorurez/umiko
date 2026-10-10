@@ -8551,12 +8551,6 @@
 		(uuid "033b2cff-ad1f-4bb0-a1a7-831f4b32ee0a")
 	)
 	(junction
-		(at 554.482 260.858)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "04e4cb5d-b0aa-4947-b7a2-7d59c76c448c")
-	)
-	(junction
 		(at 129.54 216.154)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8629,12 +8623,6 @@
 		(uuid "0ce86144-875f-4924-adb1-cad9f48e5285")
 	)
 	(junction
-		(at 650.494 224.282)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0d9deb55-b229-4261-9c95-314aee746191")
-	)
-	(junction
 		(at 135.89 87.63)
 		(diameter 1.016)
 		(color 0 0 0 0)
@@ -8677,12 +8665,6 @@
 		(uuid "0fef198b-b76b-451f-9218-6d0d9a311244")
 	)
 	(junction
-		(at 573.278 224.282)
-		(diameter 1.016)
-		(color 0 0 0 0)
-		(uuid "1031897d-0963-4140-9e38-31440f7c9905")
-	)
-	(junction
 		(at 89.916 254.762)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8719,10 +8701,10 @@
 		(uuid "12720c8e-471a-4a7b-9d4a-2c8335846906")
 	)
 	(junction
-		(at 684.276 258.064)
+		(at 650.494 224.282)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "1385c7da-684e-4c26-abd5-2872d0f1e904")
+		(uuid "135446c6-7488-4cd2-a1e3-7348a2b1ba29")
 	)
 	(junction
 		(at 623.062 316.992)
@@ -8767,12 +8749,6 @@
 		(uuid "1544238c-7d0c-4a40-9b07-ffe718babc61")
 	)
 	(junction
-		(at 689.356 224.282)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "155f808b-0eb3-4081-8df1-1ee4fcb98f5e")
-	)
-	(junction
 		(at 85.09 138.43)
 		(diameter 1.016)
 		(color 0 0 0 0)
@@ -8797,22 +8773,28 @@
 		(uuid "173279fe-ba84-496c-a171-cf2d2310fbbc")
 	)
 	(junction
-		(at 533.654 242.824)
+		(at 689.61 219.71)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "184a5b5a-60b6-45d8-9456-116244fdbe9c")
-	)
-	(junction
-		(at 554.228 239.522)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "18b4aa8e-09ad-4620-bc25-4f09aeefe9bc")
+		(uuid "1830b595-01e0-4542-9f90-13b4075563aa")
 	)
 	(junction
 		(at 545.592 338.582)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "18e2c567-a7f1-4c06-96ae-936502f4a7df")
+	)
+	(junction
+		(at 684.276 242.824)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "192431db-b91b-4e61-94d4-60a1fd9c38f4")
+	)
+	(junction
+		(at 650.748 219.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "19a6b1d2-4a14-4e05-a6bd-51259b629eab")
 	)
 	(junction
 		(at 149.86 73.66)
@@ -8845,16 +8827,34 @@
 		(uuid "1d03ea95-3cb8-495a-a3b0-9c1095c1204c")
 	)
 	(junction
+		(at 630.428 219.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1e36ad7a-85f8-420b-bde7-4e415ddd6fe9")
+	)
+	(junction
 		(at 701.04 219.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1f4c59d8-4676-406d-a5b1-f7fa4dfd3b32")
 	)
 	(junction
+		(at 573.278 224.282)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1f799964-abba-4138-8387-8ce93dee0990")
+	)
+	(junction
 		(at 410.21 151.638)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1f8309b0-750e-41cc-9c7c-6c970e68a4d3")
+	)
+	(junction
+		(at 665.226 258.064)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "205e311e-6ce7-45b5-a73f-ad342acdd97a")
 	)
 	(junction
 		(at 81.28 216.154)
@@ -8875,16 +8875,16 @@
 		(uuid "2128cb48-ded3-4452-8f66-ae10a730993b")
 	)
 	(junction
+		(at 554.228 224.282)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "21535a1a-9470-44f8-9662-cf21570d5a25")
+	)
+	(junction
 		(at 110.998 334.264)
 		(diameter 1.016)
 		(color 0 0 0 0)
 		(uuid "21a95783-e0b4-44d9-ac1b-4435d2281505")
-	)
-	(junction
-		(at 669.798 219.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "22112ddb-bbc7-4dbd-99f7-47ca72aa75b4")
 	)
 	(junction
 		(at 85.598 379.984)
@@ -8935,16 +8935,22 @@
 		(uuid "26a0fbb6-9fb7-4aec-af10-15e87e40a3cc")
 	)
 	(junction
-		(at 689.61 219.71)
+		(at 551.942 242.824)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "26cf3fd3-ada4-4ba8-aaa0-bd1d15204d6b")
+		(uuid "278176b6-bacd-46d4-9469-46ba9875417a")
 	)
 	(junction
 		(at 258.064 157.734)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "27e11fb8-0c20-45bd-9107-c8a1bdbca0a0")
+	)
+	(junction
+		(at 554.482 260.858)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "285cedec-c7e0-4751-bf58-fa7d441820f2")
 	)
 	(junction
 		(at 97.028 235.204)
@@ -9001,22 +9007,16 @@
 		(uuid "2ca8ee68-8f82-444a-98a7-3b989dc75fd5")
 	)
 	(junction
-		(at 533.908 239.522)
+		(at 654.558 250.444)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "2de9f73b-1eab-421d-965c-781602254d8a")
+		(uuid "2db21ffa-82c4-419f-82a0-7716a89b26a1")
 	)
 	(junction
 		(at 212.09 62.23)
 		(diameter 1.016)
 		(color 0 0 0 0)
 		(uuid "2dedb4a7-4ba3-4093-8d4c-2de312b9ec05")
-	)
-	(junction
-		(at 554.482 276.098)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2e0416a1-a2a0-4ec7-b4d6-c341385b7f10")
 	)
 	(junction
 		(at 543.814 258.064)
@@ -9109,34 +9109,16 @@
 		(uuid "33554cc7-f978-4762-a969-a9eb9a824767")
 	)
 	(junction
-		(at 551.942 242.824)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "33b18746-fade-4310-86e3-039053d7cc50")
-	)
-	(junction
 		(at 294.894 124.714)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "33c770d0-ff25-4336-b744-55a2127d4ce1")
 	)
 	(junction
-		(at 570.23 242.824)
+		(at 704.088 258.064)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "34027f70-8f30-48eb-a9c8-2dc56f09b74a")
-	)
-	(junction
-		(at 554.228 224.282)
-		(diameter 1.016)
-		(color 0 0 0 0)
-		(uuid "3437c9af-277f-469f-b4d8-0109a408d067")
-	)
-	(junction
-		(at 710.692 239.522)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "347caa16-bfff-4714-80fc-69dde0cae17d")
+		(uuid "34836581-6c60-4994-bd63-9b2c811af84f")
 	)
 	(junction
 		(at 110.49 138.43)
@@ -9161,6 +9143,18 @@
 		(diameter 1.016)
 		(color 0 0 0 0)
 		(uuid "36f82b11-b713-4270-bce3-62480db33c5f")
+	)
+	(junction
+		(at 626.364 242.824)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "376b2d5c-afba-4a8c-b330-984e518e4a5f")
+	)
+	(junction
+		(at 665.226 242.824)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "379622f5-3b51-4235-ad9d-ebc267255e54")
 	)
 	(junction
 		(at 645.922 404.622)
@@ -9205,6 +9199,12 @@
 		(uuid "39a12a60-99ad-4670-a39d-52a02b201173")
 	)
 	(junction
+		(at 593.09 224.282)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3a252539-b7f0-484d-a914-5bc8d63c04bc")
+	)
+	(junction
 		(at 60.96 216.154)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9215,6 +9215,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3ab08794-56aa-4fc6-8b01-b1339a8b3d78")
+	)
+	(junction
+		(at 646.938 258.064)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3ba67dd2-9df0-4352-83ff-8dbaba74124c")
 	)
 	(junction
 		(at 488.188 58.928)
@@ -9241,6 +9247,12 @@
 		(uuid "3ebd0fb0-6bc0-497e-b4ff-71f7b0522872")
 	)
 	(junction
+		(at 588.01 242.824)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3ee705d1-9243-44e2-9412-564239328e92")
+	)
+	(junction
 		(at 143.764 239.522)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9259,10 +9271,10 @@
 		(uuid "4006c5b4-e5e6-49ca-a059-97d2d1b01ef4")
 	)
 	(junction
-		(at 588.01 242.824)
+		(at 607.06 258.064)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "406c7f41-1cd7-4a90-8046-8e648e961f42")
+		(uuid "400f06c3-826b-4703-b234-ca51017d62c9")
 	)
 	(junction
 		(at 25.908 254.762)
@@ -9301,22 +9313,10 @@
 		(uuid "41617a5a-ca85-4e23-93b5-099d929d3e9a")
 	)
 	(junction
-		(at 554.228 219.71)
-		(diameter 1.016)
-		(color 0 0 0 0)
-		(uuid "4171e338-946a-4294-bdcc-ecc8c5fb216a")
-	)
-	(junction
 		(at 294.894 146.304)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "41b47a4a-c1ef-4c5a-98c3-5555d581ebdf")
-	)
-	(junction
-		(at 551.942 258.064)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "41d92e7b-d7b0-49fb-acc7-2c3115e5d2af")
 	)
 	(junction
 		(at 185.928 239.522)
@@ -9397,6 +9397,12 @@
 		(uuid "4638f5bf-a717-4e7a-b5ba-23392d7b035a")
 	)
 	(junction
+		(at 533.654 242.824)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "478a8987-3746-4fe9-9855-c1bce573dd65")
+	)
+	(junction
 		(at 444.5 131.318)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9415,12 +9421,6 @@
 		(uuid "486ba582-d2a3-45e9-aab3-3477e438bc71")
 	)
 	(junction
-		(at 533.654 258.064)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "48aa31e2-ebae-46e5-aa02-14fd4f5b0799")
-	)
-	(junction
 		(at 676.148 258.064)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9431,12 +9431,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "497a0a84-7371-4612-a660-d5b4b547d3c8")
-	)
-	(junction
-		(at 669.544 224.282)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "49ada913-2727-4c1d-9596-fbf606818290")
 	)
 	(junction
 		(at 70.358 334.264)
@@ -9457,22 +9451,10 @@
 		(uuid "49e0bc43-0561-463a-97ab-fa45f2044b3c")
 	)
 	(junction
-		(at 665.226 258.064)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4a0ac50d-8813-422e-b351-d1d73ff0e2a9")
-	)
-	(junction
 		(at 110.49 216.154)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4a5fc1c2-eb7e-4426-a397-c7f1f73800da")
-	)
-	(junction
-		(at 626.11 258.064)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4a97351a-bcdc-4f3e-8785-9143d9ddee73")
 	)
 	(junction
 		(at 568.198 65.278)
@@ -9523,6 +9505,12 @@
 		(uuid "4f80ff27-d8b8-4269-b7cf-d9bdf4be92d5")
 	)
 	(junction
+		(at 689.356 239.522)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4f8b021f-7716-4da0-84a5-cbf99aaaea11")
+	)
+	(junction
 		(at 658.368 127.508)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9551,6 +9539,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5345b0fa-8a1c-4400-aa8e-4e734dde1f88")
+	)
+	(junction
+		(at 611.124 239.522)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "534d68cc-8867-4057-b694-82d38810fdcd")
 	)
 	(junction
 		(at 161.29 87.63)
@@ -9583,10 +9577,10 @@
 		(uuid "56a5a01c-1b89-4bb9-8f3d-c5f28bbe44be")
 	)
 	(junction
-		(at 533.654 276.098)
+		(at 573.278 260.858)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "57376f68-44a7-4f78-9ace-c6891434ae8f")
+		(uuid "56d36a48-8933-4af6-9648-ed4d2a310241")
 	)
 	(junction
 		(at 556.768 152.908)
@@ -9619,6 +9613,12 @@
 		(uuid "58b0c40d-f6ab-4d9e-8cd5-e7bd8131df3d")
 	)
 	(junction
+		(at 646.938 242.824)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "591fbb6c-8701-4739-a7f5-f26723be6f33")
+	)
+	(junction
 		(at 169.164 239.522)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9629,6 +9629,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "59dbc14e-2455-42c1-adeb-bb170c944c2b")
+	)
+	(junction
+		(at 554.228 239.522)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "59dc134c-6b2c-4cc7-b3dd-2b4a69a93c49")
 	)
 	(junction
 		(at 85.598 357.124)
@@ -9643,10 +9649,10 @@
 		(uuid "5adf6278-9a26-4eb7-a70a-044718566ea4")
 	)
 	(junction
-		(at 704.088 258.064)
+		(at 630.174 224.282)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "5af3f3ce-04a8-45d7-abbf-8effdf0a44de")
+		(uuid "5b517c32-db58-41f0-a3d9-3b716401f17b")
 	)
 	(junction
 		(at 63.246 219.964)
@@ -9829,12 +9835,6 @@
 		(uuid "6723c918-1a91-42fd-af9b-af330f9d37a6")
 	)
 	(junction
-		(at 592.074 260.858)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6790cd2a-f353-4e28-8f10-9750c343a981")
-	)
-	(junction
 		(at 71.12 216.154)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9877,16 +9877,16 @@
 		(uuid "6b329505-c2d8-457f-9e10-6d0925ffb7a1")
 	)
 	(junction
-		(at 592.328 219.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6b9afe70-370f-4fcb-bdc1-78ec0c485a2a")
-	)
-	(junction
 		(at 41.148 254.762)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6c081f8d-1bdd-4a60-acac-622b423b460b")
+	)
+	(junction
+		(at 573.278 276.098)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6c5526a0-aa64-4db5-a299-3a3bb3580b11")
 	)
 	(junction
 		(at 564.388 276.098)
@@ -9901,12 +9901,6 @@
 		(uuid "6cd2014d-e21f-4d4e-bb78-11f838def3c6")
 	)
 	(junction
-		(at 611.378 219.71)
-		(diameter 1.016)
-		(color 0 0 0 0)
-		(uuid "6cdefed1-3fb0-48a4-b96e-17ab7fd64c9b")
-	)
-	(junction
 		(at 176.53 200.914)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9917,12 +9911,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6d6c522a-f36a-4358-87da-22692d90e65a")
-	)
-	(junction
-		(at 630.174 239.522)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6d8f5e8d-0219-4bca-999c-e552349ff9fd")
 	)
 	(junction
 		(at 377.19 220.218)
@@ -9961,12 +9949,6 @@
 		(uuid "702d6f5e-f29c-4e73-b96b-32e25627adf6")
 	)
 	(junction
-		(at 644.652 242.824)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7052323f-47c3-41d5-b7e4-3d51ae7dc4cb")
-	)
-	(junction
 		(at 564.388 260.858)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9995,12 +9977,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "73566bc6-b2f1-4d51-9579-c3be01cf99c3")
-	)
-	(junction
-		(at 573.278 239.522)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7393fb46-6a9d-40ea-a8af-aa1aa4f2e2da")
 	)
 	(junction
 		(at 607.822 338.582)
@@ -10057,16 +10033,10 @@
 		(uuid "77e5f68a-d50a-43da-a1c4-594f7691e735")
 	)
 	(junction
-		(at 644.652 258.064)
+		(at 669.544 239.522)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "7a534a74-5cc8-4f9f-92c6-9cf99ef0031e")
-	)
-	(junction
-		(at 533.908 224.282)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7a5a3142-3230-4f5c-b315-42e9d26a269e")
+		(uuid "79b712da-244a-4703-a826-d137b3aa3adc")
 	)
 	(junction
 		(at 568.198 90.678)
@@ -10075,10 +10045,10 @@
 		(uuid "7adc23f2-1141-4fde-977b-1ad9b7a122ea")
 	)
 	(junction
-		(at 669.544 239.522)
+		(at 684.276 258.064)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "7ba217cb-5ecd-491f-b5df-f48237ae2e40")
+		(uuid "7c3cda43-7edf-4923-ac17-a51e65f330a4")
 	)
 	(junction
 		(at 658.368 102.108)
@@ -10091,6 +10061,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7cb99422-5397-40f4-b5e7-43cd77a2b567")
+	)
+	(junction
+		(at 669.544 224.282)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7cc13baf-8ea3-4fa6-ad40-da605119c600")
 	)
 	(junction
 		(at 676.148 242.824)
@@ -10147,12 +10123,6 @@
 		(uuid "80efa52e-e44f-4f27-94d7-bf378115faa7")
 	)
 	(junction
-		(at 592.074 276.098)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "81072925-80ee-4692-9f9e-f1e103914330")
-	)
-	(junction
 		(at 431.8 131.318)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10193,12 +10163,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "83bf36c9-a87a-428e-af9a-28a9b1b0e016")
-	)
-	(junction
-		(at 630.174 224.282)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "83dcec30-bd82-4c4a-948c-82b003b98503")
 	)
 	(junction
 		(at 51.308 379.984)
@@ -10321,10 +10285,22 @@
 		(uuid "8a3c28af-f189-4d6c-9060-c48ef241d5f0")
 	)
 	(junction
+		(at 551.942 258.064)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8a808b55-755e-41aa-a886-c99a3592926d")
+	)
+	(junction
 		(at 291.084 146.304)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8a817a58-1965-474f-a5ea-63ec4b4f2819")
+	)
+	(junction
+		(at 533.908 224.282)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8ad8ab7f-f33f-4927-8973-df3c0596e185")
 	)
 	(junction
 		(at 669.798 90.678)
@@ -10337,6 +10313,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8b28f771-279e-4b56-9b14-dfb5db4b1b9d")
+	)
+	(junction
+		(at 626.364 258.064)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8d654ff0-3312-4e1d-a080-622fd03f8d41")
 	)
 	(junction
 		(at 48.26 73.66)
@@ -10375,10 +10357,10 @@
 		(uuid "8f85203c-526b-4c42-8695-5f457cd9dc6d")
 	)
 	(junction
-		(at 592.328 224.282)
+		(at 611.124 224.282)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "9001fbf7-5015-4149-b6c1-49638711d17f")
+		(uuid "8fffbb22-bff4-4d07-9e89-4edeb6abb605")
 	)
 	(junction
 		(at 563.88 239.522)
@@ -10391,6 +10373,12 @@
 		(diameter 1.016)
 		(color 0 0 0 0)
 		(uuid "916728fa-4df0-4733-9433-fcda57c1deb7")
+	)
+	(junction
+		(at 630.174 239.522)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "92d09275-b554-4656-86c2-1b6069a860dc")
 	)
 	(junction
 		(at 80.264 239.522)
@@ -10423,16 +10411,16 @@
 		(uuid "947b543d-e42e-4f8f-abaf-d750cfae7b8f")
 	)
 	(junction
-		(at 607.06 242.824)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "94c027fa-acd4-4dbc-9286-6b3d3f906aa1")
-	)
-	(junction
 		(at 124.46 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "94ce12b9-ce1a-49ae-84f3-e293eb00dc8f")
+	)
+	(junction
+		(at 710.692 239.522)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "952ffd4f-f841-4a5b-a65d-6b5ac7d47446")
 	)
 	(junction
 		(at 643.382 316.992)
@@ -10453,12 +10441,6 @@
 		(uuid "9660f201-a8ac-43b6-9f6b-2374ae2fbbdb")
 	)
 	(junction
-		(at 588.01 258.064)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "96bdece0-3070-4f08-ab85-b1f63150369c")
-	)
-	(junction
 		(at 418.338 72.898)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10471,22 +10453,10 @@
 		(uuid "97613fb6-9a3d-4fd6-b452-309d395f1a79")
 	)
 	(junction
-		(at 573.278 260.858)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9864722f-2732-4bf6-bc11-f13a8b8baae1")
-	)
-	(junction
 		(at 658.368 76.708)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "987d03b8-1a56-4f57-b7f6-45c1bdf31d92")
-	)
-	(junction
-		(at 607.06 258.064)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9885a799-ac9b-47b0-9843-b5f3f94dbb53")
 	)
 	(junction
 		(at 531.368 127.508)
@@ -10553,12 +10523,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9d6e30de-0c84-4824-b9ac-4add61ad826d")
-	)
-	(junction
-		(at 710.692 224.282)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9de1ad70-41eb-48b1-ba5f-227ef7f29681")
 	)
 	(junction
 		(at 607.822 361.442)
@@ -10639,6 +10603,18 @@
 		(uuid "a481c3cc-c44f-4dba-aafb-a4e3719817da")
 	)
 	(junction
+		(at 534.162 219.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a4990e41-24fc-4c32-a46f-3811368ad896")
+	)
+	(junction
+		(at 533.654 260.858)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a4cb3db3-47b9-4d83-9ef2-0b2a495b9b13")
+	)
+	(junction
 		(at 175.26 149.86)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10657,10 +10633,10 @@
 		(uuid "a53fec29-95aa-4e11-b941-56a2cdea6bfa")
 	)
 	(junction
-		(at 630.428 219.71)
-		(diameter 1.016)
+		(at 533.654 258.064)
+		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "a5636fd2-d642-4b40-9a8d-975cf003bb99")
+		(uuid "a543a66d-95b8-45d1-80e5-dda3cd845959")
 	)
 	(junction
 		(at 602.488 219.71)
@@ -10747,16 +10723,16 @@
 		(uuid "aa26e68f-fe20-4868-b232-8eb32cea963e")
 	)
 	(junction
+		(at 573.278 239.522)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "aabf7ff1-bee3-4c23-9f2e-60a5033abffa")
+	)
+	(junction
 		(at 50.8 216.154)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aaea563c-16cc-4bfa-b199-bd84b111b638")
-	)
-	(junction
-		(at 573.278 276.098)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ab45e43a-a3b1-4d02-b4d5-5e0819ea471f")
 	)
 	(junction
 		(at 701.04 224.282)
@@ -10783,12 +10759,6 @@
 		(uuid "adb9184a-057a-4a50-9568-433b084bd14a")
 	)
 	(junction
-		(at 704.088 242.824)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "adec91a0-191d-433d-9b57-c0bf94268fc3")
-	)
-	(junction
 		(at 32.512 239.522)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10799,6 +10769,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ae792b33-c64d-48dd-bdd7-950ece4db067")
+	)
+	(junction
+		(at 633.984 250.444)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "af09c21c-8506-4fdf-8893-1e9937caad40")
 	)
 	(junction
 		(at 56.134 254.762)
@@ -10817,6 +10793,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "af8ac1ba-fca0-4eaf-89c2-23cabb97e47c")
+	)
+	(junction
+		(at 650.494 239.522)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b0820754-17c5-4a26-afbd-d66537f3c7ce")
 	)
 	(junction
 		(at 680.466 239.522)
@@ -10867,16 +10849,10 @@
 		(uuid "b2cb3fe0-682c-409c-bf32-c9a241aebd0d")
 	)
 	(junction
-		(at 611.378 239.522)
+		(at 607.06 242.824)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b31461b7-e28d-4c44-8af7-c55c0a51c9e7")
-	)
-	(junction
-		(at 570.23 258.064)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b543b24e-c677-45cc-9891-d1cb996d8e48")
+		(uuid "b57c9d3f-7736-4984-923c-bb65ab9cd3ad")
 	)
 	(junction
 		(at 166.37 200.914)
@@ -10903,16 +10879,22 @@
 		(uuid "b7d6a145-8c4b-46d9-a07a-067b5c0953df")
 	)
 	(junction
+		(at 570.23 242.824)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b865458b-7afe-4c02-b361-458f7ceab2c3")
+	)
+	(junction
 		(at 683.768 102.108)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b88fed30-8bb3-4f43-9026-510b2896969d")
 	)
 	(junction
-		(at 684.276 242.824)
+		(at 533.654 276.098)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b8d8b0e1-d787-4e5f-b1e7-ec1911113370")
+		(uuid "b9352eb3-ebe4-4c91-b6d8-adb338b6ba90")
 	)
 	(junction
 		(at 394.97 189.738)
@@ -10955,6 +10937,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ba70dc06-15d5-4c4c-9349-3972c715c18f")
+	)
+	(junction
+		(at 554.482 276.098)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bcae64fb-3c62-4787-9a9e-8ce3193c1e72")
 	)
 	(junction
 		(at 431.8 123.698)
@@ -11023,6 +11011,12 @@
 		(uuid "c23c7015-0b00-42df-8f6c-670175c9d8ed")
 	)
 	(junction
+		(at 689.356 224.282)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c2816d72-cb81-4799-9352-161253febbfa")
+	)
+	(junction
 		(at 495.3 201.168)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11033,6 +11027,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c378ce01-cfcc-417f-9dcc-b5349b09904e")
+	)
+	(junction
+		(at 704.088 242.824)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c3fdc3dc-6863-49be-ba64-e9455e57a816")
 	)
 	(junction
 		(at 135.89 62.23)
@@ -11047,16 +11047,16 @@
 		(uuid "c44f6360-a3de-4cb8-aeb3-1777bd13489c")
 	)
 	(junction
-		(at 650.748 219.71)
-		(diameter 1.016)
-		(color 0 0 0 0)
-		(uuid "c4b789d4-f62b-4c36-8f05-4bc4af64661b")
-	)
-	(junction
 		(at 433.07 145.288)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c4e4a107-914b-48a7-8874-c48875667c84")
+	)
+	(junction
+		(at 533.908 239.522)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c619acb4-2ed9-4542-95db-e5bf4519bff1")
 	)
 	(junction
 		(at 305.054 132.334)
@@ -11185,6 +11185,12 @@
 		(uuid "d2bddadf-fb45-4c91-b05a-3dac496dd33d")
 	)
 	(junction
+		(at 573.278 219.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d353179e-8d8a-4cd8-9930-0a7215cfa71a")
+	)
+	(junction
 		(at 107.188 254.762)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11195,12 +11201,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d4c03764-2eb3-42ea-9936-b01b9fd7bbbb")
-	)
-	(junction
-		(at 689.356 239.522)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d4dec5c8-bcdd-400b-8017-fce6030601e4")
 	)
 	(junction
 		(at 659.638 219.71)
@@ -11221,10 +11221,10 @@
 		(uuid "d566d457-fa07-47ba-9a05-1c69d9bedb14")
 	)
 	(junction
-		(at 592.328 239.522)
+		(at 534.162 201.93)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "d5b02593-5cc3-42b5-9bab-804ab7995244")
+		(uuid "d5dc3d79-8392-4c07-883a-3bba4d0724ef")
 	)
 	(junction
 		(at 151.892 239.522)
@@ -11287,6 +11287,12 @@
 		(uuid "dace94a6-f2d2-4621-b1c7-f4b9be2b0c9f")
 	)
 	(junction
+		(at 710.692 224.282)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dc1626c1-c0cf-43b5-b2f5-9fc23ab4e5cd")
+	)
+	(junction
 		(at 467.868 58.928)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11297,6 +11303,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dc773f24-5864-4a7c-9872-2e6229dc6673")
+	)
+	(junction
+		(at 669.798 219.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dc91948f-4bf3-49e6-88e3-9e41175bbbfa")
 	)
 	(junction
 		(at 135.89 138.43)
@@ -11383,6 +11395,12 @@
 		(uuid "e1a00270-a7f2-4543-8b74-a7a55207a2af")
 	)
 	(junction
+		(at 592.328 219.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e1a43a0e-1a45-4ac3-b867-237bcc286f6d")
+	)
+	(junction
 		(at 292.354 124.714)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11443,6 +11461,12 @@
 		(uuid "e5c70ca1-49c2-4ab2-81c0-9324b157d055")
 	)
 	(junction
+		(at 570.23 258.064)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e63349aa-6c06-43e6-8847-ba31c8844510")
+	)
+	(junction
 		(at 544.068 201.93)
 		(diameter 1.016)
 		(color 0 0 0 0)
@@ -11461,12 +11485,6 @@
 		(uuid "e71557da-d806-4f01-9ccf-45a4541a66b0")
 	)
 	(junction
-		(at 626.11 242.824)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e7598684-e440-44fd-bef8-603d1e1deeb2")
-	)
-	(junction
 		(at 97.028 219.964)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11483,6 +11501,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e7e403af-aae1-4da2-8e46-b7df4eb42daf")
+	)
+	(junction
+		(at 593.09 239.522)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e83ce46a-e2da-441f-aedc-2f28a149f0fa")
 	)
 	(junction
 		(at 564.388 201.93)
@@ -11539,12 +11563,6 @@
 		(uuid "eaef1c9b-5c5d-414d-81e0-da6f9ed6ba35")
 	)
 	(junction
-		(at 650.494 239.522)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "eb31437e-08d1-48f7-bf95-635f43e10b39")
-	)
-	(junction
 		(at 420.878 58.928)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11575,16 +11593,22 @@
 		(uuid "ebfd5796-8bbd-4023-a0ca-c8626481975b")
 	)
 	(junction
-		(at 611.378 224.282)
+		(at 554.228 219.71)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ec7f54bf-5b1f-41f3-8e5b-eacb1838e4db")
+		(uuid "ec71131f-0f53-46c1-8a5b-5b4480e31996")
 	)
 	(junction
 		(at 554.228 201.93)
 		(diameter 1.016)
 		(color 0 0 0 0)
 		(uuid "ec963ad1-b476-48aa-a9e7-2ecfc154fcff")
+	)
+	(junction
+		(at 611.378 219.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ecc1c687-900c-475a-8e12-4362efeca359")
 	)
 	(junction
 		(at 166.878 313.944)
@@ -11767,12 +11791,6 @@
 		(uuid "f7ce9f67-b257-4932-bd39-8b9b55596ee2")
 	)
 	(junction
-		(at 533.654 260.858)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f7ffcfa5-358c-4f49-8d9c-f02164c6265d")
-	)
-	(junction
 		(at 565.912 338.582)
 		(diameter 1.016)
 		(color 0 0 0 0)
@@ -11801,12 +11819,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fa5005ea-591f-4b9f-82f1-cf335868357d")
-	)
-	(junction
-		(at 573.278 219.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "faf3852c-8a58-4ec6-8113-3af574fa8604")
 	)
 	(junction
 		(at 531.368 152.908)
@@ -11845,16 +11857,16 @@
 		(uuid "fc0e6abb-05a1-4cef-9da9-7371124b1a37")
 	)
 	(junction
+		(at 588.01 258.064)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fc6ae552-94b7-4f78-81d3-17aebe4667bf")
+	)
+	(junction
 		(at 439.42 137.668)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fd13b4ed-8197-4985-8fc7-89143de3ae4d")
-	)
-	(junction
-		(at 665.226 242.824)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fd1df730-0074-4dd1-8861-83f99003e58a")
 	)
 	(junction
 		(at 525.272 388.112)
@@ -12054,7 +12066,17 @@
 	)
 	(wire
 		(pts
-			(xy 582.676 276.098) (xy 592.074 276.098)
+			(xy 524.256 258.064) (xy 533.654 258.064)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00025954-3dea-4c40-a880-9aecb0b25f20")
+	)
+	(wire
+		(pts
+			(xy 582.676 276.098) (xy 600.456 276.098)
 		)
 		(stroke
 			(width 0)
@@ -12094,7 +12116,7 @@
 	)
 	(wire
 		(pts
-			(xy 650.748 219.71) (xy 659.638 219.71)
+			(xy 640.588 219.71) (xy 650.748 219.71)
 		)
 		(stroke
 			(width 0)
@@ -12124,16 +12146,6 @@
 	)
 	(wire
 		(pts
-			(xy 592.074 260.858) (xy 600.456 260.858)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "01b4562a-a83b-4710-9798-d2092c3c50cb")
-	)
-	(wire
-		(pts
 			(xy 176.53 219.964) (xy 186.69 219.964)
 		)
 		(stroke
@@ -12141,16 +12153,6 @@
 			(type solid)
 		)
 		(uuid "01f44ed4-d420-489a-a89b-9d9ddc4a3135")
-	)
-	(wire
-		(pts
-			(xy 659.384 239.522) (xy 669.544 239.522)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "01ffbe24-6665-4bb3-9770-4770dabce975")
 	)
 	(wire
 		(pts
@@ -12214,16 +12216,6 @@
 	)
 	(wire
 		(pts
-			(xy 640.334 224.282) (xy 650.494 224.282)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "03547ff4-8bde-41a2-9d6a-9a8688ca5ba7")
-	)
-	(wire
-		(pts
 			(xy 25.908 244.602) (xy 25.908 254.762)
 		)
 		(stroke
@@ -12244,13 +12236,13 @@
 	)
 	(wire
 		(pts
-			(xy 573.278 224.282) (xy 583.438 224.282)
+			(xy 704.088 258.064) (xy 716.534 258.064)
 		)
 		(stroke
 			(width 0)
-			(type solid)
+			(type default)
 		)
-		(uuid "03f2fc6d-b812-48a7-8454-c043ef656c1e")
+		(uuid "041bf781-cf5b-4d6a-81ec-692b15c56f6b")
 	)
 	(wire
 		(pts
@@ -12354,13 +12346,13 @@
 	)
 	(wire
 		(pts
-			(xy 554.482 260.858) (xy 564.388 260.858)
+			(xy 614.68 250.444) (xy 618.744 250.444)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0673df10-d8f2-4929-a7e5-cdcff74f31a1")
+		(uuid "067f5891-c64c-4799-8c90-61df8bbad78d")
 	)
 	(wire
 		(pts
@@ -12384,7 +12376,7 @@
 	)
 	(wire
 		(pts
-			(xy 525.018 219.71) (xy 544.068 219.71)
+			(xy 525.018 219.71) (xy 534.162 219.71)
 		)
 		(stroke
 			(width 0)
@@ -12574,16 +12566,6 @@
 	)
 	(wire
 		(pts
-			(xy 704.088 242.824) (xy 716.534 242.824)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0c8993b0-ee05-44c3-a027-725396acb121")
-	)
-	(wire
-		(pts
 			(xy 644.398 141.478) (xy 644.398 116.078)
 		)
 		(stroke
@@ -12674,16 +12656,6 @@
 	)
 	(wire
 		(pts
-			(xy 669.544 239.522) (xy 680.466 239.522)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0d9b7a64-af82-41a6-aadc-464280f0ec0f")
-	)
-	(wire
-		(pts
 			(xy 455.93 160.528) (xy 463.55 160.528)
 		)
 		(stroke
@@ -12744,16 +12716,6 @@
 	)
 	(wire
 		(pts
-			(xy 592.328 219.71) (xy 602.488 219.71)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "0ecb5c3a-4280-487c-815e-e66a34198442")
-	)
-	(wire
-		(pts
 			(xy 137.16 208.534) (xy 139.7 208.534)
 		)
 		(stroke
@@ -12761,16 +12723,6 @@
 			(type default)
 		)
 		(uuid "0f15c119-81b5-4402-a468-cff747540911")
-	)
-	(wire
-		(pts
-			(xy 630.174 224.282) (xy 640.334 224.282)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "0f78538e-1e18-4b65-993c-5abd8c1487b6")
 	)
 	(wire
 		(pts
@@ -12794,7 +12746,7 @@
 	)
 	(wire
 		(pts
-			(xy 582.676 260.858) (xy 592.074 260.858)
+			(xy 582.676 260.858) (xy 600.456 260.858)
 		)
 		(stroke
 			(width 0)
@@ -12834,6 +12786,36 @@
 	)
 	(wire
 		(pts
+			(xy 554.482 260.858) (xy 564.388 260.858)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10477ee8-3502-4674-b63d-4bd0a1c8459b")
+	)
+	(wire
+		(pts
+			(xy 630.428 219.71) (xy 640.588 219.71)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "1079806d-aa18-4c93-a004-8cf40aaa4ae0")
+	)
+	(wire
+		(pts
+			(xy 689.356 224.282) (xy 701.04 224.282)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "1081b0b9-a6ab-45a2-a384-5ab893e544d0")
+	)
+	(wire
+		(pts
 			(xy 71.12 216.154) (xy 81.28 216.154)
 		)
 		(stroke
@@ -12861,26 +12843,6 @@
 			(type solid)
 		)
 		(uuid "1113db6b-b68a-4e20-99a7-10eda7f897e0")
-	)
-	(wire
-		(pts
-			(xy 689.61 219.71) (xy 701.04 219.71)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "11856889-831d-48fc-be52-27a626f9dfc0")
-	)
-	(wire
-		(pts
-			(xy 588.01 258.064) (xy 579.374 258.064)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1186b6c8-5a49-4d99-933d-0a19ffaa2c8a")
 	)
 	(wire
 		(pts
@@ -13074,6 +13036,16 @@
 	)
 	(wire
 		(pts
+			(xy 650.748 219.71) (xy 659.638 219.71)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "16907537-3fe9-4e19-b7f0-dcfde0f03300")
+	)
+	(wire
+		(pts
 			(xy 40.132 247.142) (xy 40.386 247.142)
 		)
 		(stroke
@@ -13114,7 +13086,7 @@
 	)
 	(wire
 		(pts
-			(xy 598.424 242.824) (xy 607.06 242.824)
+			(xy 598.424 242.824) (xy 617.22 242.824)
 		)
 		(stroke
 			(width 0)
@@ -13224,6 +13196,16 @@
 	)
 	(wire
 		(pts
+			(xy 533.908 239.522) (xy 544.068 239.522)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19fd1ded-a7e8-4fd5-bf24-c9c1b648b325")
+	)
+	(wire
+		(pts
 			(xy 648.462 361.442) (xy 648.462 338.582)
 		)
 		(stroke
@@ -13274,7 +13256,7 @@
 	)
 	(wire
 		(pts
-			(xy 630.428 219.71) (xy 640.588 219.71)
+			(xy 621.538 219.71) (xy 630.428 219.71)
 		)
 		(stroke
 			(width 0)
@@ -13404,23 +13386,13 @@
 	)
 	(wire
 		(pts
-			(xy 533.654 258.064) (xy 543.814 258.064)
+			(xy 554.482 276.098) (xy 564.388 276.098)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1cda98ed-3eec-47fe-8d88-0578f75cd2b9")
-	)
-	(wire
-		(pts
-			(xy 523.24 239.522) (xy 533.908 239.522)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d3f7af8-5522-4627-8cee-d5596ed5b0b3")
+		(uuid "1d344158-dd8c-46b6-a20a-b817e3dbd1ba")
 	)
 	(wire
 		(pts
@@ -13441,6 +13413,16 @@
 			(type default)
 		)
 		(uuid "1df0e46b-c892-4e61-8a91-e1de0ad32ba9")
+	)
+	(wire
+		(pts
+			(xy 689.61 219.71) (xy 701.04 219.71)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "1e188578-ab00-447e-813b-0381213e0a00")
 	)
 	(wire
 		(pts
@@ -13574,6 +13556,16 @@
 	)
 	(wire
 		(pts
+			(xy 592.328 219.71) (xy 602.488 219.71)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "21734029-f35d-49f4-8eba-ec108be82fa4")
+	)
+	(wire
+		(pts
 			(xy 376.936 161.798) (xy 384.556 161.798)
 		)
 		(stroke
@@ -13604,23 +13596,13 @@
 	)
 	(wire
 		(pts
-			(xy 644.652 242.824) (xy 655.574 242.824)
+			(xy 646.938 242.824) (xy 655.574 242.824)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "22457823-2f86-430b-8061-a6531f52e530")
-	)
-	(wire
-		(pts
-			(xy 515.62 268.478) (xy 526.034 268.478)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "22886836-fa14-412b-98e2-41c50fa23a0a")
+		(uuid "22518aa8-9fa7-4dba-8f81-72e2385d642c")
 	)
 	(wire
 		(pts
@@ -13651,16 +13633,6 @@
 			(type default)
 		)
 		(uuid "233ec253-66ca-412c-a45f-8bb2a84f6ba6")
-	)
-	(wire
-		(pts
-			(xy 564.388 276.098) (xy 554.482 276.098)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "236532aa-b5cb-454a-acd1-3379d9e3a244")
 	)
 	(wire
 		(pts
@@ -13701,6 +13673,16 @@
 			(type default)
 		)
 		(uuid "23bbae6b-ad70-47c0-8de0-b98a80e20a56")
+	)
+	(wire
+		(pts
+			(xy 551.942 242.824) (xy 561.594 242.824)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23e6f0f2-c275-4b94-95b4-8c6505795ae2")
 	)
 	(wire
 		(pts
@@ -13754,6 +13736,16 @@
 	)
 	(wire
 		(pts
+			(xy 630.174 224.282) (xy 640.334 224.282)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "2440afbc-40d5-49c7-ad09-8f4ea68465c6")
+	)
+	(wire
+		(pts
 			(xy 443.738 58.928) (xy 460.248 58.928)
 		)
 		(stroke
@@ -13764,6 +13756,16 @@
 	)
 	(wire
 		(pts
+			(xy 520.954 260.858) (xy 533.654 260.858)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "248577fc-5a83-41cb-bb1c-b88b4a362a55")
+	)
+	(wire
+		(pts
 			(xy 582.676 265.938) (xy 582.676 276.098)
 		)
 		(stroke
@@ -13771,16 +13773,6 @@
 			(type default)
 		)
 		(uuid "248e39d9-b6f7-4773-bb1b-03002ed029c2")
-	)
-	(wire
-		(pts
-			(xy 544.068 224.282) (xy 554.228 224.282)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "24b29d11-5518-4158-adfc-dcba7273b118")
 	)
 	(wire
 		(pts
@@ -13864,7 +13856,7 @@
 	)
 	(wire
 		(pts
-			(xy 633.73 250.444) (xy 637.032 250.444)
+			(xy 633.73 250.444) (xy 633.984 250.444)
 		)
 		(stroke
 			(width 0)
@@ -13894,16 +13886,6 @@
 	)
 	(wire
 		(pts
-			(xy 564.388 219.71) (xy 573.278 219.71)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "269d9656-5883-441b-82c1-2ba972210080")
-	)
-	(wire
-		(pts
 			(xy 294.894 146.304) (xy 297.434 146.304)
 		)
 		(stroke
@@ -13921,16 +13903,6 @@
 			(type solid)
 		)
 		(uuid "26ec02f2-13ae-43ec-a917-6befa161eb0c")
-	)
-	(wire
-		(pts
-			(xy 533.654 258.064) (xy 524.256 258.064)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "270760ba-780a-47b8-bbfa-0b6f98bbdf66")
 	)
 	(wire
 		(pts
@@ -14034,6 +14006,16 @@
 	)
 	(wire
 		(pts
+			(xy 600.71 231.902) (xy 603.504 231.902)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29864a35-5cfc-4770-bd06-7a8829ce09af")
+	)
+	(wire
+		(pts
 			(xy 264.414 178.054) (xy 270.764 178.054)
 		)
 		(stroke
@@ -14041,16 +14023,6 @@
 			(type default)
 		)
 		(uuid "29c13e18-e608-4d01-8580-cf9d28b573c9")
-	)
-	(wire
-		(pts
-			(xy 618.998 231.902) (xy 622.554 231.902)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "29f933fb-adad-4c7a-b739-e7f62b06b1b4")
 	)
 	(wire
 		(pts
@@ -14134,6 +14106,26 @@
 	)
 	(wire
 		(pts
+			(xy 533.654 276.098) (xy 544.322 276.098)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c690ac1-eadd-48d5-85e1-25624eb757b7")
+	)
+	(wire
+		(pts
+			(xy 620.522 224.282) (xy 630.174 224.282)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "2c899e1b-ea34-44cd-9c64-48749c7f8be6")
+	)
+	(wire
+		(pts
 			(xy 361.442 121.412) (xy 363.982 121.412)
 		)
 		(stroke
@@ -14141,16 +14133,6 @@
 			(type default)
 		)
 		(uuid "2cace23d-c51e-4368-b995-983c26f18274")
-	)
-	(wire
-		(pts
-			(xy 665.226 242.824) (xy 676.148 242.824)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2d091ad1-cc78-4331-8ba8-549792b5b71f")
 	)
 	(wire
 		(pts
@@ -14244,7 +14226,7 @@
 	)
 	(wire
 		(pts
-			(xy 684.276 258.064) (xy 676.148 258.064)
+			(xy 676.148 258.064) (xy 684.276 258.064)
 		)
 		(stroke
 			(width 0)
@@ -14354,16 +14336,6 @@
 	)
 	(wire
 		(pts
-			(xy 563.88 224.282) (xy 573.278 224.282)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "3266a054-685c-4119-92dd-fcbfe451c410")
-	)
-	(wire
-		(pts
 			(xy 180.34 62.23) (xy 186.69 62.23)
 		)
 		(stroke
@@ -14381,6 +14353,16 @@
 			(type default)
 		)
 		(uuid "3329723b-7cdf-403d-90b0-683d781e0873")
+	)
+	(wire
+		(pts
+			(xy 533.654 260.858) (xy 544.322 260.858)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33367823-7919-40e9-9a26-4a2e16600465")
 	)
 	(polyline
 		(pts
@@ -14524,16 +14506,6 @@
 	)
 	(wire
 		(pts
-			(xy 700.278 268.478) (xy 599.694 268.478)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "3705de1d-fae6-4b03-9c80-d1c73f3c9c59")
-	)
-	(wire
-		(pts
 			(xy 434.34 145.288) (xy 435.61 145.288)
 		)
 		(stroke
@@ -14554,16 +14526,6 @@
 	)
 	(wire
 		(pts
-			(xy 564.388 260.858) (xy 573.278 260.858)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "374a5222-db7d-4d41-a04a-70c672113db5")
-	)
-	(wire
-		(pts
 			(xy 169.164 256.286) (xy 177.546 256.286)
 		)
 		(stroke
@@ -14571,16 +14533,6 @@
 			(type default)
 		)
 		(uuid "3757f539-a052-4d3f-a156-65660d283790")
-	)
-	(wire
-		(pts
-			(xy 583.438 224.282) (xy 592.328 224.282)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "37fae0f9-c489-4ab8-bc1f-e0c987478f61")
 	)
 	(wire
 		(pts
@@ -14611,6 +14563,26 @@
 			(type solid)
 		)
 		(uuid "383de0b2-271e-43f8-a4cb-754cedda3c43")
+	)
+	(wire
+		(pts
+			(xy 665.226 258.064) (xy 676.148 258.064)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3874bbcc-ec24-4db9-8333-b00be87c736c")
+	)
+	(wire
+		(pts
+			(xy 655.574 258.064) (xy 665.226 258.064)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3886b516-0a7f-4716-b311-4f8dbaf5819f")
 	)
 	(wire
 		(pts
@@ -14734,6 +14706,16 @@
 	)
 	(wire
 		(pts
+			(xy 523.24 239.522) (xy 533.908 239.522)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3affb2a1-2ecf-4acb-bd35-2d0b9f163ed3")
+	)
+	(wire
+		(pts
 			(xy 455.93 230.378) (xy 463.55 230.378)
 		)
 		(stroke
@@ -14784,6 +14766,16 @@
 	)
 	(wire
 		(pts
+			(xy 618.744 231.902) (xy 622.554 231.902)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bd3703d-b548-4fdb-b235-804a51514b17")
+	)
+	(wire
+		(pts
 			(xy 260.604 190.754) (xy 261.874 190.754)
 		)
 		(stroke
@@ -14791,16 +14783,6 @@
 			(type default)
 		)
 		(uuid "3c091b37-d9bb-469a-a333-8ee89d119b25")
-	)
-	(wire
-		(pts
-			(xy 614.68 250.444) (xy 618.49 250.444)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c2cea7c-5b5b-41e2-9eb7-e5feb39e1e39")
 	)
 	(wire
 		(pts
@@ -14814,13 +14796,13 @@
 	)
 	(wire
 		(pts
-			(xy 543.814 242.824) (xy 551.942 242.824)
+			(xy 580.898 231.902) (xy 585.47 231.902)
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
-		(uuid "3c45e8bf-8880-44ad-8248-24fbaaecc897")
+		(uuid "3ca253ca-ab31-4ba1-86d4-2c201a6e5614")
 	)
 	(wire
 		(pts
@@ -15024,6 +15006,16 @@
 	)
 	(wire
 		(pts
+			(xy 579.374 258.064) (xy 598.424 258.064)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "420b09cb-1098-4ab6-a90a-93e2892dbd17")
+	)
+	(wire
+		(pts
 			(xy 526.288 127.508) (xy 531.368 127.508)
 		)
 		(stroke
@@ -15054,13 +15046,13 @@
 	)
 	(wire
 		(pts
-			(xy 635.762 258.064) (xy 626.11 258.064)
+			(xy 602.488 224.282) (xy 620.522 224.282)
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
-		(uuid "439c6438-76e3-45ac-a5ea-5af2d74ce3c1")
+		(uuid "43f440e1-aaa8-45e3-a147-583c8c360942")
 	)
 	(wire
 		(pts
@@ -15091,6 +15083,16 @@
 			(type solid)
 		)
 		(uuid "44dab648-4420-44e1-8558-326cba133012")
+	)
+	(wire
+		(pts
+			(xy 669.798 219.71) (xy 689.61 219.71)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "4504a059-7991-46c2-8fef-928e62bade6f")
 	)
 	(wire
 		(pts
@@ -15294,6 +15296,26 @@
 	)
 	(wire
 		(pts
+			(xy 515.62 268.478) (xy 526.034 268.478)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49503186-0d17-479c-8509-380f918abd1c")
+	)
+	(wire
+		(pts
+			(xy 533.654 242.824) (xy 543.814 242.824)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49784339-03a2-4c6c-b36e-05823d9f45d8")
+	)
+	(wire
+		(pts
 			(xy 563.88 229.362) (xy 563.88 239.522)
 		)
 		(stroke
@@ -15354,7 +15376,7 @@
 	)
 	(wire
 		(pts
-			(xy 611.378 219.71) (xy 621.538 219.71)
+			(xy 602.488 219.71) (xy 611.378 219.71)
 		)
 		(stroke
 			(width 0)
@@ -15394,7 +15416,7 @@
 	)
 	(wire
 		(pts
-			(xy 617.22 258.064) (xy 607.06 258.064)
+			(xy 598.424 258.064) (xy 617.22 258.064)
 		)
 		(stroke
 			(width 0)
@@ -15484,16 +15506,6 @@
 	)
 	(wire
 		(pts
-			(xy 655.574 258.064) (xy 644.652 258.064)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4e22b1ed-957f-4f74-a3d2-5d8d04439064")
-	)
-	(wire
-		(pts
 			(xy 680.72 201.93) (xy 680.72 214.63)
 		)
 		(stroke
@@ -15501,16 +15513,6 @@
 			(type solid)
 		)
 		(uuid "4e5b336a-6420-4268-8578-0cc78d401923")
-	)
-	(wire
-		(pts
-			(xy 544.322 260.858) (xy 554.482 260.858)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4e5efde1-aa2d-42dc-aa75-1a169514b324")
 	)
 	(wire
 		(pts
@@ -15554,16 +15556,6 @@
 	)
 	(wire
 		(pts
-			(xy 617.22 242.824) (xy 626.11 242.824)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4ef6841d-1e55-4eb0-b0c0-0b691d05124e")
-	)
-	(wire
-		(pts
 			(xy 119.38 216.154) (xy 129.54 216.154)
 		)
 		(stroke
@@ -15604,6 +15596,16 @@
 	)
 	(wire
 		(pts
+			(xy 710.692 239.522) (xy 720.344 239.522)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f41e334-f778-426e-a5f7-0abe7401f708")
+	)
+	(wire
+		(pts
 			(xy 602.742 388.112) (xy 602.742 361.442)
 		)
 		(stroke
@@ -15624,7 +15626,17 @@
 	)
 	(wire
 		(pts
-			(xy 554.228 219.71) (xy 564.388 219.71)
+			(xy 611.378 219.71) (xy 621.538 219.71)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "4fb89bbe-6517-4b10-b6fd-0bc58c4c07fd")
+	)
+	(wire
+		(pts
+			(xy 544.068 219.71) (xy 554.228 219.71)
 		)
 		(stroke
 			(width 0)
@@ -15704,6 +15716,16 @@
 	)
 	(wire
 		(pts
+			(xy 533.908 224.282) (xy 544.068 224.282)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "512f3d12-9a62-4fad-92ed-e4a4f564182b")
+	)
+	(wire
+		(pts
 			(xy 676.148 252.984) (xy 676.148 242.824)
 		)
 		(stroke
@@ -15714,7 +15736,7 @@
 	)
 	(wire
 		(pts
-			(xy 570.23 258.064) (xy 579.374 258.064)
+			(xy 561.594 258.064) (xy 579.374 258.064)
 		)
 		(stroke
 			(width 0)
@@ -15731,6 +15753,16 @@
 			(type solid)
 		)
 		(uuid "52061937-341c-43f4-b9ce-cc50e46916f3")
+	)
+	(wire
+		(pts
+			(xy 650.494 224.282) (xy 659.384 224.282)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "522649e7-9a8f-46ac-9509-8a67b7a97168")
 	)
 	(wire
 		(pts
@@ -15844,16 +15876,6 @@
 	)
 	(wire
 		(pts
-			(xy 600.456 276.098) (xy 592.074 276.098)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "550305b6-00c9-4ffa-bf82-08d8bb9994f7")
-	)
-	(wire
-		(pts
 			(xy 129.54 216.154) (xy 138.176 216.154)
 		)
 		(stroke
@@ -15914,6 +15936,16 @@
 	)
 	(wire
 		(pts
+			(xy 659.384 239.522) (xy 669.544 239.522)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5839ad20-774d-495e-b05f-1e45c48d1df2")
+	)
+	(wire
+		(pts
 			(xy 127 263.906) (xy 38.608 263.906)
 		)
 		(stroke
@@ -15931,16 +15963,6 @@
 			(type default)
 		)
 		(uuid "59a3dc97-d559-4d50-ac71-54aaa63b2aa7")
-	)
-	(wire
-		(pts
-			(xy 626.11 242.824) (xy 635.762 242.824)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "59c413e0-e8a7-4370-a699-8d4ca4479608")
 	)
 	(wire
 		(pts
@@ -15971,16 +15993,6 @@
 			(type default)
 		)
 		(uuid "59d89568-e1c1-4a04-be4b-212f48051ad5")
-	)
-	(wire
-		(pts
-			(xy 579.374 242.824) (xy 588.01 242.824)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "59f7d942-d375-4ea7-866f-fe7a465ae23a")
 	)
 	(wire
 		(pts
@@ -16051,16 +16063,6 @@
 			(type default)
 		)
 		(uuid "5aea3486-aa6d-4b63-9f60-6a1587a37ce8")
-	)
-	(wire
-		(pts
-			(xy 592.328 239.522) (xy 602.488 239.522)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5aeed66e-14ec-4748-9650-5dccb7b6b2b5")
 	)
 	(wire
 		(pts
@@ -16174,13 +16176,13 @@
 	)
 	(wire
 		(pts
-			(xy 520.954 260.858) (xy 533.654 260.858)
+			(xy 544.322 260.858) (xy 554.482 260.858)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5d3ff9b5-135d-4044-b44e-dc5fdda348d1")
+		(uuid "5cc49c8f-a37e-4d7d-8e2d-63dbfa0ffe00")
 	)
 	(wire
 		(pts
@@ -16221,6 +16223,16 @@
 			(type default)
 		)
 		(uuid "5ea751e5-86c7-4f9d-829d-6065acbaf0ac")
+	)
+	(wire
+		(pts
+			(xy 523.24 276.098) (xy 533.654 276.098)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5eab4176-4f09-4c64-91e6-66b5b63618c7")
 	)
 	(wire
 		(pts
@@ -16304,16 +16316,6 @@
 	)
 	(wire
 		(pts
-			(xy 598.424 258.064) (xy 588.01 258.064)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "62ff419d-864c-4241-b577-75861f5eacdb")
-	)
-	(wire
-		(pts
 			(xy 556.768 127.508) (xy 582.168 127.508)
 		)
 		(stroke
@@ -16321,16 +16323,6 @@
 			(type solid)
 		)
 		(uuid "6303170f-3d01-40f3-a0e9-5934967d84c7")
-	)
-	(wire
-		(pts
-			(xy 710.692 224.282) (xy 720.344 224.282)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6310402f-016a-40d0-ab5f-eeb6e2db04b0")
 	)
 	(wire
 		(pts
@@ -16371,26 +16363,6 @@
 			(type solid)
 		)
 		(uuid "63a77b8a-c119-43fd-9ccb-14ca54778fea")
-	)
-	(wire
-		(pts
-			(xy 554.482 276.098) (xy 544.322 276.098)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6404a15f-cef1-4247-a9bb-cac95b86743f")
-	)
-	(wire
-		(pts
-			(xy 689.356 224.282) (xy 701.04 224.282)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "642b6154-d599-4ff9-aaf7-8349077316ae")
 	)
 	(wire
 		(pts
@@ -16524,6 +16496,16 @@
 	)
 	(wire
 		(pts
+			(xy 633.984 250.444) (xy 639.318 250.444)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6795e368-f508-419a-91d1-492f169dd65a")
+	)
+	(wire
+		(pts
 			(xy 99.568 372.364) (xy 99.568 364.744)
 		)
 		(stroke
@@ -16564,6 +16546,26 @@
 	)
 	(wire
 		(pts
+			(xy 650.494 239.522) (xy 659.384 239.522)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "685f0b93-976e-4637-8e0d-54762440fb9e")
+	)
+	(wire
+		(pts
+			(xy 704.088 242.824) (xy 716.534 242.824)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6893bec8-1fc3-4583-8813-6fb0b70e7e59")
+	)
+	(wire
+		(pts
 			(xy 48.26 73.66) (xy 73.66 73.66)
 		)
 		(stroke
@@ -16571,6 +16573,16 @@
 			(type solid)
 		)
 		(uuid "6972d161-face-4b75-8e3b-d99684f7640a")
+	)
+	(wire
+		(pts
+			(xy 583.438 239.522) (xy 602.488 239.522)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69c1780d-dcfb-4b58-b64b-92181f7a6844")
 	)
 	(wire
 		(pts
@@ -16621,6 +16633,16 @@
 			(type default)
 		)
 		(uuid "6a48779b-0f3e-4f36-b2ba-48ad1abe1b99")
+	)
+	(wire
+		(pts
+			(xy 640.334 224.282) (xy 650.494 224.282)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "6a5dc7c2-daaf-49aa-871f-b5161c8e41ab")
 	)
 	(wire
 		(pts
@@ -16724,7 +16746,7 @@
 	)
 	(wire
 		(pts
-			(xy 570.23 242.824) (xy 579.374 242.824)
+			(xy 561.594 242.824) (xy 579.374 242.824)
 		)
 		(stroke
 			(width 0)
@@ -16772,16 +16794,6 @@
 		)
 		(uuid "6d510de9-7755-4ccb-aa1f-c73cdabd6fb7")
 	)
-	(wire
-		(pts
-			(xy 525.018 224.282) (xy 533.908 224.282)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "6d61679e-bfa0-45c7-8f94-d763ccdb4eeb")
-	)
 	(polyline
 		(pts
 			(xy 226.06 46.99) (xy 359.41 46.99)
@@ -16801,6 +16813,16 @@
 			(type solid)
 		)
 		(uuid "6e43e446-2955-4d2e-8fea-fc509b83c752")
+	)
+	(wire
+		(pts
+			(xy 696.976 231.902) (xy 703.072 231.902)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e46b7b1-e97e-46b0-be46-35e3a64dd866")
 	)
 	(wire
 		(pts
@@ -16874,6 +16896,16 @@
 	)
 	(wire
 		(pts
+			(xy 620.522 239.522) (xy 630.174 239.522)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f87cc2b-8719-478a-8490-26ce01553257")
+	)
+	(wire
+		(pts
 			(xy 41.91 200.914) (xy 50.8 200.914)
 		)
 		(stroke
@@ -16904,7 +16936,7 @@
 	)
 	(wire
 		(pts
-			(xy 580.898 268.478) (xy 584.454 268.478)
+			(xy 580.898 268.478) (xy 700.278 268.478)
 		)
 		(stroke
 			(width 0)
@@ -17004,6 +17036,26 @@
 	)
 	(wire
 		(pts
+			(xy 676.148 242.824) (xy 684.276 242.824)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "736bebb7-4235-46a2-ab89-7643200d75fa")
+	)
+	(wire
+		(pts
+			(xy 684.276 242.824) (xy 695.452 242.824)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73b520cf-f128-4c1c-80a8-aa6adddef49f")
+	)
+	(wire
+		(pts
 			(xy 299.974 138.684) (xy 305.054 138.684)
 		)
 		(stroke
@@ -17031,6 +17083,16 @@
 			(type default)
 		)
 		(uuid "749f0a59-f449-415e-bf7b-bb04b40e6ea1")
+	)
+	(wire
+		(pts
+			(xy 626.364 242.824) (xy 635.762 242.824)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74a743ee-4805-4e21-b1aa-a2ea8a186008")
 	)
 	(wire
 		(pts
@@ -17114,6 +17176,16 @@
 	)
 	(wire
 		(pts
+			(xy 544.068 239.522) (xy 563.88 239.522)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77126b61-6122-4d58-9b67-926b8fd54b36")
+	)
+	(wire
+		(pts
 			(xy 286.004 146.304) (xy 287.274 146.304)
 		)
 		(stroke
@@ -17164,26 +17236,6 @@
 	)
 	(wire
 		(pts
-			(xy 620.522 239.522) (xy 630.174 239.522)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7767dd67-b0dd-4d70-b2fc-60c7ed168c90")
-	)
-	(wire
-		(pts
-			(xy 533.654 242.824) (xy 543.814 242.824)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "777cfb15-297e-4076-82c2-bb4c22721f6f")
-	)
-	(wire
-		(pts
 			(xy 149.86 73.66) (xy 175.26 73.66)
 		)
 		(stroke
@@ -17231,6 +17283,16 @@
 			(type solid)
 		)
 		(uuid "78c3375e-0115-483d-95a3-e01e08b65b40")
+	)
+	(wire
+		(pts
+			(xy 665.226 242.824) (xy 676.148 242.824)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "795e53c4-f996-4f40-af0a-1c6db35a2e35")
 	)
 	(wire
 		(pts
@@ -17314,13 +17376,13 @@
 	)
 	(wire
 		(pts
-			(xy 580.898 231.902) (xy 584.708 231.902)
+			(xy 626.364 258.064) (xy 635.762 258.064)
 		)
 		(stroke
 			(width 0)
-			(type solid)
+			(type default)
 		)
-		(uuid "7ba050fd-c912-496a-83c5-9a56cc713fce")
+		(uuid "7b59d7a6-f162-4c1f-890b-4047d9ba2002")
 	)
 	(wire
 		(pts
@@ -17594,16 +17656,6 @@
 	)
 	(wire
 		(pts
-			(xy 533.654 260.858) (xy 544.322 260.858)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "81f44c51-4183-4cad-a586-6a5fce3ecbc2")
-	)
-	(wire
-		(pts
 			(xy 676.402 380.492) (xy 676.402 324.612)
 		)
 		(stroke
@@ -17681,16 +17733,6 @@
 			(type solid)
 		)
 		(uuid "85365b92-4ce8-4734-ad71-865abc510551")
-	)
-	(wire
-		(pts
-			(xy 592.328 224.282) (xy 602.488 224.282)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "858e7fa9-ec05-4591-9880-11865e3676dd")
 	)
 	(wire
 		(pts
@@ -17814,6 +17856,16 @@
 	)
 	(wire
 		(pts
+			(xy 551.942 258.064) (xy 561.594 258.064)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87e57d80-67ff-4782-bde6-8152ded912e9")
+	)
+	(wire
+		(pts
 			(xy 455.93 175.768) (xy 463.55 175.768)
 		)
 		(stroke
@@ -17821,16 +17873,6 @@
 			(type default)
 		)
 		(uuid "8861beca-86bd-4cd9-9ab2-b6c8bbaf94c4")
-	)
-	(wire
-		(pts
-			(xy 544.322 276.098) (xy 533.654 276.098)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "88dd37bd-f577-473f-9550-f23897b9ff50")
 	)
 	(wire
 		(pts
@@ -17954,17 +17996,7 @@
 	)
 	(wire
 		(pts
-			(xy 544.068 239.522) (xy 554.228 239.522)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8ad6f828-b5f1-4e48-bd85-9df1b957807e")
-	)
-	(wire
-		(pts
-			(xy 588.01 242.824) (xy 598.424 242.824)
+			(xy 579.374 242.824) (xy 598.424 242.824)
 		)
 		(stroke
 			(width 0)
@@ -18254,16 +18286,6 @@
 	)
 	(wire
 		(pts
-			(xy 524.256 242.824) (xy 533.654 242.824)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9330ef8b-778f-4bb9-9f98-9a9c9ddcfbf5")
-	)
-	(wire
-		(pts
 			(xy 160.528 271.526) (xy 169.164 271.526)
 		)
 		(stroke
@@ -18314,7 +18336,7 @@
 	)
 	(wire
 		(pts
-			(xy 704.088 258.064) (xy 695.452 258.064)
+			(xy 695.452 258.064) (xy 704.088 258.064)
 		)
 		(stroke
 			(width 0)
@@ -18381,6 +18403,16 @@
 			(type solid)
 		)
 		(uuid "94d2ae0c-698e-4e26-b497-67719303eacb")
+	)
+	(wire
+		(pts
+			(xy 554.228 219.71) (xy 564.388 219.71)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "94f89651-5b70-4752-9d30-32b993ec3f44")
 	)
 	(wire
 		(pts
@@ -18454,16 +18486,6 @@
 	)
 	(wire
 		(pts
-			(xy 533.908 224.282) (xy 544.068 224.282)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "972e2d62-3aa9-4e7a-9078-e853231df7e6")
-	)
-	(wire
-		(pts
 			(xy 688.848 166.878) (xy 695.198 166.878)
 		)
 		(stroke
@@ -18471,16 +18493,6 @@
 			(type solid)
 		)
 		(uuid "979187f3-21b3-491b-9c33-6d8ae2187827")
-	)
-	(wire
-		(pts
-			(xy 640.334 239.522) (xy 650.494 239.522)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "97dbdb48-9f27-4f45-bab9-13ccd2f906e4")
 	)
 	(wire
 		(pts
@@ -18501,16 +18513,6 @@
 			(type default)
 		)
 		(uuid "982816d6-959d-4e93-8700-f2ef0a72a86e")
-	)
-	(wire
-		(pts
-			(xy 659.384 224.282) (xy 669.544 224.282)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "9866257e-8f3f-4d4d-b49d-acd29b12c4bb")
 	)
 	(wire
 		(pts
@@ -18574,16 +18576,6 @@
 	)
 	(wire
 		(pts
-			(xy 665.226 258.064) (xy 676.148 258.064)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9af4ac45-9d68-44fd-bc79-f20e02abfb3e")
-	)
-	(wire
-		(pts
 			(xy 739.14 231.902) (xy 739.14 250.444)
 		)
 		(stroke
@@ -18644,16 +18636,6 @@
 	)
 	(wire
 		(pts
-			(xy 620.522 224.282) (xy 630.174 224.282)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "9c5e8d5b-2690-4dbc-aa7d-9cb20dccfd16")
-	)
-	(wire
-		(pts
 			(xy 688.848 116.078) (xy 695.198 116.078)
 		)
 		(stroke
@@ -18664,7 +18646,7 @@
 	)
 	(wire
 		(pts
-			(xy 525.018 201.93) (xy 544.068 201.93)
+			(xy 525.018 201.93) (xy 534.162 201.93)
 		)
 		(stroke
 			(width 0)
@@ -18751,16 +18733,6 @@
 			(type default)
 		)
 		(uuid "9e016dd9-b4b6-4520-929c-963ac8633c90")
-	)
-	(wire
-		(pts
-			(xy 710.692 239.522) (xy 720.344 239.522)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9e2390c3-35bf-4de2-a735-2354d525f476")
 	)
 	(wire
 		(pts
@@ -18934,7 +18906,7 @@
 	)
 	(wire
 		(pts
-			(xy 517.398 212.09) (xy 546.608 212.09)
+			(xy 517.398 212.09) (xy 526.542 212.09)
 		)
 		(stroke
 			(width 0)
@@ -18944,7 +18916,7 @@
 	)
 	(wire
 		(pts
-			(xy 644.652 258.064) (xy 635.762 258.064)
+			(xy 635.762 258.064) (xy 646.938 258.064)
 		)
 		(stroke
 			(width 0)
@@ -18981,16 +18953,6 @@
 			(type default)
 		)
 		(uuid "a2916196-027c-468a-b80b-9b51c2e30f8c")
-	)
-	(wire
-		(pts
-			(xy 716.534 258.064) (xy 704.088 258.064)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a2cc1343-13c6-425a-bc16-f9c0f6fd1249")
 	)
 	(wire
 		(pts
@@ -19031,16 +18993,6 @@
 			(type solid)
 		)
 		(uuid "a3207924-0604-4a0a-8176-00a2b86ddad6")
-	)
-	(wire
-		(pts
-			(xy 533.908 239.522) (xy 544.068 239.522)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a33fed99-0b0e-40e7-9680-fddd73c43a69")
 	)
 	(wire
 		(pts
@@ -19104,17 +19056,7 @@
 	)
 	(wire
 		(pts
-			(xy 599.948 231.902) (xy 603.758 231.902)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "a4affca4-9900-48b4-830f-583089639e39")
-	)
-	(wire
-		(pts
-			(xy 602.488 239.522) (xy 611.378 239.522)
+			(xy 602.488 239.522) (xy 620.522 239.522)
 		)
 		(stroke
 			(width 0)
@@ -19214,16 +19156,6 @@
 	)
 	(wire
 		(pts
-			(xy 630.174 239.522) (xy 640.334 239.522)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a7652380-9cf9-483f-a966-ccae0305ecbb")
-	)
-	(wire
-		(pts
 			(xy 340.36 57.15) (xy 340.36 58.42)
 		)
 		(stroke
@@ -19291,6 +19223,16 @@
 			(type solid)
 		)
 		(uuid "a86bd608-17d4-4f2e-bee6-1aaac989994e")
+	)
+	(wire
+		(pts
+			(xy 691.896 250.444) (xy 696.468 250.444)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8ad5fe9-6a0f-4ca7-95cc-fe1e35fa74fc")
 	)
 	(wire
 		(pts
@@ -19424,6 +19366,16 @@
 	)
 	(wire
 		(pts
+			(xy 534.162 201.93) (xy 534.162 204.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "abb73f1d-8150-4e13-b328-9e36437e53f4")
+	)
+	(wire
+		(pts
 			(xy 56.134 254.762) (xy 63.246 254.762)
 		)
 		(stroke
@@ -19434,7 +19386,7 @@
 	)
 	(wire
 		(pts
-			(xy 573.278 276.098) (xy 582.676 276.098)
+			(xy 564.388 276.098) (xy 582.676 276.098)
 		)
 		(stroke
 			(width 0)
@@ -19451,6 +19403,16 @@
 			(type solid)
 		)
 		(uuid "ac330240-a13f-41e1-8492-bf6a962d085a")
+	)
+	(wire
+		(pts
+			(xy 659.384 224.282) (xy 669.544 224.282)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "ac4502ff-1331-45d0-be58-4a4f2a568157")
 	)
 	(wire
 		(pts
@@ -19574,7 +19536,7 @@
 	)
 	(wire
 		(pts
-			(xy 573.278 219.71) (xy 583.438 219.71)
+			(xy 564.388 219.71) (xy 573.278 219.71)
 		)
 		(stroke
 			(width 0)
@@ -19601,6 +19563,16 @@
 			(type default)
 		)
 		(uuid "aefc848c-9171-42b5-bdce-cbb7139f87ef")
+	)
+	(wire
+		(pts
+			(xy 630.174 239.522) (xy 640.334 239.522)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af28b951-21b7-446c-8a22-213d189a2e82")
 	)
 	(wire
 		(pts
@@ -19894,16 +19866,6 @@
 	)
 	(wire
 		(pts
-			(xy 611.378 239.522) (xy 620.522 239.522)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b5543305-71dc-46cd-b357-e764c9dfd835")
-	)
-	(wire
-		(pts
 			(xy 311.404 228.854) (xy 319.024 228.854)
 		)
 		(stroke
@@ -19961,6 +19923,16 @@
 			(type default)
 		)
 		(uuid "b64b9a53-9ccc-4134-a36f-d59da86d7675")
+	)
+	(wire
+		(pts
+			(xy 689.356 239.522) (xy 701.04 239.522)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b657ffdf-53d3-48a2-8095-111d5ecbd654")
 	)
 	(wire
 		(pts
@@ -20084,6 +20056,16 @@
 	)
 	(wire
 		(pts
+			(xy 669.544 239.522) (xy 680.466 239.522)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b855eddc-360b-4153-a06d-9813b98161c3")
+	)
+	(wire
+		(pts
 			(xy 455.93 178.308) (xy 463.55 178.308)
 		)
 		(stroke
@@ -20164,7 +20146,7 @@
 	)
 	(wire
 		(pts
-			(xy 626.11 258.064) (xy 617.22 258.064)
+			(xy 617.22 258.064) (xy 626.364 258.064)
 		)
 		(stroke
 			(width 0)
@@ -20274,16 +20256,6 @@
 	)
 	(wire
 		(pts
-			(xy 621.538 219.71) (xy 630.428 219.71)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "bd892ac5-8b4c-415e-84ab-3e1a970daceb")
-	)
-	(wire
-		(pts
 			(xy 573.532 290.322) (xy 595.122 290.322)
 		)
 		(stroke
@@ -20331,6 +20303,16 @@
 			(type default)
 		)
 		(uuid "bebfedd4-b4e7-489c-a0ce-dafbb5f3997a")
+	)
+	(wire
+		(pts
+			(xy 533.654 258.064) (xy 543.814 258.064)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bee5883b-52b5-495c-baf5-5598fb1e92f0")
 	)
 	(wire
 		(pts
@@ -20404,7 +20386,7 @@
 	)
 	(wire
 		(pts
-			(xy 652.272 250.444) (xy 657.606 250.444)
+			(xy 652.272 250.444) (xy 654.558 250.444)
 		)
 		(stroke
 			(width 0)
@@ -20514,16 +20496,6 @@
 	)
 	(wire
 		(pts
-			(xy 554.228 224.282) (xy 563.88 224.282)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "c203cc0d-a1eb-4ce4-adbc-4b8765e1e782")
-	)
-	(wire
-		(pts
 			(xy 714.248 90.678) (xy 720.598 90.678)
 		)
 		(stroke
@@ -20561,16 +20533,6 @@
 			(type solid)
 		)
 		(uuid "c2d9ea71-5307-429b-af23-53ea946d3d73")
-	)
-	(wire
-		(pts
-			(xy 563.88 239.522) (xy 573.278 239.522)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c2e70378-667e-4626-9b76-6c2b419f7e86")
 	)
 	(wire
 		(pts
@@ -20614,16 +20576,6 @@
 	)
 	(wire
 		(pts
-			(xy 655.574 258.064) (xy 665.226 258.064)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c4ba7495-16e4-44c9-bcec-9e7c28e4633c")
-	)
-	(wire
-		(pts
 			(xy 663.448 65.278) (xy 669.798 65.278)
 		)
 		(stroke
@@ -20644,6 +20596,16 @@
 	)
 	(wire
 		(pts
+			(xy 646.938 258.064) (xy 655.574 258.064)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c66ef154-5ffd-461f-94c7-75009b099e0b")
+	)
+	(wire
+		(pts
 			(xy 100.33 216.154) (xy 110.49 216.154)
 		)
 		(stroke
@@ -20651,16 +20613,6 @@
 			(type solid)
 		)
 		(uuid "c67ed9b2-6227-4258-bd02-2ffee174dae3")
-	)
-	(wire
-		(pts
-			(xy 684.276 242.824) (xy 695.452 242.824)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c6a731e1-71a4-4a8a-aec8-5ee5fbe842c3")
 	)
 	(wire
 		(pts
@@ -20754,6 +20706,16 @@
 	)
 	(wire
 		(pts
+			(xy 544.068 224.282) (xy 563.88 224.282)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "c8ae7b0a-894a-42c1-97df-2fab9a4713b2")
+	)
+	(wire
+		(pts
 			(xy 258.064 193.294) (xy 263.144 193.294)
 		)
 		(stroke
@@ -20784,16 +20746,6 @@
 	)
 	(wire
 		(pts
-			(xy 602.488 224.282) (xy 611.378 224.282)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "c9651f6e-8e90-40a9-bef6-4f38dc8edf2e")
-	)
-	(wire
-		(pts
 			(xy 107.188 244.602) (xy 107.188 254.762)
 		)
 		(stroke
@@ -20811,16 +20763,6 @@
 			(type default)
 		)
 		(uuid "c9a84810-9ab3-4673-894c-1d0c79f3f643")
-	)
-	(wire
-		(pts
-			(xy 583.438 239.522) (xy 592.328 239.522)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c9c08562-fe04-4de2-b0c4-6f173dec45dd")
 	)
 	(wire
 		(pts
@@ -20844,16 +20786,6 @@
 	)
 	(wire
 		(pts
-			(xy 669.798 219.71) (xy 689.61 219.71)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "ca36908c-dfdd-4549-8888-ccc2ff77f62a")
-	)
-	(wire
-		(pts
 			(xy 53.34 87.63) (xy 59.69 87.63)
 		)
 		(stroke
@@ -20864,13 +20796,13 @@
 	)
 	(wire
 		(pts
-			(xy 561.594 242.824) (xy 570.23 242.824)
+			(xy 534.162 219.71) (xy 544.068 219.71)
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
-		(uuid "cae8257d-7397-450e-a4d9-7a83b484342e")
+		(uuid "cb8671f5-bbde-456c-a838-c86f98d0016d")
 	)
 	(wire
 		(pts
@@ -20881,26 +20813,6 @@
 			(type default)
 		)
 		(uuid "cb8f5878-4ffb-40c7-8993-52b0bc3fb10b")
-	)
-	(wire
-		(pts
-			(xy 551.942 242.824) (xy 561.594 242.824)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cbbfda7d-fe5e-410d-b499-a46f86de3d43")
-	)
-	(wire
-		(pts
-			(xy 696.976 231.902) (xy 703.072 231.902)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cbd15f4a-69a4-49fe-88fe-cba9857a6952")
 	)
 	(wire
 		(pts
@@ -20921,6 +20833,16 @@
 			(type solid)
 		)
 		(uuid "ccad9583-98b3-4469-9677-a3cc0e6917e0")
+	)
+	(wire
+		(pts
+			(xy 525.018 224.282) (xy 533.908 224.282)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "cd3f2af4-9ccb-4411-96e3-6c0e884fd640")
 	)
 	(wire
 		(pts
@@ -20951,6 +20873,16 @@
 			(type solid)
 		)
 		(uuid "ce2e70e9-ce2c-4426-bfaf-e7f79d84f78b")
+	)
+	(wire
+		(pts
+			(xy 684.276 258.064) (xy 695.452 258.064)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce645056-9d6e-42b8-9e17-f762049e8540")
 	)
 	(wire
 		(pts
@@ -21021,16 +20953,6 @@
 			(type default)
 		)
 		(uuid "d0f13df0-0cc1-4615-9065-c06c0f36eb8b")
-	)
-	(wire
-		(pts
-			(xy 607.06 258.064) (xy 598.424 258.064)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d14f2c44-1cdf-4286-87b4-e9756430f191")
 	)
 	(wire
 		(pts
@@ -21131,6 +21053,16 @@
 			(type default)
 		)
 		(uuid "d392437a-557c-43d2-a48a-2cc361c2407c")
+	)
+	(wire
+		(pts
+			(xy 543.814 242.824) (xy 551.942 242.824)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d39bbb62-be79-40c7-bcfc-931d8e9e16e2")
 	)
 	(wire
 		(pts
@@ -21374,16 +21306,6 @@
 	)
 	(wire
 		(pts
-			(xy 691.896 250.444) (xy 696.468 250.444)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d84fed2c-1f72-40c7-88b1-59fb6fe958fb")
-	)
-	(wire
-		(pts
 			(xy 418.338 72.898) (xy 418.338 74.168)
 		)
 		(stroke
@@ -21391,16 +21313,6 @@
 			(type default)
 		)
 		(uuid "d882d555-f6db-4949-a2f8-78f8da1ce73c")
-	)
-	(wire
-		(pts
-			(xy 676.148 242.824) (xy 684.276 242.824)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d8d035d8-987d-408c-9e84-8e4f599e0da3")
 	)
 	(wire
 		(pts
@@ -21421,16 +21333,6 @@
 			(type default)
 		)
 		(uuid "d9deed25-9dd8-4c9f-ab0f-62cf6a6841c3")
-	)
-	(wire
-		(pts
-			(xy 570.23 258.064) (xy 561.594 258.064)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d9e5c70d-1d38-48a2-90d4-427d195c3360")
 	)
 	(wire
 		(pts
@@ -21464,7 +21366,7 @@
 	)
 	(wire
 		(pts
-			(xy 573.278 260.858) (xy 582.676 260.858)
+			(xy 564.388 260.858) (xy 582.676 260.858)
 		)
 		(stroke
 			(width 0)
@@ -21481,6 +21383,16 @@
 			(type solid)
 		)
 		(uuid "db2d30e9-def0-4e41-9ba5-b27653bf4aa1")
+	)
+	(wire
+		(pts
+			(xy 583.438 224.282) (xy 602.488 224.282)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "db765018-60d5-4f27-b15e-9d10cd465600")
 	)
 	(wire
 		(pts
@@ -21584,16 +21496,6 @@
 	)
 	(wire
 		(pts
-			(xy 640.588 219.71) (xy 650.748 219.71)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "de692441-3d1d-4b5c-945d-d5cd620215b8")
-	)
-	(wire
-		(pts
 			(xy 725.678 212.09) (xy 718.82 212.09)
 		)
 		(stroke
@@ -21604,7 +21506,7 @@
 	)
 	(wire
 		(pts
-			(xy 650.494 239.522) (xy 659.384 239.522)
+			(xy 640.334 239.522) (xy 650.494 239.522)
 		)
 		(stroke
 			(width 0)
@@ -21724,6 +21626,16 @@
 	)
 	(wire
 		(pts
+			(xy 524.256 242.824) (xy 533.654 242.824)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e185bbcc-4183-4e24-b430-59d55a79130c")
+	)
+	(wire
+		(pts
 			(xy 41.91 205.994) (xy 41.91 216.154)
 		)
 		(stroke
@@ -21731,6 +21643,16 @@
 			(type solid)
 		)
 		(uuid "e28c19d3-6323-40e6-ad96-c59029f7d950")
+	)
+	(wire
+		(pts
+			(xy 669.544 224.282) (xy 680.466 224.282)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "e37367c2-2565-4811-884f-ba02fe6dc6d9")
 	)
 	(wire
 		(pts
@@ -21794,6 +21716,16 @@
 	)
 	(wire
 		(pts
+			(xy 573.278 219.71) (xy 583.438 219.71)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "e492ff13-8190-42e0-9995-baea074a22e3")
+	)
+	(wire
+		(pts
 			(xy 73.66 143.51) (xy 73.66 144.78)
 		)
 		(stroke
@@ -21814,7 +21746,7 @@
 	)
 	(wire
 		(pts
-			(xy 635.762 242.824) (xy 644.652 242.824)
+			(xy 635.762 242.824) (xy 646.938 242.824)
 		)
 		(stroke
 			(width 0)
@@ -21874,16 +21806,6 @@
 	)
 	(wire
 		(pts
-			(xy 695.452 258.064) (xy 684.276 258.064)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e656e175-217e-4d93-9302-dee2f5d669d2")
-	)
-	(wire
-		(pts
 			(xy 483.108 66.548) (xy 483.108 64.008)
 		)
 		(stroke
@@ -21891,16 +21813,6 @@
 			(type default)
 		)
 		(uuid "e6646bb8-710f-46eb-a821-2af729852713")
-	)
-	(wire
-		(pts
-			(xy 554.228 239.522) (xy 563.88 239.522)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e66f2d90-a7a8-41f6-b1b4-6b585330f89d")
 	)
 	(wire
 		(pts
@@ -21931,6 +21843,16 @@
 			(type solid)
 		)
 		(uuid "e699b775-07b3-46dc-a9e1-1abb0c8e42e8")
+	)
+	(wire
+		(pts
+			(xy 654.558 250.444) (xy 657.606 250.444)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e71c5a9f-33b9-43ed-b6da-3e3a63bfd166")
 	)
 	(wire
 		(pts
@@ -22021,26 +21943,6 @@
 			(type solid)
 		)
 		(uuid "e995b06d-3e5d-4eb2-8e78-ee8fead9cdcc")
-	)
-	(wire
-		(pts
-			(xy 650.494 224.282) (xy 659.384 224.282)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "e9b590e5-1563-46b3-99a4-ad608da54e35")
-	)
-	(wire
-		(pts
-			(xy 669.544 224.282) (xy 680.466 224.282)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "ea3be41a-d3c1-4c8b-b38f-c6aeabcab536")
 	)
 	(wire
 		(pts
@@ -22154,6 +22056,16 @@
 	)
 	(wire
 		(pts
+			(xy 617.22 242.824) (xy 626.364 242.824)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec773ac4-32f4-4b06-8de2-18f4d2e35d0e")
+	)
+	(wire
+		(pts
 			(xy 335.28 58.42) (xy 340.36 58.42)
 		)
 		(stroke
@@ -22181,16 +22093,6 @@
 			(type solid)
 		)
 		(uuid "ede93faf-34ee-4777-a459-51fe7adc0f5a")
-	)
-	(wire
-		(pts
-			(xy 551.942 258.064) (xy 561.594 258.064)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ee13cc3e-1612-43bd-beb7-beaa0dbae92b")
 	)
 	(wire
 		(pts
@@ -22264,16 +22166,6 @@
 	)
 	(wire
 		(pts
-			(xy 611.378 224.282) (xy 620.522 224.282)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "efbf24bd-b0d1-47a5-9d0d-0822799f0908")
-	)
-	(wire
-		(pts
 			(xy 418.338 72.898) (xy 425.958 72.898)
 		)
 		(stroke
@@ -22314,16 +22206,6 @@
 	)
 	(wire
 		(pts
-			(xy 533.654 276.098) (xy 523.24 276.098)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f0ea8913-8381-4114-99aa-697c503bc064")
-	)
-	(wire
-		(pts
 			(xy 676.402 395.732) (xy 700.278 395.732)
 		)
 		(stroke
@@ -22354,6 +22236,16 @@
 	)
 	(wire
 		(pts
+			(xy 563.88 224.282) (xy 583.438 224.282)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "f1a2ce8c-cbb2-4241-84c0-77b683c662e2")
+	)
+	(wire
+		(pts
 			(xy 46.482 219.964) (xy 53.848 219.964)
 		)
 		(stroke
@@ -22364,7 +22256,7 @@
 	)
 	(wire
 		(pts
-			(xy 573.278 239.522) (xy 583.438 239.522)
+			(xy 563.88 239.522) (xy 583.438 239.522)
 		)
 		(stroke
 			(width 0)
@@ -22411,16 +22303,6 @@
 			(type default)
 		)
 		(uuid "f34b55cd-ff4f-47c3-ba50-f5ec4ab2c634")
-	)
-	(wire
-		(pts
-			(xy 544.068 219.71) (xy 554.228 219.71)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "f3b17098-0481-439b-8e81-3a71f23d62de")
 	)
 	(wire
 		(pts
@@ -22491,16 +22373,6 @@
 			(type default)
 		)
 		(uuid "f592d61f-5142-49f7-9772-036cec048262")
-	)
-	(wire
-		(pts
-			(xy 689.356 239.522) (xy 701.04 239.522)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f641571e-55d0-4fa6-bfa0-3bd124623507")
 	)
 	(wire
 		(pts
@@ -22734,6 +22606,16 @@
 	)
 	(wire
 		(pts
+			(xy 544.322 276.098) (xy 554.482 276.098)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb2ecb2a-0b9a-4875-b2ee-be2cc72059a9")
+	)
+	(wire
+		(pts
 			(xy 63.246 235.204) (xy 70.358 235.204)
 		)
 		(stroke
@@ -22744,6 +22626,16 @@
 	)
 	(wire
 		(pts
+			(xy 541.782 212.09) (xy 546.608 212.09)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "fb9fa1e8-74a8-4489-a922-43bd6cccd9e5")
+	)
+	(wire
+		(pts
 			(xy 401.32 177.038) (xy 394.97 177.038)
 		)
 		(stroke
@@ -22751,16 +22643,6 @@
 			(type default)
 		)
 		(uuid "fba05e92-7376-49d3-b2b7-50143796c845")
-	)
-	(wire
-		(pts
-			(xy 607.06 242.824) (xy 617.22 242.824)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fbdead91-ff5a-4017-b3cb-0249ade6a371")
 	)
 	(wire
 		(pts
@@ -22812,16 +22694,6 @@
 		)
 		(uuid "fcc4a13e-3c14-4cdf-933c-659f9375ce3b")
 	)
-	(wire
-		(pts
-			(xy 573.278 276.098) (xy 564.388 276.098)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fcfda8fa-e3f1-4c66-9046-3167f306a3e0")
-	)
 	(polyline
 		(pts
 			(xy 385.318 108.458) (xy 385.318 47.498)
@@ -22841,16 +22713,6 @@
 			(type solid)
 		)
 		(uuid "fdb4bcd6-33a9-4d85-9beb-66e0074cf9ed")
-	)
-	(wire
-		(pts
-			(xy 602.488 219.71) (xy 611.378 219.71)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "fe00d559-26a6-426a-97cd-9d4c4cd68404")
 	)
 	(wire
 		(pts
@@ -22884,6 +22746,16 @@
 	)
 	(wire
 		(pts
+			(xy 710.692 224.282) (xy 720.344 224.282)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "fe2abdd2-db71-468a-91bb-48fcd8445f7d")
+	)
+	(wire
+		(pts
 			(xy 526.288 76.708) (xy 531.368 76.708)
 		)
 		(stroke
@@ -22901,6 +22773,16 @@
 			(type solid)
 		)
 		(uuid "fe4d81c4-a9a9-40f2-9b1c-47158f523c03")
+	)
+	(wire
+		(pts
+			(xy 534.162 201.93) (xy 544.068 201.93)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "fe891bde-73f3-4487-b8e1-89e1513ee912")
 	)
 	(polyline
 		(pts
@@ -36474,264 +36356,6 @@
 		)
 	)
 	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 533.908 231.902 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-0000604f80b8")
-		(property "Reference" "LED48"
-			(at 542.6456 231.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 542.6456 232.6386 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 536.448 238.252 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 536.448 238.252 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 533.908 231.902 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "deb8d590-b590-4699-917c-a921cb1f58f2")
-		)
-		(pin "2"
-			(uuid "e8559200-70c0-4c4b-b6b3-00ffff205729")
-		)
-		(pin "3"
-			(uuid "e33e9996-220f-4fce-a3ff-06877bc0e860")
-		)
-		(pin "4"
-			(uuid "58846cad-1ff2-4b5d-874e-af60e2aff792")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED48")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 554.228 212.09 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-0000604f80bd")
-		(property "Reference" "LED55"
-			(at 545.4904 212.852 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 545.4904 211.3534 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 551.688 205.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 551.688 205.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 554.228 212.09 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ee28ae48-40a8-4f57-9b52-84985e6135ae")
-		)
-		(pin "2"
-			(uuid "67b16296-0542-4b48-b56f-22adc4d7574b")
-		)
-		(pin "3"
-			(uuid "b6a30673-12a2-498f-adb6-4369376cf6d6")
-		)
-		(pin "4"
-			(uuid "b9441c3a-1399-4f6d-83ab-c891a358e403")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED55")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 573.278 231.902 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-0000604f80be")
-		(property "Reference" "LED60"
-			(at 582.0156 231.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 582.0156 232.6386 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 575.818 238.252 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 575.818 238.252 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 573.278 231.902 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f6ec059a-1909-45c4-8417-7f9f3c75063e")
-		)
-		(pin "2"
-			(uuid "66429f92-81b1-4bff-9d1c-9531a95d4817")
-		)
-		(pin "3"
-			(uuid "bd69a107-024d-4148-90c8-6efe8c64dc26")
-		)
-		(pin "4"
-			(uuid "6ab93c54-3430-4400-bcc8-48ce34a3bf08")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED60")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 119.38 203.454 180)
 		(unit 1)
@@ -46496,92 +46120,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "#PWR0226")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 554.228 231.902 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-000060d4bf3e")
-		(property "Reference" "LED54"
-			(at 562.9656 231.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 562.9656 232.6386 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 556.768 238.252 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 556.768 238.252 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 554.228 231.902 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a38cf938-f4f4-4b68-bc5d-e8c6e0237e64")
-		)
-		(pin "2"
-			(uuid "394286f4-0db7-48a0-85aa-b382686c3d2e")
-		)
-		(pin "3"
-			(uuid "e9e94272-d83e-4903-b025-c47e7949c77c")
-		)
-		(pin "4"
-			(uuid "a7dbdb17-df7a-4d5b-bb1f-e7cdcfe8ff51")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED54")
 					(unit 1)
 				)
 			)
@@ -60459,6 +59997,92 @@
 		)
 	)
 	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 611.378 212.09 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "01047959-79f6-41af-bfe2-a01bd7cc384f")
+		(property "Reference" "LED122"
+			(at 620.1156 211.328 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 620.1156 212.8276 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 613.918 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 613.918 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 611.378 212.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f341cae5-ad72-4213-8664-c5ff1f861a3d")
+		)
+		(pin "2"
+			(uuid "0c31c8a0-7758-43dc-9034-47f778cb1716")
+		)
+		(pin "3"
+			(uuid "f196396d-a7e6-4450-b67f-4d60ed847d79")
+		)
+		(pin "4"
+			(uuid "bf45964f-a4bb-44de-b7db-e784cfa6915d")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED122")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "onigaku:+3V3_L")
 		(at 265.684 148.844 0)
 		(unit 1)
@@ -61270,7 +60894,7 @@
 	)
 	(symbol
 		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 669.798 212.09 180)
+		(at 630.174 231.902 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -61278,9 +60902,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "0b323daf-4cbe-4d82-9236-9a0b40693d32")
-		(property "Reference" "LED84"
-			(at 661.0604 212.852 0)
+		(uuid "0b50c2f3-d15b-483c-9dd6-4460b369e6fb")
+		(property "Reference" "LED113"
+			(at 621.4364 232.664 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -61291,7 +60915,7 @@
 			)
 		)
 		(property "Value" "SK6812-4020-SideView"
-			(at 661.0604 211.3534 0)
+			(at 621.4364 231.1644 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -61302,7 +60926,7 @@
 			)
 		)
 		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 667.258 205.74 0)
+			(at 627.634 225.552 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -61313,7 +60937,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 667.258 205.74 0)
+			(at 627.634 225.552 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -61324,7 +60948,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 669.798 212.09 0)
+			(at 630.174 231.902 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -61334,21 +60958,21 @@
 			)
 		)
 		(pin "1"
-			(uuid "15490bde-60f6-470c-9876-537e86135cd5")
+			(uuid "22d998c9-eef1-4b37-ba71-d46cc6ffb035")
 		)
 		(pin "2"
-			(uuid "b0fb45d5-22f6-45d8-8cc6-0170b445fb52")
+			(uuid "04715af9-8203-4418-a9df-c5ab734403de")
 		)
 		(pin "3"
-			(uuid "9eb5f875-2aab-4c63-bfb6-723135749963")
+			(uuid "b5518204-a99b-49f4-b905-b00654cb18b3")
 		)
 		(pin "4"
-			(uuid "f365ac6d-cbf6-40b9-810a-e1126d1b8bb6")
+			(uuid "e2a20848-92fd-4f58-bd55-a1b5a428b8ae")
 		)
 		(instances
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED84")
+					(reference "LED113")
 					(unit 1)
 				)
 			)
@@ -61426,6 +61050,92 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "#PWR0135")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 573.278 268.478 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0c0cf769-850e-41f6-a687-6fa994e12675")
+		(property "Reference" "LED88"
+			(at 582.0156 267.716 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 582.0156 269.2146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 575.818 274.828 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 575.818 274.828 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 573.278 268.478 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a7e551af-6e1b-461d-9b11-a92430d33200")
+		)
+		(pin "2"
+			(uuid "2e646dcb-236e-465a-b19d-faad7eea1add")
+		)
+		(pin "3"
+			(uuid "76e16a89-db42-4abe-95b1-d05a00d615da")
+		)
+		(pin "4"
+			(uuid "3fefff38-59e6-4df2-9420-baf714be9743")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED88")
 					(unit 1)
 				)
 			)
@@ -61615,6 +61325,92 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "#PWR074")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 593.09 231.902 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0e114697-c0fc-42b2-8b77-1d4e233351de")
+		(property "Reference" "LED115"
+			(at 584.3524 232.664 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 584.3524 231.1644 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 590.55 225.552 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 590.55 225.552 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 593.09 231.902 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9d58229b-4b26-4e1f-a7df-4a3ad6f9ce38")
+		)
+		(pin "2"
+			(uuid "10ac5696-4d63-4e68-aed1-db478f3bd26a")
+		)
+		(pin "3"
+			(uuid "6a500d63-4c5c-4a74-b804-ac91cf5a054c")
+		)
+		(pin "4"
+			(uuid "a94c878a-3e77-4035-820e-ab4cb43ebfd9")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED115")
 					(unit 1)
 				)
 			)
@@ -62225,92 +62021,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "C127")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 551.942 250.444 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "152bc29f-9caf-4738-9a4f-37b0b1f0456a")
-		(property "Reference" "LED127"
-			(at 560.6796 249.682 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 560.6796 251.1816 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 554.482 256.794 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 554.482 256.794 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 551.942 250.444 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8e99d117-bd65-4cc3-acf6-6691be4c66dd")
-		)
-		(pin "2"
-			(uuid "88930772-5a99-483d-96cf-9ba055588b1e")
-		)
-		(pin "3"
-			(uuid "9ceee0da-45e0-4a20-98c1-9777b3c3e34c")
-		)
-		(pin "4"
-			(uuid "610c480f-7541-48f9-843f-c934dc7aa6ac")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED127")
 					(unit 1)
 				)
 			)
@@ -63437,6 +63147,92 @@
 		)
 	)
 	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 570.23 250.444 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "21a5adf0-b046-4562-bf5d-65846cc1d4ab")
+		(property "Reference" "LED61"
+			(at 561.4924 251.206 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 561.4924 249.7074 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 567.69 244.094 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 567.69 244.094 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 570.23 250.444 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "03c337f2-2dab-4d30-ae16-1f7dcbcc0938")
+		)
+		(pin "2"
+			(uuid "a2e28da6-3b54-44a6-8568-dcd16bdb2aee")
+		)
+		(pin "3"
+			(uuid "6127c9b9-54b2-4568-8b4b-98d22d3ed01a")
+		)
+		(pin "4"
+			(uuid "f3f7bbbb-8ace-4963-95b8-b4a6cbda57bc")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED61")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "GND_R_1")
 		(lib_id "onigaku:GND_R")
 		(at 435.61 234.188 0)
@@ -63595,6 +63391,92 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "LED102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 650.748 212.09 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2251d1bc-458a-4eae-b4a7-474cb14ebbd0")
+		(property "Reference" "LED124"
+			(at 659.4856 211.328 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 659.4856 212.8276 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 653.288 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 653.288 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 650.748 212.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d5a9d7c7-f5a5-4d27-ba6a-4c47146511c7")
+		)
+		(pin "2"
+			(uuid "58fe3ccc-17bc-42c3-9490-1e43fc7b7543")
+		)
+		(pin "3"
+			(uuid "cecc0d90-cc37-4d30-ba37-0b3cf4ff3b22")
+		)
+		(pin "4"
+			(uuid "dd1b01dd-acd4-4107-a94d-224a459eb69f")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED124")
 					(unit 1)
 				)
 			)
@@ -64379,92 +64261,6 @@
 		)
 	)
 	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 533.654 250.444 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2acffce3-9efe-4867-9e5c-b72052380ca8")
-		(property "Reference" "LED122"
-			(at 542.3916 249.682 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 542.3916 251.1816 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 536.194 256.794 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 536.194 256.794 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 533.654 250.444 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "62701706-9a2d-4f76-80d2-37b248ed2d98")
-		)
-		(pin "2"
-			(uuid "f30bf8c6-a0ed-4dfd-9a61-0bb1cfb65ba3")
-		)
-		(pin "3"
-			(uuid "d6f59075-0d14-4067-9c58-150e1b0346f5")
-		)
-		(pin "4"
-			(uuid "25004234-0daf-40ff-bc5e-1e6d515ed872")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED122")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 600.456 263.398 0)
 		(unit 1)
@@ -64616,6 +64412,92 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "#FLG06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 669.544 231.902 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2dbc69a2-0409-43f7-8dfe-5041684cc921")
+		(property "Reference" "LED111"
+			(at 660.8064 232.664 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 660.8064 231.1644 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 667.004 225.552 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 667.004 225.552 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 669.544 231.902 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2e22ad6b-ec73-49dc-863e-174c298a99a4")
+		)
+		(pin "2"
+			(uuid "b74eab39-e343-46ff-a4a1-f23e1025d2fb")
+		)
+		(pin "3"
+			(uuid "ce926fbc-c52a-4406-ad27-42adecd7f4ed")
+		)
+		(pin "4"
+			(uuid "19b01fbb-5ccd-402a-a1cf-22225fe03825")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED111")
 					(unit 1)
 				)
 			)
@@ -65512,6 +65394,92 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "C107")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 533.654 268.478 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "36aaddd6-7449-4de0-8411-01253240850a")
+		(property "Reference" "LED79"
+			(at 542.3916 267.716 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 542.3916 269.2146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 536.194 274.828 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 536.194 274.828 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 533.654 268.478 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0eaf36b8-da6f-48fd-9bbe-8b33607117aa")
+		)
+		(pin "2"
+			(uuid "5a0a448c-d89f-4843-bb7d-31d9fbad094e")
+		)
+		(pin "3"
+			(uuid "8cd98adb-a025-4b5a-96f0-574b25c06c61")
+		)
+		(pin "4"
+			(uuid "9fafc7cb-298f-4725-bb07-4fbc0a2936d5")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED79")
 					(unit 1)
 				)
 			)
@@ -66587,92 +66555,6 @@
 		)
 	)
 	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 573.278 268.478 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3ed680f7-fbae-4334-8673-aeea4d40806e")
-		(property "Reference" "LED125"
-			(at 564.5404 269.24 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 564.5404 267.7404 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 570.738 262.128 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 570.738 262.128 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 573.278 268.478 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ac14593b-0fec-463c-9f3b-d443ab106370")
-		)
-		(pin "2"
-			(uuid "d118862b-1589-4646-a1bb-5911f8595ab8")
-		)
-		(pin "3"
-			(uuid "aba0422f-6bb3-449c-921c-7d8448ac9bb0")
-		)
-		(pin "4"
-			(uuid "6ca001d9-dbd6-4d05-b140-2efbab95f780")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED125")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 405.13 174.498 90)
 		(unit 1)
@@ -67062,92 +66944,6 @@
 		)
 	)
 	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 611.378 212.09 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4247e918-bf9e-40f1-984a-1df8605d4f97")
-		(property "Reference" "LED68"
-			(at 602.6404 212.852 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 602.6404 211.3534 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 608.838 205.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 608.838 205.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 611.378 212.09 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dd0233d0-d478-48d7-9384-cfd870248dab")
-		)
-		(pin "2"
-			(uuid "f8e4cd25-933b-4cfa-a8c1-8ebaca0750dd")
-		)
-		(pin "3"
-			(uuid "b1066062-c9f1-4e3e-8de6-4133de445618")
-		)
-		(pin "4"
-			(uuid "78a6f272-765b-40d1-ac0c-4050e2c17a7d")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED68")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "onigaku:GND_R")
 		(at 722.376 202.184 0)
 		(unit 1)
@@ -67227,7 +67023,7 @@
 	)
 	(symbol
 		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 607.06 250.444 180)
+		(at 588.01 250.444 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -67235,9 +67031,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "435c3934-270b-4452-9256-72b5ad2f8d75")
-		(property "Reference" "LED119"
-			(at 615.7976 249.682 0)
+		(uuid "43a68213-11a7-4331-8386-b262ebdb575b")
+		(property "Reference" "LED90"
+			(at 579.2724 251.206 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -67248,7 +67044,7 @@
 			)
 		)
 		(property "Value" "SK6812-4020-SideView"
-			(at 615.7976 251.1816 0)
+			(at 579.2724 249.7074 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -67259,7 +67055,7 @@
 			)
 		)
 		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 609.6 256.794 0)
+			(at 585.47 244.094 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -67270,7 +67066,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 609.6 256.794 0)
+			(at 585.47 244.094 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -67281,7 +67077,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 607.06 250.444 0)
+			(at 588.01 250.444 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -67291,107 +67087,21 @@
 			)
 		)
 		(pin "1"
-			(uuid "530111d9-f682-4a2f-bc12-f8865f5456d0")
+			(uuid "6e227f46-fc3a-4588-a604-7f21ea0b29bc")
 		)
 		(pin "2"
-			(uuid "01b4313f-884e-4a47-b337-8f900941f306")
+			(uuid "3b552780-c3f2-4af4-96e4-215421e487b9")
 		)
 		(pin "3"
-			(uuid "ac30aaed-4040-4487-b769-4f80e95fca09")
+			(uuid "5694b22f-cbbb-4668-8f7e-63d601b69983")
 		)
 		(pin "4"
-			(uuid "94e00c0a-434f-4401-ab7b-6141ef8a3b81")
+			(uuid "d09d3b82-8fd8-454d-90b9-288c32284942")
 		)
 		(instances
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED119")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 689.356 231.902 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "43e9f0fb-89c0-43a4-a124-1c9418c16bdf")
-		(property "Reference" "LED111"
-			(at 680.6184 232.664 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 680.6184 231.1644 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 686.816 225.552 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 686.816 225.552 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 689.356 231.902 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ddb928c0-33ec-4e67-956d-2b75861967c9")
-		)
-		(pin "2"
-			(uuid "8152eb3b-cc98-4f81-8c52-7f47a9d78912")
-		)
-		(pin "3"
-			(uuid "28eb1bbf-1893-4954-9e0a-659304b76f0d")
-		)
-		(pin "4"
-			(uuid "3a69b081-a848-4bd3-a199-0c40fcf643a5")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED111")
+					(reference "LED90")
 					(unit 1)
 				)
 			)
@@ -67767,92 +67477,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "U11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 533.654 268.478 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "45a6972b-b071-4e5b-8230-248a848c117a")
-		(property "Reference" "LED123"
-			(at 524.9164 269.24 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 524.9164 267.7404 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 531.114 262.128 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 531.114 262.128 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 533.654 268.478 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a7c277cb-c9a0-45d1-8604-b20fae581500")
-		)
-		(pin "2"
-			(uuid "d95a91bf-3c52-444b-bafe-9b05663f1af3")
-		)
-		(pin "3"
-			(uuid "96911ae1-2f99-4cce-9b72-3e082949abc3")
-		)
-		(pin "4"
-			(uuid "a1df354a-cda6-490e-88d2-c5345627bbc8")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED123")
 					(unit 1)
 				)
 			)
@@ -68263,92 +67887,6 @@
 		)
 	)
 	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 650.494 231.902 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "495e292a-ed2b-4af7-a696-066062b81149")
-		(property "Reference" "LED109"
-			(at 641.7564 232.664 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 641.7564 231.1644 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 647.954 225.552 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 647.954 225.552 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 650.494 231.902 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ddd26a89-918a-4d9c-8a41-fd9303c13ef9")
-		)
-		(pin "2"
-			(uuid "be392812-95db-46a1-8d16-585b456a37db")
-		)
-		(pin "3"
-			(uuid "91e5ede9-8149-4dcb-8afd-1d9f5645028b")
-		)
-		(pin "4"
-			(uuid "c771333e-7c0d-4df6-a353-e27e754303c6")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED109")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 583.438 217.17 0)
 		(unit 1)
@@ -68424,178 +67962,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "C122")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 665.226 250.444 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4d8a8d5f-9d46-4532-8ac9-f6f873dcb3f8")
-		(property "Reference" "LED116"
-			(at 673.9636 249.682 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 673.9636 251.1816 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 667.766 256.794 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 667.766 256.794 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 665.226 250.444 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2188a338-450e-4f8f-9b3f-ba9aed9cf589")
-		)
-		(pin "2"
-			(uuid "65ceebf8-92d5-4b26-969b-980e42559697")
-		)
-		(pin "3"
-			(uuid "27496a40-6ca8-4805-ac2d-8d69d033eb6b")
-		)
-		(pin "4"
-			(uuid "22de74f5-2a83-4fcf-8766-e3e5210bf1f4")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED116")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 689.61 212.09 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4dab4b29-e0d5-49de-89ae-df2f0cf549a9")
-		(property "Reference" "LED88"
-			(at 680.8724 212.852 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 680.8724 211.3534 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 687.07 205.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 687.07 205.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 689.61 212.09 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ee135c73-8b1f-4d80-b8ec-345c15d561d2")
-		)
-		(pin "2"
-			(uuid "6cbb4c03-a12e-4430-a11a-39b816159039")
-		)
-		(pin "3"
-			(uuid "09d39905-a6d8-4516-91d3-dd32f4b19ca7")
-		)
-		(pin "4"
-			(uuid "82ca7fc3-4a27-4244-9d55-2dab8085bce0")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED88")
 					(unit 1)
 				)
 			)
@@ -68681,92 +68047,6 @@
 		)
 	)
 	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 626.11 250.444 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4e4d6cf8-2321-4706-badc-609b01fb799d")
-		(property "Reference" "LED118"
-			(at 634.8476 249.682 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 634.8476 251.1816 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 628.65 256.794 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 628.65 256.794 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 626.11 250.444 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "641746b1-19c0-42f2-985e-0d18cd2ec896")
-		)
-		(pin "2"
-			(uuid "06b19557-887a-49b1-9c6d-7b8a700a91dd")
-		)
-		(pin "3"
-			(uuid "0904c579-b9a1-45a0-a7b0-cd265173175f")
-		)
-		(pin "4"
-			(uuid "517d95ba-265b-4be4-9703-8c55765eaa77")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED118")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "onigaku:GND_L")
 		(at 340.36 66.04 0)
 		(mirror y)
@@ -68839,6 +68119,92 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "#PWR091")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 630.428 212.09 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4edfcaef-6700-4278-ab6b-93dca2d71bb6")
+		(property "Reference" "LED123"
+			(at 639.1656 211.328 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 639.1656 212.8276 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 632.968 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 632.968 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 630.428 212.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "784259c8-6a80-46e3-80b5-cd129daac645")
+		)
+		(pin "2"
+			(uuid "bf2132a8-eefd-4de0-9977-c086294c4d3e")
+		)
+		(pin "3"
+			(uuid "3bcefcb3-8ba9-482a-b04f-b8248adf529f")
+		)
+		(pin "4"
+			(uuid "e4050d41-e8ee-44ec-9ec8-eb474cf3be58")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED123")
 					(unit 1)
 				)
 			)
@@ -68999,6 +68365,92 @@
 		)
 	)
 	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 554.482 268.478 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "500fc8fa-7c01-4013-8f2b-d0f0b8639a23")
+		(property "Reference" "LED84"
+			(at 563.2196 267.716 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 563.2196 269.2146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 557.022 274.828 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 557.022 274.828 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 554.482 268.478 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "52ac10eb-b8a9-4edc-b0fe-83f550b3b105")
+		)
+		(pin "2"
+			(uuid "7f881741-45bf-4d99-9ed2-c9f7719f4094")
+		)
+		(pin "3"
+			(uuid "b779d5b1-1531-4621-9ea4-faf21e1a99e5")
+		)
+		(pin "4"
+			(uuid "85be7678-e84d-477d-87c3-5cda3179bdee")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED84")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:Crystal_GND24_Small")
 		(at 402.59 189.738 90)
 		(unit 1)
@@ -69110,92 +68562,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "Y2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 710.692 231.902 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "508f1808-26ac-4bbf-8931-097291d26d55")
-		(property "Reference" "LED112"
-			(at 701.9544 232.664 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 701.9544 231.1644 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 708.152 225.552 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 708.152 225.552 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 710.692 231.902 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ac158cef-4ea4-4496-a2db-50036b47e65b")
-		)
-		(pin "2"
-			(uuid "e43414b9-7075-4151-8f11-bc334de07b28")
-		)
-		(pin "3"
-			(uuid "0d3e5b4f-39e3-4ca9-ada0-546c42c0ec14")
-		)
-		(pin "4"
-			(uuid "a1995e2c-38d6-4d7e-9105-069841685bf3")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED112")
 					(unit 1)
 				)
 			)
@@ -69553,7 +68919,7 @@
 	)
 	(symbol
 		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 611.378 231.902 0)
+		(at 684.276 250.444 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -69561,9 +68927,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "546db9a0-4d20-430d-93a7-70e1baebd143")
-		(property "Reference" "LED74"
-			(at 620.1156 231.14 0)
+		(uuid "54a1df5d-1432-4871-b59f-f970de26db33")
+		(property "Reference" "LED67"
+			(at 675.5384 251.206 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -69574,7 +68940,7 @@
 			)
 		)
 		(property "Value" "SK6812-4020-SideView"
-			(at 620.1156 232.6386 0)
+			(at 675.5384 249.7074 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -69585,7 +68951,7 @@
 			)
 		)
 		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 613.918 238.252 0)
+			(at 681.736 244.094 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69596,7 +68962,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 613.918 238.252 0)
+			(at 681.736 244.094 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69607,7 +68973,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 611.378 231.902 0)
+			(at 684.276 250.444 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -69617,21 +68983,21 @@
 			)
 		)
 		(pin "1"
-			(uuid "a00abf68-90f4-401c-a37b-5c6b8acdbd80")
+			(uuid "453dd2e3-c2dd-476e-80f1-920fba70aaff")
 		)
 		(pin "2"
-			(uuid "7fa40d13-b8fc-4101-9e94-675ecc5148ac")
+			(uuid "be99297f-3bb5-463d-b4d1-0846ca1fc358")
 		)
 		(pin "3"
-			(uuid "e31f7d76-0f38-448b-b12a-0890d07c74e8")
+			(uuid "a726ae9c-3d4f-44f1-a3a1-e0d12fcc3fce")
 		)
 		(pin "4"
-			(uuid "a30b6502-4f7f-4fdd-918b-9cb9cd808951")
+			(uuid "e6b827f3-4094-47a1-a83b-514f35e318e6")
 		)
 		(instances
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED74")
+					(reference "LED67")
 					(unit 1)
 				)
 			)
@@ -69907,7 +69273,7 @@
 	)
 	(symbol
 		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 669.544 231.902 0)
+		(at 592.328 212.09 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -69915,9 +69281,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "59583add-5864-4c3e-bfbc-764ef2e892a9")
-		(property "Reference" "LED110"
-			(at 660.8064 232.664 0)
+		(uuid "58834588-9479-4ee1-b305-59cf00108bfb")
+		(property "Reference" "LED127"
+			(at 601.0656 211.328 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -69928,7 +69294,7 @@
 			)
 		)
 		(property "Value" "SK6812-4020-SideView"
-			(at 660.8064 231.1644 0)
+			(at 601.0656 212.8276 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -69939,7 +69305,7 @@
 			)
 		)
 		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 667.004 225.552 0)
+			(at 594.868 218.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69950,7 +69316,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 667.004 225.552 0)
+			(at 594.868 218.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69961,7 +69327,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 669.544 231.902 0)
+			(at 592.328 212.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -69971,21 +69337,21 @@
 			)
 		)
 		(pin "1"
-			(uuid "faf5f1b6-ee80-492d-966f-ab205c2dbf08")
+			(uuid "c2a74fdf-e349-49c9-a593-77661fefc96d")
 		)
 		(pin "2"
-			(uuid "7d084744-36ad-404e-81b6-cae93d8ef5aa")
+			(uuid "33c8be3f-00b3-43e6-b8c4-c1a27b5ce4f6")
 		)
 		(pin "3"
-			(uuid "d9a21f57-e0fb-4c48-b101-a8adef0ceddd")
+			(uuid "3c0a83f1-58be-4f39-a301-e420a6fede56")
 		)
 		(pin "4"
-			(uuid "93902a75-ca9e-4b00-b429-4f271b83b50b")
+			(uuid "a83bf270-7a6f-403d-aa61-88afd837b724")
 		)
 		(instances
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED110")
+					(reference "LED127")
 					(unit 1)
 				)
 			)
@@ -71765,92 +71131,6 @@
 	)
 	(symbol
 		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 592.328 212.09 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "67736695-4279-4317-bb9f-67f5b542bf6e")
-		(property "Reference" "LED61"
-			(at 583.5904 212.852 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 583.5904 211.3534 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 589.788 205.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 589.788 205.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 592.328 212.09 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "40e9e622-e313-4ec6-b300-e63e8ae9cf1d")
-		)
-		(pin "2"
-			(uuid "4050dfc8-a8ee-4b4b-acc6-75a4965ecdec")
-		)
-		(pin "3"
-			(uuid "311d8570-281b-4830-9c8d-2ec1883adbd8")
-		)
-		(pin "4"
-			(uuid "69cff7e9-8657-4c39-9e58-4fbd8899d5e4")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED61")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
 		(at 134.62 247.142 0)
 		(unit 1)
 		(body_style 1)
@@ -71930,92 +71210,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "LED96")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 588.01 250.444 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "67988d50-6cc9-4729-b551-bf546808d371")
-		(property "Reference" "LED120"
-			(at 596.7476 249.682 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 596.7476 251.1816 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 590.55 256.794 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 590.55 256.794 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 588.01 250.444 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d2e76265-d70c-49b8-b854-0ab8a6b74205")
-		)
-		(pin "2"
-			(uuid "fba7b444-c924-4b52-85c9-da2f8de0880f")
-		)
-		(pin "3"
-			(uuid "a814b1ed-14a7-4891-84b1-f598a2f8db4d")
-		)
-		(pin "4"
-			(uuid "7195fe26-4b21-44fd-8c45-c7ac4136e1d1")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED120")
 					(unit 1)
 				)
 			)
@@ -72947,92 +72141,6 @@
 		)
 	)
 	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 592.074 268.478 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "6eb011ab-3e2d-4fae-bdf1-80a06ab4dcdf")
-		(property "Reference" "LED126"
-			(at 583.3364 269.24 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 583.3364 267.7404 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 589.534 262.128 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 589.534 262.128 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 592.074 268.478 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1acb5292-3eef-4bd6-bbc4-cf7646cc5dd4")
-		)
-		(pin "2"
-			(uuid "4f07be83-3965-46b1-9f17-fe8d6c25228f")
-		)
-		(pin "3"
-			(uuid "23147964-fb0c-4a41-8b05-d5e4e55695cb")
-		)
-		(pin "4"
-			(uuid "e5a0ef24-bb04-4751-aad5-e1776f639a2c")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED126")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "onigaku:GND_R")
 		(at 392.43 189.738 0)
 		(unit 1)
@@ -73460,7 +72568,7 @@
 	)
 	(symbol
 		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 650.748 212.09 180)
+		(at 704.088 250.444 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -73468,9 +72576,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "761c9d65-f7f6-4abd-b2e1-103c272aef12")
-		(property "Reference" "LED79"
-			(at 642.0104 212.852 0)
+		(uuid "7835adba-1a2d-4c87-bb1c-969ea0dfefc2")
+		(property "Reference" "LED74"
+			(at 695.3504 251.206 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -73481,7 +72589,7 @@
 			)
 		)
 		(property "Value" "SK6812-4020-SideView"
-			(at 642.0104 211.3534 0)
+			(at 695.3504 249.7074 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -73492,7 +72600,7 @@
 			)
 		)
 		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 648.208 205.74 0)
+			(at 701.548 244.094 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -73503,7 +72611,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 648.208 205.74 0)
+			(at 701.548 244.094 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -73514,7 +72622,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 650.748 212.09 0)
+			(at 704.088 250.444 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -73524,21 +72632,21 @@
 			)
 		)
 		(pin "1"
-			(uuid "8d1e1e20-8891-4089-918b-04a3b8cf4136")
+			(uuid "55df97f2-d76d-4b0e-be2b-88879e22d636")
 		)
 		(pin "2"
-			(uuid "71b1e104-54e4-4d87-991b-ec9dee528f9d")
+			(uuid "f6d43873-bbf8-4c2a-9723-ecc2903bf973")
 		)
 		(pin "3"
-			(uuid "e7fd09b3-376c-44b0-a917-0bf424d6a656")
+			(uuid "477df9bb-ff80-46b7-a809-496bb2419488")
 		)
 		(pin "4"
-			(uuid "07f2d0d4-7331-4f32-86b8-2cfec1abcdf3")
+			(uuid "2eda9351-f630-4868-88da-fb64083bd8df")
 		)
 		(instances
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED79")
+					(reference "LED74")
 					(unit 1)
 				)
 			)
@@ -73889,6 +72997,92 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 607.06 250.444 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7b2a4510-90d2-47e1-8498-f8be6d6965ba")
+		(property "Reference" "LED55"
+			(at 598.3224 251.206 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 598.3224 249.7074 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 604.52 244.094 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 604.52 244.094 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 607.06 250.444 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cdf8e642-a891-4841-b00c-c346a34a382a")
+		)
+		(pin "2"
+			(uuid "20f4bd27-0370-4537-be2b-9f0a8fdc9954")
+		)
+		(pin "3"
+			(uuid "39a6fa48-abd1-4325-a259-c73e58251366")
+		)
+		(pin "4"
+			(uuid "e9291f79-3264-4521-94d6-ecb6e5ac130f")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED55")
 					(unit 1)
 				)
 			)
@@ -74405,6 +73599,92 @@
 		)
 	)
 	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 554.228 212.09 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7e557e5e-e6c6-4ff0-b983-81b8c3c997f6")
+		(property "Reference" "LED120"
+			(at 562.9656 211.328 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 562.9656 212.8276 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 556.768 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 556.768 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 554.228 212.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ca585136-f349-40aa-b22e-fe3d2848bb9e")
+		)
+		(pin "2"
+			(uuid "467a86dc-4fbc-45cf-b3b6-c03e05022ddc")
+		)
+		(pin "3"
+			(uuid "39e7b0ca-ae1c-4152-8f86-64ad629644a6")
+		)
+		(pin "4"
+			(uuid "9ca2f24d-b0a1-4bad-9f2e-95bd0f9304e4")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED120")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "onigaku:+1V1_R")
 		(at 410.21 156.718 0)
 		(unit 1)
@@ -74552,92 +73832,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "#FLG05")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 704.088 250.444 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "7f15f98c-8e20-4037-a082-9d719ca059dd")
-		(property "Reference" "LED114"
-			(at 712.8256 249.682 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 712.8256 251.1816 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 706.628 256.794 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 706.628 256.794 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 704.088 250.444 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0b0f49c4-178e-4a7c-a62b-6a599502863a")
-		)
-		(pin "2"
-			(uuid "82f25c8e-e4f1-4b88-8fd7-c6710b251763")
-		)
-		(pin "3"
-			(uuid "5a74ace6-e59a-4bed-ab9c-c8cbc0a5cf7b")
-		)
-		(pin "4"
-			(uuid "fafa1bbc-b175-426f-a84b-456541ba3f3a")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED114")
 					(unit 1)
 				)
 			)
@@ -75313,6 +74507,92 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "#PWR097")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 611.124 231.902 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "843e73c4-e9f3-4c20-bd73-9d84f314458e")
+		(property "Reference" "LED114"
+			(at 602.3864 232.664 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 602.3864 231.1644 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 608.584 225.552 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 608.584 225.552 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 611.124 231.902 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8d9b3a71-70d9-4c23-bd20-a9b137f1080c")
+		)
+		(pin "2"
+			(uuid "21cb59e4-6273-4e81-b12a-475197c431aa")
+		)
+		(pin "3"
+			(uuid "06284dd5-4c77-4f9d-9320-3ad9e9f44211")
+		)
+		(pin "4"
+			(uuid "449cf1c2-c60b-47ad-97fc-50ba2e8580b5")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED114")
 					(unit 1)
 				)
 			)
@@ -76399,6 +75679,92 @@
 		)
 	)
 	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 551.942 250.444 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "921c62bb-8349-4e30-8c32-6e42e2124a43")
+		(property "Reference" "LED68"
+			(at 543.2044 251.206 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 543.2044 249.7074 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 549.402 244.094 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 549.402 244.094 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 551.942 250.444 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "de9f9668-e615-413a-91fe-ef55d3f4570a")
+		)
+		(pin "2"
+			(uuid "c4008dea-cddc-4986-90a6-379d1526c3d5")
+		)
+		(pin "3"
+			(uuid "282ec3b1-57fc-4e1b-b8db-9628e8204c4a")
+		)
+		(pin "4"
+			(uuid "41feae42-0d78-4545-8cce-9663c5ed11d8")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED68")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 478.79 180.848 270)
 		(unit 1)
@@ -76822,178 +76188,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "#PWR069")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 573.278 212.09 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9a1ca045-9307-4921-b717-f93f56b50291")
-		(property "Reference" "LED90"
-			(at 564.5404 212.852 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 564.5404 211.3534 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 570.738 205.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 570.738 205.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 573.278 212.09 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d6e2a24c-22d0-4844-8490-49fab58bb609")
-		)
-		(pin "2"
-			(uuid "919eed03-8e85-423d-8600-7586d7dee965")
-		)
-		(pin "3"
-			(uuid "d7431dd8-df79-4053-9aed-5a5b0ad33bf6")
-		)
-		(pin "4"
-			(uuid "c7e09b36-604d-4050-9bd4-c41c84b9c986")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED90")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 630.174 231.902 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9b02f5bc-9a34-4689-85a3-1b31de8b58c4")
-		(property "Reference" "LED108"
-			(at 621.4364 232.664 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 621.4364 231.1644 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 627.634 225.552 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 627.634 225.552 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 630.174 231.902 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e2a59650-f058-4300-9204-ce1705874dc8")
-		)
-		(pin "2"
-			(uuid "013cb0ca-b643-4ea3-b587-b9be6aaf45cc")
-		)
-		(pin "3"
-			(uuid "89ab3416-bd2c-47d5-9305-8db0d698c3b2")
-		)
-		(pin "4"
-			(uuid "3dab8923-66bb-440a-a282-5a70712227c9")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED108")
 					(unit 1)
 				)
 			)
@@ -77748,6 +76942,92 @@
 		)
 	)
 	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 689.61 212.09 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a3e4d66d-a476-4dd5-8e16-fa2087734f67")
+		(property "Reference" "LED126"
+			(at 698.3476 211.328 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 698.3476 212.8276 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 692.15 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 692.15 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 689.61 212.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d359bd8e-ebbd-4b99-a171-67010ab3508e")
+		)
+		(pin "2"
+			(uuid "e2aeb300-187c-4ec7-881c-dc6365243891")
+		)
+		(pin "3"
+			(uuid "055bf243-9f71-4d9f-b259-43d3d9d77311")
+		)
+		(pin "4"
+			(uuid "e134c266-0388-41ef-9bba-03ef668400f5")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED126")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 464.058 90.678 90)
 		(unit 1)
@@ -78080,92 +77360,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "F1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 592.328 231.902 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a79c6fab-6eaa-4f09-83b8-e1be469cf369")
-		(property "Reference" "LED67"
-			(at 601.0656 231.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 601.0656 232.6386 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 594.868 238.252 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 594.868 238.252 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 592.328 231.902 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6c4e4806-743a-4740-b39a-203e9b108b50")
-		)
-		(pin "2"
-			(uuid "af5ce33d-5c53-4f01-87f9-25ed69573e23")
-		)
-		(pin "3"
-			(uuid "1b1c2f4f-4d38-4c2b-86cf-bda26353f7f5")
-		)
-		(pin "4"
-			(uuid "7f33cea4-e653-4f1f-96cc-21210a3bd14b")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED67")
 					(unit 1)
 				)
 			)
@@ -79519,7 +78713,7 @@
 	)
 	(symbol
 		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 644.652 250.444 180)
+		(at 689.356 231.902 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -79527,9 +78721,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "b54b1c32-c756-46a4-9513-1f45f69fecbe")
-		(property "Reference" "LED117"
-			(at 653.3896 249.682 0)
+		(uuid "b6baf8c1-4587-4e9d-a75f-1d607d1fb14d")
+		(property "Reference" "LED110"
+			(at 680.6184 232.664 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -79540,7 +78734,7 @@
 			)
 		)
 		(property "Value" "SK6812-4020-SideView"
-			(at 653.3896 251.1816 0)
+			(at 680.6184 231.1644 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -79551,7 +78745,7 @@
 			)
 		)
 		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 647.192 256.794 0)
+			(at 686.816 225.552 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -79562,7 +78756,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 647.192 256.794 0)
+			(at 686.816 225.552 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -79573,7 +78767,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 644.652 250.444 0)
+			(at 689.356 231.902 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -79583,21 +78777,107 @@
 			)
 		)
 		(pin "1"
-			(uuid "eacba062-5902-4c3a-b50b-541e22f8fc4c")
+			(uuid "2e5eab13-2dc6-421e-9a97-ecffd59ac763")
 		)
 		(pin "2"
-			(uuid "6fcab50e-9168-4f7b-968f-fb7e92f2d6f3")
+			(uuid "79e78d16-2331-460b-bd49-bbcc23387b97")
 		)
 		(pin "3"
-			(uuid "36d9b7cb-3866-4a52-b8f9-0954b2b83506")
+			(uuid "27a36117-639c-4037-8b44-3ddf4ef7b129")
 		)
 		(pin "4"
-			(uuid "32d2ef4a-d265-492d-971a-efbb5298fde3")
+			(uuid "c217f0b4-b5ca-4138-ab69-020a2c3d180e")
 		)
 		(instances
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED117")
+					(reference "LED110")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 650.494 231.902 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b76313f3-32ae-479d-b119-8376d15feab8")
+		(property "Reference" "LED112"
+			(at 641.7564 232.664 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 641.7564 231.1644 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 647.954 225.552 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 647.954 225.552 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 650.494 231.902 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "44a1b324-112f-4419-902f-aa9f9d8bbb5b")
+		)
+		(pin "2"
+			(uuid "6aca2258-7dc9-4ec6-8382-1edba31055b1")
+		)
+		(pin "3"
+			(uuid "2081a99c-37d7-4e22-816b-3b19a1593734")
+		)
+		(pin "4"
+			(uuid "a3c1d121-f72e-4a76-b943-dda505a7d2bd")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED112")
 					(unit 1)
 				)
 			)
@@ -80394,6 +79674,92 @@
 		)
 	)
 	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 626.364 250.444 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bd06f15a-51f2-49ce-8221-830af216719f")
+		(property "Reference" "LED48"
+			(at 617.6264 251.206 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 617.6264 249.7074 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 623.824 244.094 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 623.824 244.094 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 626.364 250.444 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0501b9bb-de3c-4f81-9a06-32d2918ac5ac")
+		)
+		(pin "2"
+			(uuid "e7d471ff-3cdd-4e25-9f82-9a12cd36b26f")
+		)
+		(pin "3"
+			(uuid "48ac2413-e8ca-4439-a944-a1d828b62717")
+		)
+		(pin "4"
+			(uuid "8d89017d-93af-4ea5-b79c-4008278ee441")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED48")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 232.664 216.154 0)
 		(unit 1)
@@ -80501,6 +79867,92 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "C6_A1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 725.424 250.444 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "be5a3340-df55-40ae-be10-fc7860b8ddc8")
+		(property "Reference" "LED108"
+			(at 734.1616 249.682 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 734.1616 251.1816 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 727.964 256.794 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 727.964 256.794 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 725.424 250.444 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "adb59dc7-799d-4223-9d88-99e56f295f0b")
+		)
+		(pin "2"
+			(uuid "55c16375-93c4-4dd9-a5b4-58998e228ecb")
+		)
+		(pin "3"
+			(uuid "421eb644-5098-4705-8b38-fc788eb43154")
+		)
+		(pin "4"
+			(uuid "c77ab797-219f-4daf-a614-0aacf5b8e31a")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED108")
 					(unit 1)
 				)
 			)
@@ -82380,92 +81832,6 @@
 		)
 	)
 	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 725.424 250.444 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ceb5953b-f62b-4f88-be4c-0c8cee0b604f")
-		(property "Reference" "LED113"
-			(at 734.1616 249.682 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 734.1616 251.1816 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 727.964 256.794 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 727.964 256.794 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 725.424 250.444 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9c11ef1d-8695-44e6-8754-a04cf1670eda")
-		)
-		(pin "2"
-			(uuid "a24afe0e-bb9e-4f91-b095-c3a107984929")
-		)
-		(pin "3"
-			(uuid "74e0dd59-f129-4547-af59-fbd63ed33d0e")
-		)
-		(pin "4"
-			(uuid "2dcac8de-c676-4ddd-a8fc-d53968356046")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED113")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "PCM_0xcb:W25Q128JVPIQ")
 		(at 242.824 217.424 0)
 		(mirror y)
@@ -83436,6 +82802,92 @@
 		)
 	)
 	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 665.226 250.444 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d62d494a-c0d8-4bbe-8b17-5bdbb9862a1e")
+		(property "Reference" "LED60"
+			(at 656.4884 251.206 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 656.4884 249.7074 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 662.686 244.094 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 662.686 244.094 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 665.226 250.444 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8e3415bc-71d2-41bc-9045-52acc630cd58")
+		)
+		(pin "2"
+			(uuid "9f4c5ccb-7087-4f1b-b965-0f3b2c033667")
+		)
+		(pin "3"
+			(uuid "ee1ae021-0960-4013-92e7-60d3de9cebf3")
+		)
+		(pin "4"
+			(uuid "fdb3171f-e89d-49b5-8932-dea5a0d2bbf3")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED60")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "onigaku:+3V3_L")
 		(at 252.984 202.184 0)
 		(unit 1)
@@ -83703,92 +83155,6 @@
 		)
 	)
 	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 684.276 250.444 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "dabe2932-fbbd-498e-a3f9-dec8287d7cf8")
-		(property "Reference" "LED115"
-			(at 693.0136 249.682 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 693.0136 251.1816 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 686.816 256.794 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 686.816 256.794 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 684.276 250.444 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "40f120fa-5de3-4b2b-b5e7-77c944d1727f")
-		)
-		(pin "2"
-			(uuid "5210408f-ca0a-4a67-b7e0-56b9e7b9ab3b")
-		)
-		(pin "3"
-			(uuid "925b9e31-9693-42b2-b85b-1788f9721cd3")
-		)
-		(pin "4"
-			(uuid "961454f0-073a-4006-874c-80bee82b5300")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED115")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 602.488 226.822 0)
 		(unit 1)
@@ -83870,6 +83236,178 @@
 		)
 	)
 	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 710.692 231.902 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dc1ed92c-08d7-4851-a33d-3425caef2f26")
+		(property "Reference" "LED109"
+			(at 701.9544 232.664 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 701.9544 231.1644 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 708.152 225.552 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 708.152 225.552 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 710.692 231.902 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b1e2dd0c-ff46-40c8-ba7e-44d70dc6101a")
+		)
+		(pin "2"
+			(uuid "f9faa3ac-02dc-457c-9877-329c44251a39")
+		)
+		(pin "3"
+			(uuid "142a67f2-4374-4b15-87a2-46c3aa7ee763")
+		)
+		(pin "4"
+			(uuid "2418e41c-83ec-4994-9716-c19860212c26")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED109")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 646.938 250.444 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dc380466-5b0d-44fe-a546-9cbf5152d175")
+		(property "Reference" "LED54"
+			(at 638.2004 251.206 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 638.2004 249.7074 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 644.398 244.094 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 644.398 244.094 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 646.938 250.444 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "949ff046-ea7c-4371-803f-2709beb1ad69")
+		)
+		(pin "2"
+			(uuid "bee21336-2d7e-420d-8111-600cf3a8cefa")
+		)
+		(pin "3"
+			(uuid "51a65073-7de7-480d-940f-053609b21974")
+		)
+		(pin "4"
+			(uuid "25c2cba7-d039-46b1-8964-35644ca21fb7")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED54")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:VBUS")
 		(at 525.018 219.71 90)
 		(unit 1)
@@ -83941,6 +83479,92 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "#PWR079")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 533.654 250.444 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ddd59604-1ea2-4029-a768-28d2e05dc9cd")
+		(property "Reference" "LED75"
+			(at 524.9164 251.206 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 524.9164 249.7074 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 531.114 244.094 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 531.114 244.094 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 533.654 250.444 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f3f3ba07-d6ae-41a6-a282-2f19622841ed")
+		)
+		(pin "2"
+			(uuid "f48f6a5f-46a0-4dda-9f59-64f34cbb1f64")
+		)
+		(pin "3"
+			(uuid "30e7c558-080d-4847-9637-8b3351d3070c")
+		)
+		(pin "4"
+			(uuid "9eb4fa2d-f4e7-4330-baf3-9a3fdf864e8a")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED75")
 					(unit 1)
 				)
 			)
@@ -84026,7 +83650,7 @@
 	)
 	(symbol
 		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 630.428 212.09 180)
+		(at 573.278 212.09 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -84034,9 +83658,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "dfb5eadf-79af-46bb-9784-c9acf946559c")
-		(property "Reference" "LED75"
-			(at 621.6904 212.852 0)
+		(uuid "de87b408-3838-4dcc-9e8a-6185bfcfddec")
+		(property "Reference" "LED121"
+			(at 582.0156 211.328 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -84047,7 +83671,7 @@
 			)
 		)
 		(property "Value" "SK6812-4020-SideView"
-			(at 621.6904 211.3534 0)
+			(at 582.0156 212.8276 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -84058,7 +83682,7 @@
 			)
 		)
 		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 627.888 205.74 0)
+			(at 575.818 218.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -84069,7 +83693,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 627.888 205.74 0)
+			(at 575.818 218.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -84080,7 +83704,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 630.428 212.09 0)
+			(at 573.278 212.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -84090,21 +83714,21 @@
 			)
 		)
 		(pin "1"
-			(uuid "d104aa99-9fda-440b-b198-3555fc110c1d")
+			(uuid "467d58cf-9645-46c6-83bb-e433acc6bc33")
 		)
 		(pin "2"
-			(uuid "97685898-b342-4ca2-a01c-0eb15b132130")
+			(uuid "2f89a78a-2f9c-4739-b7a1-2f965e2dd62a")
 		)
 		(pin "3"
-			(uuid "207295e3-e473-47fd-a07d-bc42d9219db2")
+			(uuid "93bac8ac-5054-4296-a196-577be73eedb8")
 		)
 		(pin "4"
-			(uuid "4238bc7c-483d-442a-add3-a10a9bbfedec")
+			(uuid "04b70f38-5813-49f5-b27c-ae8189e97088")
 		)
 		(instances
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED75")
+					(reference "LED121")
 					(unit 1)
 				)
 			)
@@ -85279,6 +84903,92 @@
 		)
 	)
 	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 533.908 231.902 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ec761855-a599-4be1-8c9d-422ae6097335")
+		(property "Reference" "LED118"
+			(at 525.1704 232.664 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 525.1704 231.1644 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 531.368 225.552 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 531.368 225.552 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 533.908 231.902 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c901eec3-2688-49fb-a3a6-6da07491eade")
+		)
+		(pin "2"
+			(uuid "b3e2b8d2-a2c0-42f7-8610-45c56640f10d")
+		)
+		(pin "3"
+			(uuid "e2cb26b4-ea7f-4b5f-b81a-cc8e4dd2d672")
+		)
+		(pin "4"
+			(uuid "6bc96aaf-4a27-4562-810a-242bc266a35e")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED118")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 582.676 263.398 0)
 		(unit 1)
@@ -85354,6 +85064,92 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "C157")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 573.278 231.902 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f0eae118-4ae5-4384-a599-4b4f2ac44beb")
+		(property "Reference" "LED116"
+			(at 564.5404 232.664 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 564.5404 231.1644 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 570.738 225.552 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 570.738 225.552 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 573.278 231.902 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1d49a7cf-f5a4-4c01-9777-a9dafe4e5a93")
+		)
+		(pin "2"
+			(uuid "406f454c-0768-4cdb-86ad-a385316e73c1")
+		)
+		(pin "3"
+			(uuid "938e6993-2239-4b7d-a92f-25722408af05")
+		)
+		(pin "4"
+			(uuid "4970128e-3d98-4896-bffc-6f373c439d40")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED116")
 					(unit 1)
 				)
 			)
@@ -85824,6 +85620,92 @@
 		)
 	)
 	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 534.162 212.09 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f4c841f3-3d75-4a07-8190-98cbe50d5ce9")
+		(property "Reference" "LED119"
+			(at 542.8996 211.328 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 542.8996 212.8276 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 536.702 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 536.702 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 534.162 212.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dc40ad91-1f64-47ec-9287-09e2af2a3762")
+		)
+		(pin "2"
+			(uuid "68ce1d8a-f212-4301-85c4-28e950adfcf6")
+		)
+		(pin "3"
+			(uuid "afb4aea4-c3be-412f-925d-71ec41609e07")
+		)
+		(pin "4"
+			(uuid "cdc94559-ea19-4004-b38e-c598f595d7b5")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED119")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 323.85 88.9 180)
 		(unit 1)
@@ -86209,7 +86091,7 @@
 	)
 	(symbol
 		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 570.23 250.444 180)
+		(at 554.228 231.902 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -86217,9 +86099,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "f99a8f77-d01c-4447-8aa7-d74c657143ce")
-		(property "Reference" "LED121"
-			(at 578.9676 249.682 0)
+		(uuid "f938c9d7-f62c-4caa-af99-b0f416c3b8f7")
+		(property "Reference" "LED117"
+			(at 545.4904 232.664 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -86230,7 +86112,7 @@
 			)
 		)
 		(property "Value" "SK6812-4020-SideView"
-			(at 578.9676 251.1816 0)
+			(at 545.4904 231.1644 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -86241,7 +86123,7 @@
 			)
 		)
 		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 572.77 256.794 0)
+			(at 551.688 225.552 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -86252,7 +86134,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 572.77 256.794 0)
+			(at 551.688 225.552 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -86263,7 +86145,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 570.23 250.444 0)
+			(at 554.228 231.902 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -86273,21 +86155,21 @@
 			)
 		)
 		(pin "1"
-			(uuid "9286329c-4a8a-4f8f-88eb-2e80e1b54336")
+			(uuid "ee779594-73a9-487e-8113-547bce6b97e2")
 		)
 		(pin "2"
-			(uuid "c140ef86-0458-4eb6-9298-61efb96acc99")
+			(uuid "9e09f102-cebb-431b-be41-53a378f08aa8")
 		)
 		(pin "3"
-			(uuid "4af4d450-01e0-4f17-9d6a-bd6481069c6b")
+			(uuid "f4906840-09f3-47bd-82ca-dcd0c27053af")
 		)
 		(pin "4"
-			(uuid "3f4f1ec2-36e1-495c-89f8-05df1499da2f")
+			(uuid "cb15aabb-f203-45d3-9bf4-e24d763c1c30")
 		)
 		(instances
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED121")
+					(reference "LED117")
 					(unit 1)
 				)
 			)
@@ -86676,6 +86558,92 @@
 		)
 	)
 	(symbol
+		(lib_id "umiko-rev2:SK6812-4020-SideView")
+		(at 669.798 212.09 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fc3fb4fa-fc1c-4d62-8866-0861baac6d0b")
+		(property "Reference" "LED125"
+			(at 678.5356 211.328 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SK6812-4020-SideView"
+			(at 678.5356 212.8276 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
+			(at 672.338 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 672.338 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 669.798 212.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "68f35cf4-6dcf-472f-8b05-5fb36b15e0a6")
+		)
+		(pin "2"
+			(uuid "04edf5b3-b666-44bb-aa7a-8297aaed9012")
+		)
+		(pin "3"
+			(uuid "626b1d68-9c14-4091-9782-362ebddfe135")
+		)
+		(pin "4"
+			(uuid "02e40709-d04a-49a9-9163-d52a45c1839a")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "LED125")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 377.19 215.138 0)
 		(unit 1)
@@ -86783,92 +86751,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "C6_A2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "umiko-rev2:SK6812-4020-SideView")
-		(at 554.482 268.478 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ff2afb20-397d-4e32-9e70-0a630e0e2527")
-		(property "Reference" "LED124"
-			(at 545.7444 269.24 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SK6812-4020-SideView"
-			(at 545.7444 267.7404 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7366 0.7366)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "umiko-rev2:SK6812-4020-SideView"
-			(at 551.942 262.128 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 551.942 262.128 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 554.482 268.478 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "37bd74e7-a51d-4b6e-8e81-9e625595d922")
-		)
-		(pin "2"
-			(uuid "a9ae5095-f46f-4f88-9f7d-0c6a5370c59a")
-		)
-		(pin "3"
-			(uuid "e36a3b9a-e06d-4ab9-90ef-3e414407654f")
-		)
-		(pin "4"
-			(uuid "b6f810a2-f628-41b0-a2b5-bd88cd85db08")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "LED124")
 					(unit 1)
 				)
 			)
