@@ -172,64 +172,119 @@ static const uint8_t sin_lut[16] = {
 // g_led_config (matrix map, per-LED positions and flags) lives in
 // keyboards/umiko/umiko.c, derived from the trace in docs/led-chain.md.
 //
-// Per-key LEDs follow the base RGB Matrix effect (cycled via FN+Y/H).
-// Underglow LEDs are OVERRIDDEN each frame with a slow blue↔white cycle,
-// so their look is independent of whatever per-key effect is active.
+// "Smoked caps" scheme (matches black/smoke keycaps with gold legends):
+// per-key is a true typing heatmap (black at rest, gold heat with
+// exponential spread to neighbors, overlapping presses stack to max).
+// Underglow is a white breathing trim. Painted every frame, so it
+// overrides whatever stock effect runs underneath. RM_TOGG still works
+// (QMK skips rendering while disabled); RM_SPDU/SPDD set how fast heat
+// dissipates. Per-key peak is 80% (188) to sit under smoked caps.
 // ──────────────────────────────────────────────────────────────────────
 
 #ifdef RGB_MATRIX_ENABLE
 #include "lib/lib8tion/lib8tion.h"
 
-// Purple + Gold motif for BOTH per-key and underglow, applied every frame so
-// it overrides whatever RGB Matrix effect is active. The user can still cycle
-// effects with FN+Y/H — the underlying effect runs, but this indicator hook
-// re-paints on top of it in-palette.
-//
-//   Underglow: two-color ring rotating around each half's perimeter (~8s
-//   per revolution). Left and right halves rotate independently.
-//
-//   Per-key: Midnight Purple base with a Gold wave sweeping across the
-//   keyboard, driven by the LED's x-position + a time phase. Both hue
-//   (purple/gold) and value (dim/bright) modulate with the wave so it
-//   feels alive without ever leaving the palette.
-//
-// Underglow chain layout (from umiko.c):
-//   Left  half: chain indices 0..11 (12 LEDs), CCW around left perimeter
-//   Right half: chain indices 42..56 (15 LEDs), CCW around right perimeter
-bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
-    // Midnight Purple (H≈195): deep, high sat, near-black richness.
-    // Gold (H≈32): warm yellow-orange.
-    const uint8_t HUE_PURPLE = 195;
-    const uint8_t HUE_GOLD   = 32;
+#define HUE_GOLD 32
+#define HEAT_PEAK 200   // heat stamped at the pressed key (single press)
+#define HEAT_MAX 255    // stacking clamp — overlapping presses max out here
+#define PK_PEAK 188     // per-key brightness peak (80%)
+#define PK_BASE 0       // resting level (0 = black at rest)
 
-    uint32_t t     = timer_read32();
-    uint8_t  phase = (uint8_t)((t >> 5) & 0xFF);   // ~8s per full rotation
+// Heat falloff: true base-2 exponential in d^2 (Gaussian in distance).
+// 2^(-h/2) * 255 for half-step h = 0..17 (index 17 = 0 guard for lerp).
+// Half-life HEAT_HALFLIFE in d^2 units (~9 units: pressed key plus faint
+// adjacent neighbors only).
+#define HEAT_HALFLIFE 90
+static const uint8_t exp_lut[18] = {
+    255, 180, 127, 90, 64, 45, 32, 23, 16, 11, 8, 6, 4, 3, 2, 1, 1, 0
+};
+
+static uint16_t heat[RGB_MATRIX_LED_COUNT] = {0};
+static uint16_t last_cool = 0, lin_acc = 0;
+
+static inline uint16_t heat_add(int32_t d2) {
+    uint32_t h = ((uint32_t)d2 * 2) / HEAT_HALFLIFE;
+    if (h >= 17) return 0;
+    uint32_t frac = ((uint32_t)d2 * 2) % HEAT_HALFLIFE;
+    uint32_t f    = (uint32_t)exp_lut[h] * (HEAT_HALFLIFE - frac)
+                  + (uint32_t)exp_lut[h + 1] * frac;
+    return (uint16_t)((uint32_t)HEAT_PEAK * f / (uint32_t)(HEAT_HALFLIFE * 256));
+}
+
+static void heatmap_stamp(uint8_t row, uint8_t col) {
+    uint8_t center = g_led_config.matrix_co[row][col];
+    if (center == NO_LED) return;
+    led_point_t cp = g_led_config.point[center];
+    for (uint8_t i = 0; i < RGB_MATRIX_LED_COUNT; i++) {
+        if (g_led_config.flags[i] & LED_FLAG_UNDERGLOW) continue;
+        led_point_t p  = g_led_config.point[i];
+        int32_t     dx = (int32_t)p.x - cp.x;
+        int32_t     dy = (int32_t)p.y - cp.y;
+        uint16_t    h  = heat[i] + heat_add(dx * dx + dy * dy);
+        heat[i]        = h > HEAT_MAX ? HEAT_MAX : h;
+    }
+}
+
+// Edge-detect newly pressed keys and stamp heat. Runs on BOTH halves via
+// the two scan hooks below (master sees the full merged matrix, slave sees
+// its local rows) — each half maintains heat[] for the LEDs it renders.
+// NOTE: post_process_record_user would be master-only and is NOT used here.
+static matrix_row_t heat_prev[MATRIX_ROWS] = {0};
+
+static void heatmap_scan_matrix(void) {
+    for (uint8_t row = 0; row < MATRIX_ROWS; row++) {
+        matrix_row_t current = matrix_get_row(row);
+        matrix_row_t newly   = (matrix_row_t)(current & ~heat_prev[row]);
+        heat_prev[row]       = current;
+        for (uint8_t col = 0; col < MATRIX_COLS; col++) {
+            if (newly & ((matrix_row_t)1 << col)) heatmap_stamp(row, col);
+        }
+    }
+}
+
+void matrix_scan_user(void) { heatmap_scan_matrix(); }        // master: full matrix
+void matrix_slave_scan_user(void) { heatmap_scan_matrix(); }  // slave: local rows
+
+bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+    // Time-based cooling (frame-rate independent): slow exponential decay
+    // plus a linear drain so heat fully reaches the base. FN speed sets the
+    // half-life (~1.2s..3.5s); visible glow lingers ~7-12s at default.
+    uint16_t now16 = timer_read();
+    uint16_t dt    = TIMER_DIFF_16(now16, last_cool);
+    last_cool      = now16;
+    if (dt > 100) dt = 100;
+    lin_acc += dt;
+    uint16_t lin = (uint16_t)(lin_acc / 40);  // linear drain 25/s
+    lin_acc      = (uint16_t)(lin_acc % 40);
+    uint16_t div = (uint16_t)(1800 + (uint16_t)(255 - rgb_matrix_config.speed) * 8);
+    for (uint8_t i = 0; i < RGB_MATRIX_LED_COUNT; i++) {
+        if (g_led_config.flags[i] & LED_FLAG_UNDERGLOW) continue;
+        if (!heat[i]) continue;
+        uint32_t h = heat[i];
+        h          = h - h * dt / div;
+        heat[i]    = (uint16_t)(h > lin ? h - lin : 0);
+    }
+
+    // Underglow trim: white breathing, ~8s period.
+    uint8_t breath = (uint8_t)(40 + (sin8((uint8_t)(now16 >> 5)) >> 3));  // 40..71
 
     for (uint8_t i = led_min; i < led_max; i++) {
         if (g_led_config.flags[i] & LED_FLAG_UNDERGLOW) {
-            // Underglow ring: purple half + gold half, boundary rotates.
-            uint8_t pos, group_size;
-            if (i < 42) { pos = i;      group_size = 12; }
-            else        { pos = i - 42; group_size = 15; }
-            uint8_t angular   = (uint8_t)(((uint16_t)pos * 256) / group_size);
-            uint8_t effective = angular + phase;
-            uint8_t hue       = (effective < 128) ? HUE_PURPLE : HUE_GOLD;
-            hsv_t   hsv       = {hue, 255, 80};
-            rgb_t   rgb       = hsv_to_rgb(hsv);
+            hsv_t hsv = {0, 0, breath};
+            rgb_t rgb = hsv_to_rgb(hsv);
             rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
         } else {
-            // Per-key: purple base with a gold wave sweeping across x.
-            // Wave amplitude modulates value; hue snaps at midpoint.
-            led_point_t p    = g_led_config.point[i];
-            uint8_t     wave = sin8((uint8_t)(p.x + (phase << 1)));
-            uint8_t     hue  = (wave < 128) ? HUE_PURPLE : HUE_GOLD;
-            // Value: dim floor (~40) + wave amplitude → 40..103 range.
-            uint8_t     val  = 40 + (wave >> 2);
-            hsv_t       hsv  = {hue, 255, val};
-            rgb_t       rgb  = hsv_to_rgb(hsv);
+            // Heat → brightness: fixed gold, intensity tracks heat. Dim values
+            // snap to black — SK6812s skew red near zero, so no red tail.
+            uint16_t h = heat[i] > HEAT_MAX ? HEAT_MAX : heat[i];
+            uint8_t  v = (uint8_t)(PK_BASE + h * (PK_PEAK - PK_BASE) / HEAT_MAX);
+            if (v < 20) v = 0;
+            hsv_t hsv = {HUE_GOLD, 255, v};
+            rgb_t rgb = hsv_to_rgb(hsv);
             rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
         }
     }
+
     return false;
 }
 #endif
