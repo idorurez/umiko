@@ -4,6 +4,8 @@
 
 *umiko* (Japanese: **海** sea + **子** an affectionate diminutive) is a split, low-profile TKL F-row-less mechanical keyboard PCB. The split sits between your hands like the trough between two waves; typed at speed on Gateron KS-33 low-profile blues, the rolling clicks sound like waves breaking on sand.
 
+This branch (`rev2`) is the hybrid-switch revision: MX-or-KS-33 footprints, 4020 side-view underglow, 127 LEDs total. `main` is the original rev1 KS-33-only board.
+
 ![PCB front (with keycaps)](images/umiko_3dview_front.png)
 
 ## Features
@@ -11,8 +13,8 @@
 * **Split layout** — two physically separate halves; each half has its own MCU and runs standalone
 * **TKL, F-row-less** — full alpha + nav cluster on the right, no function row
 * **Per-key RGB** (SK6812MINI-E reverse-mount, lights through PCB cutouts to underside of keycap)
-* **Underglow** (SK6812 4020 side-view, edge-mounted outward-facing, single GP25 chain per half, no satellite board)
-* **Gateron KS-33 v2.0 low-profile hot-swap** switches (MX-compatible footprint, low-profile body)
+* **Underglow** (SK6812 4020 side-view, edge-mounted outward-facing, single GP25 chain per half, no satellite board — 64 total: 30 left + 34 right)
+* **Hybrid MX / Gateron KS-33 low-profile hot-swap** switches — one footprint accepts either switch type; flip the 3D visualization with `python scripts/toggle_switch_3d.py mx|lowpro|hide` (KiCad closed)
 * **Kailh Choc V2 stabilizers** (stabilizer cutouts on PCB sized for Choc V2, not MX stabs)
 * **Side-mounted host USB-C** per half (on the outer edge of each board) for host connection and power
 * **Top-mounted USB-C inter-half link** (HRO Type-C, on the top edge of each board near the inner-top corner) carrying single-wire PIO serial (over D+), GND, and 5 V bridge between halves
@@ -31,9 +33,9 @@
 | **Flash** | 2× Winbond W25Q128JVPIQ (16 MB QSPI) |
 | **LDO** | 2× TI LP5907SNX-3.3 (XDFN-4, 250 mA) |
 | **Crystal** | 2× 12 MHz (Crystal_SMD_2520-4Pin) |
-| **Switches** | 63× Gateron KS-33 v2.0 low-profile (MX-compatible, hot-swap) |
+| **Switches** | 63× hybrid (Cherry-MX-compatible **or** Gateron KS-33 v2.0 low-profile, hot-swap) |
 | **Stabilizers** | Kailh Choc V2 (2.25U + 2.75U + 2U backspace) |
-| **RGB LEDs** | 63× per-key (SK6812MINI-E reverse-mount) + ~20–33 per half underglow (SK6812 4020 side-view) — 103–129 total provisional pending actual Edge.Cuts measurement. Left 30 per-key + ~20 underglow = ~50, right 33 per-key + ~22 underglow = ~55 at 20mm pitch; denser 16.7mm pitch ~30/33 per half = ~60/66. |
+| **RGB LEDs** | **127 total**: 63× per-key (SK6812MINI-E reverse-mount) + 64× underglow (SK6812 4020 side-view). Left 30 + 30 = 60, right 33 + 34 = 67. |
 | **Host USB-C** | 2× HRO TYPE-C-31-M-12 (side-mounted, outer edge, 4 mm plank protrusion + 1 mm connector overhang) |
 | **Inter-half USB-C** | 2× HRO TYPE-C-31-M-12 (top-edge mounted, near inner-top corner). Carries VBUS (+5V bridge), GND, and single-wire PIO serial on D+. |
 | **Case hardware** | M2 × L4 × D3.5 heat-set inserts (3.3 mm holes) + M2 × 4 mm screws. |
@@ -54,19 +56,19 @@ QSPI Flash | Winbond W25Q128JVPIQ | 2 | LCSC `C190862` / Mouser / DigiKey
 12 MHz crystal | 2520 4-pin SMD | 2 | LCSC `C2149204` / Mouser
 USB-C receptacle (host + inter-half) | HRO TYPE-C-31-M-12 | 4 | LCSC `C165948` / JLC / AliExpress — same part used for all four positions (J1/J2 outer = host, J3/J4 top = inter-half)
 USB ESD | USBLC6-2P6 | 2 | LCSC `C2827693` (SOT-666)
-Polyfuse | Bourns MF-FSMF050X-2 (500 mA hold / 1 A trip, 0603) | 2 | LCSC `C210357` / DigiKey (per Helios reference design)
+Polyfuse | SMD0805-075 (750 mA hold, 0805) | 2 | LCSC `C70060` — undersized for 127-LED rev2 typical draw (~1.3–1.4 A); upgrade to 2 A hold / 1206 (Bourns MF-MSMF200-2, LCSC `C210837`) still pending — see Stretch. (Rev1 used Bourns MF-FSMF050X-2, 500 mA / 0603.)
 Ferrite bead | 600 Ω 0402 | 2 | LCSC `C160977`
 Schottky diode | PMEG2010BELD (SOD-882) | 4 | LCSC `C552820` / DigiKey
 Per-key LEDs | SK6812MINI-E (reverse mount) | 70+ | LCSC `C5149201` / AliExpress — order ~10% spare, fragile. Pin **numbers** between vendors differ but physical VDD/VSS/DIN/DOUT corners match
-Underglow LEDs | SK6812SIDE-A 4020 side-view 4.0×2.0×1.5mm (thin 0.85mm variant same pads, e.g. Adafruit 4691) | 40–75+ depending on density — 20–33 per half, order 10–15% spare | OPSCO/Shenzhen Normand SK6812SIDE-A / SK68XX SIDE, Adafruit 4691 thin alt, Custom/Extended at JLC (no LCSC SIDE index found 2026-08-28), 5V 800kHz GRB, 4 pads 1mm pitch DIN/VDD/DOUT/GND left→right toward edge (+Y), **not** same as 5050 VSS/DIN/VDD/DOUT — new symbol/footprint required. See `files/footprints/SK6812-4020-SideView.pretty/` and `rev2-4020-selection.md` for land pattern, rotation, and power notes
+Underglow LEDs | SK6812SIDE-A 4020 side-view 4.0×2.0×1.5mm (thin 0.85mm variant same pads, e.g. Adafruit 4691) | 64 (30 left + 34 right) — order ~75 (15% spare) | OPSCO/Shenzhen Normand SK6812SIDE-A / SK68XX SIDE, Adafruit 4691 thin alt, Custom/Extended at JLC (no LCSC SIDE index found 2026-08-28), 5V 800kHz GRB, 4 pads 1mm pitch DIN/VDD/DOUT/GND left→right toward edge (+Y), **not** same as 5050 VSS/DIN/VDD/DOUT. See `footprints/SK6812-4020-SideView.pretty/` and `docs/rev2-4020-selection.md` for land pattern, rotation, and power notes
 Switch diodes | 1N4148W (SOD-123) | 70+ | LCSC `C81598` / Mouser. Footprint `onigaku:D3_SMD_v2` is SOD-123, **not** SOD-323
-Switches | Gateron KS-33 v2.0 low-profile | 63 | Keebio / Keychron / Gateron direct (hand-place; not from JLC stock)
-Hot-swap sockets | Gateron KS33 hot-swap socket | 63 | Same source as switches
+Switches | Gateron KS-33 v2.0 low-profile **or** Cherry-MX-compatible | 63 (either type — hybrid footprint accepts both) | Keebio / Keychron / Gateron direct (hand-place; not from JLC stock)
+Hot-swap sockets | Match to switch choice (KS33 sockets for KS-33, MX sockets for MX) | 63 | Same source as switches
 Stabilizers | Kailh Choc V2 (2u for 2.25U, 2.75U, and 2U keys) | 2 sets | Choc V2 — **not** MX. Kailh has EOL'd this part — stock spares while retailers still have them. See [Stabilizers](#stabilizers) for the full story.
-0603 100 nF ceramic caps | CC0603KRX7R9BB104 (or equiv 0.1µF X7R) | 90+ | LCSC auto-matches — confirm prompt is benign
+0603 100 nF ceramic caps | CC0603KRX7R9BB104 (or equiv 0.1µF X7R) | 150+ (147 in schematic — one per LED plus MCU/IC bypass) | LCSC auto-matches — confirm prompt is benign
 0402 caps (LDO bypass) | varies (see schematic) | as schematic | LCSC `C1525` / `C15525` / `C52923` etc.
 0402 resistors | varies | as schematic | LCSC `C25905` (5.1k, UNI-ROYAL) / `C11702` (1k, UNI-ROYAL) / `C60490` (10k, YAGEO) / `C138021` (27R, YAGEO) / `C25900` (4.7k, UNI-ROYAL) — 10k and 27R switched from UNI-ROYAL to YAGEO after recurring JLC stock shortages on UNI-ROYAL 0402 SKUs; the R30/R31 4.7k previously carried the 5.1k `C25905` code by mistake and is now correct
-BOOTSEL push button | 4×4×1.5 mm SMD | 2 | LCSC `C589221`
+BOOTSEL push button | Panasonic EVP-BL2A1B000 SMD tact (1.9×2.8 mm footprint) | 2 | LCSC `C589221` — small; bigger case-pressable button still desired, see Stretch
 0402 status LEDs | red / blue / green (per spec) | 4 | LCSC `C130719` / `C130724`
 Case heat-set inserts | M2 × L4 × D3.5 brass knurled | as case dictates | Ruthex-style or equivalent — Amazon / AliExpress. Print 3.3 mm holes; heat-install with soldering iron ~200°C
 Case screws | M2 × 4 mm machine screws | same qty as heat-set inserts | Any standard M2 × 4 — hardware store / Amazon / AliExpress
@@ -84,7 +86,7 @@ cd ~/dev/keyboard/qmk_umiko
 git submodule update --init --recursive   # ~2 GB, ~10 min. Required for RP2040 (pico-sdk submodule)
 ```
 
-The `keyboards/umiko/` folder is authored by-hand in this repo. Files: `info.json` (matrix pins, 5×8 scanning matrix, split serial vendor driver on GP0, LAYOUT_all with 63 keys extracted from the schematic), `rules.mk`, `config.h`, `keymaps/default/keymap.c`, `readme.md`. Copy these into `qmk_umiko/keyboards/umiko/` when setting up a fresh clone. (TODO: move keyboards/umiko/ into this repo and symlink or use QMK's external-keyboard support so it lives with the PCB source.)
+The `keyboards/umiko/` folder lives in this repo: `keyboard.json` (matrix pins, 5×8 scanning matrix, split serial vendor driver on GP0, LAYOUT_all with 63 keys extracted from the schematic), `rules.mk`, `config.h`, `umiko.c`, `readme.md`, `keymaps/default/` + `keymaps/oled_test/`. Copy (or symlink) it into `qmk_umiko/keyboards/umiko/` when setting up a fresh clone. (TODO: `keyboard.json` still carries rev1 RGB counts — `led_count 90`, `split_count [42, 48]`. Rev2 needs 127 with split [60, 67] plus rev2 LED positions.)
 
 ### Toolchain (Windows)
 
@@ -97,6 +99,8 @@ QMK's CLI requires MSYS2 on Windows (its `MSYSTEM` environment check hard-fails 
 | Script | What it does |
 |---|---|
 | `scripts/qmk_compile.sh [keymap]` | Wraps `qmk compile -kb umiko -km <keymap>` inside MSYS2 with all the required env vars (USERPROFILE, HOME, PATH). Defaults to `default` keymap. Output UF2 lands at `qmk_umiko/umiko_default.uf2` (~74 KB). |
+
+**Default keymap** (`keymaps/default/`): typing heatmap on per-key (black at rest, gold heat with halo falloff onto neighbors, overlapping presses stack to max) + white breathing underglow trim. The banked `.uf2` targets rev1 hardware (90 LEDs).
 
 ### QMK config: `keyboard.json` (NOT `info.json`)
 
@@ -118,14 +122,14 @@ Each half is flashed independently via BOOTSEL:
 
 Note: on this board the W25Q128 flash arrives blank from JLC, so first plug-in enters BOOTSEL automatically (RP2040 defaults to USB mass-storage mode when the QSPI flash contains no valid firmware). After first flash, subsequent re-flashes need the BOOTSEL button held.
 
-No reset button on the board — power-cycle + BOOTSEL handles all flashing. Case access to SW1/SW2 is a design decision left to the case (v1 uses pinhole access; v2 plans to integrate the buttons directly — see [Rev 2 ideas](#stretch--future-ideas-rev-2)).
+No reset button on the board — power-cycle + BOOTSEL handles all flashing. Case access to SW1/SW2 is a design decision left to the case (rev1 uses pinhole access; case-integrated buttons still planned — see [Stretch](#stretch--future-ideas)).
 
 ### Split serial: what's happening on the wire
 
 Umiko routes QMK's split-transport protocol over a **single-wire half-duplex PIO serial** running on **GP0** of each RP2040. GP0 connects to the D+ pin of each half's inter-half USB-C connector (J3 left, J4 right). A short USB-C-to-USB-C cable between J3 and J4 ties the two GP0 lines together and provides the 5V bridge (VBUS pins A4/A9) and GND (A12/B12).
 
 QMK config:
-- `info.json` → `split.serial.driver = "vendor"` (uses RP2040 PIO peripheral for the serial protocol)
+- `keyboard.json` → `split.serial.driver = "vendor"` (uses RP2040 PIO peripheral for the serial protocol)
 - `config.h` → `SERIAL_USART_TX_PIN = GP0` (single pin used for both TX and RX in half-duplex)
 
 The inter-half USB-C is **not** a real USB port — it's just a convenient 4-conductor connector shape (VBUS + GND + D+). Do not plug either J3 or J4 into a computer or USB device.
@@ -137,8 +141,8 @@ The inter-half USB-C is **not** a real USB port — it's just a convenient 4-con
 > ⚠️ **Hand-solder only the DNP parts. Get everything else JLCPCB-assembled.**
 >
 > **✅ Reasonable to hand-solder** (these are already DNP'd for exactly this reason):
-> * **SK6812MINI-E LEDs** — per-key (reverse-mount) and underglow. Fragile and tedious but doable with flux and patience.
-> * **Gateron KS33 hot-swap sockets** — pre-tin the pads, place, reflow one pad at a time. Straightforward.
+> * **RGB LEDs (127, all hand-soldered)** — 63× per-key SK6812MINI-E (reverse-mount, light through PCB cutouts) + 64× underglow 4020 side-view (edge-mounted). Fragile and tedious but doable with flux and patience.
+> * **Hot-swap sockets (match to switch choice)** — pre-tin the pads, place, reflow one pad at a time. Straightforward.
 > * **HRO TYPE-C-31-M-12 USB-C connectors** — larger through-hole shield legs + reflowable SMD data pads. Manageable with a chisel tip.
 >
 > **❌ Do NOT attempt to hand-solder** (unless you're a professional with a reflow / hotplate / hot-air station):
@@ -174,7 +178,7 @@ The inter-half USB-C is **not** a real USB port — it's just a convenient 4-con
 
 ![PCB back (no keys)](images/umiko_3dview_back_nokeys.png)
 
-* The **underglow LEDs are reverse-mounted on B.Cu** (back of board) — their pads are on B.Cu but the body sits below the PCB. **Bend the terminals down to the soldering pads** before reflowing or hand-soldering.
+* **Per-key MINI-E are reverse-mounted** — pads on B.Cu, body recessed in the PCB cutout, light shines through to the keycap. **Underglow 4020s are edge-mounted side-view** (B.Cu pads); pin 1 is the filled dot on silk/F.Fab and `EMIT` text marks the light-exit side. **Bend the terminals down to the soldering pads** before reflowing or hand-soldering.
 * **Solder LEDs in the data chain order** and **test as you go** — if one is bad, all LEDs after it in the chain won't light up
 * If an LED looks broken or melted after soldering, it's probably broken — desolder and replace
 
@@ -187,6 +191,8 @@ The inter-half USB-C is **not** a real USB port — it's just a convenient 4-con
 **Plate design**: 2.2 mm plate, stepped pocket per stab position (1.2 mm housing pocket on top, 1.0 mm wire clearance on bottom). Reference: [`reference/choc_v2_stab_holder.stl`](reference/choc_v2_stab_holder.stl). **Printed in PETG with no tolerance adjustments needed**; other FDM materials may need outward relief on the far-from-switch faces (never widen inward, plate breaks during install).
 
 Cutout dimensions (from `keebio/kb-plategen`, encoded in `scripts/make_plate.py`): Body A 5.95×7.95 mm at (±12, ±0.3441), Neck B 4.55×6.25 mm at (±12, ±6.7559), Wire slot 24×1.4 mm at (0, ±8.2809), r=0.5 mm fillet unioned per stab. Sign flips for SW_30/SW_35 (bottom-edge keys → wire points north).
+
+**Durock V3 screw-in evaluated and rejected (2026-10)** — PCB cutouts are far larger than Choc V2's and availability is no better; staying with Choc V2, stock spares.
 
 ### SWD Debug
 
@@ -224,7 +230,7 @@ This board is set up for **JLCPCB's standard 4-layer pricing tier**:
 
 * **Minimum clearance**: 0.1 mm (4 mil) — JLC's standard min for 4-layer at no surcharge
 * **Net class clearance**: 0.1 mm
-* **Track widths**: 0.2 mm (signals), 0.3 mm (power/GND) — well above the 0.1 mm minimum
+* **Track widths**: 0.2 mm (signals), 0.3 mm (+5V LED rails), 0.5 mm (VBUS feeds from USB — a few 0.3 mm stubs remain at pad breakouts); power vias 0.6/0.3 mm — all well above minimums
 * **Min via**: 0.4 mm diameter / 0.2 mm drill
 * **Min hole**: 0.3 mm (matches JLC standard)
 
@@ -255,8 +261,8 @@ Outputs in `fab/`:
 
 **DNP list** (excluded from both BOM and CPL — hand-soldered later):
 
-* `YS-SK6812MINI-E` (90 total) — per-key are reverse-mount (not standard PnP); underglow OPSCO layout is 180° from our footprint. Both hand-soldered.
-* `KEYSW` (63) — Gateron KS-33 hot-swap sockets, not in JLC's stock. Sourced from Keebio / Gateron / AliExpress.
+* `YS-SK6812MINI-E` (127 total: 63 per-key + 64 underglow) — per-key are reverse-mount (not standard PnP); underglow OPSCO layout is 180° from our footprint. All hand-soldered.
+* `KEYSW` (63) — hot-swap sockets (match to switch choice: KS33 or MX), not in JLC's stock. Sourced from Keebio / Gateron / AliExpress.
 
 **LCSC overrides** (baked into the script for parts whose schematic symbols don't carry an LCSC field): matrix diode `D3_SMD_v2` → `C81598`, per-key + underglow LED `YS-SK6812MINI-E` → `C5149201`.
 
@@ -266,6 +272,7 @@ Outputs in `fab/`:
 |---|---|
 | `scripts/make_cad_files.py` | 3D STEP exports of the whole board + component groups (assembly, halves, switches, LEDs, ICs, connectors, passives) for case CAD import into SolidWorks. Read-only on the source PCB — uses an in-memory copy + self-deleting temp file. |
 | `scripts/make_plate.py` | Plate STEP + DXF for the case top plate (integrated switch cutouts + Choc V2 stab cutouts). Optional CLI arg to also generate a "switches-only" alt plate with configurable switch cutout size (`14.2 14.0` recommended for FDM). Read-only on the source PCB. |
+| `scripts/toggle_switch_3d.py mx/lowpro/hide` | Flip hybrid-switch 3D variant (regular MX default, KS-33 low-pro, or hidden). Edits the PCB in place — run with KiCad closed; keeps a `.bak_toggle`. Covered by `scripts/test_toggle_switch_3d.py`. |
 
 Outputs in `cad/`:
 
@@ -281,8 +288,8 @@ Outputs in `cad/`:
 
 * **Board thickness**: 1.6 mm (JLC standard, ±10% — plan case pocket for up to 1.76 mm).
 * **Plate thickness**: **2.2 mm total** (bakingpy two-level design), split as **1.2 mm housing pocket on top** (Choc V2 clip engagement depth) + **1.0 mm wire clearance pocket on bottom** — see [Stabilizers](#stabilizers).
-* **Switch bodies render on F.Cu; hot-swap sockets on B.Cu.** Switch *footprints* are on B.Cu (socket pads live there) but the switch *bodies* still show on F.Cu.
-* **STEP thickness compensation**: KiCad's exporter omits outer copper (~0.07 mm) + soldermask (~0.02 mm), so both scripts bump the extruded thickness by **+0.09 mm** to hit a true 1.6 mm / 1.2 mm. F.Cu components ride up automatically; switch bodies (anchored to B.Cu sockets) get an extra `-4.1 → -4.19` 3D-model offset nudge to stay flush.
+* **Hybrid switch footprints sit on F.Cu**, each carrying two 3D models: `CherryMX-Switch.step` (visible default) + `Gateron-KS-33_v2.step` (`hide yes`), both identity transform — seating verified by `kicad-cli` trial renders. (Onigaku's legacy KS-33 pairing, offset z −4.1 + rotate 180/0/180, renders below the board on rev2 — do not use.)
+* **STEP thickness compensation**: KiCad's exporter omits outer copper (~0.07 mm) + soldermask (~0.02 mm), so both scripts bump the extruded thickness by **+0.09 mm** to hit a true 1.6 mm / 1.2 mm. All F.Cu components (switch bodies included) ride up automatically.
 * **PLA case FDM clearance**: **0.5 mm/side long axis, 0.3 mm/side short axis, 0.2 mm Z**. Print tolerance dominates over PLA shrinkage / thermal. Test a corner chunk and tune slicer XY size compensation before a full-case print.
 
 ![Case CAD in SolidWorks](images/umiko_case_solidworks.png)
@@ -293,7 +300,7 @@ The following workflow is if you would prefer to build your own case. The includ
 
 1. Run `python scripts/make_cad_files.py` and `python scripts/make_plate.py` once to seed `cad/` with the STEPs.
 2. In SolidWorks, import `umiko-assembly.step` (or per-half if you're working on one side) as reference geometry, mate to case origin.
-3. Design the case around it — pocket the PCB, add USB-C cutouts, screw holes, feet, BOOTSEL access at SW1 (166.01, 57.53) and SW2 (188.17, 77.52). v1 uses pinholes; v2 plans a case-integrated button — see [Rev 2 ideas](#stretch--future-ideas-rev-2).
+3. Design the case around it — pocket the PCB, add USB-C cutouts, screw holes, feet, BOOTSEL access at SW1 (166.75, 84.45) and SW2 (183.92, 84.45). Rev1 uses pinholes; a case-integrated button is still planned — see [Stretch](#stretch--future-ideas).
 4. For the plate: import `umiko-plate.step` or build a subtract body from `umiko-switches-only.step` (see [SolidWorks "Combine → Subtract" trick](#).
 5. Freeze the STEPs once case work starts — see warning below.
 6. Track your working SW files under `cad/` in git — everything else in that folder is regenerable.
@@ -369,6 +376,7 @@ Send those with your BOM upload so their engineers can apply them up front inste
 * **Connector placement** — the two host USB-C jacks (J1/J2) are mounted on the outer-side edges of each half (aligned with the Q-row keycap top); the inter-half USB-C jacks (J3/J4) are on the **top edge** of each half, near the inner-top corner, so a short USB-C-to-USB-C cable bridges between them across the keyboard's top edge with minimal slack. All four USB-C connectors sit on Edge.Cuts plank protrusions of **4 mm** (with the connector's plug face overhanging the plank by **1 mm**, giving a clean 1 mm recess inside a planned 6 mm case wall).
 * **Each half is fully independent** — you can power and flash each half on its own. Either half can be the master.
 * **Edge cuts** have 1.25 mm fillets on all corners. Both halves form closed loops; no breakaway tabs (order as 2 separate boards, or as a customer panel).
+* **5 V distribution** — VBUS feeds (0.5 mm) from each host USB-C join a near-full perimeter ring; per-row +5V rails (0.3 mm) stub off the ring to the LED chains, with 100 nF decoupling at each LED and 0.6/0.3 mm power vias.
 * The `onigaku` repo (sibling library) contains the custom symbols, footprints, and 3D models referenced by this design. Must be cloned alongside this repo for KiCad to find the libraries.
 
 ### LDO history
@@ -379,10 +387,10 @@ U2/U10 use **LP5907SNX-3.3** (TI, XDFN-4, LCSC `C133572`, 250 mA) — a pin-comp
 
 **If a future rev needs 500 mA** (Bluetooth, bigger display, expansion headers): `TLV75533PDQNR` drops into the current footprint if JLC restocks; `TLV75533PDBVR` (SOT-23-5, LCSC `C404027`) is more reliably stocked but requires a footprint + symbol swap (5-pin: pad 5 = OUT, pad 4 = NR).
 
-## Stretch / Future Ideas (Rev 2)
+## Stretch / Future Ideas
 
-* **Polyfuse upgrade to 2 A hold / 4 A trip** — Rev 2's 126-LED chain draws far more current than the v1 polyfuse can sustain. At `RGB_MATRIX_MAXIMUM_BRIGHTNESS 150` and worst-case white, right-half draw is ~1.7 A per half, which will trip a 1 A polyfuse. Replace F1/F2 with `MF-FSMF200X-2` (2 A hold / 4 A trip, 1206 package — up from 0603). Schematic is already updated with the new value/MPN/footprint pending LCSC verification. Also update the README as "requires ≥1.5 A USB-C source for full-brightness Rev 2 operation." See [Rev 2 TODO](docs/rev2-todo.md#polyfuse-upgrade-rev-2) for the full analysis.
-* **Bigger, case-integrated BOOTSEL button per half** — v1 uses tiny 4×4×1.5 mm SMD tacts (SW1/SW2) requiring a pinhole in the case top for paperclip access. v2 should either (a) swap the PCB switch to a **larger through-hole or lower-mount tactile** so a case-integrated **cantilever / living-hinge button** (3D-printed flexure that presses the PCB switch when pushed from outside) works cleanly, or (b) go directly to a case-integrated button style with the tact positioned to sit under the flexure.
+* **Polyfuse upgrade to 2 A hold / 4 A trip** — the 127-LED chain draws far more than the current 750 mA SMD0805-075 (F1/F2) can sustain. At `RGB_MATRIX_MAXIMUM_BRIGHTNESS 150` and worst-case white, right-half (67 LEDs) draw is ~1.8 A. Replace F1/F2 with `MF-MSMF200-2` (Bourns, 2 A hold / 4 A trip, 1206 package, LCSC `C210837`) in schematic + PCB — not yet applied. Requires ≥1.5 A USB-C source for full-brightness rev2 operation. See [Rev 2 TODO](docs/rev2-todo.md#polyfuse-upgrade-rev-2) for the full analysis.
+* **Bigger, case-integrated BOOTSEL button per half** — still tiny SMD tacts (SW1/SW2) requiring a pinhole in the case top for paperclip access. Still open: either (a) swap the PCB switch to a **larger through-hole or lower-mount tactile** so a case-integrated **cantilever / living-hinge button** (3D-printed flexure that presses the PCB switch when pushed from outside) works cleanly, or (b) go directly to a case-integrated button style with the tact positioned to sit under the flexure.
 * **Lower-profile OLED mounting** — current through-hole 4-pin header puts the daughterboard ~10–12 mm above the PCB, forcing the case cutout to swallow the whole board (not just the display window). Options: short-body SMD headers (~3–5 mm mated), board-to-board connectors (Hirose DF13 / JAE FI-X, ~2–4 mm), or a direct SMD OLED module (eliminates the daughterboard entirely).
 * **OLED breakout board** for the inter-half I²C lines (`SCL_*` / `SDA_*` are broken out but unwired).
 * **Sound** — small speaker + amp (e.g. PAM8302 mono class-D) + audio storage/playback path. A dedicated audio DAC or a codec IC with I²S from the RP2040 can play short WAV/MP3 clips off an SD card or an extra flash chip. Fun options: ocean/wave sample loops (naming-appropriate), click/keypress feedback, boot chime.

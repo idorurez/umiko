@@ -106,4 +106,15 @@
 		(effects (font (size 0.5 0.5) (thickness 0.08))))
 	(fp_text user "KS2" (at -4.4 -3.55) (layer "F.Fab")
 		(effects (font (size 0.5 0.5) (thickness 0.08))))
+	(model "${KIPRJMOD}/footprints/hybrid_switches.pretty/CherryMX-Switch.step"
+		(at (xyz 0 0 0))
+		(scale (xyz 1 1 1))
+		(rotate (xyz 0 0 0))
+	)
+	(model "${KIPRJMOD}/footprints/hybrid_switches.pretty/Gateron-KS-33_v2.step"
+		(hide yes)
+		(at (xyz 0 0 0))
+		(scale (xyz 1 1 1))
+		(rotate (xyz 0 0 0))
+	)
 )

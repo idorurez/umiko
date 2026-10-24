@@ -1,17 +1,29 @@
 #!/usr/bin/env python
 """
-toggle_switch_3d.py - Toggle 3D model visibility for Gateron switch footprints.
+toggle_switch_3d.py - Switch 3D model variant for umiko hybrid switch footprints.
 
 Usage:
-    python toggle_switch_3d.py hide              # Hide just the KS-33 switch body
-    python toggle_switch_3d.py show              # Show the KS-33 switch body
-    python toggle_switch_3d.py hide all          # Hide all 3D models on switches (body + socket)
-    python toggle_switch_3d.py show all          # Show all
+    python toggle_switch_3d.py mx                 # Show regular MX bodies (repo default)
+    python toggle_switch_3d.py lowpro             # Show Gateron KS-33 low-profile bodies
+    python toggle_switch_3d.py hide               # Hide both switch bodies
+    python toggle_switch_3d.py show               # Same as mx (restore default)
+    python toggle_switch_3d.py <verb> --pcb PATH  # Operate on a different board file
+
+Each hybrid footprint carries two 3D models; this script flips which one is
+visible by adding/removing `(hide yes)` on the per-instance model blocks.
+Models that are neither switch body (e.g. sockets) are never touched.
 
 This script edits umiko.kicad_pcb in place. A backup is created at
 umiko.kicad_pcb.bak_toggle each run.
 
 Make sure KiCad is CLOSED before running (or reload after).
+
+Model provenance (both verified seated by kicad-cli trial renders):
+  CherryMX-Switch.step    <- onigaku packages3D "CherryMX Switch.step" (space renamed)
+  Gateron-KS-33_v2.step   <- onigaku packages3D (same file, hash-verified copy)
+  Both use identity transform (at 0 0 0, rot 0 0 0). Note: onigaku's own
+  library pairs KS-33 with offset z -4.1 + rot 180/0/180, which renders
+  below the board on umiko rev2 footprints - do not "restore" that transform.
 """
 
 import re
@@ -19,12 +31,32 @@ import sys
 import shutil
 import os
 
-PCB = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'umiko.kicad_pcb')
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+# Board lives at repo root, one level above scripts/.
+DEFAULT_PCB = os.path.normpath(os.path.join(SCRIPT_DIR, '..', 'umiko.kicad_pcb'))
+
+# Rev2 hybrid libs first; rev1 libs kept so old boards still toggle sanely.
+SWITCH_LIBS = (
+    'umiko-hybrid-switches:',
+    'Gateron_KS33_Hotswap:',
+    'onigaku:Gateron-KS33-2.0-Hotswap',
+)
+
+KS33_MARK = 'KS-33_v2'   # body only; 'KS33-Socket' files do NOT match this
+MX_MARK = 'CherryMX'
+
+# verb -> {variant: hidden?}
+VERBS = {
+    'mx': {'mx': False, 'ks33': True},
+    'show': {'mx': False, 'ks33': True},
+    'lowpro': {'mx': True, 'ks33': False},
+    'hide': {'mx': True, 'ks33': True},
+}
 
 
 def find_footprints(txt):
     out = []
-    for m in re.finditer(r'\(footprint \"', txt):
+    for m in re.finditer(r'\(footprint "', txt):
         p = m.start()
         depth = 0
         i = p
@@ -44,7 +76,7 @@ def find_footprints(txt):
 def find_model_blocks(blk):
     """Find all (model ...) blocks within a footprint block."""
     out = []
-    for m in re.finditer(r'\(model \"', blk):
+    for m in re.finditer(r'\(model "', blk):
         p = m.start()
         depth = 0
         i = p
@@ -61,22 +93,51 @@ def find_model_blocks(blk):
     return out
 
 
-def main():
-    if len(sys.argv) < 2 or sys.argv[1] not in ('hide', 'show'):
+def model_variant(mblk):
+    """Classify a model block as 'mx', 'ks33', or None (leave alone)."""
+    first = mblk.split('\n', 1)[0]
+    if KS33_MARK in first:
+        return 'ks33'
+    if MX_MARK in first:
+        return 'mx'
+    return None
+
+
+def set_hidden(mblk, hide):
+    """Return (new_block, changed) with hide-flag set to `hide`."""
+    has = re.search(r'\(hide yes\)', mblk) is not None
+    if hide and not has:
+        # Insert (hide yes) right after the (model "...") opening line
+        return re.sub(
+            r'(\(model "[^"]+")(\s*\r?\n)',
+            r'\1\2\t\t(hide yes)\n',
+            mblk, count=1,
+        ), True
+    if not hide and has:
+        return re.sub(r'\s*\(hide yes\)\s*\r?\n?', '\n', mblk, count=1), True
+    return mblk, False
+
+
+def main(argv):
+    args = [a for a in argv if a != '--help']
+    if '--help' in argv or not args or args[0] not in VERBS:
         print(__doc__)
-        sys.exit(1)
+        return 1
 
-    action = sys.argv[1]  # 'hide' or 'show'
-    scope = sys.argv[2] if len(sys.argv) > 2 else 'body'  # 'all' or 'body'
+    verb = args[0]
+    want = VERBS[verb]
+    pcb = DEFAULT_PCB
+    if '--pcb' in args:
+        i = args.index('--pcb')
+        if i + 1 >= len(args):
+            print('error: --pcb needs a path')
+            return 1
+        pcb = args[i + 1]
 
-    if scope not in ('all', 'body'):
-        print('Scope must be "all" or "body"')
-        sys.exit(1)
-
-    with open(PCB, 'r', encoding='utf-8', newline='') as f:
+    with open(pcb, 'r', encoding='utf-8', newline='') as f:
         txt = f.read()
 
-    shutil.copyfile(PCB, PCB + '.bak_toggle')
+    shutil.copyfile(pcb, pcb + '.bak_toggle')
 
     new_txt = txt
     count = 0
@@ -87,12 +148,11 @@ def main():
 
     for p, q in fps:
         blk = new_txt[p:q]
-        libm = re.search(r'\(footprint \"([^\"]+)\"', blk)
+        libm = re.search(r'\(footprint "([^"]+)"', blk)
         if not libm:
             continue
         lib = libm.group(1)
-        if ('Gateron_KS33_Hotswap:' not in lib
-                and 'onigaku:Gateron-KS33-2.0-Hotswap' not in lib):
+        if not any(key in lib for key in SWITCH_LIBS):
             continue
 
         # Find and edit each (model ...) within this footprint
@@ -100,25 +160,11 @@ def main():
         models.sort(key=lambda x: x[0], reverse=True)
         for mp, mq in models:
             mblk = blk[mp:mq]
-
-            # If scope is 'body', only target the KS-33 switch body model
-            if scope == 'body' and 'Gateron-KS-33_v2.step' not in mblk:
+            variant = model_variant(mblk)
+            if variant is None:
                 continue
-
-            new_mblk = mblk
-            if action == 'hide':
-                if not re.search(r'\(hide yes\)', mblk):
-                    # Insert (hide yes) right after the (model "...") opening line
-                    new_mblk = re.sub(
-                        r'(\(model \"[^\"]+\")(\s*\r?\n)',
-                        r'\1\2\t\t\t(hide yes)\n',
-                        mblk, count=1,
-                    )
-            else:  # show
-                # Remove (hide yes) if present
-                new_mblk = re.sub(r'\s*\(hide yes\)\s*\r?\n?', '\n', mblk, count=1)
-
-            if new_mblk != mblk:
+            new_mblk, changed = set_hidden(mblk, want[variant])
+            if changed:
                 blk = blk[:mp] + new_mblk + blk[mq:]
                 count += 1
 
@@ -127,14 +173,15 @@ def main():
     depth = sum(1 for c in new_txt if c == '(') - sum(1 for c in new_txt if c == ')')
     if depth != 0:
         print(f'ABORTED: paren mismatch ({depth}). PCB unchanged.')
-        sys.exit(1)
+        return 1
 
-    with open(PCB, 'w', encoding='utf-8', newline='') as f:
+    with open(pcb, 'w', encoding='utf-8', newline='') as f:
         f.write(new_txt)
 
-    print(f'{action.capitalize()}: updated {count} 3D model block(s) on Gateron switches (scope={scope})')
-    print(f'Backup written to {PCB}.bak_toggle')
+    print(f'{verb}: updated {count} 3D model block(s) on switch footprints')
+    print(f'Backup written to {pcb}.bak_toggle')
+    return 0
 
 
 if __name__ == '__main__':
-    main()
+    sys.exit(main(sys.argv[1:]))

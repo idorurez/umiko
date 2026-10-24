@@ -5,11 +5,11 @@
 #   Some WS2812B-branded variants: 1.90-2.00 mm
 # Using 2.00 mm to represent the worst-case (thickest known variant).
 # Footprint origin at (0,0,0), Z is height above PCB surface, +Y is emit direction.
-# KiCad expects WRL in inches (1 inch = 25.4 mm) — scaled below.
+# KiCad expects WRL in 0.1 inch (1 unit = 2.54 mm) — scaled below.
 # TODO: replace with proper SolidWorks-exported STEP if precise case clearance matters.
 
 Transform {
-  scale 0.03937 0.03937 0.03937
+  scale 0.3937 0.3937 0.3937
   children [
     # ---- Main package body (white plastic), 4.0 x 2.0 x 2.00 mm ----
     Transform {
