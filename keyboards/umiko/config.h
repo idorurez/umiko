@@ -17,13 +17,12 @@
 // that happens on the master (left) half.
 #define SPLIT_WPM_ENABLE
 
-// Fixed handedness: LEFT is always master. Right is always slave.
-// Plug USB into LEFT's J2; right gets power + data via the split cable.
-// This works out of the box (no per-half EEPROM setup required).
-// To upgrade to dynamic handedness (either side can be master), swap
-// this for `#define EE_HANDS` and follow the README's optional
-// handedness-setup steps.
-#define MASTER_LEFT
+// Split handedness: twin-binary scheme (see umiko.c).
+// `default` keymap builds LEFT, `right` keymap builds RIGHT — flash the
+// matching file per half. Either half can take the USB cable; the cabled
+// half becomes master via VBUS detection on GPIO19. Plug USB into exactly
+// one half. (No MASTER_LEFT/RIGHT, EE_HANDS, SPLIT_HAND_PIN, or
+// SPLIT_USB_DETECT — the overrides in umiko.c handle both halves.)
 
 // Layer state sync across the split so both halves know the current layer
 // (needed for the OLED layer indicator on the slave half).

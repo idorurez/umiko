@@ -56,7 +56,7 @@ QSPI Flash | Winbond W25Q128JVPIQ | 2 | LCSC `C190862` / Mouser / DigiKey
 12 MHz crystal | 2520 4-pin SMD | 2 | LCSC `C2149204` / Mouser
 USB-C receptacle (host + inter-half) | HRO TYPE-C-31-M-12 | 4 | LCSC `C165948` / JLC / AliExpress — same part used for all four positions (J1/J2 outer = host, J3/J4 top = inter-half)
 USB ESD | USBLC6-2P6 | 2 | LCSC `C2827693` (SOT-666)
-Polyfuse | SMD0805-075 (750 mA hold, 0805) | 2 | LCSC `C70060` — undersized for 127-LED rev2 typical draw (~1.3–1.4 A); upgrade to 2 A hold / 1206 (Bourns MF-MSMF200-2, LCSC `C210837`) still pending — see Stretch. (Rev1 used Bourns MF-FSMF050X-2, 500 mA / 0603.)
+Polyfuse | SMD0805-075 (750 mA hold, 0805) | 2 | LCSC `C70060` — undersized for 127-LED rev2 typical draw (~1.3–1.4 A); upgrade to 2 A hold / 1206 (Bourns MF-NSMF200-2, LCSC `C89656`): schematic done, PCB footprint pending — see Stretch. (Rev1 used Bourns MF-FSMF050X-2, 500 mA / 0603.)
 Ferrite bead | 600 Ω 0402 | 2 | LCSC `C160977`
 Schottky diode | PMEG2010BELD (SOD-882) | 4 | LCSC `C552820` / DigiKey
 Per-key LEDs | SK6812MINI-E (reverse mount) | 70+ | LCSC `C5149201` / AliExpress — order ~10% spare, fragile. Pin **numbers** between vendors differ but physical VDD/VSS/DIN/DOUT corners match
@@ -98,7 +98,7 @@ QMK's CLI requires MSYS2 on Windows (its `MSYSTEM` environment check hard-fails 
 
 | Script | What it does |
 |---|---|
-| `scripts/qmk_compile.sh [keymap]` | Wraps `qmk compile -kb umiko -km <keymap>` inside MSYS2 with all the required env vars (USERPROFILE, HOME, PATH). Defaults to `default` keymap. Output UF2 lands at `qmk_umiko/umiko_default.uf2` (~74 KB). |
+| `scripts/qmk_compile.sh [keymap]` | Wraps `qmk compile` inside MSYS2 with all the required env vars (USERPROFILE, HOME, PATH). No arg builds BOTH halves: `qmk_umiko/umiko_left.uf2` (from `default` keymap) + `qmk_umiko/umiko_right.uf2` (from `right` keymap, same code + right flag). With an arg, builds that keymap only. Flash the matching file per half. |
 
 **Default keymap** (`keymaps/default/`): typing heatmap on per-key (black at rest, gold heat with halo falloff onto neighbors, overlapping presses stack to max) + white breathing underglow trim. The banked `.uf2` targets rev1 hardware (90 LEDs).
 
@@ -108,7 +108,7 @@ Current QMK expects each keyboard folder to have `keyboard.json` at the top leve
 
 ### Split handedness
 
-Umiko has no dedicated handedness pin (`SPLIT_HAND_PIN`), so the default UF2 relies on QMK's USB-detect-based master election (whichever half enumerates as a USB HID device becomes master; the other becomes slave over the inter-half serial link). This may need tweaking if it doesn't behave — options include compile-time `MASTER_LEFT`/`MASTER_RIGHT` defines or `EE_HANDS` (per-half EEPROM handedness). TODO: revisit after first split test.
+Twin-binary scheme, no `SPLIT_HAND_PIN` / `MASTER_LEFT` / `EE_HANDS` / `SPLIT_USB_DETECT`: the `default` keymap builds LEFT and `right` builds RIGHT (side compiled in via `-DUMiko_RIGHT`). Either half can take the USB cable; the cabled half becomes master via VBUS detection on GPIO19 (divided local VBUS — the inter-half bridge lands post-diode, so only the USB-fed half reads high). Flash the matching file per half and plug USB into exactly one half (both plugged in = both claim master). TODO: confirm on hardware at first split test.
 
 ### Flash
 
@@ -389,7 +389,7 @@ U2/U10 use **LP5907SNX-3.3** (TI, XDFN-4, LCSC `C133572`, 250 mA) — a pin-comp
 
 ## Stretch / Future Ideas
 
-* **Polyfuse upgrade to 2 A hold / 4 A trip** — the 127-LED chain draws far more than the current 750 mA SMD0805-075 (F1/F2) can sustain. At `RGB_MATRIX_MAXIMUM_BRIGHTNESS 150` and worst-case white, right-half (67 LEDs) draw is ~1.8 A. Replace F1/F2 with `MF-MSMF200-2` (Bourns, 2 A hold / 4 A trip, 1206 package, LCSC `C210837`) in schematic + PCB — not yet applied. Requires ≥1.5 A USB-C source for full-brightness rev2 operation. See [Rev 2 TODO](docs/rev2-todo.md#polyfuse-upgrade-rev-2) for the full analysis.
+* **Polyfuse upgrade to 2 A hold / 4 A trip** — the 127-LED chain draws far more than the current 750 mA SMD0805-075 (F1/F2) can sustain. At `RGB_MATRIX_MAXIMUM_BRIGHTNESS 150` and worst-case white, right-half (67 LEDs) draw is ~1.8 A. Replace F1/F2 with `MF-NSMF200-2` (Bourns, 2 A hold / 4 A trip, 1206 package, LCSC `C89656`) — schematic applied, PCB footprint pending. Requires ≥1.5 A USB-C source for full-brightness rev2 operation. See [Rev 2 TODO](docs/rev2-todo.md#polyfuse-upgrade-rev-2) for the full analysis.
 * **Bigger, case-integrated BOOTSEL button per half** — still tiny SMD tacts (SW1/SW2) requiring a pinhole in the case top for paperclip access. Still open: either (a) swap the PCB switch to a **larger through-hole or lower-mount tactile** so a case-integrated **cantilever / living-hinge button** (3D-printed flexure that presses the PCB switch when pushed from outside) works cleanly, or (b) go directly to a case-integrated button style with the tact positioned to sit under the flexure.
 * **Lower-profile OLED mounting** — current through-hole 4-pin header puts the daughterboard ~10–12 mm above the PCB, forcing the case cutout to swallow the whole board (not just the display window). Options: short-body SMD headers (~3–5 mm mated), board-to-board connectors (Hirose DF13 / JAE FI-X, ~2–4 mm), or a direct SMD OLED module (eliminates the daughterboard entirely).
 * **OLED breakout board** for the inter-half I²C lines (`SCL_*` / `SDA_*` are broken out but unwired).

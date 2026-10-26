@@ -3,6 +3,7 @@
 // RGB Matrix. Keep this small; keymap-level stuff belongs in keymaps/*/keymap.c.
 
 #include "quantum.h"
+#include "usb_util.h" // usb_disconnect() for the slave half (handedness block below)
 
 #ifdef RGB_MATRIX_ENABLE
 
@@ -241,3 +242,34 @@ bool oled_task_kb(void) {
     return oled_task_user();
 }
 #endif
+
+// ─── Split handedness + master election ─────────────────────────────────
+// Twin-binary scheme: `default` keymap builds the LEFT half, `right` keymap
+// (compiled with -DUMiko_RIGHT, see keymaps/right/rules.mk) builds RIGHT.
+// Flash the matching file per half: umiko_left.uf2 / umiko_right.uf2.
+//
+// Either half can take the USB cable; the cabled half becomes master via
+// VBUS detection on GPIO19, which reads the divided LOCAL VBUS (R13/R14,
+// R19/R20). The inter-half bridge lands on the post-diode +5V rail, so only
+// the USB-fed half reads high. No MASTER_LEFT/RIGHT, EE_HANDS, SPLIT_HAND_PIN,
+// or SPLIT_USB_DETECT needed. Plug USB into exactly one half — both plugged
+// in means both claim master.
+#define UMiko_VBUS_PIN GP19
+
+bool is_keyboard_master_impl(void) {
+    gpio_set_pin_input(UMiko_VBUS_PIN);
+    wait_us(100);
+    bool is_master = gpio_read_pin(UMiko_VBUS_PIN);
+    if (!is_master) {
+        usb_disconnect();
+    }
+    return is_master;
+}
+
+bool is_keyboard_left_impl(void) {
+#ifdef UMiko_RIGHT
+    return false;
+#else
+    return true;
+#endif
+}
