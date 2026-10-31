@@ -243,6 +243,37 @@ bool oled_task_kb(void) {
 }
 #endif
 
+// ─── Companion display — Raw HID layer push ─────────────────────────────
+// Sends the current layer state to the host on every layer change so the
+// companion tray app (companion/umiko_tray.py) can show it. Master half
+// only — the slave has no USB. Coexists with VIA on the shared Raw HID
+// interface; the 0x55 report ID sits outside VIA's command range.
+//
+// Protocol (32-byte report, keyboard → host):
+//   [0] = 0x55 ('U' — umiko companion)
+//   [1] = 0x01 (message: layer state)
+//   [2] = highest active layer number
+//   [3..6] = full layer_state bitmask, little-endian
+//   rest = reserved (zero)
+#ifdef RAW_ENABLE
+#    include <string.h>
+#    include "raw_hid.h"
+#    define UMIKO_COMPANION_ID 0x55
+#    define UMIKO_MSG_LAYER 0x01
+layer_state_t layer_state_set_kb(layer_state_t state) {
+    state = layer_state_set_user(state);
+    if (is_keyboard_master()) {
+        uint8_t report[32] = {0};  // Raw HID reports are fixed 32 bytes
+        report[0]                  = UMIKO_COMPANION_ID;
+        report[1]                  = UMIKO_MSG_LAYER;
+        report[2]                  = get_highest_layer(state);
+        memcpy(&report[3], &state, sizeof(state));
+        raw_hid_send(report, sizeof(report));
+    }
+    return state;
+}
+#endif
+
 // ─── Split handedness + master election ─────────────────────────────────
 // Twin-binary scheme: `default` keymap builds the LEFT half, `right` keymap
 // (compiled with -DUMiko_RIGHT, see keymaps/right/rules.mk) builds RIGHT.

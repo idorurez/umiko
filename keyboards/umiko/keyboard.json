@@ -19,7 +19,8 @@
         "oled": true,
         "wpm": true,
         "tap_dance": true,
-        "via": true
+        "via": true,
+        "raw": true
     },
     "diode_direction": "COL2ROW",
     "matrix_pins": {
