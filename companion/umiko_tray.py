@@ -147,48 +147,117 @@ class Reader(threading.Thread):
             self._set_connected(False)
 
 
+def _win_chrome(root) -> None:
+    """Windows-only tweaks: dark titlebar + never steal focus on popup.
+
+    WS_EX_NOACTIVATE keeps deiconify() from grabbing foreground
+    activation, so keystrokes keep landing in the app behind the map.
+    Silent no-op elsewhere.
+    """
+    try:
+        import ctypes
+
+        hwnd = ctypes.windll.user32.GetParent(root.winfo_id())
+        value = ctypes.c_int(1)
+        ctypes.windll.dwmapi.DwmSetWindowAttribute(
+            hwnd, 20, ctypes.byref(value), ctypes.sizeof(value)
+        )
+        ex = ctypes.windll.user32.GetWindowLongW(hwnd, -20)
+        ctypes.windll.user32.SetWindowLongW(hwnd, -20, ex | 0x08000000)
+        ctypes.windll.user32.SetWindowPos(
+            hwnd, 0, 0, 0, 0, 0, 0x0020 | 0x0002 | 0x0001
+        )
+    except Exception:
+        pass
+
 def run_window(state, reader) -> None:
-    """Floating always-on-top layer indicator (tkinter, stdlib only).
+    """Minimal floating keymap: the active layer's bindings, live.
 
     Polls the shared state dict on a timer so all tk calls stay on the
     main thread; the reader thread only mutates the dict.
     """
     import tkinter as tk
 
+    import keymap_data
+    import key_geometry
+
+    BG = "#181818"
+    KEY = "#232323"
+    GOLD = "#c8a44d"
+    INK = "#e8e8e8"
+    FAINT = "#5a5a5a"
+
     root = tk.Tk()
     root.title("umiko")
     root.attributes("-topmost", True)
     root.resizable(False, False)
-    root.configure(bg="#181818")
+    root.configure(bg=BG, padx=10, pady=10)
 
-    number = tk.Label(
-        root, text="–", font=("Arial", 72, "bold"),
-        fg="#c8a44d", bg="#181818", width=3,
-    )
-    number.pack(padx=16, pady=(12, 0))
-    name = tk.Label(
-        root, text="connecting…", font=("Arial", 14),
-        fg="#969696", bg="#181818",
-    )
-    name.pack(padx=16, pady=(0, 12))
+    S = 2.0  # px per mm
+    TRIM = 20.0  # pull halves together by this many mm (display only)
+    mapframe = tk.Frame(root, bg=BG,
+                        width=int((key_geometry.BOARD_W_MM - TRIM) * S),
+                        height=int(key_geometry.BOARD_H_MM * S))
+    mapframe.pack()
+    mapframe.pack_propagate(False)
+    key_labels = {}
+    for idx, (x, y, w, h) in enumerate(key_geometry.KEY_GEOMETRY):
+        if idx >= 30:  # right half
+            x -= TRIM
+        lab = tk.Label(mapframe, text="", font=("Arial", 9),
+                       fg=INK, bg=KEY,
+                       highlightthickness=1, highlightbackground="#3a3a3a")
+        lab.place(x=int(x * S) + 1, y=int(y * S) + 1,
+                  width=int(w * S) - 2, height=int(h * S) - 2)
+        key_labels[idx] = lab
+
+    last_layer = [None]
+
+    def render_map(n):
+        legends = keymap_data.LAYERS[n] if n < len(keymap_data.LAYERS) else ()
+        for idx, lab in key_labels.items():
+            leg = legends[idx] if idx < len(legends) else None
+            if leg is None:
+                lab.config(text=keymap_data.BASE[idx], fg=FAINT)
+            elif n == 0:
+                lab.config(text=leg, fg=INK)
+            else:
+                lab.config(text=leg, fg=GOLD)
+
+    shown = [False]
+
+    def set_visible(v):
+        if v != shown[0]:
+            shown[0] = v
+            if v:
+                root.deiconify()
+            else:
+                root.withdraw()
 
     def refresh():
         if state["connected"] and state["layer"] is not None:
-            number.config(text=str(state["layer"]))
-            name.config(text=layer_name(state["layer"]))
+            n = state["layer"]
+            root.title(f"umiko — {layer_name(n)}")
+            if n != last_layer[0]:
+                last_layer[0] = n
+                render_map(n)
+            set_visible(n != 0)
         elif state["connected"]:
-            number.config(text="?")
-            name.config(text="waiting for layer…")
+            root.title("umiko — …")
+            set_visible(False)
         else:
-            number.config(text="–")
-            name.config(text="disconnected")
-        root.after(250, refresh)
+            root.title("umiko — offline")
+            set_visible(False)
+        root.after(100, refresh)
 
     def on_close():
         reader.stop()
         root.destroy()
 
     root.protocol("WM_DELETE_WINDOW", on_close)
+    render_map(0)
+    _win_chrome(root)
+    root.withdraw()
     refresh()
     root.mainloop()
 
@@ -202,16 +271,9 @@ def main() -> None:
     state = {"layer": None, "connected": False}
 
     if args.window:
-        print("window mode: floating layer indicator", flush=True)
         reader = Reader(
-            on_layer=lambda n: (
-                state.update(layer=n),
-                print(f"[umiko] connected, layer={n}", flush=True),
-            ),
-            on_connect=lambda c: (
-                state.update(connected=c),
-                print(f"[umiko] {'connected' if c else 'disconnected'}", flush=True),
-            ),
+            on_layer=lambda n: state.update(layer=n),
+            on_connect=lambda c: state.update(connected=c),
         )
         reader.start()
         try:

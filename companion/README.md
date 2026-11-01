@@ -1,12 +1,9 @@
-# umiko companion tray app
+# umiko companion
 
-Shows the live keyboard layer in the system tray (Windows) or menu bar
-(macOS). The firmware pushes a tiny Raw HID packet on every layer change;
-this script listens and renders the current layer as an icon.
+Live keyboard layer on your desktop. The firmware pushes a tiny Raw HID
+packet on every layer change; this script listens and shows it.
 
-Packaged with the repo: firmware side in `keyboards/umiko/`, host side here.
-No driver, no admin, no installer — plain Python doing user-level HID reads,
-so it's about as work-machine-friendly as a listener can get.
+No driver, no admin, no installer — plain Python doing user-level HID reads.
 
 ## Run
 
@@ -14,35 +11,47 @@ so it's about as work-machine-friendly as a listener can get.
 cd companion
 pip install -r requirements.txt
 python umiko_tray.py            # tray / menu-bar icon
-python umiko_tray.py --window   # floating always-on-top window
+python umiko_tray.py --window   # floating keymap window
 ```
 
-Then tap your FN key: the indicator should flip between `0` (BASE) and `1` (FN).
+Tap FN: the tray icon flips between `0` (BASE) and `1` (FN). The window
+stays hidden until a non-base layer is active, then pops up with that
+layer's full bindings — hold FN to study the map, release to dismiss it.
+(Quit via the console with Ctrl+C, or close the window while FN is held.)
 
 Requires firmware built with `"raw": true` (already enabled in
 `keyboards/umiko/keyboard.json`) and flashed to the board.
 
-## Protocol
+## Keymap data
 
-32-byte Raw HID report, keyboard → host (see `layer_state_set_kb` in
-`keyboards/umiko/umiko.c`):
-
-| Byte | Value                                    |
-| ---- | ---------------------------------------- |
-| 0    | `0x55` (`U` — umiko companion)           |
-| 1    | `0x01` (message: layer state)            |
-| 2    | highest active layer number              |
-| 3–6  | full `layer_state` bitmask, little-endian |
-| rest | reserved (zero)                          |
-
-Device: VID `0x4257` / PID `0x554D`, usage page `0xFF60` / usage `0x61`
-(the standard QMK Raw HID interface, shared with VIA).
+Legends live in `keymap_data.py`, derived by hand from
+`keyboards/umiko/keymaps/default/keymap.c` — update both together when the
+keymap changes. Keys that fall through to BASE render dimmed with the base
+legend. Key positions/sizes live in `key_geometry.py`, generated from the
+real switch footprints via `scripts/make_key_geometry.py` — rerun it if the
+PCB layout changes.
 
 ## Layer names
 
 `LAYER_NAMES` at the top of `umiko_tray.py` maps layer numbers to names.
 Keep it in sync with `enum layers` in `keymaps/*/keymap.c`. Unknown layers
 show as `L<n>` rather than crashing.
+
+## Protocol
+
+32-byte Raw HID report, keyboard → host (see `layer_state_set_kb` in
+`keyboards/umiko/umiko.c`):
+
+| Byte | Value                                     |
+| ---- | ----------------------------------------- |
+| 0    | `0x55` (`U` — umiko companion)            |
+| 1    | `0x01` (message: layer state)             |
+| 2    | highest active layer number               |
+| 3–6  | full `layer_state` bitmask, little-endian |
+| rest | reserved (zero)                           |
+
+Device: VID `0x4257` / PID `0x554D`, usage page `0xFF60` / usage `0x61`
+(the standard QMK Raw HID interface, shared with VIA).
 
 ## Notes
 
