@@ -143,4 +143,163 @@
 		)
 		(embedded_fonts no)
 	)
+		(symbol "LS011B7DH03_Breakout"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 0 10.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LS011B7DH03_Breakout"
+			(at 0 -10.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "umiko-display:LS011B7DH03_Breakout"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://nicekeyboards.com/docs/nice-view/pinout-schematic"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Sharp LS011B7DH03 Memory LCD breakout, Nice!View-compatible 5-pin (MOSI/SCK/VCC/GND/CS), 160x68, 36x14mm. Pin order ASSUMED per nice!view; verify vs module silkscreen."
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "LS011B7DH03_Breakout_0_1"
+			(rectangle
+				(start -5.08 6.35)
+				(end 5.08 -6.35)
+				(stroke
+					(width 0.254)
+					(type solid)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "LS011B7DH03_Breakout_1_1"
+		(pin input line
+			(at -7.62 5.08 0)
+			(length 2.54)
+			(name "MOSI"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(number "1"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+		)
+		(pin input line
+			(at -7.62 2.54 0)
+			(length 2.54)
+			(name "SCK"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(number "2"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+		)
+		(pin power_in line
+			(at -7.62 0.0 0)
+			(length 2.54)
+			(name "VCC"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(number "3"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+		)
+		(pin power_in line
+			(at -7.62 -2.54 0)
+			(length 2.54)
+			(name "GND"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(number "4"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+		)
+		(pin input line
+			(at -7.62 -5.08 0)
+			(length 2.54)
+			(name "CS"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(number "5"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+		)
+		)
+		(embedded_fonts no)
+	)
 )
