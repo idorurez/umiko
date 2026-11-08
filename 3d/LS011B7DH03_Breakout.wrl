@@ -1,0 +1,14 @@
+#VRML V2.0 utf8
+# Sharp LS011B7DH03 Memory LCD breakout, Nice!View-compatible.
+# Body box 36x14x2.9mm (units: inches). Fit-check estimate, glass not modeled.
+Transform {
+  translation 0 0 0.05709
+  children [
+    Shape {
+      appearance Appearance {
+        material Material { diffuseColor 0.16 0.16 0.18 }
+      }
+      geometry Box { size 1.41732 0.55118 0.11417 }
+    }
+  ]
+}

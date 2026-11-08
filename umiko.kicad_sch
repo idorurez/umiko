@@ -8218,6 +8218,175 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "umiko-rev2:LS011B7DH03_Breakout"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LS011B7DH03_Breakout"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "umiko-display:LS011B7DH03_Breakout"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://nicekeyboards.com/docs/nice-view/pinout-schematic"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Sharp LS011B7DH03 Memory LCD breakout, Nice!View-compatible 5-pin (MOSI/SCK/VCC/GND/CS), 160x68, 36x14mm. Pin order ASSUMED per nice!view; verify vs module silkscreen."
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LS011B7DH03_Breakout_0_1"
+				(rectangle
+					(start -5.08 6.35)
+					(end 5.08 -6.35)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "LS011B7DH03_Breakout_1_1"
+				(pin input line
+					(at -7.62 5.08 0)
+					(length 2.54)
+					(name "MOSI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "SCK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -5.08 0)
+					(length 2.54)
+					(name "CS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "umiko-rev2:SK6812-4020-SideView"
 			(pin_names
 				(offset 1.016)
@@ -8369,167 +8538,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "umiko-rev2:LS011B7DH03_Breakout"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "LS011B7DH03_Breakout"
-				(at 0 -10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "umiko-display:LS011B7DH03_Breakout"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://nicekeyboards.com/docs/nice-view/pinout-schematic"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Sharp LS011B7DH03 Memory LCD breakout, Nice!View-compatible 5-pin (MOSI/SCK/VCC/GND/CS), 160x68, 36x14mm. Pin order ASSUMED per nice!view; verify vs module silkscreen."
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "LS011B7DH03_Breakout_0_1"
-				(rectangle
-					(start -5.08 6.35)
-					(end 5.08 -6.35)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "LS011B7DH03_Breakout_1_1"
-			(pin input line
-				(at -7.62 5.08 0)
-				(length 2.54)
-				(name "MOSI"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at -7.62 2.54 0)
-				(length 2.54)
-				(name "SCK"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at -7.62 0.0 0)
-				(length 2.54)
-				(name "VCC"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at -7.62 -2.54 0)
-				(length 2.54)
-				(name "GND"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "4"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at -7.62 -5.08 0)
-				(length 2.54)
-				(name "CS"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			)
-			(embedded_fonts no)
-		)
-
-)
+	)
 	(rectangle
 		(start 22.86 46.355)
 		(end 220.98 186.055)
@@ -12068,7 +12077,7 @@
 		(at 463.55 206.248)
 		(uuid "0202c2ca-663e-4975-9f50-12e6d55558b3")
 	)
-		(no_connect
+	(no_connect
 		(at 336.042 131.572)
 		(uuid "07aa48f7-3898-41fb-9992-8df0923a80fa")
 	)
@@ -12076,7 +12085,7 @@
 		(at 463.55 230.378)
 		(uuid "09ec5adc-49ef-471b-b2a1-ee86e85657a1")
 	)
-		(no_connect
+	(no_connect
 		(at 319.024 194.564)
 		(uuid "1ab44db0-b9a7-4fe1-a81c-02401382e8b5")
 	)
@@ -12096,7 +12105,7 @@
 		(at 319.024 228.854)
 		(uuid "3ecd1fd0-e605-4af7-9473-ea76c195c609")
 	)
-		(no_connect
+	(no_connect
 		(at 319.024 226.314)
 		(uuid "52972f30-0d5f-4407-98fb-d9fb3999565f")
 	)
@@ -12125,10 +12134,6 @@
 		(uuid "641558a0-386b-4a37-b85a-84122a9a0756")
 	)
 	(no_connect
-		(at 455.93 198.628)
-		(uuid "65f40e45-3ace-4beb-8d4d-7ae892d1946b")
-	)
-	(no_connect
 		(at 463.55 225.298)
 		(uuid "6eda6c59-8dd0-4d9f-a559-b6d5fa364427")
 	)
@@ -12141,10 +12146,6 @@
 		(uuid "76d2615d-9309-4f53-b565-989f643f8220")
 	)
 	(no_connect
-		(at 455.93 213.868)
-		(uuid "7b61cc24-961f-4950-9f6e-d5aec65cda42")
-	)
-	(no_connect
 		(at 159.258 387.604)
 		(uuid "88e1415a-f7c0-4ebc-96e6-d01fca7a1dd3")
 	)
@@ -12152,7 +12153,7 @@
 		(at 319.024 231.394)
 		(uuid "90b1cfe8-5e6e-48bf-9c70-44437ed7652f")
 	)
-		(no_connect
+	(no_connect
 		(at 399.796 154.178)
 		(uuid "a3bb80bd-9d9d-40d5-a627-78d70cd5d63d")
 	)
@@ -12172,7 +12173,7 @@
 		(at 463.55 211.328)
 		(uuid "b71124e3-9354-40fe-bb90-c310e4cdaf72")
 	)
-		(no_connect
+	(no_connect
 		(at 319.024 207.264)
 		(uuid "c97418a1-2eac-4035-9fe3-522039d9fa3e")
 	)
@@ -12224,7 +12225,7 @@
 		(at 415.29 163.068)
 		(uuid "f71f5535-3b82-4644-a292-f0ad53d71df7")
 	)
-		(wire
+	(wire
 		(pts
 			(xy 524.256 258.064) (xy 533.654 258.064)
 		)
@@ -14303,16 +14304,6 @@
 			(type solid)
 		)
 		(uuid "2d6265ed-a14c-4381-bb38-cc5626efda1b")
-	)
-	(wire
-		(pts
-			(xy 456.692 239.014) (xy 456.692 240.284)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2d635a58-5030-4fe7-a599-80f7f4fe0556")
 	)
 	(wire
 		(pts
@@ -17336,6 +17327,16 @@
 	)
 	(wire
 		(pts
+			(xy 437.896 247.904) (xy 449.072 247.904)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76d35cc8-ddbf-4348-85ee-fe31b8a45d6e")
+	)
+	(wire
+		(pts
 			(xy 125.984 239.522) (xy 134.62 239.522)
 		)
 		(stroke
@@ -18403,6 +18404,16 @@
 			(type solid)
 		)
 		(uuid "915d159c-58e0-4a07-ac9d-e8b64c8edbf0")
+	)
+	(wire
+		(pts
+			(xy 433.324 250.444) (xy 449.072 250.444)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "919329b1-54a8-441a-8b91-122af123c5b4")
 	)
 	(wire
 		(pts
@@ -23464,16 +23475,6 @@
 		)
 		(uuid "a559f89e-7702-400b-a997-c1d3c6a8959c")
 	)
-	(label "+3V3_R"
-		(at 456.692 239.014 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a646491e-0d69-4175-9444-1f4e3186c7b8")
-	)
 	(label "VBUS_DETECT_R"
 		(at 468.63 201.168 180)
 		(effects
@@ -23802,6 +23803,30 @@
 			)
 		)
 	)
+	(global_label "MIP_MOSI_R"
+		(shape input)
+		(at 449.072 242.824 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "065ba717-b5d2-4741-8950-d28ce2f84042")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 434.8641 242.824 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "col0_R"
 		(shape input)
 		(at 463.55 175.768 0)
@@ -23815,6 +23840,30 @@
 		(uuid "0e214e8b-fe91-4c85-be5e-90739766a82d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 472.7383 175.768 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "MIP_SCK_R"
+		(shape input)
+		(at 455.93 198.628 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "10433110-aedf-4a9e-a41a-24a90cc0d3b9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 469.2912 198.628 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24234,6 +24283,30 @@
 			)
 		)
 	)
+	(global_label "MIP_SCK_R"
+		(shape input)
+		(at 449.072 245.364 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4f8201e8-87bf-4616-8265-b92aefda54cb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 435.7108 245.364 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "data_L"
 		(shape bidirectional)
 		(at 336.042 139.192 180)
@@ -24378,7 +24451,7 @@
 			)
 		)
 	)
-	(global_label "SCL_R"
+	(global_label "MIP_MOSI_R"
 		(shape input)
 		(at 463.55 160.528 0)
 		(fields_autoplaced yes)
@@ -24390,7 +24463,31 @@
 		)
 		(uuid "67ddf4b1-5ad4-4e4d-bb0f-ff0ce8596b53")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 472.1336 160.528 0)
+			(at 477.7579 160.528 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "MIP_CS_R"
+		(shape input)
+		(at 455.93 213.868 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "68782eca-df4b-40c2-9082-d94e1139ad39")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 468.0212 213.868 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25095,6 +25192,30 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "MIP_CS_R"
+		(shape input)
+		(at 449.072 252.984 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d86d074d-60fc-485c-be78-26e77eeffa69")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 436.9808 252.984 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -66043,6 +66164,83 @@
 		)
 	)
 	(symbol
+		(lib_id "onigaku:+3V3_R")
+		(at 437.896 247.904 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "39905ee9-4767-4edf-84ba-19d441a4e755")
+		(property "Reference" "#PWR0158"
+			(at 441.706 247.904 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3_R"
+			(at 434.34 247.904 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 437.896 247.904 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 437.896 247.904 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 437.896 247.904 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "514018c9-0801-469b-ab50-6817b0a70908")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "#PWR0158")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "onigaku:GND_L")
 		(at 305.054 132.334 0)
 		(unit 1)
@@ -67743,7 +67941,95 @@
 			)
 		)
 	)
-		(symbol
+	(symbol
+		(lib_id "umiko-rev2:LS011B7DH03_Breakout")
+		(at 456.692 247.904 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4702eb57-4491-43d9-ba9c-44eb62660e86")
+		(property "Reference" "U12"
+			(at 456.692 240.904 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LS011B7DH03_Breakout"
+			(at 456.692 254.904 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "umiko-display:LS011B7DH03_Breakout"
+			(at 456.692 247.904 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://nicekeyboards.com/docs/nice-view/pinout-schematic"
+			(at 456.692 247.904 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 456.692 247.904 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3c9a48fe-1f66-4324-8bdb-a577286694d3")
+		)
+		(pin "2"
+			(uuid "60ffe385-930f-481d-bd36-da6c882b924f")
+		)
+		(pin "3"
+			(uuid "e02dc2b2-3b83-4a35-b2f6-e6d5511287b0")
+		)
+		(pin "4"
+			(uuid "9100794c-b606-433d-8c59-23fbc713ad20")
+		)
+		(pin "5"
+			(uuid "db47188d-916f-47f0-b75c-7cf135020a62")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "U12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:USB_C_Receptacle_USB2.0")
 		(at 403.098 74.168 0)
 		(unit 1)
@@ -72160,84 +72446,6 @@
 			(project "umiko"
 				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
 					(reference "#PWR0134")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "onigaku:GND_R")
-		(at 456.692 255.524 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6caf5229-8427-4c3b-a005-7382387f8ace")
-		(property "Reference" "#PWR0155"
-			(at 456.692 261.874 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND_R"
-			(at 456.692 259.969 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 456.692 255.524 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 456.692 255.524 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 456.692 255.524 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4074bb39-cc41-43d2-b9ed-d94b7459792d")
-		)
-		(instances
-			(project "umiko"
-				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
-					(reference "#PWR0155")
 					(unit 1)
 				)
 			)
@@ -82090,6 +82298,85 @@
 		)
 	)
 	(symbol
+		(lib_id "onigaku:GND_R")
+		(at 433.324 250.444 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cd0cb32e-8f99-4f22-b3db-7a03ba2cf940")
+		(property "Reference" "#PWR0155"
+			(at 426.974 250.444 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND_R"
+			(at 429.26 250.4439 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 433.324 250.444 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 433.324 250.444 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 433.324 250.444 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "475eb814-8c92-485e-8a88-de9714faa425")
+		)
+		(instances
+			(project "umiko"
+				(path "/4b4aa2f9-db35-4fc9-9772-4a4fa5dd4e1a"
+					(reference "#PWR0155")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "PCM_0xcb:W25Q128JVPIQ")
 		(at 242.824 217.424 0)
 		(mirror y)
@@ -87019,107 +87306,4 @@
 		)
 	)
 	(embedded_fonts no)
-	(symbol
-		(lib_id "umiko-rev2:LS011B7DH03_Breakout")
-		(at 456.692 247.904 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4702eb57-4491-43d9-ba9c-44eb62660e86")
-		(property "Reference" "U12"
-			(at 456.692 240.904 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LS011B7DH03_Breakout"
-			(at 456.692 254.904 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "umiko-display:LS011B7DH03_Breakout"
-			(at 456.692 247.904 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://nicekeyboards.com/docs/nice-view/pinout-schematic"
-			(at 456.692 247.904 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1" (uuid "3c9a48fe-1f66-4324-8bdb-a577286694d3"))
-		(pin "2" (uuid "60ffe385-930f-481d-bd36-da6c882b924f"))
-		(pin "3" (uuid "e02dc2b2-3b83-4a35-b2f6-e6d5511287b0"))
-		(pin "4" (uuid "9100794c-b606-433d-8c59-23fbc713ad20"))
-		(pin "5" (uuid "db47188d-916f-47f0-b75c-7cf135020a62"))
-	)
-	(wire
-		(pts
-			(xy 449.072 247.904) (xy 446.532 247.904)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "05755559-bff2-45f7-8faa-2c3f4c4a7349")
-	)
-	(label "+3V3_R"
-		(at 446.532 247.904 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d87706a1-2c21-4d28-bdfc-791d79aefbae")
-	)
-	(wire
-		(pts
-			(xy 449.072 250.444) (xy 446.532 250.444)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fb9c68c6-c602-43f7-b9c9-eefb2c89d997")
-	)
-	(label "GND_R"
-		(at 446.532 250.444 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2b34f870-736c-49e8-bfc3-b19b220db5ea")
-	)
-	(no_connect
-		(at 449.072 242.824)
-		(uuid "72fa8fe2-a62e-4792-8217-6fcd5cb97fc7")
-	)
-	(no_connect
-		(at 449.072 245.364)
-		(uuid "b4ad37f6-53c5-4692-a2d5-003a703e1273")
-	)
-	(no_connect
-		(at 449.072 252.984)
-		(uuid "52cd17bd-c41c-449e-a19e-5e1a857e7db5")
-	)
 )
